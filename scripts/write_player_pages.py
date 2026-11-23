@@ -2848,7 +2848,7 @@ HAND_WRITTEN_PAGES = [
     (SEND_DOWN_PATH, "0.9"),
     # Generated pages hashed from disk: the offseason hub and the change log.
     ("offseason.html", "0.9"),
-    ("changes.html", "0.9"),
+    ("changes.html", "0.9"), ("dfa-outcomes.html", "0.9"),
 ]
 
 # --------------------------------------------------------------------------

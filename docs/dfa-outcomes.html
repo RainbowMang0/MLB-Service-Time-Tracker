@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- Google Analytics -->
+<script>
+(function () {
+  var started = false;
+  function loadTags() {
+    if (started) return;
+    started = true;
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', 'G-G04P969TLX');
+    var ga = document.createElement('script');
+    ga.async = true;
+    ga.src = 'https://www.googletagmanager.com/gtag/js?id=G-G04P969TLX';
+    document.head.appendChild(ga);
+    var ads = document.createElement('script');
+    ads.async = true;
+    ads.crossOrigin = 'anonymous';
+    ads.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8748967682918425';
+    ads.onload = function () {
+      var slots = document.querySelectorAll('ins.adsbygoogle');
+      for (var i = 0; i < slots.length; i++) {
+        (window.adsbygoogle = window.adsbygoogle || []).push({});
+      }
+    };
+    document.head.appendChild(ads);
+  }
+  function arm() {
+    var timer = setTimeout(loadTags, 5000);
+    function early() { clearTimeout(timer); loadTags(); }
+    ['pointerdown', 'keydown', 'touchstart', 'scroll'].forEach(function (name) {
+      window.addEventListener(name, early, { once: true, passive: true });
+    });
+  }
+  if (document.readyState === 'complete') arm();
+  else window.addEventListener('load', arm, { once: true });
+})();
+</script>
+<!-- End Google Analytics -->
+<!-- Google AdSense -->
+<meta name="google-adsense-account" content="ca-pub-8748967682918425">
+<!-- End Google AdSense -->
+<meta property="og:image" content="https://bigleagueservicetime.com/og.png" /><meta property="og:image:width" content="1200" /><meta property="og:image:height" content="630" /><meta name="twitter:card" content="summary_large_image" /><meta name="twitter:image" content="https://bigleagueservicetime.com/og.png" /><title>MLB DFA tracker: designated for assignment outcomes | Big League Service Time Tracker</title>
+<meta name="description" content="Recent designated-for-assignment outcomes: traded, claimed, outrighted, released, elected free agency, or still pending. From public data." />
+<link rel="canonical" href="https://bigleagueservicetime.com/dfa-outcomes.html" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="MLB DFA tracker: designated for assignment outcomes" />
+<meta property="og:description" content="Recent designated-for-assignment outcomes: traded, claimed, outrighted, released, elected free agency, or still pending. From public data." />
+<meta property="og:url" content="https://bigleagueservicetime.com/dfa-outcomes.html" />
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "CollectionPage", "name": "MLB DFA tracker: designated for assignment outcomes", "url": "https://bigleagueservicetime.com/dfa-outcomes.html", "description": "Recent designated-for-assignment outcomes: traded, claimed, outrighted, released, elected free agency, or still pending. From public data."}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Big League Service Time Tracker", "item": "https://bigleagueservicetime.com/"}, {"@type": "ListItem", "position": 2, "name": "DFA outcomes", "item": "https://bigleagueservicetime.com/dfa-outcomes.html"}]}]}</script>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="/styles.css" />
+<link rel="stylesheet" href="/page.css" />
+<script>
+  try {
+    var t = localStorage.getItem("mlb-service-time-theme");
+    if (t) document.documentElement.setAttribute("data-theme", t);
+  } catch (e) {}
+</script>
+</head>
+<body>
+<div class="viz-root"><header class="site-top"><div class="site-top-row"><a class="brand" href="/"><svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><circle cx="16" cy="16" r="14" class="bm-ball" /><path d="M7.2 5.6c3.6 3 5.4 6.5 5.4 10.4s-1.8 7.4-5.4 10.4" class="bm-seam" /><path d="M24.8 5.6c-3.6 3-5.4 6.5-5.4 10.4s1.8 7.4 5.4 10.4" class="bm-seam" /></svg><span class="brand-long">Big League Service Time</span><span class="brand-short">Service Time</span></a><form class="top-search hide-phone" action="/" role="search"><input type="search" name="q" placeholder="Search a player or club" aria-label="Search a player or club" /></form><button type="button" class="icon-btn show-phone phone-search" aria-label="Search players"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7" /><path d="m20 20-3.5-3.5" /></svg></button><details class="menu"><summary class="icon-btn" aria-label="More" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16" /></svg><span class="hide-phone">More</span></summary><div class="sheet" role="navigation" aria-label="All pages"><p class="sheet-h">Numbers</p><ul><li><a href="/">Players</a></li><li><a href="/arbitration-eligible.html">Arbitration eligible</a></li><li><a href="/super-two.html">Super Two</a></li><li><a href="/free-agents.html">Free agents</a></li><li><a href="/non-tender-watch.html">Non-tender watch</a></li><li><a href="/options.html">Out of options</a></li><li><a href="/alumni/">Previous players A–Z</a></li></ul><p class="sheet-h">Tools</p><ul><li><a href="/lockout.html">Lockout tracker</a></li><li><a href="/contract.html">Contract clock</a></li></ul><p class="sheet-h">Clubs</p><ul class="clubs"><li><a href="/t/arizona-diamondbacks.html">ARI</a></li><li><a href="/t/atlanta-braves.html">ATL</a></li><li><a href="/t/athletics.html">ATH</a></li><li><a href="/t/baltimore-orioles.html">BAL</a></li><li><a href="/t/boston-red-sox.html">BOS</a></li><li><a href="/t/chicago-cubs.html">CHC</a></li><li><a href="/t/chicago-white-sox.html">CWS</a></li><li><a href="/t/cincinnati-reds.html">CIN</a></li><li><a href="/t/cleveland-guardians.html">CLE</a></li><li><a href="/t/colorado-rockies.html">COL</a></li><li><a href="/t/detroit-tigers.html">DET</a></li><li><a href="/t/houston-astros.html">HOU</a></li><li><a href="/t/kansas-city-royals.html">KC</a></li><li><a href="/t/los-angeles-angels.html">LAA</a></li><li><a href="/t/los-angeles-dodgers.html">LAD</a></li><li><a href="/t/miami-marlins.html">MIA</a></li><li><a href="/t/milwaukee-brewers.html">MIL</a></li><li><a href="/t/minnesota-twins.html">MIN</a></li><li><a href="/t/new-york-mets.html">NYM</a></li><li><a href="/t/new-york-yankees.html">NYY</a></li><li><a href="/t/philadelphia-phillies.html">PHI</a></li><li><a href="/t/pittsburgh-pirates.html">PIT</a></li><li><a href="/t/san-diego-padres.html">SD</a></li><li><a href="/t/san-francisco-giants.html">SF</a></li><li><a href="/t/seattle-mariners.html">SEA</a></li><li><a href="/t/st-louis-cardinals.html">STL</a></li><li><a href="/t/tampa-bay-rays.html">TB</a></li><li><a href="/t/texas-rangers.html">TEX</a></li><li><a href="/t/toronto-blue-jays.html">TOR</a></li><li><a href="/t/washington-nationals.html">WSH</a></li></ul><div class="site-links"><a href="/service-time.html">What is service time?</a><a href="/send-a-player-down.html">Can a team send a player down?</a><a href="/about.html">About</a><a href="/neutrality.html">Neutrality</a><a href="/privacy.html">Privacy</a><a href="mailto:contact@bigleagueservicetime.com">contact@bigleagueservicetime.com</a></div></div></details></div><nav class="tabs" aria-label="Main"><a href="/">Players</a><a href="/t/">Clubs</a><a href="/arbitration-eligible.html">Arbitration</a><a href="/super-two.html">Super Two</a><a class="hide-phone" href="/free-agents.html">Free agents</a><a class="hide-phone" href="/options.html">Options</a><a class="hide-phone" href="/lockout.html">Lockout</a><a class="hide-phone" href="/alumni/">Previous players</a></nav></header><div class="wrap">
+  <nav class="crumbs"><a href="/">Players</a><span>/</span><b>DFA outcomes</b></nav>
+
+  <h1>MLB DFA tracker</h1>
+  <p class="lede">Recent designated-for-assignment moves, and what happened to each player afterward.</p>
+<section id="pending">
+  <h2>Still in the window</h2>
+  <p>No designation in this window is still waiting on an outcome.</p>
+</section>
+<nav class="list-links dfa-clubs" aria-label="Clubs"><a href="#recent">All clubs</a> · <a href="#arizona-diamondbacks">Arizona Diamondbacks</a> · <a href="#atlanta-braves">Atlanta Braves</a> · <a href="#athletics">Athletics</a> · <a href="#boston-red-sox">Boston Red Sox</a> · <a href="#chicago-cubs">Chicago Cubs</a> · <a href="#chicago-white-sox">Chicago White Sox</a> · <a href="#colorado-rockies">Colorado Rockies</a> · <a href="#detroit-tigers">Detroit Tigers</a> · <a href="#houston-astros">Houston Astros</a> · <a href="#kansas-city-royals">Kansas City Royals</a> · <a href="#los-angeles-dodgers">Los Angeles Dodgers</a> · <a href="#milwaukee-brewers">Milwaukee Brewers</a> · <a href="#new-york-mets">New York Mets</a> · <a href="#new-york-yankees">New York Yankees</a> · <a href="#philadelphia-phillies">Philadelphia Phillies</a> · <a href="#san-francisco-giants">San Francisco Giants</a> · <a href="#st-louis-cardinals">St. Louis Cardinals</a> · <a href="#tampa-bay-rays">Tampa Bay Rays</a> · <a href="#toronto-blue-jays">Toronto Blue Jays</a> · <a href="#washington-nationals">Washington Nationals</a></nav>
+<section id="recent">
+  <h2>Recent designations</h2>
+<div class="tbl-wrap">
+<table class="pp-tbl">
+  <thead><tr><th scope="col">Player</th><th scope="col">Club</th><th scope="col">DFA date</th><th scope="col">Outcome</th><th scope="col">Outcome date</th><th scope="col">New club</th><th scope="col">Service time</th></tr></thead>
+  <tbody>
+    <tr><td><a href="/p/623474-jimmy-herget.html">Jimmy Herget</a></td><td>Colorado Rockies</td><td><time class="dfa-date" datetime="2026-11-20">November 20, 2026</time></td><td>Elected free agency</td><td><time datetime="2026-11-20">November 20, 2026</time></td><td></td><td>5.050</td></tr>
+    <tr><td><a href="/p/695445-chase-lee.html">Chase Lee</a></td><td>Toronto Blue Jays</td><td><time class="dfa-date" datetime="2026-11-19">November 19, 2026</time></td><td>Traded</td><td><time datetime="2026-11-20">November 20, 2026</time></td><td>Colorado Rockies</td><td>0.115</td></tr>
+    <tr><td><a href="/p/657136-connor-wong.html">Connor Wong</a></td><td>Boston Red Sox</td><td><time class="dfa-date" datetime="2026-11-18">November 18, 2026</time></td><td>Elected free agency</td><td><time datetime="2026-11-20">November 20, 2026</time></td><td></td><td>4.075</td></tr>
+    <tr><td><a href="/p/673929-jordan-leasure.html">Jordan Leasure</a></td><td>Chicago White Sox</td><td><time class="dfa-date" datetime="2026-11-18">November 18, 2026</time></td><td>Traded</td><td><time datetime="2026-11-20">November 20, 2026</time></td><td>Philadelphia Phillies</td><td>2.153</td></tr>
+    <tr><td><a href="/p/664728-kyle-isbel.html">Kyle Isbel</a></td><td>Kansas City Royals</td><td><time class="dfa-date" datetime="2026-11-18">November 18, 2026</time></td><td>Elected free agency</td><td><time datetime="2026-11-20">November 20, 2026</time></td><td></td><td>5.043</td></tr>
+    <tr><td><a href="/p/804556-braden-nett.html">Braden Nett</a></td><td>Athletics</td><td><time class="dfa-date" datetime="2026-11-17">November 17, 2026</time></td><td>Claimed off waivers</td><td><time datetime="2026-11-19">November 19, 2026</time></td><td>Baltimore Orioles</td><td>0.000</td></tr>
+    <tr><td><a href="/p/694820-braxton-roxby.html">Braxton Roxby</a></td><td>Washington Nationals</td><td><time class="dfa-date" datetime="2026-11-17">November 17, 2026</time></td><td>Traded</td><td><time datetime="2026-11-20">November 20, 2026</time></td><td>Chicago Cubs</td><td>0.033</td></tr>
+    <tr><td><a href="/p/687223-carson-palmquist.html">Carson Palmquist</a></td><td>Washington Nationals</td><td><time class="dfa-date" datetime="2026-11-17">November 17, 2026</time></td><td>Elected free agency</td><td><time datetime="2026-11-20">November 20, 2026</time></td><td></td><td>0.080</td></tr>
+    <tr><td><a href="/p/686551-christian-cairo.html">Christian Cairo</a></td><td>Los Angeles Dodgers</td><td><time class="dfa-date" datetime="2026-11-17">November 17, 2026</time></td><td>Claimed off waivers</td><td><time datetime="2026-11-19">November 19, 2026</time></td><td>Toronto Blue Jays</td><td>0.003</td></tr>
+    <tr><td><a href="/p/683766-christian-koss.html">Christian Koss</a></td><td>San Francisco Giants</td><td><time class="dfa-date" datetime="2026-11-17">November 17, 2026</time></td><td>Traded</td><td><time datetime="2026-11-20">November 20, 2026</time></td><td>Tampa Bay Rays</td><td>1.140</td></tr>
+    <tr><td><a href="/p/697811-dylan-ross.html">Dylan Ross</a></td><td>New York Mets</td><td><time class="dfa-date" datetime="2026-11-17">November 17, 2026</time></td><td>Elected free agency</td><td><time datetime="2026-11-20">November 20, 2026</time></td><td></td><td>0.001</td></tr>
+    <tr><td><a href="/p/681402-gus-varland.html">Gus Varland</a></td><td>Washington Nationals</td><td><time class="dfa-date" datetime="2026-11-17">November 17, 2026</time></td><td>Claimed off waivers</td><td><time datetime="2026-11-20">November 20, 2026</time></td><td>New York Mets</td><td>1.095</td></tr>
+    <tr><td><a href="/p/696522-hayden-juenger.html">Hayden Juenger</a></td><td>Athletics</td><td><time class="dfa-date" datetime="2026-11-17">November 17, 2026</time></td><td>Outrighted to the minors</td><td><time datetime="2026-11-20">November 20, 2026</time></td><td></td><td>0.037</td></tr>
+    <tr><td><a href="/p/690291-jace-jung.html">Jace Jung</a></td><td>Detroit Tigers</td><td><time class="dfa-date" datetime="2026-11-17">November 17, 2026</time></td><td>Traded</td><td><time datetime="2026-11-18">November 18, 2026</time></td><td>Los Angeles Angels</td><td>0.087</td></tr>
+    <tr><td><a href="/p/664776-jake-cousins.html">Jake Cousins</a></td><td>Los Angeles Dodgers</td><td><time class="dfa-date" datetime="2026-11-17">November 17, 2026</time></td><td>Elected free agency</td><td><time datetime="2026-11-20">November 20, 2026</time></td><td></td><td>4.078</td></tr>
+    <tr><td><a href="/p/805725-jake-miller.html">Jake Miller</a></td><td>Detroit Tigers</td><td><time class="dfa-date" datetime="2026-11-17">November 17, 2026</time></td><td>Elected free agency</td><td><time datetime="2026-11-20">November 20, 2026</time></td><td></td><td>0.015</td></tr>
+    <tr><td><a href="/p/663698-joey-bart.html">Joey Bart</a></td><td>Chicago White Sox</td><td><time class="dfa-date" datetime="2026-11-17">November 17, 2026</time></td><td>Claimed off waivers</td><td><time datetime="2026-11-20">November 20, 2026</time></td><td>Chicago Cubs</td><td>5.004</td></tr>
+    <tr><td><a href="/p/680686-josiah-gray.html">Josiah Gray</a></td><td>Washington Nationals</td><td><time class="dfa-date" datetime="2026-11-17">November 17, 2026</time></td><td>Elected free agency</td><td><time datetime="2026-11-20">November 20, 2026</time></td><td></td><td>5.076</td></tr>
+    <tr><td><a href="/p/663837-matt-vierling.html">Matt Vierling</a></td><td>Detroit Tigers</td><td><time class="dfa-date" datetime="2026-11-17">November 17, 2026</time></td><td>Elected free agency</td><td><time datetime="2026-11-20">November 20, 2026</time></td><td></td><td>5.020</td></tr>
+    <tr><td><a href="/p/691008-max-rajcic.html">Max Rajcic</a></td><td>St. Louis Cardinals</td><td><time class="dfa-date" datetime="2026-11-17">November 17, 2026</time></td><td>Elected free agency</td><td><time datetime="2026-11-20">November 20, 2026</time></td><td></td><td>0.102</td></tr>
+    <tr><td><a href="/p/683232-nick-mears.html">Nick Mears</a></td><td>Kansas City Royals</td><td><time class="dfa-date" datetime="2026-11-17">November 17, 2026</time></td><td>Elected free agency</td><td><time datetime="2026-11-20">November 20, 2026</time></td><td></td><td>5.012</td></tr>
+    <tr><td><a href="/p/592858-rowan-wick.html">Rowan Wick</a></td><td>San Francisco Giants</td><td><time class="dfa-date" datetime="2026-11-17">November 17, 2026</time></td><td>Elected free agency</td><td><time datetime="2026-11-20">November 20, 2026</time></td><td></td><td>4.114</td></tr>
+    <tr><td><a href="/p/700242-trey-sweeney.html">Trey Sweeney</a></td><td>Detroit Tigers</td><td><time class="dfa-date" datetime="2026-11-17">November 17, 2026</time></td><td>Elected free agency</td><td><time datetime="2026-11-20">November 20, 2026</time></td><td></td><td>2.046</td></tr>
+    <tr><td><a href="/p/814305-yunior-tur.html">Yunior Tur</a></td><td>Athletics</td><td><time class="dfa-date" datetime="2026-11-17">November 17, 2026</time></td><td>Claimed off waivers</td><td><time datetime="2026-11-20">November 20, 2026</time></td><td>New York Mets</td><td>0.039</td></tr>
+    <tr><td><a href="/p/693312-kyle-nicolas.html">Kyle Nicolas</a></td><td>Washington Nationals</td><td><time class="dfa-date" datetime="2026-11-06">November 6, 2026</time></td><td>Released</td><td><time datetime="2026-11-12">November 12, 2026</time></td><td></td><td>1.104</td></tr>
+    <tr><td><a href="/p/694633-chase-hampton.html">Chase Hampton</a></td><td>St. Louis Cardinals</td><td><time class="dfa-date" datetime="2026-11-02">November 2, 2026</time></td><td>Claimed off waivers</td><td><time datetime="2026-11-02">November 2, 2026</time></td><td>Baltimore Orioles</td><td>0.014</td></tr>
+    <tr><td><a href="/p/686551-christian-cairo.html">Christian Cairo</a></td><td>New York Mets</td><td><time class="dfa-date" datetime="2026-11-02">November 2, 2026</time></td><td>Claimed off waivers</td><td><time datetime="2026-11-09">November 9, 2026</time></td><td>Los Angeles Dodgers</td><td>0.003</td></tr>
+    <tr><td><a href="/p/700842-eduardo-rivera.html">Eduardo Rivera</a></td><td>Boston Red Sox</td><td><time class="dfa-date" datetime="2026-11-02">November 2, 2026</time></td><td>Traded</td><td><time datetime="2026-11-03">November 3, 2026</time></td><td>St. Louis Cardinals</td><td>0.040</td></tr>
+    <tr><td><a href="/p/677588-jose-tena.html">José Tena</a></td><td>Washington Nationals</td><td><time class="dfa-date" datetime="2026-11-02">November 2, 2026</time></td><td>Claimed off waivers</td><td><time datetime="2026-11-06">November 6, 2026</time></td><td>Cleveland Guardians</td><td>2.033</td></tr>
+    <tr><td><a href="/p/686610-ken-waldichuk.html">Ken Waldichuk</a></td><td>Washington Nationals</td><td><time class="dfa-date" datetime="2026-11-02">November 2, 2026</time></td><td>Elected free agency</td><td><time datetime="2026-11-02">November 2, 2026</time></td><td></td><td>2.149</td></tr>
+    <tr><td><a href="/p/677347-kyren-paris.html">Kyren Paris</a></td><td>New York Mets</td><td><time class="dfa-date" datetime="2026-11-02">November 2, 2026</time></td><td>Outrighted to the minors</td><td><time datetime="2026-11-09">November 9, 2026</time></td><td></td><td>0.151</td></tr>
+    <tr><td><a href="/p/676571-pj-poulin.html">PJ Poulin</a></td><td>Washington Nationals</td><td><time class="dfa-date" datetime="2026-11-02">November 2, 2026</time></td><td>Elected free agency</td><td><time datetime="2026-11-02">November 2, 2026</time></td><td></td><td>1.057</td></tr>
+    <tr><td><a href="/p/665665-reiver-sanmartin.html">Reiver Sanmartin</a></td><td>San Francisco Giants</td><td><time class="dfa-date" datetime="2026-11-02">November 2, 2026</time></td><td>Traded</td><td><time datetime="2026-11-06">November 6, 2026</time></td><td>Washington Nationals</td><td>2.115</td></tr>
+    <tr><td><a href="/p/700270-yilber-diaz.html">Yilber Díaz</a></td><td>Detroit Tigers</td><td><time class="dfa-date" datetime="2026-11-02">November 2, 2026</time></td><td>Outrighted to the minors</td><td><time datetime="2026-11-06">November 6, 2026</time></td><td></td><td>0.067</td></tr>
+    <tr><td><a href="/p/677161-zack-kelly.html">Zack Kelly</a></td><td>Boston Red Sox</td><td><time class="dfa-date" datetime="2026-11-02">November 2, 2026</time></td><td>Released</td><td><time datetime="2026-11-06">November 6, 2026</time></td><td></td><td>3.057</td></tr>
+    <tr><td><a href="/p/663992-richard-lovelady.html">Richard Lovelady</a></td><td>Washington Nationals</td><td><time class="dfa-date" datetime="2026-11-01">November 1, 2026</time></td><td>Elected free agency</td><td><time datetime="2026-11-02">November 2, 2026</time></td><td></td><td>4.046</td></tr>
+    <tr><td><a href="/p/665506-cristian-pache.html">Cristian Pache</a></td><td>New York Mets</td><td><time class="dfa-date" datetime="2026-10-29">October 29, 2026</time></td><td>Elected free agency</td><td><time datetime="2026-11-02">November 2, 2026</time></td><td></td><td>3.081</td></tr>
+    <tr><td><a href="/p/663897-luke-williams.html">Luke Williams</a></td><td>Atlanta Braves</td><td><time class="dfa-date" datetime="2026-10-09">October 9, 2026</time></td><td>Elected free agency</td><td><time datetime="2026-10-15">October 15, 2026</time></td><td></td><td>3.034</td></tr>
+    <tr><td>Alexander Cornielle</td><td>New York Yankees</td><td><time class="dfa-date" datetime="2026-09-29">September 29, 2026</time></td><td>Outrighted to the minors</td><td><time datetime="2026-10-01">October 1, 2026</time></td><td></td><td>0.003</td></tr>
+    <tr><td><a href="/p/622694-elieser-hernandez.html">Elieser Hernández</a></td><td>Atlanta Braves</td><td><time class="dfa-date" datetime="2026-09-29">September 29, 2026</time></td><td>Elected free agency</td><td><time datetime="2026-09-30">September 30, 2026</time></td><td></td><td>5.077</td></tr>
+    <tr><td><a href="/p/676568-ricky-vanasco.html">Ricky Vanasco</a></td><td>Atlanta Braves</td><td><time class="dfa-date" datetime="2026-09-29">September 29, 2026</time></td><td>Elected free agency</td><td><time datetime="2026-09-30">September 30, 2026</time></td><td></td><td>0.044</td></tr>
+    <tr><td><a href="/p/681432-luke-little.html">Luke Little</a></td><td>Kansas City Royals</td><td><time class="dfa-date" datetime="2026-09-28">September 28, 2026</time></td><td>Outrighted to the minors</td><td><time datetime="2026-10-01">October 1, 2026</time></td><td></td><td>1.030</td></tr>
+    <tr><td><a href="/p/664353-jose-urquidy.html">José Urquidy</a></td><td>Philadelphia Phillies</td><td><time class="dfa-date" datetime="2026-09-27">September 27, 2026</time></td><td>Elected free agency</td><td><time datetime="2026-09-30">September 30, 2026</time></td><td></td><td>6.119</td></tr>
+    <tr><td>Antoine Kelly</td><td>Chicago Cubs</td><td><time class="dfa-date" datetime="2026-09-26">September 26, 2026</time></td><td>Elected free agency</td><td><time datetime="2026-09-30">September 30, 2026</time></td><td></td><td>0.005</td></tr>
+    <tr><td><a href="/p/694633-chase-hampton.html">Chase Hampton</a></td><td>Washington Nationals</td><td><time class="dfa-date" datetime="2026-09-26">September 26, 2026</time></td><td>Claimed off waivers</td><td><time datetime="2026-09-28">September 28, 2026</time></td><td>St. Louis Cardinals</td><td>0.014</td></tr>
+    <tr><td><a href="/p/660821-jesus-sanchez.html">Jesús Sánchez</a></td><td>Arizona Diamondbacks</td><td><time class="dfa-date" datetime="2026-09-26">September 26, 2026</time></td><td>Outrighted to the minors</td><td><time datetime="2026-09-29">September 29, 2026</time></td><td></td><td>5.115</td></tr>
+    <tr><td><a href="/p/663765-jake-woodford.html">Jake Woodford</a></td><td>Tampa Bay Rays</td><td><time class="dfa-date" datetime="2026-09-25">September 25, 2026</time></td><td>Elected free agency</td><td><time datetime="2026-09-30">September 30, 2026</time></td><td></td><td>4.075</td></tr>
+    <tr><td><a href="/p/680689-lyon-richardson.html">Lyon Richardson</a></td><td>Milwaukee Brewers</td><td><time class="dfa-date" datetime="2026-09-25">September 25, 2026</time></td><td>Elected free agency</td><td><time datetime="2026-09-28">September 28, 2026</time></td><td></td><td>0.123</td></tr>
+    <tr><td><a href="/p/669920-jason-alexander.html">Jason Alexander</a></td><td>Houston Astros</td><td><time class="dfa-date" datetime="2026-09-24">September 24, 2026</time></td><td>Outrighted to the minors</td><td><time datetime="2026-09-27">September 27, 2026</time></td><td></td><td>1.132</td></tr>
+  </tbody>
+</table>
+</div>
+</section>
+<section id="arizona-diamondbacks">
+  <h2>Arizona Diamondbacks</h2>
+<div class="tbl-wrap">
+<table class="pp-tbl">
+  <thead><tr><th scope="col">Player</th><th scope="col">Club</th><th scope="col">DFA date</th><th scope="col">Outcome</th><th scope="col">Outcome date</th><th scope="col">New club</th><th scope="col">Service time</th></tr></thead>
+  <tbody>
+    <tr><td><a href="/p/660821-jesus-sanchez.html">Jesús Sánchez</a></td><td>Arizona Diamondbacks</td><td><time class="dfa-date" datetime="2026-09-26">September 26, 2026</time></td><td>Outrighted to the minors</td><td><time datetime="2026-09-29">September 29, 2026</time></td><td></td><td>5.115</td></tr>
+  </tbody>
+</table>
+</div>
+</section>
+<section id="atlanta-braves">
+  <h2>Atlanta Braves</h2>
+<div class="tbl-wrap">
+<table class="pp-tbl">
+  <thead><tr><th scope="col">Player</th><th scope="col">Club</th><th scope="col">DFA date</th><th scope="col">Outcome</th><th scope="col">Outcome date</th><th scope="col">New club</th><th scope="col">Service time</th></tr></thead>
+  <tbody>
+    <tr><td><a href="/p/663897-luke-williams.html">Luke Williams</a></td><td>Atlanta Braves</td><td><time class="dfa-date" datetime="2026-10-09">October 9, 2026</time></td><td>Elected free agency</td><td><time datetime="2026-10-15">October 15, 2026</time></td><td></td><td>3.034</td></tr>
+    <tr><td><a href="/p/622694-elieser-hernandez.html">Elieser Hernández</a></td><td>Atlanta Braves</td><td><time class="dfa-date" datetime="2026-09-29">September 29, 2026</time></td><td>Elected free agency</td><td><time datetime="2026-09-30">September 30, 2026</time></td><td></td><td>5.077</td></tr>
+    <tr><td><a href="/p/676568-ricky-vanasco.html">Ricky Vanasco</a></td><td>Atlanta Braves</td><td><time class="dfa-date" datetime="2026-09-29">September 29, 2026</time></td><td>Elected free agency</td><td><time datetime="2026-09-30">September 30, 2026</time></td><td></td><td>0.044</td></tr>
+  </tbody>
+</table>
+</div>
+</section>
+<section id="athletics">
+  <h2>Athletics</h2>
+<div class="tbl-wrap">
+<table class="pp-tbl">
+  <thead><tr><th scope="col">Player</th><th scope="col">Club</th><th scope="col">DFA date</th><th scope="col">Outcome</th><th scope="col">Outcome date</th><th scope="col">New club</th><th scope="col">Service time</th></tr></thead>
+  <tbody>
+    <tr><td><a href="/p/804556-braden-nett.html">Braden Nett</a></td><td>Athletics</td><td><time class="dfa-date" datetime="2026-11-17">November 17, 2026</time></td><td>Claimed off waivers</td><td><time datetime="2026-11-19">November 19, 2026</time></td><td>Baltimore Orioles</td><td>0.000</td></tr>
+    <tr><td><a href="/p/696522-hayden-juenger.html">Hayden Juenger</a></td><td>Athletics</td><td><time class="dfa-date" datetime="2026-11-17">November 17, 2026</time></td><td>Outrighted to the minors</td><td><time datetime="2026-11-20">November 20, 2026</time></td><td></td><td>0.037</td></tr>
+    <tr><td><a href="/p/814305-yunior-tur.html">Yunior Tur</a></td><td>Athletics</td><td><time class="dfa-date" datetime="2026-11-17">November 17, 2026</time></td><td>Claimed off waivers</td><td><time datetime="2026-11-20">November 20, 2026</time></td><td>New York Mets</td><td>0.039</td></tr>
+  </tbody>
+</table>
+</div>
+</section>
+<section id="boston-red-sox">
+  <h2>Boston Red Sox</h2>
+<div class="tbl-wrap">
+<table class="pp-tbl">
+  <thead><tr><th scope="col">Player</th><th scope="col">Club</th><th scope="col">DFA date</th><th scope="col">Outcome</th><th scope="col">Outcome date</th><th scope="col">New club</th><th scope="col">Service time</th></tr></thead>
+  <tbody>
+    <tr><td><a href="/p/657136-connor-wong.html">Connor Wong</a></td><td>Boston Red Sox</td><td><time class="dfa-date" datetime="2026-11-18">November 18, 2026</time></td><td>Elected free agency</td><td><time datetime="2026-11-20">November 20, 2026</time></td><td></td><td>4.075</td></tr>
+    <tr><td><a href="/p/700842-eduardo-rivera.html">Eduardo Rivera</a></td><td>Boston Red Sox</td><td><time class="dfa-date" datetime="2026-11-02">November 2, 2026</time></td><td>Traded</td><td><time datetime="2026-11-03">November 3, 2026</time></td><td>St. Louis Cardinals</td><td>0.040</td></tr>
+    <tr><td><a href="/p/677161-zack-kelly.html">Zack Kelly</a></td><td>Boston Red Sox</td><td><time class="dfa-date" datetime="2026-11-02">November 2, 2026</time></td><td>Released</td><td><time datetime="2026-11-06">November 6, 2026</time></td><td></td><td>3.057</td></tr>
+  </tbody>
+</table>
+</div>
+</section>
+<section id="chicago-cubs">
+  <h2>Chicago Cubs</h2>
+<div class="tbl-wrap">
+<table class="pp-tbl">
+  <thead><tr><th scope="col">Player</th><th scope="col">Club</th><th scope="col">DFA date</th><th scope="col">Outcome</th><th scope="col">Outcome date</th><th scope="col">New club</th><th scope="col">Service time</th></tr></thead>
+  <tbody>
+    <tr><td>Antoine Kelly</td><td>Chicago Cubs</td><td><time class="dfa-date" datetime="2026-09-26">September 26, 2026</time></td><td>Elected free agency</td><td><time datetime="2026-09-30">September 30, 2026</time></td><td></td><td>0.005</td></tr>
+  </tbody>
+</table>
+</div>
+</section>
+<section id="chicago-white-sox">
+  <h2>Chicago White Sox</h2>
+<div class="tbl-wrap">
+<table class="pp-tbl">
+  <thead><tr><th scope="col">Player</th><th scope="col">Club</th><th scope="col">DFA date</th><th scope="col">Outcome</th><th scope="col">Outcome date</th><th scope="col">New club</th><th scope="col">Service time</th></tr></thead>
+  <tbody>
+    <tr><td><a href="/p/673929-jordan-leasure.html">Jordan Leasure</a></td><td>Chicago White Sox</td><td><time class="dfa-date" datetime="2026-11-18">November 18, 2026</time></td><td>Traded</td><td><time datetime="2026-11-20">November 20, 2026</time></td><td>Philadelphia Phillies</td><td>2.153</td></tr>
+    <tr><td><a href="/p/663698-joey-bart.html">Joey Bart</a></td><td>Chicago White Sox</td><td><time class="dfa-date" datetime="2026-11-17">November 17, 2026</time></td><td>Claimed off waivers</td><td><time datetime="2026-11-20">November 20, 2026</time></td><td>Chicago Cubs</td><td>5.004</td></tr>
+  </tbody>
+</table>
+</div>
+</section>
+<section id="colorado-rockies">
+  <h2>Colorado Rockies</h2>
+<div class="tbl-wrap">
+<table class="pp-tbl">
+  <thead><tr><th scope="col">Player</th><th scope="col">Club</th><th scope="col">DFA date</th><th scope="col">Outcome</th><th scope="col">Outcome date</th><th scope="col">New club</th><th scope="col">Service time</th></tr></thead>
+  <tbody>
+    <tr><td><a href="/p/623474-jimmy-herget.html">Jimmy Herget</a></td><td>Colorado Rockies</td><td><time class="dfa-date" datetime="2026-11-20">November 20, 2026</time></td><td>Elected free agency</td><td><time datetime="2026-11-20">November 20, 2026</time></td><td></td><td>5.050</td></tr>
+  </tbody>
+</table>
+</div>
+</section>
+<section id="detroit-tigers">
+  <h2>Detroit Tigers</h2>
+<div class="tbl-wrap">
+<table class="pp-tbl">
+  <thead><tr><th scope="col">Player</th><th scope="col">Club</th><th scope="col">DFA date</th><th scope="col">Outcome</th><th scope="col">Outcome date</th><th scope="col">New club</th><th scope="col">Service time</th></tr></thead>
+  <tbody>
+    <tr><td><a href="/p/690291-jace-jung.html">Jace Jung</a></td><td>Detroit Tigers</td><td><time class="dfa-date" datetime="2026-11-17">November 17, 2026</time></td><td>Traded</td><td><time datetime="2026-11-18">November 18, 2026</time></td><td>Los Angeles Angels</td><td>0.087</td></tr>
+    <tr><td><a href="/p/805725-jake-miller.html">Jake Miller</a></td><td>Detroit Tigers</td><td><time class="dfa-date" datetime="2026-11-17">November 17, 2026</time></td><td>Elected free agency</td><td><time datetime="2026-11-20">November 20, 2026</time></td><td></td><td>0.015</td></tr>
+    <tr><td><a href="/p/663837-matt-vierling.html">Matt Vierling</a></td><td>Detroit Tigers</td><td><time class="dfa-date" datetime="2026-11-17">November 17, 2026</time></td><td>Elected free agency</td><td><time datetime="2026-11-20">November 20, 2026</time></td><td></td><td>5.020</td></tr>
+    <tr><td><a href="/p/700242-trey-sweeney.html">Trey Sweeney</a></td><td>Detroit Tigers</td><td><time class="dfa-date" datetime="2026-11-17">November 17, 2026</time></td><td>Elected free agency</td><td><time datetime="2026-11-20">November 20, 2026</time></td><td></td><td>2.046</td></tr>
+    <tr><td><a href="/p/700270-yilber-diaz.html">Yilber Díaz</a></td><td>Detroit Tigers</td><td><time class="dfa-date" datetime="2026-11-02">November 2, 2026</time></td><td>Outrighted to the minors</td><td><time datetime="2026-11-06">November 6, 2026</time></td><td></td><td>0.067</td></tr>
+  </tbody>
+</table>
+</div>
+</section>
+<section id="houston-astros">
+  <h2>Houston Astros</h2>
+<div class="tbl-wrap">
+<table class="pp-tbl">
+  <thead><tr><th scope="col">Player</th><th scope="col">Club</th><th scope="col">DFA date</th><th scope="col">Outcome</th><th scope="col">Outcome date</th><th scope="col">New club</th><th scope="col">Service time</th></tr></thead>
+  <tbody>
+    <tr><td><a href="/p/669920-jason-alexander.html">Jason Alexander</a></td><td>Houston Astros</td><td><time class="dfa-date" datetime="2026-09-24">September 24, 2026</time></td><td>Outrighted to the minors</td><td><time datetime="2026-09-27">September 27, 2026</time></td><td></td><td>1.132</td></tr>
+  </tbody>
+</table>
+</div>
+</section>
+<section id="kansas-city-royals">
+  <h2>Kansas City Royals</h2>
+<div class="tbl-wrap">
+<table class="pp-tbl">
+  <thead><tr><th scope="col">Player</th><th scope="col">Club</th><th scope="col">DFA date</th><th scope="col">Outcome</th><th scope="col">Outcome date</th><th scope="col">New club</th><th scope="col">Service time</th></tr></thead>
+  <tbody>
+    <tr><td><a href="/p/664728-kyle-isbel.html">Kyle Isbel</a></td><td>Kansas City Royals</td><td><time class="dfa-date" datetime="2026-11-18">November 18, 2026</time></td><td>Elected free agency</td><td><time datetime="2026-11-20">November 20, 2026</time></td><td></td><td>5.043</td></tr>
+    <tr><td><a href="/p/683232-nick-mears.html">Nick Mears</a></td><td>Kansas City Royals</td><td><time class="dfa-date" datetime="2026-11-17">November 17, 2026</time></td><td>Elected free agency</td><td><time datetime="2026-11-20">November 20, 2026</time></td><td></td><td>5.012</td></tr>
+    <tr><td><a href="/p/681432-luke-little.html">Luke Little</a></td><td>Kansas City Royals</td><td><time class="dfa-date" datetime="2026-09-28">September 28, 2026</time></td><td>Outrighted to the minors</td><td><time datetime="2026-10-01">October 1, 2026</time></td><td></td><td>1.030</td></tr>
+  </tbody>
+</table>
+</div>
+</section>
+<section id="los-angeles-dodgers">
+  <h2>Los Angeles Dodgers</h2>
+<div class="tbl-wrap">
+<table class="pp-tbl">
+  <thead><tr><th scope="col">Player</th><th scope="col">Club</th><th scope="col">DFA date</th><th scope="col">Outcome</th><th scope="col">Outcome date</th><th scope="col">New club</th><th scope="col">Service time</th></tr></thead>
+  <tbody>
+    <tr><td><a href="/p/686551-christian-cairo.html">Christian Cairo</a></td><td>Los Angeles Dodgers</td><td><time class="dfa-date" datetime="2026-11-17">November 17, 2026</time></td><td>Claimed off waivers</td><td><time datetime="2026-11-19">November 19, 2026</time></td><td>Toronto Blue Jays</td><td>0.003</td></tr>
+    <tr><td><a href="/p/664776-jake-cousins.html">Jake Cousins</a></td><td>Los Angeles Dodgers</td><td><time class="dfa-date" datetime="2026-11-17">November 17, 2026</time></td><td>Elected free agency</td><td><time datetime="2026-11-20">November 20, 2026</time></td><td></td><td>4.078</td></tr>
+  </tbody>
+</table>
+</div>
+</section>
+<section id="milwaukee-brewers">
+  <h2>Milwaukee Brewers</h2>
+<div class="tbl-wrap">
+<table class="pp-tbl">
+  <thead><tr><th scope="col">Player</th><th scope="col">Club</th><th scope="col">DFA date</th><th scope="col">Outcome</th><th scope="col">Outcome date</th><th scope="col">New club</th><th scope="col">Service time</th></tr></thead>
+  <tbody>
+    <tr><td><a href="/p/680689-lyon-richardson.html">Lyon Richardson</a></td><td>Milwaukee Brewers</td><td><time class="dfa-date" datetime="2026-09-25">September 25, 2026</time></td><td>Elected free agency</td><td><time datetime="2026-09-28">September 28, 2026</time></td><td></td><td>0.123</td></tr>
+  </tbody>
+</table>
+</div>
+</section>
+<section id="new-york-mets">
+  <h2>New York Mets</h2>
+<div class="tbl-wrap">
+<table class="pp-tbl">
+  <thead><tr><th scope="col">Player</th><th scope="col">Club</th><th scope="col">DFA date</th><th scope="col">Outcome</th><th scope="col">Outcome date</th><th scope="col">New club</th><th scope="col">Service time</th></tr></thead>
+  <tbody>
+    <tr><td><a href="/p/697811-dylan-ross.html">Dylan Ross</a></td><td>New York Mets</td><td><time class="dfa-date" datetime="2026-11-17">November 17, 2026</time></td><td>Elected free agency</td><td><time datetime="2026-11-20">November 20, 2026</time></td><td></td><td>0.001</td></tr>
+    <tr><td><a href="/p/686551-christian-cairo.html">Christian Cairo</a></td><td>New York Mets</td><td><time class="dfa-date" datetime="2026-11-02">November 2, 2026</time></td><td>Claimed off waivers</td><td><time datetime="2026-11-09">November 9, 2026</time></td><td>Los Angeles Dodgers</td><td>0.003</td></tr>
+    <tr><td><a href="/p/677347-kyren-paris.html">Kyren Paris</a></td><td>New York Mets</td><td><time class="dfa-date" datetime="2026-11-02">November 2, 2026</time></td><td>Outrighted to the minors</td><td><time datetime="2026-11-09">November 9, 2026</time></td><td></td><td>0.151</td></tr>
+    <tr><td><a href="/p/665506-cristian-pache.html">Cristian Pache</a></td><td>New York Mets</td><td><time class="dfa-date" datetime="2026-10-29">October 29, 2026</time></td><td>Elected free agency</td><td><time datetime="2026-11-02">November 2, 2026</time></td><td></td><td>3.081</td></tr>
+  </tbody>
+</table>
+</div>
+</section>
+<section id="new-york-yankees">
+  <h2>New York Yankees</h2>
+<div class="tbl-wrap">
+<table class="pp-tbl">
+  <thead><tr><th scope="col">Player</th><th scope="col">Club</th><th scope="col">DFA date</th><th scope="col">Outcome</th><th scope="col">Outcome date</th><th scope="col">New club</th><th scope="col">Service time</th></tr></thead>
+  <tbody>
+    <tr><td>Alexander Cornielle</td><td>New York Yankees</td><td><time class="dfa-date" datetime="2026-09-29">September 29, 2026</time></td><td>Outrighted to the minors</td><td><time datetime="2026-10-01">October 1, 2026</time></td><td></td><td>0.003</td></tr>
+  </tbody>
+</table>
+</div>
+</section>
+<section id="philadelphia-phillies">
+  <h2>Philadelphia Phillies</h2>
+<div class="tbl-wrap">
+<table class="pp-tbl">
+  <thead><tr><th scope="col">Player</th><th scope="col">Club</th><th scope="col">DFA date</th><th scope="col">Outcome</th><th scope="col">Outcome date</th><th scope="col">New club</th><th scope="col">Service time</th></tr></thead>
+  <tbody>
+    <tr><td><a href="/p/664353-jose-urquidy.html">José Urquidy</a></td><td>Philadelphia Phillies</td><td><time class="dfa-date" datetime="2026-09-27">September 27, 2026</time></td><td>Elected free agency</td><td><time datetime="2026-09-30">September 30, 2026</time></td><td></td><td>6.119</td></tr>
+  </tbody>
+</table>
+</div>
+</section>
+<section id="san-francisco-giants">
+  <h2>San Francisco Giants</h2>
+<div class="tbl-wrap">
+<table class="pp-tbl">
+  <thead><tr><th scope="col">Player</th><th scope="col">Club</th><th scope="col">DFA date</th><th scope="col">Outcome</th><th scope="col">Outcome date</th><th scope="col">New club</th><th scope="col">Service time</th></tr></thead>
+  <tbody>
+    <tr><td><a href="/p/683766-christian-koss.html">Christian Koss</a></td><td>San Francisco Giants</td><td><time class="dfa-date" datetime="2026-11-17">November 17, 2026</time></td><td>Traded</td><td><time datetime="2026-11-20">November 20, 2026</time></td><td>Tampa Bay Rays</td><td>1.140</td></tr>
+    <tr><td><a href="/p/592858-rowan-wick.html">Rowan Wick</a></td><td>San Francisco Giants</td><td><time class="dfa-date" datetime="2026-11-17">November 17, 2026</time></td><td>Elected free agency</td><td><time datetime="2026-11-20">November 20, 2026</time></td><td></td><td>4.114</td></tr>
+    <tr><td><a href="/p/665665-reiver-sanmartin.html">Reiver Sanmartin</a></td><td>San Francisco Giants</td><td><time class="dfa-date" datetime="2026-11-02">November 2, 2026</time></td><td>Traded</td><td><time datetime="2026-11-06">November 6, 2026</time></td><td>Washington Nationals</td><td>2.115</td></tr>
+  </tbody>
+</table>
+</div>
+</section>
+<section id="st-louis-cardinals">
+  <h2>St. Louis Cardinals</h2>
+<div class="tbl-wrap">
+<table class="pp-tbl">
+  <thead><tr><th scope="col">Player</th><th scope="col">Club</th><th scope="col">DFA date</th><th scope="col">Outcome</th><th scope="col">Outcome date</th><th scope="col">New club</th><th scope="col">Service time</th></tr></thead>
+  <tbody>
+    <tr><td><a href="/p/691008-max-rajcic.html">Max Rajcic</a></td><td>St. Louis Cardinals</td><td><time class="dfa-date" datetime="2026-11-17">November 17, 2026</time></td><td>Elected free agency</td><td><time datetime="2026-11-20">November 20, 2026</time></td><td></td><td>0.102</td></tr>
+    <tr><td><a href="/p/694633-chase-hampton.html">Chase Hampton</a></td><td>St. Louis Cardinals</td><td><time class="dfa-date" datetime="2026-11-02">November 2, 2026</time></td><td>Claimed off waivers</td><td><time datetime="2026-11-02">November 2, 2026</time></td><td>Baltimore Orioles</td><td>0.014</td></tr>
+  </tbody>
+</table>
+</div>
+</section>
+<section id="tampa-bay-rays">
+  <h2>Tampa Bay Rays</h2>
+<div class="tbl-wrap">
+<table class="pp-tbl">
+  <thead><tr><th scope="col">Player</th><th scope="col">Club</th><th scope="col">DFA date</th><th scope="col">Outcome</th><th scope="col">Outcome date</th><th scope="col">New club</th><th scope="col">Service time</th></tr></thead>
+  <tbody>
+    <tr><td><a href="/p/663765-jake-woodford.html">Jake Woodford</a></td><td>Tampa Bay Rays</td><td><time class="dfa-date" datetime="2026-09-25">September 25, 2026</time></td><td>Elected free agency</td><td><time datetime="2026-09-30">September 30, 2026</time></td><td></td><td>4.075</td></tr>
+  </tbody>
+</table>
+</div>
+</section>
+<section id="toronto-blue-jays">
+  <h2>Toronto Blue Jays</h2>
+<div class="tbl-wrap">
+<table class="pp-tbl">
+  <thead><tr><th scope="col">Player</th><th scope="col">Club</th><th scope="col">DFA date</th><th scope="col">Outcome</th><th scope="col">Outcome date</th><th scope="col">New club</th><th scope="col">Service time</th></tr></thead>
+  <tbody>
+    <tr><td><a href="/p/695445-chase-lee.html">Chase Lee</a></td><td>Toronto Blue Jays</td><td><time class="dfa-date" datetime="2026-11-19">November 19, 2026</time></td><td>Traded</td><td><time datetime="2026-11-20">November 20, 2026</time></td><td>Colorado Rockies</td><td>0.115</td></tr>
+  </tbody>
+</table>
+</div>
+</section>
+<section id="washington-nationals">
+  <h2>Washington Nationals</h2>
+<div class="tbl-wrap">
+<table class="pp-tbl">
+  <thead><tr><th scope="col">Player</th><th scope="col">Club</th><th scope="col">DFA date</th><th scope="col">Outcome</th><th scope="col">Outcome date</th><th scope="col">New club</th><th scope="col">Service time</th></tr></thead>
+  <tbody>
+    <tr><td><a href="/p/694820-braxton-roxby.html">Braxton Roxby</a></td><td>Washington Nationals</td><td><time class="dfa-date" datetime="2026-11-17">November 17, 2026</time></td><td>Traded</td><td><time datetime="2026-11-20">November 20, 2026</time></td><td>Chicago Cubs</td><td>0.033</td></tr>
+    <tr><td><a href="/p/687223-carson-palmquist.html">Carson Palmquist</a></td><td>Washington Nationals</td><td><time class="dfa-date" datetime="2026-11-17">November 17, 2026</time></td><td>Elected free agency</td><td><time datetime="2026-11-20">November 20, 2026</time></td><td></td><td>0.080</td></tr>
+    <tr><td><a href="/p/681402-gus-varland.html">Gus Varland</a></td><td>Washington Nationals</td><td><time class="dfa-date" datetime="2026-11-17">November 17, 2026</time></td><td>Claimed off waivers</td><td><time datetime="2026-11-20">November 20, 2026</time></td><td>New York Mets</td><td>1.095</td></tr>
+    <tr><td><a href="/p/680686-josiah-gray.html">Josiah Gray</a></td><td>Washington Nationals</td><td><time class="dfa-date" datetime="2026-11-17">November 17, 2026</time></td><td>Elected free agency</td><td><time datetime="2026-11-20">November 20, 2026</time></td><td></td><td>5.076</td></tr>
+    <tr><td><a href="/p/693312-kyle-nicolas.html">Kyle Nicolas</a></td><td>Washington Nationals</td><td><time class="dfa-date" datetime="2026-11-06">November 6, 2026</time></td><td>Released</td><td><time datetime="2026-11-12">November 12, 2026</time></td><td></td><td>1.104</td></tr>
+    <tr><td><a href="/p/677588-jose-tena.html">José Tena</a></td><td>Washington Nationals</td><td><time class="dfa-date" datetime="2026-11-02">November 2, 2026</time></td><td>Claimed off waivers</td><td><time datetime="2026-11-06">November 6, 2026</time></td><td>Cleveland Guardians</td><td>2.033</td></tr>
+    <tr><td><a href="/p/686610-ken-waldichuk.html">Ken Waldichuk</a></td><td>Washington Nationals</td><td><time class="dfa-date" datetime="2026-11-02">November 2, 2026</time></td><td>Elected free agency</td><td><time datetime="2026-11-02">November 2, 2026</time></td><td></td><td>2.149</td></tr>
+    <tr><td><a href="/p/676571-pj-poulin.html">PJ Poulin</a></td><td>Washington Nationals</td><td><time class="dfa-date" datetime="2026-11-02">November 2, 2026</time></td><td>Elected free agency</td><td><time datetime="2026-11-02">November 2, 2026</time></td><td></td><td>1.057</td></tr>
+    <tr><td><a href="/p/663992-richard-lovelady.html">Richard Lovelady</a></td><td>Washington Nationals</td><td><time class="dfa-date" datetime="2026-11-01">November 1, 2026</time></td><td>Elected free agency</td><td><time datetime="2026-11-02">November 2, 2026</time></td><td></td><td>4.046</td></tr>
+    <tr><td><a href="/p/694633-chase-hampton.html">Chase Hampton</a></td><td>Washington Nationals</td><td><time class="dfa-date" datetime="2026-09-26">September 26, 2026</time></td><td>Claimed off waivers</td><td><time datetime="2026-09-28">September 28, 2026</time></td><td>St. Louis Cardinals</td><td>0.014</td></tr>
+  </tbody>
+</table>
+</div>
+</section>
+<p class="foot-note">A designation takes a player off the 40-man roster. The club has 7 days to trade him, place him on waivers, or release him. If he clears waivers he can be sent to the minors, and a player who rejects that assignment becomes a free agent. <a href="/send-a-player-down.html#dfa">How a designation works</a>.</p>
+</div><footer class="site-foot"><h2 class="visually-hidden">Site map</h2><div class="site-foot-inner"><div><p class="foot-h">Numbers</p><a href="/">Players</a><a href="/t/">Clubs</a><a href="/arbitration-eligible.html">Arbitration eligible</a><a href="/super-two.html">Super Two</a><a href="/free-agents.html">Free agents</a><a href="/non-tender-watch.html">Non-tender watch</a><a href="/options.html">Out of options</a><a href="/alumni/">Previous players A–Z</a></div><div><p class="foot-h">Tools</p><a href="/lockout.html">Lockout tracker</a><a href="/contract.html">Contract clock</a></div><div><p class="foot-h">Learn</p><a href="/service-time.html">What is service time?</a><a href="/send-a-player-down.html">Can a team send a player down?</a></div><div><p class="foot-h">Site</p><a href="/about.html">About</a><a href="/neutrality.html">Neutrality</a><a href="/privacy.html">Privacy</a><a href="mailto:contact@bigleagueservicetime.com">Contact</a></div><p class="foot-disclaimer">Not affiliated with or endorsed by Major League Baseball or any team. Service time figures are our own calculations from public data.</p></div></footer><script defer src="/search-typeahead.js"></script></div>
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "b1a0b70a9b8944a9892a99bc56e22e15"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>

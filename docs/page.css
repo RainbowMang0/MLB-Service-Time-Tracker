@@ -149,6 +149,8 @@ h1 { letter-spacing: -0.02em; }
               max-width: 68ch; line-height: 1.5; }
 .list-links a { color: var(--accent); text-decoration: none; }
 .list-links a:hover { text-decoration: underline; }
+.dfa-clubs { max-width: none; }
+.dfa-clubs a { white-space: nowrap; }
 @media (max-width: 640px) {
   .opt-controls input, .opt-controls select { flex-basis: 100%; }
 }

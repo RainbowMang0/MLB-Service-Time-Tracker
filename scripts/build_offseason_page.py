@@ -53,6 +53,7 @@ _CALENDAR_ORDER = (
     "contract.html",
     "rule-5.html",
     wpp.SEND_DOWN_PATH,
+    "dfa-outcomes.html",
     "out-of-options.html",
     wpp.ARBITRATION_ELIGIBLE_PATH,
     wpp.NON_TENDER_WATCH_PATH,
@@ -117,6 +118,11 @@ def calendar_groups(docs: Path) -> list[dict]:
                     wpp.SEND_DOWN_PATH,
                     "Can a team send a player down?",
                     "Options, a designation for assignment, and an outright.",
+                ),
+                (
+                    "dfa-outcomes.html",
+                    "DFA outcomes",
+                    "Recent designations and what happened afterward.",
                 ),
                 (
                     "out-of-options.html",
