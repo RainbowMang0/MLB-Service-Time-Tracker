@@ -1,7 +1,7 @@
 {
   "player_id": 694820,
-  "fetched_at": "2026-11-21T18:47:39Z",
-  "checksum": "sha256:166345bbd515bff791c664c78f095bbfd3621bd805cc54f9766316b871a8dd29",
+  "fetched_at": "2026-11-23T00:33:19Z",
+  "checksum": "sha256:8de408941edafc33fbec94530d0aa8ad667b72303b5cc72f45037a162a89f1fe",
   "transactions": [
     {
       "id": 445749,
@@ -44,26 +44,6 @@
       "description": "Cincinnati Reds signed free agent RHP Braxton Roxby to a minor league contract."
     },
     {
-      "id": 483035,
-      "person": {
-        "id": 694820,
-        "fullName": "Braxton Roxby",
-        "link": "/api/v1/people/694820",
-        "nameSlug": "braxton-roxby-694820"
-      },
-      "toTeam": {
-        "id": 459,
-        "name": "Dayton Dragons",
-        "link": "/api/v1/teams/459"
-      },
-      "date": "2021-05-03",
-      "effectiveDate": "2021-05-03",
-      "resolutionDate": "2021-05-03",
-      "typeCode": "ASG",
-      "typeDesc": "Assigned",
-      "description": "RHP Braxton Roxby assigned to Dayton Dragons."
-    },
-    {
       "id": 482957,
       "person": {
         "id": 694820,
@@ -86,6 +66,26 @@
       "typeCode": "ASG",
       "typeDesc": "Assigned",
       "description": "RHP Braxton Roxby assigned to Dayton Dragons from AZL Reds."
+    },
+    {
+      "id": 483035,
+      "person": {
+        "id": 694820,
+        "fullName": "Braxton Roxby",
+        "link": "/api/v1/people/694820",
+        "nameSlug": "braxton-roxby-694820"
+      },
+      "toTeam": {
+        "id": 459,
+        "name": "Dayton Dragons",
+        "link": "/api/v1/teams/459"
+      },
+      "date": "2021-05-03",
+      "effectiveDate": "2021-05-03",
+      "resolutionDate": "2021-05-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Braxton Roxby assigned to Dayton Dragons."
     },
     {
       "id": 506956,
@@ -340,26 +340,6 @@
       "description": "RHP Braxton Roxby assigned to Cincinnati Reds."
     },
     {
-      "id": 812589,
-      "person": {
-        "id": 694820,
-        "fullName": "Braxton Roxby",
-        "link": "/api/v1/people/694820",
-        "nameSlug": "braxton-roxby-694820"
-      },
-      "toTeam": {
-        "id": 105,
-        "name": "Sacramento River Cats",
-        "link": "/api/v1/teams/105"
-      },
-      "date": "2025-01-29",
-      "effectiveDate": "2025-01-29",
-      "resolutionDate": "2025-01-29",
-      "typeCode": "ASG",
-      "typeDesc": "Assigned",
-      "description": "RHP Braxton Roxby assigned to Sacramento River Cats."
-    },
-    {
       "id": 823052,
       "person": {
         "id": 694820,
@@ -398,6 +378,26 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "RHP Braxton Roxby roster status changed by San Francisco Giants."
+    },
+    {
+      "id": 812589,
+      "person": {
+        "id": 694820,
+        "fullName": "Braxton Roxby",
+        "link": "/api/v1/people/694820",
+        "nameSlug": "braxton-roxby-694820"
+      },
+      "toTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "date": "2025-01-29",
+      "effectiveDate": "2025-01-29",
+      "resolutionDate": "2025-01-29",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Braxton Roxby assigned to Sacramento River Cats."
     },
     {
       "id": 812588,
@@ -665,7 +665,7 @@
       "effectiveDate": "2026-11-20",
       "typeCode": "TR",
       "typeDesc": "Trade",
-      "description": "Washington Nationals traded RHP Braxton Roxby to Chicago Cubs for cash."
+      "description": "Washington Nationals traded RHP Braxton Roxby to Chicago Cubs."
     }
   ]
 }

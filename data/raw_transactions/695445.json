@@ -1,7 +1,7 @@
 {
   "player_id": 695445,
-  "fetched_at": "2026-11-21T18:47:39Z",
-  "checksum": "sha256:b9f0170945fa48efb3fed6b624ba9889356f035771dacfe6ccd89098c59aa9fc",
+  "fetched_at": "2026-11-23T00:33:19Z",
+  "checksum": "sha256:4d3068c7cc9a469c4a7c8e8ea1079088ede4c1935c8a48347956b76b41d9318c",
   "transactions": [
     {
       "id": 504947,
@@ -135,26 +135,6 @@
       "description": "RHP Chase Lee assigned to Round Rock Express from Frisco RoughRiders."
     },
     {
-      "id": 678893,
-      "person": {
-        "id": 695445,
-        "fullName": "Chase Lee",
-        "link": "/api/v1/people/695445",
-        "nameSlug": "chase-lee-695445"
-      },
-      "toTeam": {
-        "id": 140,
-        "name": "Texas Rangers",
-        "link": "/api/v1/teams/140"
-      },
-      "date": "2023-01-27",
-      "effectiveDate": "2023-01-27",
-      "resolutionDate": "2023-01-27",
-      "typeCode": "SC",
-      "typeDesc": "Status Change",
-      "description": "RHP Chase Lee roster status changed by Texas Rangers."
-    },
-    {
       "id": 666861,
       "person": {
         "id": 695445,
@@ -173,6 +153,26 @@
       "typeCode": "ASG",
       "typeDesc": "Assigned",
       "description": "Texas Rangers invited non-roster RHP Chase Lee to spring training."
+    },
+    {
+      "id": 678893,
+      "person": {
+        "id": 695445,
+        "fullName": "Chase Lee",
+        "link": "/api/v1/people/695445",
+        "nameSlug": "chase-lee-695445"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2023-01-27",
+      "effectiveDate": "2023-01-27",
+      "resolutionDate": "2023-01-27",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "RHP Chase Lee roster status changed by Texas Rangers."
     },
     {
       "id": 728221,
@@ -195,7 +195,7 @@
       "description": "Round Rock Express activated RHP Chase Lee from the 7-day injured list."
     },
     {
-      "id": 756371,
+      "id": 783390,
       "person": {
         "id": 695445,
         "fullName": "Chase Lee",
@@ -235,7 +235,7 @@
       "description": "Round Rock Express placed RHP Chase Lee on the 60-day injured list."
     },
     {
-      "id": 783390,
+      "id": 756371,
       "person": {
         "id": 695445,
         "fullName": "Chase Lee",
@@ -304,26 +304,6 @@
       "description": "RHP Chase Lee assigned to Round Rock Express from ACL Rangers."
     },
     {
-      "id": 791137,
-      "person": {
-        "id": 695445,
-        "fullName": "Chase Lee",
-        "link": "/api/v1/people/695445",
-        "nameSlug": "chase-lee-695445"
-      },
-      "toTeam": {
-        "id": 512,
-        "name": "Toledo Mud Hens",
-        "link": "/api/v1/teams/512"
-      },
-      "date": "2024-07-30",
-      "effectiveDate": "2024-07-30",
-      "resolutionDate": "2024-07-30",
-      "typeCode": "ASG",
-      "typeDesc": "Assigned",
-      "description": "RHP Chase Lee assigned to Toledo Mud Hens."
-    },
-    {
       "id": 791949,
       "person": {
         "id": 695445,
@@ -342,6 +322,26 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "RHP Chase Lee roster status changed by Toledo Mud Hens."
+    },
+    {
+      "id": 791137,
+      "person": {
+        "id": 695445,
+        "fullName": "Chase Lee",
+        "link": "/api/v1/people/695445",
+        "nameSlug": "chase-lee-695445"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2024-07-30",
+      "effectiveDate": "2024-07-30",
+      "resolutionDate": "2024-07-30",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Chase Lee assigned to Toledo Mud Hens."
     },
     {
       "id": 791135,
@@ -1057,7 +1057,7 @@
       "effectiveDate": "2026-11-20",
       "typeCode": "TR",
       "typeDesc": "Trade",
-      "description": "Toronto Blue Jays traded RHP Chase Lee to Colorado Rockies for cash."
+      "description": "Toronto Blue Jays traded RHP Chase Lee to Colorado Rockies."
     }
   ]
 }

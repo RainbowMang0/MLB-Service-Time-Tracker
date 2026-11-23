@@ -1,7 +1,7 @@
 {
   "player_id": 702153,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:63d01f8e255fb0b2e024004ab426c1b919dffc0e5347e6315fb9d945f06dae7b",
+  "fetched_at": "2026-11-23T00:33:19Z",
+  "checksum": "sha256:1d37aa588b295c5a4bc9c3bdf0baf9656723bbe3c7561e92c46eeddcdf3c8eeb",
   "transactions": [
     {
       "id": 645645,
@@ -515,6 +515,26 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "Milwaukee Brewers transferred LHP Brian Fitzpatrick from the 15-day injured list to the 60-day injured list. Left elbow injury."
+    },
+    {
+      "id": 950681,
+      "person": {
+        "id": 702153,
+        "fullName": "Brian Fitzpatrick",
+        "link": "/api/v1/people/702153",
+        "nameSlug": "brian-fitzpatrick-702153"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2026-11-02",
+      "effectiveDate": "2026-11-02",
+      "resolutionDate": "2026-11-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Milwaukee Brewers activated LHP Brian Fitzpatrick from the 60-day injured list."
     }
   ]
 }

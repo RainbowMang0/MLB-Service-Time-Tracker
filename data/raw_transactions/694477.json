@@ -1,7 +1,7 @@
 {
   "player_id": 694477,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:f5d8f292e6ff75db4564f9b266da586cdc60b8802ef9c0e75361a8285577fbbb",
+  "fetched_at": "2026-11-23T00:33:19Z",
+  "checksum": "sha256:cafaaf6bfb50090dbca32d1ad1b9a9acf7b6f874d553291b37f0bb8e0b8a5442",
   "transactions": [
     {
       "id": 508647,
@@ -153,26 +153,6 @@
       "description": "RHP Chad Patrick assigned to Hillsboro Hops from Visalia Rawhide."
     },
     {
-      "id": 652608,
-      "person": {
-        "id": 694477,
-        "fullName": "Chad Patrick",
-        "link": "/api/v1/people/694477",
-        "nameSlug": "chad-patrick-694477"
-      },
-      "toTeam": {
-        "id": 527,
-        "name": "Salt River Rafters",
-        "link": "/api/v1/teams/527"
-      },
-      "date": "2022-09-16",
-      "effectiveDate": "2022-09-16",
-      "resolutionDate": "2022-09-16",
-      "typeCode": "SC",
-      "typeDesc": "Status Change",
-      "description": "Salt River Rafters activated RHP Chad Patrick."
-    },
-    {
       "id": 654303,
       "person": {
         "id": 694477,
@@ -193,7 +173,7 @@
       "description": "Salt River Rafters activated RHP Chad Patrick."
     },
     {
-      "id": 673147,
+      "id": 652608,
       "person": {
         "id": 694477,
         "fullName": "Chad Patrick",
@@ -201,16 +181,16 @@
         "nameSlug": "chad-patrick-694477"
       },
       "toTeam": {
-        "id": 109,
-        "name": "Arizona Diamondbacks",
-        "link": "/api/v1/teams/109"
+        "id": 527,
+        "name": "Salt River Rafters",
+        "link": "/api/v1/teams/527"
       },
-      "date": "2023-02-25",
-      "effectiveDate": "2023-02-25",
-      "resolutionDate": "2023-02-25",
-      "typeCode": "ASG",
-      "typeDesc": "Assigned",
-      "description": "RHP Chad Patrick assigned to Arizona Diamondbacks."
+      "date": "2022-09-16",
+      "effectiveDate": "2022-09-16",
+      "resolutionDate": "2022-09-16",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Salt River Rafters activated RHP Chad Patrick."
     },
     {
       "id": 678633,
@@ -231,6 +211,26 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "RHP Chad Patrick roster status changed by Arizona Diamondbacks."
+    },
+    {
+      "id": 673147,
+      "person": {
+        "id": 694477,
+        "fullName": "Chad Patrick",
+        "link": "/api/v1/people/694477",
+        "nameSlug": "chad-patrick-694477"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2023-02-25",
+      "effectiveDate": "2023-02-25",
+      "resolutionDate": "2023-02-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Chad Patrick assigned to Arizona Diamondbacks."
     },
     {
       "id": 716186,
@@ -445,26 +445,6 @@
       "description": "Las Vegas Aviators activated RHP Chad Patrick."
     },
     {
-      "id": 733135,
-      "person": {
-        "id": 694477,
-        "fullName": "Chad Patrick",
-        "link": "/api/v1/people/694477",
-        "nameSlug": "chad-patrick-694477"
-      },
-      "toTeam": {
-        "id": 556,
-        "name": "Nashville Sounds",
-        "link": "/api/v1/teams/556"
-      },
-      "date": "2023-11-15",
-      "effectiveDate": "2023-11-15",
-      "resolutionDate": "2023-11-15",
-      "typeCode": "ASG",
-      "typeDesc": "Assigned",
-      "description": "RHP Chad Patrick assigned to Nashville Sounds."
-    },
-    {
       "id": 751361,
       "person": {
         "id": 694477,
@@ -483,6 +463,26 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "RHP Chad Patrick roster status changed by Milwaukee Brewers."
+    },
+    {
+      "id": 733135,
+      "person": {
+        "id": 694477,
+        "fullName": "Chad Patrick",
+        "link": "/api/v1/people/694477",
+        "nameSlug": "chad-patrick-694477"
+      },
+      "toTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "date": "2023-11-15",
+      "effectiveDate": "2023-11-15",
+      "resolutionDate": "2023-11-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Chad Patrick assigned to Nashville Sounds."
     },
     {
       "id": 733134,
@@ -911,6 +911,26 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "RHP Chad Patrick roster status changed by Milwaukee Brewers."
+    },
+    {
+      "id": 950677,
+      "person": {
+        "id": 694477,
+        "fullName": "Chad Patrick",
+        "link": "/api/v1/people/694477",
+        "nameSlug": "chad-patrick-694477"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2026-10-29",
+      "effectiveDate": "2026-10-29",
+      "resolutionDate": "2026-10-29",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Milwaukee Brewers activated RHP Chad Patrick."
     }
   ]
 }

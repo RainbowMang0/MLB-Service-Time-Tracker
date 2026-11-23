@@ -1,7 +1,7 @@
 {
   "player_id": 691620,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:3f4b0a0e82d68134db570c401137e31921d71c664ba6c2b6b418c5e8aa516c91",
+  "fetched_at": "2026-11-23T00:33:19Z",
+  "checksum": "sha256:2dacf352730229744f0d8b360960a22137bd134d24c5f9e0ee72e3888e3faf24",
   "transactions": [
     {
       "id": 417779,
@@ -175,7 +175,7 @@
       "description": "C Jeferson Quero assigned to Wisconsin Timber Rattlers from Carolina Mudcats."
     },
     {
-      "id": 652674,
+      "id": 670315,
       "person": {
         "id": 691620,
         "fullName": "Jeferson Quero",
@@ -195,7 +195,7 @@
       "description": "Glendale Desert Dogs activated C Jeferson Quero."
     },
     {
-      "id": 670315,
+      "id": 652674,
       "person": {
         "id": 691620,
         "fullName": "Jeferson Quero",
@@ -403,6 +403,26 @@
       "description": "Milwaukee Brewers Prospects activated C Jeferson Quero."
     },
     {
+      "id": 757822,
+      "person": {
+        "id": 691620,
+        "fullName": "Jeferson Quero",
+        "link": "/api/v1/people/691620",
+        "nameSlug": "jeferson-quero-691620"
+      },
+      "toTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "date": "2024-03-10",
+      "effectiveDate": "2024-03-10",
+      "resolutionDate": "2024-03-10",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Nashville Sounds activated C Jeferson Quero."
+    },
+    {
       "id": 757792,
       "person": {
         "id": 691620,
@@ -441,26 +461,6 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "Nashville Sounds placed C Jeferson Quero on the 7-day injured list."
-    },
-    {
-      "id": 757822,
-      "person": {
-        "id": 691620,
-        "fullName": "Jeferson Quero",
-        "link": "/api/v1/people/691620",
-        "nameSlug": "jeferson-quero-691620"
-      },
-      "toTeam": {
-        "id": 556,
-        "name": "Nashville Sounds",
-        "link": "/api/v1/teams/556"
-      },
-      "date": "2024-03-10",
-      "effectiveDate": "2024-03-10",
-      "resolutionDate": "2024-03-10",
-      "typeCode": "SC",
-      "typeDesc": "Status Change",
-      "description": "Nashville Sounds activated C Jeferson Quero."
     },
     {
       "id": 754608,
@@ -812,26 +812,6 @@
       "description": "Milwaukee Brewers activated C Jeferson Quero."
     },
     {
-      "id": 873654,
-      "person": {
-        "id": 691620,
-        "fullName": "Jeferson Quero",
-        "link": "/api/v1/people/691620",
-        "nameSlug": "jeferson-quero-691620"
-      },
-      "toTeam": {
-        "id": 693,
-        "name": "Cardenales de Lara",
-        "link": "/api/v1/teams/693"
-      },
-      "date": "2025-10-21",
-      "effectiveDate": "2025-10-21",
-      "resolutionDate": "2025-10-21",
-      "typeCode": "ASG",
-      "typeDesc": "Assigned",
-      "description": "C Jeferson Quero assigned to Cardenales de Lara."
-    },
-    {
       "id": 873880,
       "person": {
         "id": 691620,
@@ -850,6 +830,26 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "Cardenales de Lara activated C Jeferson Quero."
+    },
+    {
+      "id": 873654,
+      "person": {
+        "id": 691620,
+        "fullName": "Jeferson Quero",
+        "link": "/api/v1/people/691620",
+        "nameSlug": "jeferson-quero-691620"
+      },
+      "toTeam": {
+        "id": 693,
+        "name": "Cardenales de Lara",
+        "link": "/api/v1/teams/693"
+      },
+      "date": "2025-10-21",
+      "effectiveDate": "2025-10-21",
+      "resolutionDate": "2025-10-21",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Jeferson Quero assigned to Cardenales de Lara."
     },
     {
       "id": 880118,
@@ -1026,6 +1026,26 @@
       "typeCode": "CU",
       "typeDesc": "Recalled",
       "description": "Milwaukee Brewers recalled C Jeferson Quero from Nashville Sounds."
+    },
+    {
+      "id": 950674,
+      "person": {
+        "id": 691620,
+        "fullName": "Jeferson Quero",
+        "link": "/api/v1/people/691620",
+        "nameSlug": "jeferson-quero-691620"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2026-10-29",
+      "effectiveDate": "2026-10-29",
+      "resolutionDate": "2026-10-29",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Milwaukee Brewers activated C Jeferson Quero."
     }
   ]
 }

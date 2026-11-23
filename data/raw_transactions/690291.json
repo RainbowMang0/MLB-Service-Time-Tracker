@@ -1,10 +1,10 @@
 {
   "player_id": 690291,
-  "fetched_at": "2026-11-18T20:05:22Z",
-  "checksum": "sha256:cd11b55415e0903e71b1c155fb0f49b7f5e957afacc4bd6a57a899b7c38db277",
+  "fetched_at": "2026-11-23T00:33:19Z",
+  "checksum": "sha256:644f95f9feb732a9d178eb8502a33c01032aa8dc89e78bd866a54548345aba70",
   "transactions": [
     {
-      "id": 461139,
+      "id": 500008,
       "person": {
         "id": 690291,
         "fullName": "Jace Jung",
@@ -24,7 +24,7 @@
       "description": "SS Jace Jung assigned to Texas Tech Red Raiders."
     },
     {
-      "id": 500008,
+      "id": 461139,
       "person": {
         "id": 690291,
         "fullName": "Jace Jung",
@@ -144,26 +144,6 @@
       "description": "2B Jace Jung roster status changed by Detroit Tigers."
     },
     {
-      "id": 674830,
-      "person": {
-        "id": 690291,
-        "fullName": "Jace Jung",
-        "link": "/api/v1/people/690291",
-        "nameSlug": "jace-jung-690291"
-      },
-      "toTeam": {
-        "id": 116,
-        "name": "Detroit Tigers",
-        "link": "/api/v1/teams/116"
-      },
-      "date": "2023-03-09",
-      "effectiveDate": "2023-03-09",
-      "resolutionDate": "2023-03-09",
-      "typeCode": "ASG",
-      "typeDesc": "Assigned",
-      "description": "2B Jace Jung assigned to Detroit Tigers."
-    },
-    {
       "id": 674903,
       "person": {
         "id": 690291,
@@ -182,6 +162,26 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "2B Jace Jung roster status changed by Detroit Tigers."
+    },
+    {
+      "id": 674830,
+      "person": {
+        "id": 690291,
+        "fullName": "Jace Jung",
+        "link": "/api/v1/people/690291",
+        "nameSlug": "jace-jung-690291"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2023-03-09",
+      "effectiveDate": "2023-03-09",
+      "resolutionDate": "2023-03-09",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "2B Jace Jung assigned to Detroit Tigers."
     },
     {
       "id": 718784,
@@ -830,7 +830,7 @@
       "effectiveDate": "2026-11-18",
       "typeCode": "TR",
       "typeDesc": "Trade",
-      "description": "Detroit Tigers traded 3B Jace Jung to Los Angeles Angels for cash."
+      "description": "Detroit Tigers traded 3B Jace Jung to Los Angeles Angels."
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "player_id": 689441,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:69865e94a290d55f7b2fdb2d86de092c08fc5a4940678a15f1a282bc16dbf745",
+  "fetched_at": "2026-11-23T00:33:19Z",
+  "checksum": "sha256:57339624f848baa8abd8c207334a970bba9c1a4a63d95f48ef3e306197e6563d",
   "transactions": [
     {
       "id": 443374,
@@ -151,26 +151,6 @@
       "description": "RHP Coleman Crow and  assigned to Rocket City Trash Pandas from Inland Empire 66ers."
     },
     {
-      "id": 670074,
-      "person": {
-        "id": 689441,
-        "fullName": "Coleman Crow",
-        "link": "/api/v1/people/689441",
-        "nameSlug": "coleman-crow-689441"
-      },
-      "toTeam": {
-        "id": 108,
-        "name": "Los Angeles Angels",
-        "link": "/api/v1/teams/108"
-      },
-      "date": "2023-02-10",
-      "effectiveDate": "2023-02-10",
-      "resolutionDate": "2023-02-10",
-      "typeCode": "ASG",
-      "typeDesc": "Assigned",
-      "description": "Los Angeles Angels invited non-roster RHP Coleman Crow to spring training."
-    },
-    {
       "id": 678681,
       "person": {
         "id": 689441,
@@ -189,6 +169,26 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "RHP Coleman Crow roster status changed by Los Angeles Angels."
+    },
+    {
+      "id": 670074,
+      "person": {
+        "id": 689441,
+        "fullName": "Coleman Crow",
+        "link": "/api/v1/people/689441",
+        "nameSlug": "coleman-crow-689441"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2023-02-10",
+      "effectiveDate": "2023-02-10",
+      "resolutionDate": "2023-02-10",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Los Angeles Angels invited non-roster RHP Coleman Crow to spring training."
     },
     {
       "id": 691389,
@@ -799,7 +799,7 @@
       "description": "Milwaukee Brewers placed RHP Coleman Crow on the 15-day injured list retroactive to June 10, 2026. Right forearm flexor strain."
     },
     {
-      "id": 927070,
+      "id": 925052,
       "person": {
         "id": 689441,
         "fullName": "Coleman Crow",
@@ -824,7 +824,7 @@
       "description": "Milwaukee Brewers sent RHP Coleman Crow on a rehab assignment to Nashville Sounds."
     },
     {
-      "id": 925052,
+      "id": 927070,
       "person": {
         "id": 689441,
         "fullName": "Coleman Crow",
@@ -935,6 +935,26 @@
       "typeCode": "CU",
       "typeDesc": "Recalled",
       "description": "Milwaukee Brewers recalled RHP Coleman Crow from Nashville Sounds."
+    },
+    {
+      "id": 950679,
+      "person": {
+        "id": 689441,
+        "fullName": "Coleman Crow",
+        "link": "/api/v1/people/689441",
+        "nameSlug": "coleman-crow-689441"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2026-10-29",
+      "effectiveDate": "2026-10-29",
+      "resolutionDate": "2026-10-29",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Milwaukee Brewers activated RHP Coleman Crow."
     }
   ]
 }
