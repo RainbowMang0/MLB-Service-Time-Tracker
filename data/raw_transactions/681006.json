@@ -1,7 +1,7 @@
 {
   "player_id": 681006,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:cfdbd56dbf02b47a8e592177b3673590e1906e73fdbb55944c5941c30b8b65e8",
+  "fetched_at": "2026-11-23T00:26:03Z",
+  "checksum": "sha256:ddef707255f0e5739d8f3690de02fe839f436fd90640cdde72a27168da09552d",
   "transactions": [
     {
       "id": 412494,
@@ -699,7 +699,7 @@
       "description": "Miami Marlins sent LHP Josh Simpson on a rehab assignment to Jupiter Hammerheads."
     },
     {
-      "id": 794264,
+      "id": 795477,
       "person": {
         "id": 681006,
         "fullName": "Josh Simpson",
@@ -724,7 +724,7 @@
       "description": "Miami Marlins sent LHP Josh Simpson on a rehab assignment to Pensacola Blue Wahoos."
     },
     {
-      "id": 795477,
+      "id": 794264,
       "person": {
         "id": 681006,
         "fullName": "Josh Simpson",
@@ -1324,6 +1324,46 @@
       "typeCode": "OUT",
       "typeDesc": "Outrighted",
       "description": "Seattle Mariners sent LHP Josh Simpson outright to Tacoma Rainiers."
+    },
+    {
+      "id": 950871,
+      "person": {
+        "id": 681006,
+        "fullName": "Josh Simpson",
+        "link": "/api/v1/people/681006",
+        "nameSlug": "josh-simpson-681006"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2026-11-18",
+      "effectiveDate": "2026-11-18",
+      "resolutionDate": "2026-11-18",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Philadelphia Phillies signed free agent LHP Josh Simpson to a minor league contract."
+    },
+    {
+      "id": 950870,
+      "person": {
+        "id": 681006,
+        "fullName": "Josh Simpson",
+        "link": "/api/v1/people/681006",
+        "nameSlug": "josh-simpson-681006"
+      },
+      "toTeam": {
+        "id": 1410,
+        "name": "Lehigh Valley IronPigs",
+        "link": "/api/v1/teams/1410"
+      },
+      "date": "2026-11-18",
+      "effectiveDate": "2026-11-18",
+      "resolutionDate": "2026-11-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Josh Simpson assigned to Lehigh Valley IronPigs."
     }
   ]
 }

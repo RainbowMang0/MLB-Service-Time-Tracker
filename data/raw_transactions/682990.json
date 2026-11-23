@@ -1,7 +1,7 @@
 {
   "player_id": 682990,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:ca179f6aff05933d9a5115e9251c141767e8228f7adcf6dabef4abe041a560c9",
+  "fetched_at": "2026-11-23T00:26:03Z",
+  "checksum": "sha256:fb508f9903b1b49710d624843bd56eb08eb326f80594052dee7c7ec3b4124132",
   "transactions": [
     {
       "id": 369868,
@@ -212,7 +212,7 @@
       "description": "P Quinn Priester assigned to Pittsburgh Pirates ."
     },
     {
-      "id": 467305,
+      "id": 465090,
       "person": {
         "id": 682990,
         "fullName": "Quinn Priester",
@@ -232,7 +232,7 @@
       "description": "RHP Quinn Priester assigned to Bradenton Marauders."
     },
     {
-      "id": 465090,
+      "id": 467305,
       "person": {
         "id": 682990,
         "fullName": "Quinn Priester",
@@ -409,7 +409,7 @@
       "description": "Altoona Curve sent RHP Quinn Priester on a rehab assignment to Bradenton Marauders."
     },
     {
-      "id": 630894,
+      "id": 630913,
       "person": {
         "id": 682990,
         "fullName": "Quinn Priester",
@@ -434,7 +434,7 @@
       "description": "Altoona Curve sent RHP Quinn Priester on a rehab assignment to Greensboro Grasshoppers."
     },
     {
-      "id": 630913,
+      "id": 630894,
       "person": {
         "id": 682990,
         "fullName": "Quinn Priester",
@@ -479,7 +479,7 @@
       "description": "Altoona Curve activated RHP Quinn Priester."
     },
     {
-      "id": 652574,
+      "id": 670247,
       "person": {
         "id": 682990,
         "fullName": "Quinn Priester",
@@ -499,7 +499,7 @@
       "description": "Surprise Saguaros activated RHP Quinn Priester."
     },
     {
-      "id": 670247,
+      "id": 652574,
       "person": {
         "id": 682990,
         "fullName": "Quinn Priester",
@@ -1187,7 +1187,7 @@
       "description": "Milwaukee Brewers sent RHP Quinn Priester on a rehab assignment to Wisconsin Timber Rattlers."
     },
     {
-      "id": 915279,
+      "id": 910833,
       "person": {
         "id": 682990,
         "fullName": "Quinn Priester",
@@ -1212,7 +1212,7 @@
       "description": "Milwaukee Brewers sent RHP Quinn Priester on a rehab assignment to Nashville Sounds."
     },
     {
-      "id": 910833,
+      "id": 915279,
       "person": {
         "id": 682990,
         "fullName": "Quinn Priester",
@@ -1280,6 +1280,26 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "Milwaukee Brewers placed RHP Quinn Priester on the 60-day injured list. Right thoracic outlet syndrome."
+    },
+    {
+      "id": 950682,
+      "person": {
+        "id": 682990,
+        "fullName": "Quinn Priester",
+        "link": "/api/v1/people/682990",
+        "nameSlug": "quinn-priester-682990"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2026-11-02",
+      "effectiveDate": "2026-11-02",
+      "resolutionDate": "2026-11-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Milwaukee Brewers activated RHP Quinn Priester from the 60-day injured list."
     }
   ]
 }

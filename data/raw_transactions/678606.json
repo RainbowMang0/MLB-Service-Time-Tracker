@@ -1,7 +1,7 @@
 {
   "player_id": 678606,
-  "fetched_at": "2026-11-18T20:05:22Z",
-  "checksum": "sha256:4fe3891658d3703496b6506d9f38a8b1834c9ff0dbe512fd6ab72f27f367a496",
+  "fetched_at": "2026-11-23T00:26:03Z",
+  "checksum": "sha256:ede05ec13a61f6e8563f996ed1b754f7118b87ec012771a1470ed71ad9954d9d",
   "transactions": [
     {
       "id": 337861,
@@ -111,6 +111,29 @@
       "description": "LHP Jose A. Ferrer assigned to Fredericksburg Nationals from FCL Nationals."
     },
     {
+      "id": 625124,
+      "person": {
+        "id": 678606,
+        "fullName": "José A. Ferrer",
+        "link": "/api/v1/people/678606",
+        "nameSlug": "jose-a-ferrer-678606"
+      },
+      "fromTeam": {
+        "id": 436,
+        "name": "Fredericksburg Nationals",
+        "link": "/api/v1/teams/436"
+      },
+      "toTeam": {
+        "id": 426,
+        "name": "Wilmington Blue Rocks",
+        "link": "/api/v1/teams/426"
+      },
+      "date": "2022-05-29",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Jose A. Ferrer assigned to Wilmington Blue Rocks from Fredericksburg Nationals."
+    },
+    {
       "id": 625123,
       "person": {
         "id": 678606,
@@ -130,29 +153,6 @@
       },
       "date": "2022-05-29",
       "effectiveDate": "2022-05-29",
-      "typeCode": "ASG",
-      "typeDesc": "Assigned",
-      "description": "LHP Jose A. Ferrer assigned to Wilmington Blue Rocks from Fredericksburg Nationals."
-    },
-    {
-      "id": 625124,
-      "person": {
-        "id": 678606,
-        "fullName": "José A. Ferrer",
-        "link": "/api/v1/people/678606",
-        "nameSlug": "jose-a-ferrer-678606"
-      },
-      "fromTeam": {
-        "id": 436,
-        "name": "Fredericksburg Nationals",
-        "link": "/api/v1/teams/436"
-      },
-      "toTeam": {
-        "id": 426,
-        "name": "Wilmington Blue Rocks",
-        "link": "/api/v1/teams/426"
-      },
-      "date": "2022-05-29",
       "typeCode": "ASG",
       "typeDesc": "Assigned",
       "description": "LHP Jose A. Ferrer assigned to Wilmington Blue Rocks from Fredericksburg Nationals."
@@ -554,7 +554,7 @@
       "effectiveDate": "2026-11-18",
       "typeCode": "TR",
       "typeDesc": "Trade",
-      "description": "Seattle Mariners traded RHP Bryce Miller, RHP Logan Evans and LHP José A. Ferrer to Kansas City Royals for 3B Maikel Garcia, RHP L.P. Langevin and RHP James McArthur."
+      "description": "Seattle Mariners traded RHP Bryce Miller, RHP Logan Evans and LHP José A. Ferrer to Kansas City Royals."
     }
   ]
 }

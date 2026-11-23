@@ -1,7 +1,7 @@
 {
   "player_id": 682243,
-  "fetched_at": "2026-11-18T20:05:22Z",
-  "checksum": "sha256:dcbb1f436e8c6861d99abd7ed915ee8361a2ce2a5e2eae59519793961e3f7cd3",
+  "fetched_at": "2026-11-23T00:26:03Z",
+  "checksum": "sha256:33b71f4d344e75642b40940baab905d7b0d77998ac122f79e7b488579cfca91b",
   "transactions": [
     {
       "id": 389403,
@@ -214,26 +214,6 @@
       "description": "RHP Bryce Miller assigned to Arkansas Travelers from Everett AquaSox."
     },
     {
-      "id": 678852,
-      "person": {
-        "id": 682243,
-        "fullName": "Bryce Miller",
-        "link": "/api/v1/people/682243",
-        "nameSlug": "bryce-miller-682243"
-      },
-      "toTeam": {
-        "id": 136,
-        "name": "Seattle Mariners",
-        "link": "/api/v1/teams/136"
-      },
-      "date": "2023-01-31",
-      "effectiveDate": "2023-01-31",
-      "resolutionDate": "2023-01-31",
-      "typeCode": "SC",
-      "typeDesc": "Status Change",
-      "description": "RHP Bryce Miller roster status changed by Seattle Mariners."
-    },
-    {
       "id": 667386,
       "person": {
         "id": 682243,
@@ -252,6 +232,26 @@
       "typeCode": "ASG",
       "typeDesc": "Assigned",
       "description": "Seattle Mariners invited non-roster RHP Bryce Miller to spring training."
+    },
+    {
+      "id": 678852,
+      "person": {
+        "id": 682243,
+        "fullName": "Bryce Miller",
+        "link": "/api/v1/people/682243",
+        "nameSlug": "bryce-miller-682243"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2023-01-31",
+      "effectiveDate": "2023-01-31",
+      "resolutionDate": "2023-01-31",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "RHP Bryce Miller roster status changed by Seattle Mariners."
     },
     {
       "id": 688572,
@@ -739,7 +739,7 @@
       "effectiveDate": "2026-11-18",
       "typeCode": "TR",
       "typeDesc": "Trade",
-      "description": "Seattle Mariners traded RHP Bryce Miller, RHP Logan Evans and LHP José A. Ferrer to Kansas City Royals for 3B Maikel Garcia, RHP L.P. Langevin and RHP James McArthur."
+      "description": "Seattle Mariners traded RHP Bryce Miller to Kansas City Royals."
     }
   ]
 }

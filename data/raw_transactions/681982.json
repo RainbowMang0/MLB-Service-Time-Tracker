@@ -1,7 +1,7 @@
 {
   "player_id": 681982,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:278f1245b7a98f09c5509f85b3c24207defd963eef14728b3ca1987afaf667ae",
+  "fetched_at": "2026-11-23T00:26:03Z",
+  "checksum": "sha256:226e767d67aa788e89071f18451db8951d33d4dc2efa554397a1c3f9f0479fc3",
   "transactions": [
     {
       "id": 360060,
@@ -205,26 +205,6 @@
       "description": "RHP Grant Anderson assigned to Hickory Crawdads."
     },
     {
-      "id": 470467,
-      "person": {
-        "id": 681982,
-        "fullName": "Grant Anderson",
-        "link": "/api/v1/people/681982",
-        "nameSlug": "grant-anderson-681982"
-      },
-      "toTeam": {
-        "id": 379,
-        "name": "Texas Rangers Prospects",
-        "link": "/api/v1/teams/379"
-      },
-      "date": "2019-09-30",
-      "effectiveDate": "2019-09-30",
-      "resolutionDate": "2019-09-30",
-      "typeCode": "ASG",
-      "typeDesc": "Assigned",
-      "description": "RHP Grant Anderson assigned to Texas Rangers Futures."
-    },
-    {
       "id": 428754,
       "person": {
         "id": 681982,
@@ -245,7 +225,27 @@
       "description": "RHP Grant Anderson assigned to Texas Rangers Futures."
     },
     {
-      "id": 467417,
+      "id": 470467,
+      "person": {
+        "id": 681982,
+        "fullName": "Grant Anderson",
+        "link": "/api/v1/people/681982",
+        "nameSlug": "grant-anderson-681982"
+      },
+      "toTeam": {
+        "id": 379,
+        "name": "Texas Rangers Prospects",
+        "link": "/api/v1/teams/379"
+      },
+      "date": "2019-09-30",
+      "effectiveDate": "2019-09-30",
+      "resolutionDate": "2019-09-30",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Grant Anderson assigned to Texas Rangers Futures."
+    },
+    {
+      "id": 465198,
       "person": {
         "id": 681982,
         "fullName": "Grant Anderson",
@@ -265,7 +265,7 @@
       "description": "RHP Grant Anderson assigned to Down East Wood Ducks."
     },
     {
-      "id": 465198,
+      "id": 467417,
       "person": {
         "id": 681982,
         "fullName": "Grant Anderson",
@@ -437,26 +437,6 @@
       "description": "Equipo Metro activated RHP Grant Anderson."
     },
     {
-      "id": 674014,
-      "person": {
-        "id": 681982,
-        "fullName": "Grant Anderson",
-        "link": "/api/v1/people/681982",
-        "nameSlug": "grant-anderson-681982"
-      },
-      "toTeam": {
-        "id": 140,
-        "name": "Texas Rangers",
-        "link": "/api/v1/teams/140"
-      },
-      "date": "2023-02-28",
-      "effectiveDate": "2023-02-28",
-      "resolutionDate": "2023-02-28",
-      "typeCode": "ASG",
-      "typeDesc": "Assigned",
-      "description": "RHP Grant Anderson assigned to Texas Rangers."
-    },
-    {
       "id": 678321,
       "person": {
         "id": 681982,
@@ -475,6 +455,26 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "RHP Grant Anderson roster status changed by Texas Rangers."
+    },
+    {
+      "id": 674014,
+      "person": {
+        "id": 681982,
+        "fullName": "Grant Anderson",
+        "link": "/api/v1/people/681982",
+        "nameSlug": "grant-anderson-681982"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2023-02-28",
+      "effectiveDate": "2023-02-28",
+      "resolutionDate": "2023-02-28",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Grant Anderson assigned to Texas Rangers."
     },
     {
       "id": 681733,
@@ -1644,31 +1644,6 @@
       "description": "Milwaukee Brewers placed RHP Grant Anderson on the 15-day injured list. Right biceps inflammation."
     },
     {
-      "id": 942986,
-      "person": {
-        "id": 681982,
-        "fullName": "Grant Anderson",
-        "link": "/api/v1/people/681982",
-        "nameSlug": "grant-anderson-681982"
-      },
-      "fromTeam": {
-        "id": 158,
-        "name": "Milwaukee Brewers",
-        "link": "/api/v1/teams/158"
-      },
-      "toTeam": {
-        "id": 556,
-        "name": "Nashville Sounds",
-        "link": "/api/v1/teams/556"
-      },
-      "date": "2026-09-16",
-      "effectiveDate": "2026-09-16",
-      "resolutionDate": "2026-09-16",
-      "typeCode": "ASG",
-      "typeDesc": "Assigned",
-      "description": "Milwaukee Brewers sent RHP Grant Anderson on a rehab assignment to Nashville Sounds."
-    },
-    {
       "id": 943966,
       "person": {
         "id": 681982,
@@ -1694,24 +1669,29 @@
       "description": "Milwaukee Brewers sent RHP Grant Anderson on a rehab assignment to Nashville Sounds."
     },
     {
-      "id": 944625,
+      "id": 942986,
       "person": {
         "id": 681982,
         "fullName": "Grant Anderson",
         "link": "/api/v1/people/681982",
         "nameSlug": "grant-anderson-681982"
       },
-      "toTeam": {
+      "fromTeam": {
         "id": 158,
         "name": "Milwaukee Brewers",
         "link": "/api/v1/teams/158"
       },
-      "date": "2026-09-28",
-      "effectiveDate": "2026-09-28",
-      "resolutionDate": "2026-09-28",
-      "typeCode": "SC",
-      "typeDesc": "Status Change",
-      "description": "Milwaukee Brewers activated RHP Grant Anderson from the 15-day injured list."
+      "toTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "date": "2026-09-16",
+      "effectiveDate": "2026-09-16",
+      "resolutionDate": "2026-09-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Milwaukee Brewers sent RHP Grant Anderson on a rehab assignment to Nashville Sounds."
     },
     {
       "id": 944978,
@@ -1732,6 +1712,46 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "RHP Grant Anderson roster status changed by Milwaukee Brewers."
+    },
+    {
+      "id": 944625,
+      "person": {
+        "id": 681982,
+        "fullName": "Grant Anderson",
+        "link": "/api/v1/people/681982",
+        "nameSlug": "grant-anderson-681982"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2026-09-28",
+      "effectiveDate": "2026-09-28",
+      "resolutionDate": "2026-09-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Milwaukee Brewers activated RHP Grant Anderson from the 15-day injured list."
+    },
+    {
+      "id": 950671,
+      "person": {
+        "id": 681982,
+        "fullName": "Grant Anderson",
+        "link": "/api/v1/people/681982",
+        "nameSlug": "grant-anderson-681982"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2026-10-29",
+      "effectiveDate": "2026-10-29",
+      "resolutionDate": "2026-10-29",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Milwaukee Brewers activated RHP Grant Anderson."
     }
   ]
 }

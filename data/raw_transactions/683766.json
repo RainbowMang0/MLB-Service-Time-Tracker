@@ -1,7 +1,7 @@
 {
   "player_id": 683766,
-  "fetched_at": "2026-11-21T18:47:39Z",
-  "checksum": "sha256:27ed22719b4ce82e910fc81192340a73fb9233c4720108963a33f95ef283da50",
+  "fetched_at": "2026-11-23T00:26:03Z",
+  "checksum": "sha256:e5a6878a487e909091ee7d35d283962f65afc2bd4503ad2672d6e1ae551581da",
   "transactions": [
     {
       "id": 413545,
@@ -68,28 +68,24 @@
       "description": "SS Christian Koss assigned to Lancaster JetHawks from Grand Junction Rockies."
     },
     {
-      "id": 457543,
+      "id": 462668,
       "person": {
         "id": 683766,
         "fullName": "Christian Koss",
         "link": "/api/v1/people/683766",
         "nameSlug": "christian-koss-683766"
       },
-      "fromTeam": {
-        "id": 115,
-        "name": "Colorado Rockies",
-        "link": "/api/v1/teams/115"
-      },
       "toTeam": {
-        "id": 111,
-        "name": "Boston Red Sox",
-        "link": "/api/v1/teams/111"
+        "id": 414,
+        "name": "Salem RidgeYaks",
+        "link": "/api/v1/teams/414"
       },
       "date": "2020-12-03",
       "effectiveDate": "2020-12-03",
-      "typeCode": "TR",
-      "typeDesc": "Trade",
-      "description": "Boston Red Sox traded LHP Yoan Aybar to Colorado Rockies for SS Christian Koss."
+      "resolutionDate": "2020-12-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Christian Koss assigned to Salem Red Sox."
     },
     {
       "id": 457544,
@@ -112,24 +108,28 @@
       "description": "SS Christian Koss assigned to Salem Red Sox."
     },
     {
-      "id": 462668,
+      "id": 457543,
       "person": {
         "id": 683766,
         "fullName": "Christian Koss",
         "link": "/api/v1/people/683766",
         "nameSlug": "christian-koss-683766"
       },
+      "fromTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
       "toTeam": {
-        "id": 414,
-        "name": "Salem RidgeYaks",
-        "link": "/api/v1/teams/414"
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
       },
       "date": "2020-12-03",
       "effectiveDate": "2020-12-03",
-      "resolutionDate": "2020-12-03",
-      "typeCode": "ASG",
-      "typeDesc": "Assigned",
-      "description": "SS Christian Koss assigned to Salem Red Sox."
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Boston Red Sox traded LHP Yoan Aybar to Colorado Rockies for SS Christian Koss."
     },
     {
       "id": 465049,
@@ -192,26 +192,6 @@
       "description": "SS Christian Koss and  assigned to Scottsdale Scorpions."
     },
     {
-      "id": 605767,
-      "person": {
-        "id": 683766,
-        "fullName": "Christian Koss",
-        "link": "/api/v1/people/683766",
-        "nameSlug": "christian-koss-683766"
-      },
-      "toTeam": {
-        "id": 111,
-        "name": "Boston Red Sox",
-        "link": "/api/v1/teams/111"
-      },
-      "date": "2022-03-12",
-      "effectiveDate": "2022-03-12",
-      "resolutionDate": "2022-03-12",
-      "typeCode": "ASG",
-      "typeDesc": "Assigned",
-      "description": "Boston Red Sox invited non-roster SS Christian Koss to spring training."
-    },
-    {
       "id": 612588,
       "person": {
         "id": 683766,
@@ -230,6 +210,26 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "SS Christian Koss roster status changed by Boston Red Sox."
+    },
+    {
+      "id": 605767,
+      "person": {
+        "id": 683766,
+        "fullName": "Christian Koss",
+        "link": "/api/v1/people/683766",
+        "nameSlug": "christian-koss-683766"
+      },
+      "toTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "date": "2022-03-12",
+      "effectiveDate": "2022-03-12",
+      "resolutionDate": "2022-03-12",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Boston Red Sox invited non-roster SS Christian Koss to spring training."
     },
     {
       "id": 610998,
@@ -252,26 +252,6 @@
       "description": "SS Christian Koss assigned to Portland Sea Dogs."
     },
     {
-      "id": 657833,
-      "person": {
-        "id": 683766,
-        "fullName": "Christian Koss",
-        "link": "/api/v1/people/683766",
-        "nameSlug": "christian-koss-683766"
-      },
-      "toTeam": {
-        "id": 686,
-        "name": "Criollos de Caguas",
-        "link": "/api/v1/teams/686"
-      },
-      "date": "2022-11-04",
-      "effectiveDate": "2022-11-04",
-      "resolutionDate": "2022-11-04",
-      "typeCode": "ASG",
-      "typeDesc": "Assigned",
-      "description": "SS Christian Koss assigned to Criollos de Caguas."
-    },
-    {
       "id": 670783,
       "person": {
         "id": 683766,
@@ -290,6 +270,26 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "Criollos de Caguas activated SS Christian Koss."
+    },
+    {
+      "id": 657833,
+      "person": {
+        "id": 683766,
+        "fullName": "Christian Koss",
+        "link": "/api/v1/people/683766",
+        "nameSlug": "christian-koss-683766"
+      },
+      "toTeam": {
+        "id": 686,
+        "name": "Criollos de Caguas",
+        "link": "/api/v1/teams/686"
+      },
+      "date": "2022-11-04",
+      "effectiveDate": "2022-11-04",
+      "resolutionDate": "2022-11-04",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Christian Koss assigned to Criollos de Caguas."
     },
     {
       "id": 667609,
@@ -590,7 +590,7 @@
       "description": "Boston Red Sox traded SS Christian Koss to San Francisco Giants."
     },
     {
-      "id": 774065,
+      "id": 763035,
       "person": {
         "id": 683766,
         "fullName": "Christian Koss",
@@ -610,7 +610,7 @@
       "description": "Richmond Flying Squirrels placed SS Christian Koss on the 7-day injured list."
     },
     {
-      "id": 763035,
+      "id": 774065,
       "person": {
         "id": 683766,
         "fullName": "Christian Koss",
@@ -1045,26 +1045,6 @@
       "description": "Sacramento River Cats placed 2B Christian Koss on the 7-day injured list."
     },
     {
-      "id": 924299,
-      "person": {
-        "id": 683766,
-        "fullName": "Christian Koss",
-        "link": "/api/v1/people/683766",
-        "nameSlug": "christian-koss-683766"
-      },
-      "toTeam": {
-        "id": 408,
-        "name": "ACL Giants",
-        "link": "/api/v1/teams/408"
-      },
-      "date": "2026-06-24",
-      "effectiveDate": "2026-06-24",
-      "resolutionDate": "2026-06-24",
-      "typeCode": "ASG",
-      "typeDesc": "Assigned",
-      "description": "sent 2B Christian Koss on a rehab assignment to ACL Giants."
-    },
-    {
       "id": 922019,
       "person": {
         "id": 683766,
@@ -1088,6 +1068,26 @@
       "typeCode": "ASG",
       "typeDesc": "Assigned",
       "description": "Sacramento River Cats sent 2B Christian Koss on a rehab assignment to ACL Giants."
+    },
+    {
+      "id": 924299,
+      "person": {
+        "id": 683766,
+        "fullName": "Christian Koss",
+        "link": "/api/v1/people/683766",
+        "nameSlug": "christian-koss-683766"
+      },
+      "toTeam": {
+        "id": 408,
+        "name": "ACL Giants",
+        "link": "/api/v1/teams/408"
+      },
+      "date": "2026-06-24",
+      "effectiveDate": "2026-06-24",
+      "resolutionDate": "2026-06-24",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "sent 2B Christian Koss on a rehab assignment to ACL Giants."
     },
     {
       "id": 924286,
@@ -1155,7 +1155,7 @@
       "effectiveDate": "2026-11-20",
       "typeCode": "TR",
       "typeDesc": "Trade",
-      "description": "San Francisco Giants traded SS Christian Koss to Tampa Bay Rays for RHP Cole Stokes."
+      "description": "San Francisco Giants traded SS Christian Koss to Tampa Bay Rays."
     }
   ]
 }
