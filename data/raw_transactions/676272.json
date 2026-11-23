@@ -1,7 +1,7 @@
 {
   "player_id": 676272,
-  "fetched_at": "2026-11-21T18:47:39Z",
-  "checksum": "sha256:5ea7df5db1bbb67d28e2e497fe00a882bd2569d246807d3a5a5bfd6b802bca4c",
+  "fetched_at": "2026-11-23T00:18:28Z",
+  "checksum": "sha256:0df669d479904c1776c85da71e27bc2c5724eef221c0065bcc1c99ec4274ce18",
   "transactions": [
     {
       "id": 407447,
@@ -108,26 +108,6 @@
       "description": "RHP Bobby Miller assigned to Dodgers Alternate Training Site from AZL Dodgers 1."
     },
     {
-      "id": 463365,
-      "person": {
-        "id": 676272,
-        "fullName": "Bobby Miller",
-        "link": "/api/v1/people/676272",
-        "nameSlug": "bobby-miller-676272"
-      },
-      "toTeam": {
-        "id": 526,
-        "name": "Rancho Cucamonga Quakes",
-        "link": "/api/v1/teams/526"
-      },
-      "date": "2020-10-01",
-      "effectiveDate": "2020-10-01",
-      "resolutionDate": "2020-10-01",
-      "typeCode": "ASG",
-      "typeDesc": "Assigned",
-      "description": "RHP Bobby Miller assigned to Rancho Cucamonga Quakes."
-    },
-    {
       "id": 454015,
       "person": {
         "id": 676272,
@@ -150,6 +130,26 @@
       "typeCode": "ASG",
       "typeDesc": "Assigned",
       "description": "RHP Bobby Miller assigned to Rancho Cucamonga Quakes from Dodgers Alternate Training Site."
+    },
+    {
+      "id": 463365,
+      "person": {
+        "id": 676272,
+        "fullName": "Bobby Miller",
+        "link": "/api/v1/people/676272",
+        "nameSlug": "bobby-miller-676272"
+      },
+      "toTeam": {
+        "id": 526,
+        "name": "Rancho Cucamonga Quakes",
+        "link": "/api/v1/teams/526"
+      },
+      "date": "2020-10-01",
+      "effectiveDate": "2020-10-01",
+      "resolutionDate": "2020-10-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Bobby Miller assigned to Rancho Cucamonga Quakes."
     },
     {
       "id": 467972,
@@ -192,26 +192,6 @@
       "description": "RHP Bobby Miller assigned to Great Lakes Loons."
     },
     {
-      "id": 475007,
-      "person": {
-        "id": 676272,
-        "fullName": "Bobby Miller",
-        "link": "/api/v1/people/676272",
-        "nameSlug": "bobby-miller-676272"
-      },
-      "toTeam": {
-        "id": 119,
-        "name": "Los Angeles Dodgers",
-        "link": "/api/v1/teams/119"
-      },
-      "date": "2021-02-16",
-      "effectiveDate": "2021-02-16",
-      "resolutionDate": "2021-02-16",
-      "typeCode": "ASG",
-      "typeDesc": "Assigned",
-      "description": "P Bobby Miller assigned to Los Angeles Dodgers ."
-    },
-    {
       "id": 469934,
       "person": {
         "id": 676272,
@@ -230,6 +210,26 @@
       "typeCode": "ASG",
       "typeDesc": "Assigned",
       "description": "Los Angeles Dodgers invited non-roster RHP Bobby Miller to spring training."
+    },
+    {
+      "id": 475007,
+      "person": {
+        "id": 676272,
+        "fullName": "Bobby Miller",
+        "link": "/api/v1/people/676272",
+        "nameSlug": "bobby-miller-676272"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2021-02-16",
+      "effectiveDate": "2021-02-16",
+      "resolutionDate": "2021-02-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "P Bobby Miller assigned to Los Angeles Dodgers ."
     },
     {
       "id": 469655,
@@ -699,7 +699,7 @@
       "description": "Los Angeles Dodgers placed RHP Bobby Miller on the 15-day injured list retroactive to April 10, 2024. Right shoulder inflammation."
     },
     {
-      "id": 778621,
+      "id": 774089,
       "person": {
         "id": 676272,
         "fullName": "Bobby Miller",
@@ -724,7 +724,7 @@
       "description": "Los Angeles Dodgers sent RHP Bobby Miller on a rehab assignment to Rancho Cucamonga Quakes."
     },
     {
-      "id": 774089,
+      "id": 778621,
       "person": {
         "id": 676272,
         "fullName": "Bobby Miller",
@@ -1174,7 +1174,7 @@
       "description": "Los Angeles Dodgers placed RHP Bobby Miller on the 60-day injured list retroactive to March 22, 2026. Right shoulder soreness."
     },
     {
-      "id": 935685,
+      "id": 941422,
       "person": {
         "id": 676272,
         "fullName": "Bobby Miller",
@@ -1199,7 +1199,7 @@
       "description": "Los Angeles Dodgers sent RHP Bobby Miller on a rehab assignment to Oklahoma City Comets."
     },
     {
-      "id": 941422,
+      "id": 935685,
       "person": {
         "id": 676272,
         "fullName": "Bobby Miller",
@@ -1441,7 +1441,7 @@
       "effectiveDate": "2026-11-20",
       "typeCode": "TR",
       "typeDesc": "Trade",
-      "description": "Minnesota Twins traded 1B Royce Lewis to Los Angeles Dodgers for RHP Bobby Miller and C Francisco Espinoza."
+      "description": "Minnesota Twins traded 1B Royce Lewis to Los Angeles Dodgers for RHP Bobby Miller."
     }
   ]
 }

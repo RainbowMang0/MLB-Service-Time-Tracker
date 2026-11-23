@@ -1,28 +1,8 @@
 {
   "player_id": 669298,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:0ced052b0283bbc2c9ae0f0640c5012e4dc1ff4573576c87172504fec645ecd6",
+  "fetched_at": "2026-11-23T00:18:28Z",
+  "checksum": "sha256:263d373c15c352e26b55cf6c0b562b8d9f753d446e10c8cbdda20604d0aeb35d",
   "transactions": [
-    {
-      "id": 448172,
-      "person": {
-        "id": 669298,
-        "fullName": "TJ Shook",
-        "link": "/api/v1/people/669298",
-        "nameSlug": "tj-shook-669298"
-      },
-      "toTeam": {
-        "id": 158,
-        "name": "Milwaukee Brewers",
-        "link": "/api/v1/teams/158"
-      },
-      "date": "2020-07-24",
-      "effectiveDate": "2020-07-24",
-      "resolutionDate": "2020-07-24",
-      "typeCode": "SFA",
-      "typeDesc": "Signed as Free Agent",
-      "description": "Milwaukee Brewers signed free agent RHP TJ Shook to a minor league contract."
-    },
     {
       "id": 448173,
       "person": {
@@ -42,6 +22,26 @@
       "typeCode": "ASG",
       "typeDesc": "Assigned",
       "description": "RHP TJ Shook assigned to AZL Brewers Blue."
+    },
+    {
+      "id": 448172,
+      "person": {
+        "id": 669298,
+        "fullName": "TJ Shook",
+        "link": "/api/v1/people/669298",
+        "nameSlug": "tj-shook-669298"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2020-07-24",
+      "effectiveDate": "2020-07-24",
+      "resolutionDate": "2020-07-24",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Milwaukee Brewers signed free agent RHP TJ Shook to a minor league contract."
     },
     {
       "id": 483194,
@@ -404,26 +404,6 @@
       "description": "Binghamton Rumble Ponies activated RHP TJ Shook."
     },
     {
-      "id": 816830,
-      "person": {
-        "id": 669298,
-        "fullName": "TJ Shook",
-        "link": "/api/v1/people/669298",
-        "nameSlug": "tj-shook-669298"
-      },
-      "toTeam": {
-        "id": 121,
-        "name": "New York Mets",
-        "link": "/api/v1/teams/121"
-      },
-      "date": "2025-02-22",
-      "effectiveDate": "2025-02-22",
-      "resolutionDate": "2025-02-22",
-      "typeCode": "SC",
-      "typeDesc": "Status Change",
-      "description": "RHP TJ Shook roster status changed by New York Mets."
-    },
-    {
       "id": 816639,
       "person": {
         "id": 669298,
@@ -442,6 +422,26 @@
       "typeCode": "ASG",
       "typeDesc": "Assigned",
       "description": "RHP TJ Shook assigned to New York Mets."
+    },
+    {
+      "id": 816830,
+      "person": {
+        "id": 669298,
+        "fullName": "TJ Shook",
+        "link": "/api/v1/people/669298",
+        "nameSlug": "tj-shook-669298"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2025-02-22",
+      "effectiveDate": "2025-02-22",
+      "resolutionDate": "2025-02-22",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "RHP TJ Shook roster status changed by New York Mets."
     },
     {
       "id": 834415,
@@ -632,6 +632,26 @@
       "description": "Colorado Rockies purchased contract of RHP TJ Shook  in the Rule 5 Draft, AAA Phase."
     },
     {
+      "id": 888031,
+      "person": {
+        "id": 669298,
+        "fullName": "TJ Shook",
+        "link": "/api/v1/people/669298",
+        "nameSlug": "tj-shook-669298"
+      },
+      "toTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "date": "2026-02-21",
+      "effectiveDate": "2026-02-21",
+      "resolutionDate": "2026-02-21",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "RHP TJ Shook roster status changed by Colorado Rockies."
+    },
+    {
       "id": 887070,
       "person": {
         "id": 669298,
@@ -653,26 +673,6 @@
     },
     {
       "id": 888621,
-      "person": {
-        "id": 669298,
-        "fullName": "TJ Shook",
-        "link": "/api/v1/people/669298",
-        "nameSlug": "tj-shook-669298"
-      },
-      "toTeam": {
-        "id": 115,
-        "name": "Colorado Rockies",
-        "link": "/api/v1/teams/115"
-      },
-      "date": "2026-02-21",
-      "effectiveDate": "2026-02-21",
-      "resolutionDate": "2026-02-21",
-      "typeCode": "SC",
-      "typeDesc": "Status Change",
-      "description": "RHP TJ Shook roster status changed by Colorado Rockies."
-    },
-    {
-      "id": 888031,
       "person": {
         "id": 669298,
         "fullName": "TJ Shook",
@@ -902,6 +902,46 @@
       "typeCode": "OUT",
       "typeDesc": "Outrighted",
       "description": "Colorado Rockies sent RHP TJ Shook outright to Albuquerque Isotopes."
+    },
+    {
+      "id": 950858,
+      "person": {
+        "id": 669298,
+        "fullName": "TJ Shook",
+        "link": "/api/v1/people/669298",
+        "nameSlug": "tj-shook-669298"
+      },
+      "toTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "date": "2026-11-18",
+      "effectiveDate": "2026-11-18",
+      "resolutionDate": "2026-11-18",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Colorado Rockies signed free agent RHP TJ Shook to a minor league contract."
+    },
+    {
+      "id": 950859,
+      "person": {
+        "id": 669298,
+        "fullName": "TJ Shook",
+        "link": "/api/v1/people/669298",
+        "nameSlug": "tj-shook-669298"
+      },
+      "toTeam": {
+        "id": 342,
+        "name": "Albuquerque Isotopes",
+        "link": "/api/v1/teams/342"
+      },
+      "date": "2026-11-18",
+      "effectiveDate": "2026-11-18",
+      "resolutionDate": "2026-11-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP TJ Shook assigned to Albuquerque Isotopes."
     }
   ]
 }

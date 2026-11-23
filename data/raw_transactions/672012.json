@@ -1,7 +1,7 @@
 {
   "player_id": 672012,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:a3392fc6b7af0763fa0f085385985f7e189413ed201ee7732f1441f0edbc245b",
+  "fetched_at": "2026-11-23T00:18:28Z",
+  "checksum": "sha256:082b8143afa79101f4ca4c7959349c35fbc26fc0a472eed684ebe4c01569a630",
   "transactions": [
     {
       "id": 332563,
@@ -211,26 +211,6 @@
       "description": "Wisconsin Timber Rattlers placed 2B Tyler Black on the 7-day injured list."
     },
     {
-      "id": 652665,
-      "person": {
-        "id": 672012,
-        "fullName": "Tyler Black",
-        "link": "/api/v1/people/672012",
-        "nameSlug": "tyler-black-672012"
-      },
-      "toTeam": {
-        "id": 454,
-        "name": "Glendale Desert Dogs",
-        "link": "/api/v1/teams/454"
-      },
-      "date": "2022-09-16",
-      "effectiveDate": "2022-09-16",
-      "resolutionDate": "2022-09-16",
-      "typeCode": "SC",
-      "typeDesc": "Status Change",
-      "description": "Glendale Desert Dogs activated 2B Tyler Black from the 7-day injured list."
-    },
-    {
       "id": 670322,
       "person": {
         "id": 672012,
@@ -251,7 +231,27 @@
       "description": "Glendale Desert Dogs activated 2B Tyler Black from the 7-day injured list."
     },
     {
-      "id": 682571,
+      "id": 652665,
+      "person": {
+        "id": 672012,
+        "fullName": "Tyler Black",
+        "link": "/api/v1/people/672012",
+        "nameSlug": "tyler-black-672012"
+      },
+      "toTeam": {
+        "id": 454,
+        "name": "Glendale Desert Dogs",
+        "link": "/api/v1/teams/454"
+      },
+      "date": "2022-09-16",
+      "effectiveDate": "2022-09-16",
+      "resolutionDate": "2022-09-16",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Glendale Desert Dogs activated 2B Tyler Black from the 7-day injured list."
+    },
+    {
+      "id": 653745,
       "person": {
         "id": 672012,
         "fullName": "Tyler Black",
@@ -271,7 +271,7 @@
       "description": "Wisconsin Timber Rattlers activated 2B Tyler Black."
     },
     {
-      "id": 653745,
+      "id": 682571,
       "person": {
         "id": 672012,
         "fullName": "Tyler Black",
@@ -780,7 +780,7 @@
       "description": "Nashville Sounds sent 3B Tyler Black on a rehab assignment to ACL Brewers."
     },
     {
-      "id": 846616,
+      "id": 845249,
       "person": {
         "id": 672012,
         "fullName": "Tyler Black",
@@ -805,7 +805,7 @@
       "description": "Nashville Sounds sent 3B Tyler Black on a rehab assignment to ACL Brewers."
     },
     {
-      "id": 845249,
+      "id": 846616,
       "person": {
         "id": 672012,
         "fullName": "Tyler Black",
@@ -1184,6 +1184,26 @@
       "typeCode": "CU",
       "typeDesc": "Recalled",
       "description": "Milwaukee Brewers recalled DH Tyler Black from Nashville Sounds."
+    },
+    {
+      "id": 950672,
+      "person": {
+        "id": 672012,
+        "fullName": "Tyler Black",
+        "link": "/api/v1/people/672012",
+        "nameSlug": "tyler-black-672012"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2026-10-29",
+      "effectiveDate": "2026-10-29",
+      "resolutionDate": "2026-10-29",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Milwaukee Brewers activated DH Tyler Black."
     }
   ]
 }

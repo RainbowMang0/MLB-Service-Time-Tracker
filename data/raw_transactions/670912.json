@@ -1,7 +1,7 @@
 {
   "player_id": 670912,
-  "fetched_at": "2026-11-21T18:47:39Z",
-  "checksum": "sha256:f00eb0f2373230bb74cef45a4eb1d9241c577bcdc2652ba7d126e114ad80a591",
+  "fetched_at": "2026-11-23T00:18:28Z",
+  "checksum": "sha256:065c2a90740a01751f3a92d6acfcf155574add57314127b726292c2f5c5d5adc",
   "transactions": [
     {
       "id": 278376,
@@ -1012,31 +1012,6 @@
       "description": "Pittsburgh Pirates sent RHP Johan Oviedo on a rehab assignment to FCL Pirates."
     },
     {
-      "id": 854628,
-      "person": {
-        "id": 670912,
-        "fullName": "Johan Oviedo",
-        "link": "/api/v1/people/670912",
-        "nameSlug": "johan-oviedo-670912"
-      },
-      "fromTeam": {
-        "id": 134,
-        "name": "Pittsburgh Pirates",
-        "link": "/api/v1/teams/134"
-      },
-      "toTeam": {
-        "id": 3390,
-        "name": "Bradenton Marauders",
-        "link": "/api/v1/teams/3390"
-      },
-      "date": "2025-07-05",
-      "effectiveDate": "2025-07-05",
-      "resolutionDate": "2025-07-05",
-      "typeCode": "ASG",
-      "typeDesc": "Assigned",
-      "description": "Pittsburgh Pirates sent RHP Johan Oviedo on a rehab assignment to Bradenton Marauders."
-    },
-    {
       "id": 852995,
       "person": {
         "id": 670912,
@@ -1062,7 +1037,32 @@
       "description": "Pittsburgh Pirates sent RHP Johan Oviedo on a rehab assignment to Bradenton Marauders."
     },
     {
-      "id": 856172,
+      "id": 854628,
+      "person": {
+        "id": 670912,
+        "fullName": "Johan Oviedo",
+        "link": "/api/v1/people/670912",
+        "nameSlug": "johan-oviedo-670912"
+      },
+      "fromTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "toTeam": {
+        "id": 3390,
+        "name": "Bradenton Marauders",
+        "link": "/api/v1/teams/3390"
+      },
+      "date": "2025-07-05",
+      "effectiveDate": "2025-07-05",
+      "resolutionDate": "2025-07-05",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Pittsburgh Pirates sent RHP Johan Oviedo on a rehab assignment to Bradenton Marauders."
+    },
+    {
+      "id": 859699,
       "person": {
         "id": 670912,
         "fullName": "Johan Oviedo",
@@ -1087,7 +1087,7 @@
       "description": "Pittsburgh Pirates sent RHP Johan Oviedo on a rehab assignment to Altoona Curve."
     },
     {
-      "id": 859699,
+      "id": 856172,
       "person": {
         "id": 670912,
         "fullName": "Johan Oviedo",
@@ -1354,7 +1354,7 @@
       "description": "Boston Red Sox transferred RHP Johan Oviedo from the 15-day injured list to the 60-day injured list. Right elbow strain."
     },
     {
-      "id": 943060,
+      "id": 943884,
       "person": {
         "id": 670912,
         "fullName": "Johan Oviedo",
@@ -1379,7 +1379,7 @@
       "description": "Boston Red Sox sent RHP Johan Oviedo on a rehab assignment to Worcester Red Sox."
     },
     {
-      "id": 943884,
+      "id": 943060,
       "person": {
         "id": 670912,
         "fullName": "Johan Oviedo",
@@ -1445,7 +1445,7 @@
       "effectiveDate": "2026-11-20",
       "typeCode": "TR",
       "typeDesc": "Trade",
-      "description": "Arizona Diamondbacks traded LHP Luke Dotson and Future Considerations to Boston Red Sox for RHP Johan Oviedo."
+      "description": "Arizona Diamondbacks traded LHP Luke Dotson to Boston Red Sox for RHP Johan Oviedo."
     }
   ]
 }

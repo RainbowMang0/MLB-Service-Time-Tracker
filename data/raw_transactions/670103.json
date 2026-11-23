@@ -1,7 +1,7 @@
 {
   "player_id": 670103,
-  "fetched_at": "2026-11-17T20:33:14Z",
-  "checksum": "sha256:97012f7dd7ae277407da6246fa6bfb12f44c4ac82c8b8ca2b1e14248c37a8322",
+  "fetched_at": "2026-11-23T00:18:28Z",
+  "checksum": "sha256:fc649bb7cf0f7fc187c4b4e2a9519aa7b400c2dc0b63e7a41daddaa7a96f1f00",
   "transactions": [
     {
       "id": 280412,
@@ -481,6 +481,26 @@
       "description": "LHP Raymond Burgos elected free agency."
     },
     {
+      "id": 679098,
+      "person": {
+        "id": 670103,
+        "fullName": "Raymond Burgos",
+        "link": "/api/v1/people/670103",
+        "nameSlug": "raymond-burgos-670103"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2022-12-12",
+      "effectiveDate": "2022-12-12",
+      "resolutionDate": "2022-12-12",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "LHP Raymond Burgos roster status changed by San Francisco Giants."
+    },
+    {
       "id": 668368,
       "person": {
         "id": 670103,
@@ -519,26 +539,6 @@
       "typeCode": "SFA",
       "typeDesc": "Signed as Free Agent",
       "description": "San Francisco Giants signed free agent LHP Raymond Burgos to a minor league contract."
-    },
-    {
-      "id": 679098,
-      "person": {
-        "id": 670103,
-        "fullName": "Raymond Burgos",
-        "link": "/api/v1/people/670103",
-        "nameSlug": "raymond-burgos-670103"
-      },
-      "toTeam": {
-        "id": 137,
-        "name": "San Francisco Giants",
-        "link": "/api/v1/teams/137"
-      },
-      "date": "2022-12-12",
-      "effectiveDate": "2022-12-12",
-      "resolutionDate": "2022-12-12",
-      "typeCode": "SC",
-      "typeDesc": "Status Change",
-      "description": "LHP Raymond Burgos roster status changed by San Francisco Giants."
     },
     {
       "id": 663380,
@@ -725,26 +725,6 @@
       "description": "Guerreros de Oaxaca released LHP Raymond Burgos."
     },
     {
-      "id": 765322,
-      "person": {
-        "id": 670103,
-        "fullName": "Raymond Burgos",
-        "link": "/api/v1/people/670103",
-        "nameSlug": "raymond-burgos-670103"
-      },
-      "toTeam": {
-        "id": 408,
-        "name": "ACL Giants",
-        "link": "/api/v1/teams/408"
-      },
-      "date": "2024-04-18",
-      "effectiveDate": "2024-04-18",
-      "resolutionDate": "2024-04-18",
-      "typeCode": "ASG",
-      "typeDesc": "Assigned",
-      "description": "LHP Raymond Burgos assigned to ACL Giants."
-    },
-    {
       "id": 765321,
       "person": {
         "id": 670103,
@@ -763,6 +743,26 @@
       "typeCode": "SFA",
       "typeDesc": "Signed as Free Agent",
       "description": "San Francisco Giants signed free agent LHP Raymond Burgos to a minor league contract."
+    },
+    {
+      "id": 765322,
+      "person": {
+        "id": 670103,
+        "fullName": "Raymond Burgos",
+        "link": "/api/v1/people/670103",
+        "nameSlug": "raymond-burgos-670103"
+      },
+      "toTeam": {
+        "id": 408,
+        "name": "ACL Giants",
+        "link": "/api/v1/teams/408"
+      },
+      "date": "2024-04-18",
+      "effectiveDate": "2024-04-18",
+      "resolutionDate": "2024-04-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Raymond Burgos assigned to ACL Giants."
     },
     {
       "id": 771199,
@@ -986,26 +986,6 @@
       "description": "LHP Raymond Burgos elected free agency."
     },
     {
-      "id": 875109,
-      "person": {
-        "id": 670103,
-        "fullName": "Raymond Burgos",
-        "link": "/api/v1/people/670103",
-        "nameSlug": "raymond-burgos-670103"
-      },
-      "toTeam": {
-        "id": 687,
-        "name": "Gigantes de Carolina",
-        "link": "/api/v1/teams/687"
-      },
-      "date": "2024-11-21",
-      "effectiveDate": "2024-11-21",
-      "resolutionDate": "2024-11-21",
-      "typeCode": "SC",
-      "typeDesc": "Status Change",
-      "description": "Gigantes de Carolina activated LHP Raymond Burgos."
-    },
-    {
       "id": 806786,
       "person": {
         "id": 670103,
@@ -1026,7 +1006,7 @@
       "description": "LHP Raymond Burgos assigned to Gigantes de Carolina."
     },
     {
-      "id": 808847,
+      "id": 875109,
       "person": {
         "id": 670103,
         "fullName": "Raymond Burgos",
@@ -1034,16 +1014,36 @@
         "nameSlug": "raymond-burgos-670103"
       },
       "toTeam": {
-        "id": 137,
-        "name": "San Francisco Giants",
-        "link": "/api/v1/teams/137"
+        "id": 687,
+        "name": "Gigantes de Carolina",
+        "link": "/api/v1/teams/687"
+      },
+      "date": "2024-11-21",
+      "effectiveDate": "2024-11-21",
+      "resolutionDate": "2024-11-21",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Gigantes de Carolina activated LHP Raymond Burgos."
+    },
+    {
+      "id": 823037,
+      "person": {
+        "id": 670103,
+        "fullName": "Raymond Burgos",
+        "link": "/api/v1/people/670103",
+        "nameSlug": "raymond-burgos-670103"
+      },
+      "toTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
       },
       "date": "2024-12-14",
-      "effectiveDate": "2024-12-14",
-      "resolutionDate": "2024-12-14",
-      "typeCode": "SFA",
-      "typeDesc": "Signed as Free Agent",
-      "description": "San Francisco Giants signed free agent LHP Raymond Burgos to a minor league contract."
+      "effectiveDate": "2025-03-28",
+      "resolutionDate": "2025-03-28",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Sacramento River Cats placed LHP Raymond Burgos on the 7-day injured list."
     },
     {
       "id": 808848,
@@ -1066,7 +1066,7 @@
       "description": "LHP Raymond Burgos assigned to Sacramento River Cats."
     },
     {
-      "id": 823037,
+      "id": 808847,
       "person": {
         "id": 670103,
         "fullName": "Raymond Burgos",
@@ -1074,16 +1074,16 @@
         "nameSlug": "raymond-burgos-670103"
       },
       "toTeam": {
-        "id": 105,
-        "name": "Sacramento River Cats",
-        "link": "/api/v1/teams/105"
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
       },
       "date": "2024-12-14",
-      "effectiveDate": "2025-03-28",
-      "resolutionDate": "2025-03-28",
-      "typeCode": "SC",
-      "typeDesc": "Status Change",
-      "description": "Sacramento River Cats placed LHP Raymond Burgos on the 7-day injured list."
+      "effectiveDate": "2024-12-14",
+      "resolutionDate": "2024-12-14",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "San Francisco Giants signed free agent LHP Raymond Burgos to a minor league contract."
     },
     {
       "id": 813989,
@@ -1502,26 +1502,6 @@
       "description": "LHP Raymond Burgos changed number to 21."
     },
     {
-      "id": 944008,
-      "person": {
-        "id": 670103,
-        "fullName": "Raymond Burgos",
-        "link": "/api/v1/people/670103",
-        "nameSlug": "raymond-burgos-670103"
-      },
-      "toTeam": {
-        "id": 111,
-        "name": "Boston Red Sox",
-        "link": "/api/v1/teams/111"
-      },
-      "date": "2026-09-16",
-      "effectiveDate": "2026-09-16",
-      "resolutionDate": "2026-09-16",
-      "typeCode": "SC",
-      "typeDesc": "Status Change",
-      "description": "Boston Red Sox activated LHP Raymond Burgos."
-    },
-    {
       "id": 942853,
       "person": {
         "id": 670103,
@@ -1540,6 +1520,26 @@
       "typeCode": "NUM",
       "typeDesc": "Number Change",
       "description": "LHP Raymond Burgos changed number to 79."
+    },
+    {
+      "id": 944008,
+      "person": {
+        "id": 670103,
+        "fullName": "Raymond Burgos",
+        "link": "/api/v1/people/670103",
+        "nameSlug": "raymond-burgos-670103"
+      },
+      "toTeam": {
+        "id": 111,
+        "name": "Boston Red Sox",
+        "link": "/api/v1/teams/111"
+      },
+      "date": "2026-09-16",
+      "effectiveDate": "2026-09-16",
+      "resolutionDate": "2026-09-16",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Boston Red Sox activated LHP Raymond Burgos."
     },
     {
       "id": 943956,
@@ -1651,7 +1651,7 @@
       "effectiveDate": "2026-11-17",
       "typeCode": "TR",
       "typeDesc": "Trade",
-      "description": "Boston Red Sox traded LHP Raymond Burgos to Athletics for RHP Kenya Huggins."
+      "description": "Boston Red Sox traded LHP Raymond Burgos to Athletics."
     }
   ]
 }

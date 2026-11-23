@@ -1,7 +1,7 @@
 {
   "player_id": 669222,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:d3cb6ff1409dd11254e73e88e94f8b46c3893b27f715e37838937645000f0547",
+  "fetched_at": "2026-11-23T00:18:28Z",
+  "checksum": "sha256:46a85f0402c829f8a6ce2fb22e199fba78ec5db9a3b3ebbd7b4b35720fcf2d66",
   "transactions": [
     {
       "id": 270723,
@@ -468,26 +468,6 @@
       "description": "Cincinnati Reds activated CF Nick Senzel from the 10-day injured list."
     },
     {
-      "id": 478648,
-      "person": {
-        "id": 669222,
-        "fullName": "Nick Senzel",
-        "link": "/api/v1/people/669222",
-        "nameSlug": "nick-senzel-669222"
-      },
-      "toTeam": {
-        "id": 113,
-        "name": "Cincinnati Reds",
-        "link": "/api/v1/teams/113"
-      },
-      "date": "2020-09-14",
-      "effectiveDate": "2020-09-14",
-      "resolutionDate": "2020-09-14",
-      "typeCode": "SC",
-      "typeDesc": "Status Change",
-      "description": "Cincinnati Reds activated OF Nick Senzel from the 10-day injured list."
-    },
-    {
       "id": 477874,
       "person": {
         "id": 669222,
@@ -506,6 +486,26 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "Cincinnati Reds activated OF Nick Senzel from the 10 day injured list."
+    },
+    {
+      "id": 478648,
+      "person": {
+        "id": 669222,
+        "fullName": "Nick Senzel",
+        "link": "/api/v1/people/669222",
+        "nameSlug": "nick-senzel-669222"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2020-09-14",
+      "effectiveDate": "2020-09-14",
+      "resolutionDate": "2020-09-14",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Cincinnati Reds activated OF Nick Senzel from the 10-day injured list."
     },
     {
       "id": 490031,
@@ -886,7 +886,7 @@
       "description": "Cincinnati Reds placed OF Nick Senzel on the 10-day injured list retroactive to June 4, 2023. Right knee."
     },
     {
-      "id": 704607,
+      "id": 703080,
       "person": {
         "id": 669222,
         "fullName": "Nick Senzel",
@@ -911,7 +911,7 @@
       "description": "Cincinnati Reds sent OF Nick Senzel on a rehab assignment to Louisville Bats."
     },
     {
-      "id": 703080,
+      "id": 704607,
       "person": {
         "id": 669222,
         "fullName": "Nick Senzel",
@@ -1435,6 +1435,26 @@
       "typeCode": "ASG",
       "typeDesc": "Assigned",
       "description": "3B Nick Senzel assigned to Mayos de Navojoa."
+    },
+    {
+      "id": 950926,
+      "person": {
+        "id": 669222,
+        "fullName": "Nick Senzel",
+        "link": "/api/v1/people/669222",
+        "nameSlug": "nick-senzel-669222"
+      },
+      "toTeam": {
+        "id": 676,
+        "name": "Mayos de Navojoa",
+        "link": "/api/v1/teams/676"
+      },
+      "date": "2026-11-22",
+      "effectiveDate": "2026-11-22",
+      "resolutionDate": "2026-11-22",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Mayos de Navojoa placed 3B Nick Senzel on the reserve list."
     }
   ]
 }

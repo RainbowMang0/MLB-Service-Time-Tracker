@@ -1,7 +1,7 @@
 {
   "player_id": 672582,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:25a766e290bdfb79256f74d36b62f20893b364a8919e1e0102c898ddb7bfb3cd",
+  "fetched_at": "2026-11-23T00:18:28Z",
+  "checksum": "sha256:ae6f69aff94133f41d07f8a3bb6f2bbcd22bb07e3d67c54931b2204b9b97b848",
   "transactions": [
     {
       "id": 290206,
@@ -727,26 +727,6 @@
       "description": "Kansas City Royals activated LHP Angel Zerpa from the 60-day injured list."
     },
     {
-      "id": 661398,
-      "person": {
-        "id": 672582,
-        "fullName": "Angel Zerpa",
-        "link": "/api/v1/people/672582",
-        "nameSlug": "angel-zerpa-672582"
-      },
-      "toTeam": {
-        "id": 698,
-        "name": "Tiburones de La Guaira",
-        "link": "/api/v1/teams/698"
-      },
-      "date": "2022-11-22",
-      "effectiveDate": "2022-11-22",
-      "resolutionDate": "2022-11-22",
-      "typeCode": "ASG",
-      "typeDesc": "Assigned",
-      "description": "LHP Angel Zerpa assigned to Tiburones de La Guaira."
-    },
-    {
       "id": 670451,
       "person": {
         "id": 672582,
@@ -765,6 +745,26 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "Tiburones de La Guaira activated LHP Angel Zerpa."
+    },
+    {
+      "id": 661398,
+      "person": {
+        "id": 672582,
+        "fullName": "Angel Zerpa",
+        "link": "/api/v1/people/672582",
+        "nameSlug": "angel-zerpa-672582"
+      },
+      "toTeam": {
+        "id": 698,
+        "name": "Tiburones de La Guaira",
+        "link": "/api/v1/teams/698"
+      },
+      "date": "2022-11-22",
+      "effectiveDate": "2022-11-22",
+      "resolutionDate": "2022-11-22",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Angel Zerpa assigned to Tiburones de La Guaira."
     },
     {
       "id": 668823,
@@ -1135,6 +1135,26 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "Milwaukee Brewers transferred LHP Angel Zerpa from the 15-day injured list to the 60-day injured list. Left forearm tightness."
+    },
+    {
+      "id": 950683,
+      "person": {
+        "id": 672582,
+        "fullName": "Angel Zerpa",
+        "link": "/api/v1/people/672582",
+        "nameSlug": "angel-zerpa-672582"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2026-11-02",
+      "effectiveDate": "2026-11-02",
+      "resolutionDate": "2026-11-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Milwaukee Brewers activated LHP Angel Zerpa from the 60-day injured list."
     }
   ]
 }

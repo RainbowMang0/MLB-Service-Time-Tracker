@@ -1,7 +1,7 @@
 {
   "player_id": 673929,
-  "fetched_at": "2026-11-21T18:47:39Z",
-  "checksum": "sha256:eb6d90dcf0176308159454f868fb713ab0e533dcf6e79ed16ddfcecc08637c4d",
+  "fetched_at": "2026-11-23T00:18:28Z",
+  "checksum": "sha256:ae2ab9025f765db1c452a5179d9559d7b414b0c4fed1ddaaa13ec81976b9a4a8",
   "transactions": [
     {
       "id": 298329,
@@ -64,26 +64,6 @@
       "description": "RHP Jordan Leasure and  assigned to College Workout."
     },
     {
-      "id": 513009,
-      "person": {
-        "id": 673929,
-        "fullName": "Jordan Leasure",
-        "link": "/api/v1/people/673929",
-        "nameSlug": "jordan-leasure-673929"
-      },
-      "toTeam": {
-        "id": 5427,
-        "name": "ACL Dodgers",
-        "link": "/api/v1/teams/5427"
-      },
-      "date": "2021-08-19",
-      "effectiveDate": "2021-08-19",
-      "resolutionDate": "2021-08-19",
-      "typeCode": "ASG",
-      "typeDesc": "Assigned",
-      "description": "RHP Jordan Leasure assigned to ACL Dodgers."
-    },
-    {
       "id": 512958,
       "person": {
         "id": 673929,
@@ -102,6 +82,26 @@
       "typeCode": "SGN",
       "typeDesc": "Signed",
       "description": "Los Angeles Dodgers signed RHP Jordan Leasure."
+    },
+    {
+      "id": 513009,
+      "person": {
+        "id": 673929,
+        "fullName": "Jordan Leasure",
+        "link": "/api/v1/people/673929",
+        "nameSlug": "jordan-leasure-673929"
+      },
+      "toTeam": {
+        "id": 5427,
+        "name": "ACL Dodgers",
+        "link": "/api/v1/teams/5427"
+      },
+      "date": "2021-08-19",
+      "effectiveDate": "2021-08-19",
+      "resolutionDate": "2021-08-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jordan Leasure assigned to ACL Dodgers."
     },
     {
       "id": 515624,
@@ -231,26 +231,6 @@
       "description": "RHP Jordan Leasure assigned to Tulsa Drillers from Great Lakes Loons."
     },
     {
-      "id": 673562,
-      "person": {
-        "id": 673929,
-        "fullName": "Jordan Leasure",
-        "link": "/api/v1/people/673929",
-        "nameSlug": "jordan-leasure-673929"
-      },
-      "toTeam": {
-        "id": 119,
-        "name": "Los Angeles Dodgers",
-        "link": "/api/v1/teams/119"
-      },
-      "date": "2023-02-26",
-      "effectiveDate": "2023-02-26",
-      "resolutionDate": "2023-02-26",
-      "typeCode": "ASG",
-      "typeDesc": "Assigned",
-      "description": "RHP Jordan Leasure assigned to Los Angeles Dodgers."
-    },
-    {
       "id": 678476,
       "person": {
         "id": 673929,
@@ -269,6 +249,26 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "RHP Jordan Leasure roster status changed by Los Angeles Dodgers."
+    },
+    {
+      "id": 673562,
+      "person": {
+        "id": 673929,
+        "fullName": "Jordan Leasure",
+        "link": "/api/v1/people/673929",
+        "nameSlug": "jordan-leasure-673929"
+      },
+      "toTeam": {
+        "id": 119,
+        "name": "Los Angeles Dodgers",
+        "link": "/api/v1/teams/119"
+      },
+      "date": "2023-02-26",
+      "effectiveDate": "2023-02-26",
+      "resolutionDate": "2023-02-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jordan Leasure assigned to Los Angeles Dodgers."
     },
     {
       "id": 715386,
@@ -853,7 +853,7 @@
       "effectiveDate": "2026-11-20",
       "typeCode": "TR",
       "typeDesc": "Trade",
-      "description": "Chicago White Sox traded RHP Jordan Leasure to Philadelphia Phillies for RHP Christian Coppola."
+      "description": "Chicago White Sox traded RHP Jordan Leasure to Philadelphia Phillies."
     }
   ]
 }

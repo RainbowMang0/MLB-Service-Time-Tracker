@@ -1,7 +1,7 @@
 {
   "player_id": 669270,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:4d88a90495af2435235dde7a603e57d7e556904acc18b7c57b794cd88b22d4cc",
+  "fetched_at": "2026-11-23T00:18:28Z",
+  "checksum": "sha256:919e33cb17cf062bdcf9732732b837407a8e9878de9c59a21ddef9e7090ead2b",
   "transactions": [
     {
       "id": 276695,
@@ -737,30 +737,6 @@
       "description": "Houston Astros reassigned RHP Joel Kuhnel to the minor leagues."
     },
     {
-      "id": 704962,
-      "person": {
-        "id": 669270,
-        "fullName": "Joel Kuhnel",
-        "link": "/api/v1/people/669270",
-        "nameSlug": "joel-kuhnel-669270"
-      },
-      "fromTeam": {
-        "id": 117,
-        "name": "Houston Astros",
-        "link": "/api/v1/teams/117"
-      },
-      "toTeam": {
-        "id": 5434,
-        "name": "Sugar Land Space Cowboys",
-        "link": "/api/v1/teams/5434"
-      },
-      "date": "2023-06-17",
-      "effectiveDate": "2023-06-18",
-      "typeCode": "OPT",
-      "typeDesc": "Optioned",
-      "description": "Houston Astros optioned RHP Joel Kuhnel to Sugar Land Space Cowboys."
-    },
-    {
       "id": 704958,
       "person": {
         "id": 669270,
@@ -783,6 +759,30 @@
       "typeCode": "TR",
       "typeDesc": "Trade",
       "description": "Cincinnati Reds traded RHP Joel Kuhnel to Houston Astros for cash."
+    },
+    {
+      "id": 704962,
+      "person": {
+        "id": 669270,
+        "fullName": "Joel Kuhnel",
+        "link": "/api/v1/people/669270",
+        "nameSlug": "joel-kuhnel-669270"
+      },
+      "fromTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "toTeam": {
+        "id": 5434,
+        "name": "Sugar Land Space Cowboys",
+        "link": "/api/v1/teams/5434"
+      },
+      "date": "2023-06-17",
+      "effectiveDate": "2023-06-18",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Houston Astros optioned RHP Joel Kuhnel to Sugar Land Space Cowboys."
     },
     {
       "id": 710221,
@@ -1009,26 +1009,6 @@
       "description": "RHP Joel Kuhnel elected free agency."
     },
     {
-      "id": 738421,
-      "person": {
-        "id": 669270,
-        "fullName": "Joel Kuhnel",
-        "link": "/api/v1/people/669270",
-        "nameSlug": "joel-kuhnel-669270"
-      },
-      "toTeam": {
-        "id": 5434,
-        "name": "Sugar Land Space Cowboys",
-        "link": "/api/v1/teams/5434"
-      },
-      "date": "2024-01-29",
-      "effectiveDate": "2024-01-29",
-      "resolutionDate": "2024-01-29",
-      "typeCode": "ASG",
-      "typeDesc": "Assigned",
-      "description": "RHP Joel Kuhnel assigned to Sugar Land Space Cowboys."
-    },
-    {
       "id": 738420,
       "person": {
         "id": 669270,
@@ -1047,6 +1027,26 @@
       "typeCode": "SFA",
       "typeDesc": "Signed as Free Agent",
       "description": "Houston Astros signed free agent RHP Joel Kuhnel to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 738421,
+      "person": {
+        "id": 669270,
+        "fullName": "Joel Kuhnel",
+        "link": "/api/v1/people/669270",
+        "nameSlug": "joel-kuhnel-669270"
+      },
+      "toTeam": {
+        "id": 5434,
+        "name": "Sugar Land Space Cowboys",
+        "link": "/api/v1/teams/5434"
+      },
+      "date": "2024-01-29",
+      "effectiveDate": "2024-01-29",
+      "resolutionDate": "2024-01-29",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Joel Kuhnel assigned to Sugar Land Space Cowboys."
     },
     {
       "id": 763012,
@@ -1241,7 +1241,7 @@
       "description": "Houston Astros traded RHP Joel Kuhnel to Toronto Blue Jays for cash."
     },
     {
-      "id": 775300,
+      "id": 768766,
       "person": {
         "id": 669270,
         "fullName": "Joel Kuhnel",
@@ -1261,7 +1261,7 @@
       "description": "Buffalo Bisons activated RHP Joel Kuhnel."
     },
     {
-      "id": 768766,
+      "id": 775300,
       "person": {
         "id": 669270,
         "fullName": "Joel Kuhnel",
@@ -1345,26 +1345,6 @@
       "description": "Toronto Blue Jays sent RHP Joel Kuhnel outright to Buffalo Bisons."
     },
     {
-      "id": 779311,
-      "person": {
-        "id": 669270,
-        "fullName": "Joel Kuhnel",
-        "link": "/api/v1/people/669270",
-        "nameSlug": "joel-kuhnel-669270"
-      },
-      "toTeam": {
-        "id": 158,
-        "name": "Milwaukee Brewers",
-        "link": "/api/v1/teams/158"
-      },
-      "date": "2024-06-11",
-      "effectiveDate": "2024-06-11",
-      "resolutionDate": "2024-06-11",
-      "typeCode": "SFA",
-      "typeDesc": "Signed as Free Agent",
-      "description": "Milwaukee Brewers signed free agent RHP Joel Kuhnel to a minor league contract."
-    },
-    {
       "id": 779312,
       "person": {
         "id": 669270,
@@ -1383,6 +1363,26 @@
       "typeCode": "ASG",
       "typeDesc": "Assigned",
       "description": "RHP Joel Kuhnel assigned to Nashville Sounds."
+    },
+    {
+      "id": 779311,
+      "person": {
+        "id": 669270,
+        "fullName": "Joel Kuhnel",
+        "link": "/api/v1/people/669270",
+        "nameSlug": "joel-kuhnel-669270"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2024-06-11",
+      "effectiveDate": "2024-06-11",
+      "resolutionDate": "2024-06-11",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Milwaukee Brewers signed free agent RHP Joel Kuhnel to a minor league contract."
     },
     {
       "id": 782903,
@@ -1705,6 +1705,26 @@
       "description": "Tampa Bay Rays sent RHP Joel Kuhnel outright to Durham Bulls."
     },
     {
+      "id": 809704,
+      "person": {
+        "id": 669270,
+        "fullName": "Joel Kuhnel",
+        "link": "/api/v1/people/669270",
+        "nameSlug": "joel-kuhnel-669270"
+      },
+      "toTeam": {
+        "id": 1410,
+        "name": "Lehigh Valley IronPigs",
+        "link": "/api/v1/teams/1410"
+      },
+      "date": "2024-12-21",
+      "effectiveDate": "2024-12-21",
+      "resolutionDate": "2024-12-21",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Joel Kuhnel assigned to Lehigh Valley IronPigs."
+    },
+    {
       "id": 809923,
       "person": {
         "id": 669270,
@@ -1743,26 +1763,6 @@
       "typeCode": "SFA",
       "typeDesc": "Signed as Free Agent",
       "description": "Philadelphia Phillies signed free agent RHP Joel Kuhnel to a minor league contract."
-    },
-    {
-      "id": 809704,
-      "person": {
-        "id": 669270,
-        "fullName": "Joel Kuhnel",
-        "link": "/api/v1/people/669270",
-        "nameSlug": "joel-kuhnel-669270"
-      },
-      "toTeam": {
-        "id": 1410,
-        "name": "Lehigh Valley IronPigs",
-        "link": "/api/v1/teams/1410"
-      },
-      "date": "2024-12-21",
-      "effectiveDate": "2024-12-21",
-      "resolutionDate": "2024-12-21",
-      "typeCode": "ASG",
-      "typeDesc": "Assigned",
-      "description": "RHP Joel Kuhnel assigned to Lehigh Valley IronPigs."
     },
     {
       "id": 852453,
@@ -2164,6 +2164,46 @@
       "typeCode": "OUT",
       "typeDesc": "Outrighted",
       "description": "San Francisco Giants sent RHP Joel Kuhnel outright to Sacramento River Cats."
+    },
+    {
+      "id": 950867,
+      "person": {
+        "id": 669270,
+        "fullName": "Joel Kuhnel",
+        "link": "/api/v1/people/669270",
+        "nameSlug": "joel-kuhnel-669270"
+      },
+      "toTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "date": "2026-11-16",
+      "effectiveDate": "2026-11-16",
+      "resolutionDate": "2026-11-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Joel Kuhnel assigned to Syracuse Mets."
+    },
+    {
+      "id": 950866,
+      "person": {
+        "id": 669270,
+        "fullName": "Joel Kuhnel",
+        "link": "/api/v1/people/669270",
+        "nameSlug": "joel-kuhnel-669270"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2026-11-16",
+      "effectiveDate": "2026-11-16",
+      "resolutionDate": "2026-11-16",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "New York Mets signed free agent RHP Joel Kuhnel to a minor league contract."
     }
   ]
 }

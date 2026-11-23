@@ -1,7 +1,7 @@
 {
   "player_id": 675919,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:d8f9a28050c30942bac9e4d2380e4ffd37c451ed7ef5c4abe7fc7f9355a66cab",
+  "fetched_at": "2026-11-23T00:18:28Z",
+  "checksum": "sha256:90348cc1a2285fcb115a9cf756356f95fa7d482397fcc90c1bfd926cc40141bb",
   "transactions": [
     {
       "id": 317572,
@@ -296,26 +296,6 @@
       "description": "LHP Nick Raquet assigned to Gigantes del Cibao."
     },
     {
-      "id": 737671,
-      "person": {
-        "id": 675919,
-        "fullName": "Nick Raquet",
-        "link": "/api/v1/people/675919",
-        "nameSlug": "nick-raquet-675919"
-      },
-      "toTeam": {
-        "id": 138,
-        "name": "St. Louis Cardinals",
-        "link": "/api/v1/teams/138"
-      },
-      "date": "2024-01-16",
-      "effectiveDate": "2024-01-16",
-      "resolutionDate": "2024-01-16",
-      "typeCode": "SFA",
-      "typeDesc": "Signed as Free Agent",
-      "description": "St. Louis Cardinals signed free agent LHP Nick Raquet to a minor league contract."
-    },
-    {
       "id": 737672,
       "person": {
         "id": 675919,
@@ -334,6 +314,26 @@
       "typeCode": "ASG",
       "typeDesc": "Assigned",
       "description": "LHP Nick Raquet assigned to Memphis Redbirds."
+    },
+    {
+      "id": 737671,
+      "person": {
+        "id": 675919,
+        "fullName": "Nick Raquet",
+        "link": "/api/v1/people/675919",
+        "nameSlug": "nick-raquet-675919"
+      },
+      "toTeam": {
+        "id": 138,
+        "name": "St. Louis Cardinals",
+        "link": "/api/v1/teams/138"
+      },
+      "date": "2024-01-16",
+      "effectiveDate": "2024-01-16",
+      "resolutionDate": "2024-01-16",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "St. Louis Cardinals signed free agent LHP Nick Raquet to a minor league contract."
     },
     {
       "id": 756576,
@@ -420,26 +420,6 @@
       "description": "Memphis Redbirds released LHP Nick Raquet."
     },
     {
-      "id": 811924,
-      "person": {
-        "id": 675919,
-        "fullName": "Nick Raquet",
-        "link": "/api/v1/people/675919",
-        "nameSlug": "nick-raquet-675919"
-      },
-      "toTeam": {
-        "id": 440,
-        "name": "Ozarks Springbirds",
-        "link": "/api/v1/teams/440"
-      },
-      "date": "2025-01-15",
-      "effectiveDate": "2025-01-15",
-      "resolutionDate": "2025-01-15",
-      "typeCode": "ASG",
-      "typeDesc": "Assigned",
-      "description": "LHP Nick Raquet assigned to Springfield Cardinals."
-    },
-    {
       "id": 811925,
       "person": {
         "id": 675919,
@@ -458,6 +438,26 @@
       "typeCode": "SFA",
       "typeDesc": "Signed as Free Agent",
       "description": "St. Louis Cardinals signed free agent LHP Nick Raquet to a minor league contract."
+    },
+    {
+      "id": 811924,
+      "person": {
+        "id": 675919,
+        "fullName": "Nick Raquet",
+        "link": "/api/v1/people/675919",
+        "nameSlug": "nick-raquet-675919"
+      },
+      "toTeam": {
+        "id": 440,
+        "name": "Ozarks Springbirds",
+        "link": "/api/v1/teams/440"
+      },
+      "date": "2025-01-15",
+      "effectiveDate": "2025-01-15",
+      "resolutionDate": "2025-01-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Nick Raquet assigned to Springfield Cardinals."
     },
     {
       "id": 817949,
@@ -1018,6 +1018,46 @@
       "typeCode": "REL",
       "typeDesc": "Released",
       "description": "Baltimore Orioles released LHP Nick Raquet."
+    },
+    {
+      "id": 950342,
+      "person": {
+        "id": 675919,
+        "fullName": "Nick Raquet",
+        "link": "/api/v1/people/675919",
+        "nameSlug": "nick-raquet-675919"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2026-10-20",
+      "effectiveDate": "2026-10-20",
+      "resolutionDate": "2026-10-20",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Detroit Tigers signed free agent LHP Nick Raquet to a minor league contract."
+    },
+    {
+      "id": 950343,
+      "person": {
+        "id": 675919,
+        "fullName": "Nick Raquet",
+        "link": "/api/v1/people/675919",
+        "nameSlug": "nick-raquet-675919"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2026-10-21",
+      "effectiveDate": "2026-10-21",
+      "resolutionDate": "2026-10-21",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Nick Raquet assigned to Toledo Mud Hens."
     }
   ]
 }

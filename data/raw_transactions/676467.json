@@ -1,10 +1,10 @@
 {
   "player_id": 676467,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:c6553e8aec83bd6aaf005a95c3223ad136582fb9696a538cf9653dfc9726ab5f",
+  "fetched_at": "2026-11-23T00:18:28Z",
+  "checksum": "sha256:ebe0d54b6257d4103bd992677a5aa46084f57cc1cdc717d8cd05d1ac21a3b051",
   "transactions": [
     {
-      "id": 489992,
+      "id": 498648,
       "person": {
         "id": 676467,
         "fullName": "Colton Gordon",
@@ -24,7 +24,7 @@
       "description": "LHP Colton Gordon assigned to Central Florida Knights."
     },
     {
-      "id": 498648,
+      "id": 489992,
       "person": {
         "id": 676467,
         "fullName": "Colton Gordon",
@@ -202,7 +202,7 @@
       "description": "LHP Colton Gordon assigned to Asheville Tourists from Fayetteville Woodpeckers."
     },
     {
-      "id": 670254,
+      "id": 652582,
       "person": {
         "id": 676467,
         "fullName": "Colton Gordon",
@@ -222,7 +222,7 @@
       "description": "Surprise Saguaros activated LHP Colton Gordon."
     },
     {
-      "id": 652582,
+      "id": 670254,
       "person": {
         "id": 676467,
         "fullName": "Colton Gordon",
@@ -262,26 +262,6 @@
       "description": "Israel activated LHP Colton Gordon."
     },
     {
-      "id": 678225,
-      "person": {
-        "id": 676467,
-        "fullName": "Colton Gordon",
-        "link": "/api/v1/people/676467",
-        "nameSlug": "colton-gordon-676467"
-      },
-      "toTeam": {
-        "id": 117,
-        "name": "Houston Astros",
-        "link": "/api/v1/teams/117"
-      },
-      "date": "2023-03-04",
-      "effectiveDate": "2023-03-04",
-      "resolutionDate": "2023-03-04",
-      "typeCode": "SC",
-      "typeDesc": "Status Change",
-      "description": "LHP Colton Gordon roster status changed by Houston Astros."
-    },
-    {
       "id": 674380,
       "person": {
         "id": 676467,
@@ -300,6 +280,26 @@
       "typeCode": "ASG",
       "typeDesc": "Assigned",
       "description": "LHP Colton Gordon assigned to Houston Astros."
+    },
+    {
+      "id": 678225,
+      "person": {
+        "id": 676467,
+        "fullName": "Colton Gordon",
+        "link": "/api/v1/people/676467",
+        "nameSlug": "colton-gordon-676467"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2023-03-04",
+      "effectiveDate": "2023-03-04",
+      "resolutionDate": "2023-03-04",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "LHP Colton Gordon roster status changed by Houston Astros."
     },
     {
       "id": 674453,
@@ -1052,6 +1052,26 @@
       "typeCode": "CU",
       "typeDesc": "Recalled",
       "description": "Milwaukee Brewers recalled LHP Colton Gordon from Biloxi Shuckers."
+    },
+    {
+      "id": 950678,
+      "person": {
+        "id": 676467,
+        "fullName": "Colton Gordon",
+        "link": "/api/v1/people/676467",
+        "nameSlug": "colton-gordon-676467"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2026-10-29",
+      "effectiveDate": "2026-10-29",
+      "resolutionDate": "2026-10-29",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Milwaukee Brewers activated LHP Colton Gordon."
     }
   ]
 }
