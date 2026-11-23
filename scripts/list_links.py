@@ -15,6 +15,7 @@ LEAGUE_LISTS = (
     ("non-tender-watch.html", "Non-tender watch"),
     ("free-agents.html", "Free agents"),
     ("options.html", "Out of options"),
+    ("rookie-status.html", "Rookie eligibility"),
     ("offseason.html", "Offseason"),
 )
 

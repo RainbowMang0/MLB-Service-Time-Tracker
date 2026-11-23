@@ -51,6 +51,7 @@ _MONTHS = (
 _CALENDAR_ORDER = (
     wpp.FREE_AGENTS_PATH,
     "contract.html",
+    "rookie-status.html",
     "rule-5.html",
     wpp.SEND_DOWN_PATH,
     "dfa-outcomes.html",
@@ -101,6 +102,11 @@ def calendar_groups(docs: Path) -> list[dict]:
                     "contract.html",
                     "Contract clock",
                     "Years until arbitration and free agency.",
+                ),
+                (
+                    "rookie-status.html",
+                    "Rookie eligibility",
+                    "40-man players who still have rookie eligibility.",
                 ),
             ],
         },
