@@ -729,18 +729,18 @@ def test_no_internal_pipeline_details_leak_into_the_lockout_page():
     check("no data file name leaks", "lockout_updates.json" not in lowered)
 
 
-CATEGORIES_WITH_NO_REAL_ENTRY_TODAY = {"deadlines", "owners_league"}
-
-
-def test_real_data_exercises_both_a_populated_and_an_empty_category():
-    data = blp.load()
-    categories_present = {blp._entry_category(e) for e in data["entries"]}
-    check(
-        "at least one real category used by today's data has zero entries "
-        "(exercises the filter's empty-results state)",
-        bool(CATEGORIES_WITH_NO_REAL_ENTRY_TODAY - categories_present),
-    )
-    check("at least one real category has entries", bool(categories_present))
+def test_an_empty_category_is_built_from_a_fixture():
+    # Empty state is a fixture. A deadlines entry must not fail this test.
+    data = copy.deepcopy(GOOD)
+    data["entries"][0]["category"] = "negotiations"
+    data["entries"][1]["category"] = "salary_cap"
+    rendered = blp._render_entries(blp.sorted_entries(data))
+    present = set(re.findall(r'data-category="([^"]+)"', rendered))
+    check("the fixture publishes a category that has entries", "negotiations" in present)
+    check("the fixture's deadlines category has no entries", "deadlines" not in present)
+    page = blp.render(data, et(2026, 10, 31))
+    check("deadlines stays a filter with the empty-state message",
+          'data-filter="deadlines"' in page and "No updates for this topic yet." in page)
 
 
 def test_meta_description_fits_search_result_length():
@@ -1031,7 +1031,7 @@ if __name__ == "__main__":
     test_the_filter_empty_state_message_is_present_and_hidden_by_default()
     test_the_filter_bar_appears_above_the_entries_list()
     test_no_internal_pipeline_details_leak_into_the_lockout_page()
-    test_real_data_exercises_both_a_populated_and_an_empty_category()
+    test_an_empty_category_is_built_from_a_fixture()
     test_meta_description_fits_search_result_length()
     test_the_real_salary_cap_data_file_validates()
     test_a_well_formed_cap_fixture_validates()

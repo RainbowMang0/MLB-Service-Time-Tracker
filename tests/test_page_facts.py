@@ -93,6 +93,36 @@ def _named(html: str, label: str) -> int:
     return 0
 
 
+def test_the_winter_list_is_the_number_and_the_names() -> None:
+    """The card opens the winter list, which includes Super Two.
+
+    A free agent stays off that list. Passing the winter list in is what the
+    publisher does; the number, the sentence under it, and the offseason
+    table then name the same players.
+    """
+    players = [
+        _player(id=1, name="Zeta FA", free_agent_eligible=True, arbitration_eligible=True,
+                service_time="9.000", service_days_total=9 * pages.FULL_YEAR_DAYS),
+        _player(id=2, name="Alpha S2", super_two_candidate=True, arbitration_eligible=True,
+                service_time="2.100", service_days_total=2 * pages.FULL_YEAR_DAYS + 100),
+        _player(id=3, name="Beta Arb", arbitration_eligible=True,
+                service_time="4.000", service_days_total=4 * pages.FULL_YEAR_DAYS),
+    ]
+    winter = [players[1], players[2]]
+    html = pages.render_club(
+        "Chicago White Sox", players, "2026-11-22", winter, [], [], 2027,
+    )
+    facts = dict(re.findall(
+        r"<span>([^<]+)</span><b class=\"big\">(?:<a[^>]*>)?(\d+)", html
+    ))
+    check("the card counts the winter list, including Super Two", facts["Arbitration eligible"] == "2")
+    check("the sentence under the card names both", _named(html, "Arbitration eligible") == 2)
+    check("the free agent is not in that sentence", "Zeta FA" not in html.split("Arbitration eligible:", 1)[-1].split("</p>")[0])
+    table = html.split("<h3>Arbitration eligible</h3>", 1)[1].split("<h3>", 1)[0]
+    check("the table under that heading is the same two names",
+          "Alpha S2" in table and "Beta Arb" in table and "Zeta FA" not in table)
+
+
 def test_every_club_hub_card_matches_its_rendered_names() -> None:
     data = json.loads((ROOT / "docs" / "data" / "service_time.json").read_text())
     rostered = [p for p in data["players"] if p.get("on_40_man") and p.get("team")]
@@ -263,6 +293,7 @@ def test_named_players_match_the_feed() -> None:
 
 def main() -> None:
     test_groups_match_the_name_list_not_the_raw_flag()
+    test_the_winter_list_is_the_number_and_the_names()
     test_every_club_hub_card_matches_its_rendered_names()
     test_last_club_is_the_latest_major_league_stint()
     test_career_closed_follows_the_active_flag_and_a_retirement()

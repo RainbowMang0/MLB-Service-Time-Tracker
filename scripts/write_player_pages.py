@@ -741,7 +741,9 @@ def _ld_script(graph: list[dict]) -> str:
     return f'<script type="application/ld+json">{payload}</script>'
 
 
-def render_club_index(by_club: dict[str, list[dict]], generated_at: str) -> str:
+def render_club_index(
+    by_club: dict[str, list[dict]], generated_at: str, next_season: int | None = None,
+) -> str:
     """The club directory at /t/.
 
     This exists so the club hubs are reachable from the homepage in ONE hop.
@@ -758,11 +760,16 @@ def render_club_index(by_club: dict[str, list[dict]], generated_at: str) -> str:
     total = sum(len(v) for v in by_club.values())
     desc = page_titles.club_index_meta(total)
 
+    def _still_open(player: dict) -> bool:
+        # Same contract screen as the club page, so the directory number is
+        # the number of names on that club's arbitration list.
+        return not (next_season and contracts.covers(player.get("id"), next_season))
+
     rows = "".join(
         f"<tr><td><a href=\"{slug(club)}.html\">{html.escape(club)}</a></td>"
         f"<td class='n'>{len(players)}</td>"
-        f"<td class='n'>{sum(1 for p in players if p.get('free_agent_eligible'))}</td>"
-        f"<td class='n'>{len(club_groups.roster_groups(players)['arb'])}</td>"
+        f"<td class='n'>{len(club_groups.roster_groups(players, _still_open)['fa'])}</td>"
+        f"<td class='n'>{len(club_groups.hearing_players(players, _still_open))}</td>"
         f"<td class='n'>{sum(1 for p in players if p.get('super_two_candidate'))}</td></tr>"
         for club, players in sorted(by_club.items())
     )
@@ -884,7 +891,9 @@ def _status_badge(player: dict) -> str:
     return f"<span class='badge {cls}'>{label}</span>"
 
 
-def _key_players_line(players: list[dict], season: int | None = None) -> str:
+def _key_players_line(
+    players: list[dict], season: int | None = None, arb_names: list[dict] | None = None,
+) -> str:
     """Name-only links to the players on this roster already at a threshold.
 
     "Phillies arbitration eligible" is a far commoner search than any single
@@ -910,10 +919,13 @@ def _key_players_line(players: list[dict], season: int | None = None) -> str:
     fa = [p for p in players if p.get("free_agent_eligible") and _open(p)]
     s2 = [p for p in players if p.get("super_two_candidate")]
     already_shown = {p["id"] for p in fa} | {p["id"] for p in s2}
-    arb = [
-        p for p in players
-        if p.get("arbitration_eligible") and p["id"] not in already_shown and _open(p)
-    ]
+    if arb_names is None:
+        arb = [
+            p for p in players
+            if p.get("arbitration_eligible") and p["id"] not in already_shown and _open(p)
+        ]
+    else:
+        arb = list(arb_names)
 
     parts = []
     if fa:
@@ -1051,7 +1063,10 @@ def render_club(
     total = len(players)
     def _open(p): return not (next_season and contracts.covers(p.get("id"), next_season))
     groups = club_groups.roster_groups(players, _open)
-    fa, arb, s2 = len(groups["fa"]), len(groups["arb"]), len(groups["s2"])
+    # The number opens the winter list. That list includes Super Two, so the
+    # card has to count those players too or the names under it will not match.
+    shown_arb = arb_eligible if arb_eligible is not None else groups["arb"]
+    fa, arb, s2 = len(groups["fa"]), len(shown_arb), len(groups["s2"])
     out_of_options = out_of_options_site.count_for(players, option_counts)
     options_href = f"{slug(club)}-out-of-options.html"
 
@@ -1129,7 +1144,7 @@ def render_club(
     <div><span>Out of options</span><b class="big"><a href="{options_href}">{out_of_options}</a></b></div>
   </div>
 
-  {_key_players_line(players, next_season)}
+  {_key_players_line(players, next_season, shown_arb)}
 
   <table class="roster"><thead><tr><th>Player</th><th>Pos</th><th class="n">Service time</th>
   <th class="n">Days</th><th class="n">Options left</th><th>Status</th></tr></thead><tbody>{rows}</tbody></table>
@@ -2289,7 +2304,7 @@ def _write_club_pages(
         )
         _keep(club_free_agents_path(club), fa_page)
 
-    directory = render_club_index(by_club, generated_at)
+    directory = render_club_index(by_club, generated_at, next_season)
     _keep(f"{CLUB_DIR_NAME}/index.html", directory); rule5_site.keep(CLUB_DIR, kept); out_of_options_site.keep(CLUB_DIR, kept)
     _prune_html(CLUB_DIR, kept)
     return sorted(by_club)

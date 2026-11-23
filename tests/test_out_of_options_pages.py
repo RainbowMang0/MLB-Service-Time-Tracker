@@ -185,7 +185,6 @@ def test_real_players_match_both_counts():
     wanted = {
         641329: ("out", (2021, 2023, 2024)),  # Bryan Baker
         656529: ("out", (2019, 2020, 2021)),  # Sam Hentges
-        661563: ("out", (2020, 2021, 2022, 2026)),  # Luis Gil
         671056: ("out", (2021, 2022, 2023, 2024)),  # Iván Herrera
         650911: ("out", (2020, 2021, 2022, 2023)),  # Cristopher Sánchez
         683146: ("one", (2023, 2024)),  # Brett Baty
@@ -305,6 +304,61 @@ def test_an_injury_year_counts_and_a_lone_transfer_does_not():
     check("a lone mid-season transfer is unknown, not a short season", decision.decision == UNKNOWN)
 
 
+def test_fixtures_cover_four_years_a_fourth_option_and_missing_data():
+    """These rules used to be pinned to Luis Gil and Jake Cousins.
+
+    Both left the 40-man roster, so a test that reads today's roster can no
+    longer see them. The placement did not change: four used years stay out,
+    three years with a record that cannot settle a fourth year are held, and
+    a missing transaction file is not called out.
+    """
+    four = _roster("Four Seasons", id=101, service_time="1.040")
+    held = _roster("Maybe Fourth", id=102, team="Chicago White Sox", service_time="1.020")
+    missing = _roster("No Record", id=103, service_time="0.040")
+
+    def years_for(player):
+        if player["id"] == 101:
+            return (2020, 2021, 2022, 2026)
+        return (2022, 2023, 2024)
+
+    def raw_for(player):
+        if player["id"] == 103:
+            return None
+        return []
+
+    result = out_of_options.select(
+        [four, held, missing],
+        TODAY,
+        cache_for=lambda player: [],
+        raw_for=raw_for,
+        counter=lambda player, rows, today: _count(years_for(player)),
+        replay=lambda player, today: {"option_years_used": list(years_for(player))},
+        apply_fourth=True,
+    )
+    by_out = {row.player["id"]: row for row in result.out}
+    by_held = {row.player["id"]: row for row in result.may_fourth}
+    by_off = {row.player_id: row for row in result.omitted}
+    check(
+        "four agreed seasons stay out",
+        by_out[101].years == (2020, 2021, 2022, 2026) and 101 not in by_held,
+    )
+    check(
+        "three seasons and no signing date may have a fourth option",
+        102 in by_held and by_held[102].years == (2022, 2023, 2024) and 102 not in by_out,
+    )
+    check("a missing transaction file is left off", by_off[103].reason == REASON_NO_RAW)
+    check("missing data is not listed as out", 103 not in by_out and 103 not in by_held)
+    league = pages.render_league(result, 2027)
+    out_half, held_half = league.split("May have a fourth option", 1)
+    check("the rendered page keeps four seasons out", "Four Seasons" in out_half and "Four Seasons" not in held_half)
+    check("the rendered page holds the unsettled fourth option", "Maybe Fourth" in held_half)
+    check("the rendered page omits the missing record", "No Record" not in league)
+    from fourth_option import UNKNOWN, decide
+    from il_stints import SeasonWindows
+    decision = decide([], [2022, 2023, 2024], TODAY, SeasonWindows.load())
+    check("missing signing data is unknown", decision.decision == UNKNOWN)
+
+
 def test_real_fourth_option_cases():
     wanted = {
         814005: "one",   # Jake Bloss
@@ -315,7 +369,6 @@ def test_real_fourth_option_cases():
         641329: "out",   # Bryan Baker, five full seasons
         656529: "out",   # Sam Hentges, injury years make five full seasons
         687093: "out",   # Vaughn Grissom
-        664776: "fourth",  # Jake Cousins, reviewed hold
         682982: "fourth",  # Daniel Espino, reviewed hold
         689017: "fourth",  # Landon Knack, reviewed hold
         663436: "fourth",  # Davis Martin
@@ -336,7 +389,6 @@ def test_real_fourth_option_cases():
     check("Hentges is out and keeps 2019-2021", by_out[656529].years == (2019, 2020, 2021))
     check("Grissom is out", 687093 in by_out and 687093 not in by_one)
     check("Meckler stays one left", 685133 in by_one and 685133 not in by_out)
-    check("Cousins may have a fourth option", 664776 in by_held and by_held[664776].years == (2022, 2023, 2024))
     check("Espino may have a fourth option", 682982 in by_held and 682982 not in by_out)
     check("Knack may have a fourth option", 689017 in by_held and 689017 not in by_out)
     check("Martin may have a fourth option", 663436 in by_held and 663436 not in by_out)
@@ -395,11 +447,10 @@ def test_published_files_and_the_guards():
     check("the built Jays page puts Bloss in one left", "Jake Bloss" in one_part and "Jake Bloss" not in out_part)
     check("the built Jays page keeps Little on 2024 and 2026", "Brendon Little" in one_part and "2024, 2026" in one_part)
     check("the built Braves page puts Waldrep in one left", "Hurston Waldrep" in braves.split("<h2>One option year left</h2>", 1)[1])
-    check("the built league page still lists Gil", "Luis Gil" in league)
     out_half, held_half = league.split("May have a fourth option", 1)
     check("the built league page lists Hentges out", "Sam Hentges" in out_half)
     check("the built league page lists Grissom out", "Vaughn Grissom" in out_half)
-    check("the built league page holds Cousins", "Jake Cousins" in held_half)
+    check("the built league page holds Espino", "Daniel Espino" in held_half)
     for banned in BANNED:
         check(f"built league page does not name {banned}", banned not in league.lower())
     core = (docs / "sitemap-core.xml").read_text(encoding="utf-8")
@@ -446,6 +497,7 @@ def main():
     test_real_players_match_both_counts()
     test_a_fourth_option_moves_three_years_and_keeps_four()
     test_an_injury_year_counts_and_a_lone_transfer_does_not()
+    test_fixtures_cover_four_years_a_fourth_option_and_missing_data()
     test_real_fourth_option_cases()
     test_the_roster_page_links_the_list()
     test_published_files_and_the_guards()
