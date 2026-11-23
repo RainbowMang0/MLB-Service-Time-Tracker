@@ -171,6 +171,11 @@ jobs:
           python scripts/build_changes_page.py --check
           python tests/test_changes.py
 
+      - name: DFA outcomes
+        run: |
+          python scripts/build_dfa_outcomes_page.py --check
+          python tests/test_dfa_outcomes.py
+
       - name: Duty-day allocation engine
         run: node --test tests/duty_days.test.cjs
 

@@ -223,6 +223,14 @@ jobs:
         continue-on-error: true
         run: python scripts/build_roster_rules_page.py
 
+      # Reads the transaction cache the update just wrote. Temp-then-rename
+      # is inside the script. A failure keeps the previous page and must not
+      # drop the day's roster commit; CI already runs --check.
+      - name: Rebuild the DFA outcomes page
+        if: steps.gate.outputs.run == 'true'
+        continue-on-error: true
+        run: python scripts/build_dfa_outcomes_page.py
+
       # Same reason as the roster guide: the hub has no feed of its own, and
       # rebuilding it keeps the shared header in step with the rest of the site.
       - name: Rebuild the offseason hub
@@ -260,9 +268,11 @@ jobs:
             docs/non-tender-watch.html docs/free-agents.html docs/options.html \
             docs/out-of-options.html \
             docs/send-a-player-down.html docs/offseason.html docs/changes.html \
+            docs/dfa-outcomes.html \
             docs/sitemap.xml docs/sitemap-core.xml docs/sitemap-clubs.xml \
             docs/sitemap-players.xml docs/sitemap-alumni.xml docs/robots.txt data/cache \
             data/published_ids.json data/changes.json data/changes_snapshot.json \
+            data/dfa_outcomes.json \
             data/refresh_complete.json
 
   # Raw feed, kept beside the roster cache. This job does not calculate

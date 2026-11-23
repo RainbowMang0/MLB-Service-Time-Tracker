@@ -230,6 +230,7 @@ def render() -> str:
     players = wpp.BASE_PATH or "/"
     lockout = _href("lockout.html")
     offseason = _href("offseason.html")
+    dfa = _href("dfa-outcomes.html")
     return f"""<!doctype html>
 <html lang="en">
 <head>
@@ -301,6 +302,8 @@ def render() -> str:
   designated on a Monday. He is off the 40-man that day, and he is still
   that club's player. Within {window} days the club trades him, tries to
   send him to the minors through waivers, or releases him.</p>
+  <p><a href="{dfa}">Recent designations and what happened afterward</a>
+  are on the DFA tracker.</p>
 
   <h2 id="outright">Outright assignment</h2>
   <p><b>An outright sends him to the minors and removes him from the
@@ -417,6 +420,7 @@ def problems(page: str) -> list[str]:
         wpp.NON_TENDER_WATCH_PATH,
         "lockout.html",
         "offseason.html",
+        "dfa-outcomes.html",
     ):
         need(f"link {path}", f'href="{wpp.BASE_PATH}{path}"' in page)
     faq = _faq(_facts())

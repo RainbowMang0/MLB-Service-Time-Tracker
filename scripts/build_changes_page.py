@@ -173,6 +173,17 @@ def _days(log: dict, docs: Path) -> str:
     return "\n".join(_day(day, docs) for day in days)
 
 
+def _dfa_line(docs: Path) -> str:
+    """The designation tracker, when that page is already on disk."""
+    if not (docs / "dfa-outcomes.html").is_file():
+        return ""
+    href = html.escape(f"{wpp.BASE_PATH}dfa-outcomes.html", quote=True)
+    return (
+        f'  <p class="list-links"><a href="{href}">DFA outcomes</a>'
+        " — recent designations and what happened afterward.</p>\n"
+    )
+
+
 def render(log: dict | None = None, docs: Path | None = None) -> str:
     docs = docs or (ROOT / "docs")
     log = log if log is not None else load_log()
@@ -223,7 +234,7 @@ def render(log: dict | None = None, docs: Path | None = None) -> str:
 
   <h1>What changed</h1>
   <p class="lede">{html.escape(LEDE)}</p>
-{body}
+{_dfa_line(docs)}{body}
 </div>{wpp._site_footer()}{wpp._search_script_tag()}</div>
 {wpp.ANALYTICS}
 </body>

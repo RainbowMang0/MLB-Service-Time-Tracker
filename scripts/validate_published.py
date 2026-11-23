@@ -205,7 +205,7 @@ def check_links() -> list[str]:
                   docs / "options.html", docs / "out-of-options.html",
                   docs / "service-time.html",
                   docs / "rule-5.html", docs / "offseason.html",
-                  docs / "changes.html"]
+                  docs / "changes.html", docs / "dfa-outcomes.html"]
                  + sorted(docs.glob("p/*.html")) + sorted(docs.glob("t/*.html")))
     generated = [p for p in generated if p.exists()]
     missing_targets: set[str] = set()

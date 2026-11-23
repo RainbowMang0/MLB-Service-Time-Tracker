@@ -78,6 +78,13 @@ jobs:
           fi
           python scripts/backfill_history.py --batch "${{ github.event.inputs.batch }}" $ARGS
 
+      # The designation page reads the cache this batch may have extended.
+      # A failure keeps the previous page and must not drop the batch.
+      - name: Rebuild the DFA outcomes page
+        if: github.event.inputs.status_only != 'true'
+        continue-on-error: true
+        run: python scripts/build_dfa_outcomes_page.py
+
       - name: Commit and push results
         if: github.event.inputs.status_only != 'true'
         run: |
@@ -93,6 +100,8 @@ jobs:
             docs/non-tender-watch.html docs/free-agents.html docs/options.html \
             docs/out-of-options.html \
             docs/send-a-player-down.html docs/offseason.html docs/changes.html \
+            docs/dfa-outcomes.html \
             docs/sitemap.xml docs/sitemap-core.xml docs/sitemap-clubs.xml \
             docs/sitemap-players.xml docs/sitemap-alumni.xml docs/robots.txt data/backfill_state.json \
-            data/published_ids.json data/changes.json data/changes_snapshot.json
+            data/published_ids.json data/changes.json data/changes_snapshot.json \
+            data/dfa_outcomes.json
