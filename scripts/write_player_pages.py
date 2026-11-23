@@ -1500,7 +1500,7 @@ def render(
             player, transactions, player_sections._windows(), section_today
         )
     option_line = html.escape(option_years.player_line(option_count))
-    rookie_line = __import__("rookie_status_pages").player_line(player, transactions, section_today)
+    rookie_line = __import__("debuts_pages").player_line(player, section_today) + __import__("rookie_status_pages").player_line(player, transactions, section_today)
     sections = player_sections.render_player_sections(
         player, transactions, team_names, section_today, compact=compact
     )
@@ -2135,9 +2135,10 @@ def write_player_pages(
         f"Options: {len(opt_out)} out of options, {len(opt_one)} with one left, "
         f"{opt_unknown} unknown (rostered)"
     )
-    import out_of_options_pages, rookie_status_pages
+    import out_of_options_pages, rookie_status_pages, debuts_pages
     out_of_options_pages.write(ooo, generated_at, lastmod, _publish_page, DOCS)
     rookie_status_pages.write(rostered, generated_at, lastmod, _publish_page, DOCS)
+    debuts_pages.write(list(db.values()), generated_at, lastmod, _publish_page, DOCS)
 
     # The homepage's one generated region has to be current before the
     # sitemap hashes that file, or its lastmod would trail the page by a run.
@@ -2529,7 +2530,7 @@ def _write_sitemap(
     # one player's name.
     for path in (
         ARBITRATION_ELIGIBLE_PATH, SUPER_TWO_PAGE_PATH,
-        NON_TENDER_WATCH_PATH, FREE_AGENTS_PATH, OPTIONS_PATH, "rookie-status.html",
+        NON_TENDER_WATCH_PATH, FREE_AGENTS_PATH, OPTIONS_PATH, "rookie-status.html", "debuts.html",
     ):
         urls.append(
             f"  <url><loc>{SITE_URL}/{path}</loc>"
@@ -2677,12 +2678,7 @@ FOOTER_REQUIRED_LINE = (
 
 
 PAGE_CSS = """@import "table-scroll.css";
-/* Generated stylesheet for the static pages. Edit the generator, not this file.
-
-Shared by every static page (player, club, 404). It used to be inlined into
-each of the 1,358 player pages, which cost ~1.4 KB apiece and, worse, could
-not be cached: clicking from one player to another re-downloaded the same
-rules every time. As a real file the browser fetches it once. */
+/* Generated stylesheet for the static pages. Edit the generator, not this file. Shared by every static page so the browser fetches these rules once. */
 
 .wrap { max-width: min(60rem, 100%); margin: 0 auto; padding: 24px clamp(16px,4vw,40px) 48px;
         overflow-x: clip; }
@@ -2826,12 +2822,16 @@ h1 { letter-spacing: -0.02em; }
 .list-links { font-size: 0.9rem; color: var(--text-secondary); margin: 0.35rem 0 0.85rem;
               max-width: 68ch; line-height: 1.5; }
 .list-links a { color: var(--accent); text-decoration: none; }
-.list-links a:hover { text-decoration: underline; } .dfa-clubs { max-width: none; } .dfa-clubs a { white-space: nowrap; }
+.list-links a:hover { text-decoration: underline; }
+.dfa-clubs { max-width: none; }
+.dfa-clubs a { white-space: nowrap; }
 @media (max-width: 640px) {
   .opt-controls input, .opt-controls select { flex-basis: 100%; }
 }
-.faq h3 { font-size: 1.02rem; margin: 1.15rem 0 0.2rem; line-height: 1.35; } .faq p { margin: 0.15rem 0 0; }
-.signed-through { font-size: 0.95rem; line-height: 1.45; margin: 0.35rem 0 0; max-width: 40rem; } .roster-signed { display: block; margin-top: 0.12rem; max-width: 12rem; font-size: 0.75rem; line-height: 1.35; color: var(--text-muted); white-space: normal; }
+.faq h3 { font-size: 1.02rem; margin: 1.15rem 0 0.2rem; line-height: 1.35; }
+.faq p { margin: 0.15rem 0 0; }
+.signed-through { font-size: 0.95rem; line-height: 1.45; margin: 0.35rem 0 0; max-width: 40rem; }
+.roster-signed { display: block; margin-top: 0.12rem; max-width: 12rem; font-size: 0.75rem; line-height: 1.35; color: var(--text-muted); white-space: normal; }
 """
 
 

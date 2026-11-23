@@ -28,6 +28,7 @@ _LIST_RELS = frozenset({
     "non-tender-watch.html",
     "free-agents.html",
     "rookie-status.html",
+    "debuts.html",
 })
 
 

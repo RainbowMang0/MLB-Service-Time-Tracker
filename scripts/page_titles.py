@@ -433,3 +433,26 @@ def changes_meta() -> str:
         "Super Two range, call-ups, options, trades, and other roster moves. "
         "From public data."
     )
+
+
+def debuts_core(year: int | None) -> str:
+    if year:
+        return f"MLB debuts in {year}"
+    return "MLB debuts"
+
+
+def debuts_title(year: int | None) -> str:
+    return fit_title(debuts_core(year))
+
+
+def debuts_meta(count: int, year: int | None) -> str:
+    when = f" in {year}" if year else ""
+    if count == 0:
+        lead = f"No player made his MLB debut{when}"
+    elif count == 1:
+        lead = f"1 player made his MLB debut{when}"
+    else:
+        lead = f"{count} players made their MLB debut{when}"
+    return fit_meta(
+        f"{lead}, newest first, with club, position, and season totals. From public data."
+    )
