@@ -1,7 +1,7 @@
 {
   "player_id": 642520,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:29dced6c1cf8f2ba80e56793d951d2ceaf22e3a4e7a371dbe20bcf9b49d143f4",
+  "fetched_at": "2026-11-23T00:03:40Z",
+  "checksum": "sha256:971c539dc056259d1492126f77ca67d310335c3dc20c783868e5a820775e5e86",
   "transactions": [
     {
       "id": 369742,
@@ -293,26 +293,6 @@
       "description": "RHP Gerson Garabito elected free agency."
     },
     {
-      "id": 457905,
-      "person": {
-        "id": 642520,
-        "fullName": "Gerson Garabito",
-        "link": "/api/v1/people/642520",
-        "nameSlug": "gerson-garabito-642520"
-      },
-      "toTeam": {
-        "id": 137,
-        "name": "San Francisco Giants",
-        "link": "/api/v1/teams/137"
-      },
-      "date": "2020-11-20",
-      "effectiveDate": "2020-11-20",
-      "resolutionDate": "2020-11-20",
-      "typeCode": "SFA",
-      "typeDesc": "Signed as Free Agent",
-      "description": "San Francisco Giants signed free agent RHP Gerson Garabito to a minor league contract."
-    },
-    {
       "id": 457906,
       "person": {
         "id": 642520,
@@ -331,6 +311,26 @@
       "typeCode": "ASG",
       "typeDesc": "Assigned",
       "description": "RHP Gerson Garabito assigned to Sacramento River Cats."
+    },
+    {
+      "id": 457905,
+      "person": {
+        "id": 642520,
+        "fullName": "Gerson Garabito",
+        "link": "/api/v1/people/642520",
+        "nameSlug": "gerson-garabito-642520"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2020-11-20",
+      "effectiveDate": "2020-11-20",
+      "resolutionDate": "2020-11-20",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "San Francisco Giants signed free agent RHP Gerson Garabito to a minor league contract."
     },
     {
       "id": 482063,
@@ -421,26 +421,6 @@
       "description": "RHP Gerson Garabito elected free agency."
     },
     {
-      "id": 603984,
-      "person": {
-        "id": 642520,
-        "fullName": "Gerson Garabito",
-        "link": "/api/v1/people/642520",
-        "nameSlug": "gerson-garabito-642520"
-      },
-      "toTeam": {
-        "id": 695,
-        "name": "Leones del Caracas",
-        "link": "/api/v1/teams/695"
-      },
-      "date": "2021-12-01",
-      "effectiveDate": "2021-12-01",
-      "resolutionDate": "2021-12-01",
-      "typeCode": "SC",
-      "typeDesc": "Status Change",
-      "description": "Leones del Caracas activated RHP Gerson Garabito."
-    },
-    {
       "id": 600992,
       "person": {
         "id": 642520,
@@ -461,7 +441,7 @@
       "description": "RHP Gerson Garabito assigned to Leones del Caracas."
     },
     {
-      "id": 736375,
+      "id": 603984,
       "person": {
         "id": 642520,
         "fullName": "Gerson Garabito",
@@ -469,16 +449,16 @@
         "nameSlug": "gerson-garabito-642520"
       },
       "toTeam": {
-        "id": 667,
-        "name": "Aguilas Cibaenas",
-        "link": "/api/v1/teams/667"
+        "id": 695,
+        "name": "Leones del Caracas",
+        "link": "/api/v1/teams/695"
       },
-      "date": "2023-11-07",
-      "effectiveDate": "2023-11-07",
-      "resolutionDate": "2023-11-07",
+      "date": "2021-12-01",
+      "effectiveDate": "2021-12-01",
+      "resolutionDate": "2021-12-01",
       "typeCode": "SC",
       "typeDesc": "Status Change",
-      "description": "Aguilas Cibaenas activated RHP Gerson Garabito."
+      "description": "Leones del Caracas activated RHP Gerson Garabito."
     },
     {
       "id": 732103,
@@ -501,6 +481,26 @@
       "description": "RHP Gerson Garabito assigned to Aguilas Cibaenas."
     },
     {
+      "id": 736375,
+      "person": {
+        "id": 642520,
+        "fullName": "Gerson Garabito",
+        "link": "/api/v1/people/642520",
+        "nameSlug": "gerson-garabito-642520"
+      },
+      "toTeam": {
+        "id": 667,
+        "name": "Aguilas Cibaenas",
+        "link": "/api/v1/teams/667"
+      },
+      "date": "2023-11-07",
+      "effectiveDate": "2023-11-07",
+      "resolutionDate": "2023-11-07",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Aguilas Cibaenas activated RHP Gerson Garabito."
+    },
+    {
       "id": 734330,
       "person": {
         "id": 642520,
@@ -521,26 +521,6 @@
       "description": "RHP Gerson Garabito assigned to LIDOM All-Stars."
     },
     {
-      "id": 736376,
-      "person": {
-        "id": 642520,
-        "fullName": "Gerson Garabito",
-        "link": "/api/v1/people/642520",
-        "nameSlug": "gerson-garabito-642520"
-      },
-      "toTeam": {
-        "id": 140,
-        "name": "Texas Rangers",
-        "link": "/api/v1/teams/140"
-      },
-      "date": "2023-12-18",
-      "effectiveDate": "2023-12-18",
-      "resolutionDate": "2023-12-18",
-      "typeCode": "SFA",
-      "typeDesc": "Signed as Free Agent",
-      "description": "Texas Rangers signed free agent RHP Gerson Garabito to a minor league contract."
-    },
-    {
       "id": 736377,
       "person": {
         "id": 642520,
@@ -559,6 +539,26 @@
       "typeCode": "ASG",
       "typeDesc": "Assigned",
       "description": "RHP Gerson Garabito assigned to Round Rock Express."
+    },
+    {
+      "id": 736376,
+      "person": {
+        "id": 642520,
+        "fullName": "Gerson Garabito",
+        "link": "/api/v1/people/642520",
+        "nameSlug": "gerson-garabito-642520"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2023-12-18",
+      "effectiveDate": "2023-12-18",
+      "resolutionDate": "2023-12-18",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Texas Rangers signed free agent RHP Gerson Garabito to a minor league contract."
     },
     {
       "id": 752251,
@@ -1149,26 +1149,6 @@
       "description": "Texas Rangers released RHP Gerson Garabito."
     },
     {
-      "id": 880359,
-      "person": {
-        "id": 642520,
-        "fullName": "Gerson Garabito",
-        "link": "/api/v1/people/642520",
-        "nameSlug": "gerson-garabito-642520"
-      },
-      "toTeam": {
-        "id": 158,
-        "name": "Milwaukee Brewers",
-        "link": "/api/v1/teams/158"
-      },
-      "date": "2025-12-25",
-      "effectiveDate": "2025-12-25",
-      "resolutionDate": "2025-12-25",
-      "typeCode": "SFA",
-      "typeDesc": "Signed as Free Agent",
-      "description": "Milwaukee Brewers signed free agent RHP Gerson Garabito to a minor league contract."
-    },
-    {
       "id": 880358,
       "person": {
         "id": 642520,
@@ -1187,6 +1167,26 @@
       "typeCode": "ASG",
       "typeDesc": "Assigned",
       "description": "RHP Gerson Garabito assigned to Nashville Sounds."
+    },
+    {
+      "id": 880359,
+      "person": {
+        "id": 642520,
+        "fullName": "Gerson Garabito",
+        "link": "/api/v1/people/642520",
+        "nameSlug": "gerson-garabito-642520"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2025-12-25",
+      "effectiveDate": "2025-12-25",
+      "resolutionDate": "2025-12-25",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Milwaukee Brewers signed free agent RHP Gerson Garabito to a minor league contract."
     },
     {
       "id": 880637,
@@ -1274,7 +1274,47 @@
       "description": "Nashville Sounds activated RHP Gerson Garabito from the 60-day injured list."
     },
     {
+      "id": 945384,
+      "person": {
+        "id": 642520,
+        "fullName": "Gerson Garabito",
+        "link": "/api/v1/people/642520",
+        "nameSlug": "gerson-garabito-642520"
+      },
+      "toTeam": {
+        "id": 667,
+        "name": "Aguilas Cibaenas",
+        "link": "/api/v1/teams/667"
+      },
+      "date": "2026-10-08",
+      "effectiveDate": "2026-10-08",
+      "resolutionDate": "2026-10-08",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Gerson Garabito assigned to Aguilas Cibaenas."
+    },
+    {
       "id": 949482,
+      "person": {
+        "id": 642520,
+        "fullName": "Gerson Garabito",
+        "link": "/api/v1/people/642520",
+        "nameSlug": "gerson-garabito-642520"
+      },
+      "toTeam": {
+        "id": 667,
+        "name": "Aguilas Cibaenas",
+        "link": "/api/v1/teams/667"
+      },
+      "date": "2026-10-08",
+      "effectiveDate": "2026-10-08",
+      "resolutionDate": "2026-10-08",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Aguilas Cibaenas activated RHP Gerson Garabito."
+    },
+    {
+      "id": 950542,
       "person": {
         "id": 642520,
         "fullName": "Gerson Garabito",
@@ -1312,26 +1352,6 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "Aguilas Cibaenas activated RHP Gerson Garabito."
-    },
-    {
-      "id": 945384,
-      "person": {
-        "id": 642520,
-        "fullName": "Gerson Garabito",
-        "link": "/api/v1/people/642520",
-        "nameSlug": "gerson-garabito-642520"
-      },
-      "toTeam": {
-        "id": 667,
-        "name": "Aguilas Cibaenas",
-        "link": "/api/v1/teams/667"
-      },
-      "date": "2026-10-08",
-      "effectiveDate": "2026-10-08",
-      "resolutionDate": "2026-10-08",
-      "typeCode": "ASG",
-      "typeDesc": "Assigned",
-      "description": "RHP Gerson Garabito assigned to Aguilas Cibaenas."
     },
     {
       "id": 949126,

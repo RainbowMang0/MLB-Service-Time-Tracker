@@ -1,7 +1,7 @@
 {
   "player_id": 660766,
-  "fetched_at": "2026-11-13T19:19:09Z",
-  "checksum": "sha256:964c0a875fc6863ab057d1fddb51fd12e097b9dd92e285930ebb08c9670e80b3",
+  "fetched_at": "2026-11-23T00:03:40Z",
+  "checksum": "sha256:551d0a13c8aa0f628fc18789cb4f049e1a0f765e3798025106803d8acb174503",
   "transactions": [
     {
       "id": 369941,
@@ -770,26 +770,6 @@
       "description": "St. Louis Cardinals recalled 1B Juan Yepez from Memphis Redbirds."
     },
     {
-      "id": 661396,
-      "person": {
-        "id": 660766,
-        "fullName": "Juan Yepez",
-        "link": "/api/v1/people/660766",
-        "nameSlug": "juan-yepez-660766"
-      },
-      "toTeam": {
-        "id": 698,
-        "name": "Tiburones de La Guaira",
-        "link": "/api/v1/teams/698"
-      },
-      "date": "2022-11-22",
-      "effectiveDate": "2022-11-22",
-      "resolutionDate": "2022-11-22",
-      "typeCode": "ASG",
-      "typeDesc": "Assigned",
-      "description": "1B Juan Yepez assigned to Tiburones de La Guaira."
-    },
-    {
       "id": 670452,
       "person": {
         "id": 660766,
@@ -808,6 +788,26 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "Tiburones de La Guaira activated 1B Juan Yepez."
+    },
+    {
+      "id": 661396,
+      "person": {
+        "id": 660766,
+        "fullName": "Juan Yepez",
+        "link": "/api/v1/people/660766",
+        "nameSlug": "juan-yepez-660766"
+      },
+      "toTeam": {
+        "id": 698,
+        "name": "Tiburones de La Guaira",
+        "link": "/api/v1/teams/698"
+      },
+      "date": "2022-11-22",
+      "effectiveDate": "2022-11-22",
+      "resolutionDate": "2022-11-22",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "1B Juan Yepez assigned to Tiburones de La Guaira."
     },
     {
       "id": 661551,
@@ -946,7 +946,7 @@
       "description": "St. Louis Cardinals recalled 1B Juan Yepez from Memphis Redbirds."
     },
     {
-      "id": 713297,
+      "id": 703682,
       "person": {
         "id": 660766,
         "fullName": "Juan Yepez",
@@ -966,7 +966,7 @@
       "description": "Memphis Redbirds activated 1B Juan Yepez."
     },
     {
-      "id": 703682,
+      "id": 713297,
       "person": {
         "id": 660766,
         "fullName": "Juan Yepez",
@@ -1198,7 +1198,7 @@
       "description": "1B Juan Yepez assigned to Cardenales de Lara."
     },
     {
-      "id": 822666,
+      "id": 848418,
       "person": {
         "id": 660766,
         "fullName": "Juan Yepez",
@@ -1218,7 +1218,7 @@
       "description": "Rochester Red Wings activated 1B Juan Yepez."
     },
     {
-      "id": 848418,
+      "id": 822666,
       "person": {
         "id": 660766,
         "fullName": "Juan Yepez",
@@ -1370,7 +1370,7 @@
       "description": "Rochester Red Wings placed 1B Juan Yepez on the 7-day injured list."
     },
     {
-      "id": 864864,
+      "id": 864600,
       "person": {
         "id": 660766,
         "fullName": "Juan Yepez",
@@ -1395,7 +1395,7 @@
       "description": "Rochester Red Wings sent 1B Juan Yepez on a rehab assignment to Wilmington Blue Rocks."
     },
     {
-      "id": 864600,
+      "id": 864864,
       "person": {
         "id": 660766,
         "fullName": "Juan Yepez",
@@ -1480,7 +1480,7 @@
       "description": "1B Juan Yepez elected free agency."
     },
     {
-      "id": 886658,
+      "id": 893016,
       "person": {
         "id": 660766,
         "fullName": "Juan Yepez",
@@ -1488,16 +1488,16 @@
         "nameSlug": "juan-yepez-660766"
       },
       "toTeam": {
-        "id": 141,
-        "name": "Toronto Blue Jays",
-        "link": "/api/v1/teams/141"
+        "id": 422,
+        "name": "Buffalo Bisons",
+        "link": "/api/v1/teams/422"
       },
       "date": "2026-02-11",
       "effectiveDate": "2026-02-11",
       "resolutionDate": "2026-02-11",
-      "typeCode": "SFA",
-      "typeDesc": "Signed as Free Agent",
-      "description": "Toronto Blue Jays signed free agent 1B Juan Yepez to a minor league contract."
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Buffalo Bisons activated 1B Juan Yepez."
     },
     {
       "id": 886659,
@@ -1520,7 +1520,7 @@
       "description": "1B Juan Yepez assigned to Buffalo Bisons."
     },
     {
-      "id": 893016,
+      "id": 886658,
       "person": {
         "id": 660766,
         "fullName": "Juan Yepez",
@@ -1528,16 +1528,16 @@
         "nameSlug": "juan-yepez-660766"
       },
       "toTeam": {
-        "id": 422,
-        "name": "Buffalo Bisons",
-        "link": "/api/v1/teams/422"
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
       },
       "date": "2026-02-11",
       "effectiveDate": "2026-02-11",
       "resolutionDate": "2026-02-11",
-      "typeCode": "SC",
-      "typeDesc": "Status Change",
-      "description": "Buffalo Bisons activated 1B Juan Yepez."
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Toronto Blue Jays signed free agent 1B Juan Yepez to a minor league contract."
     },
     {
       "id": 892282,
@@ -1598,6 +1598,26 @@
       "typeCode": "SFA",
       "typeDesc": "Signed as Free Agent",
       "description": "Dorados de Chihuahua signed free agent 1B Juan Yepez."
+    },
+    {
+      "id": 950307,
+      "person": {
+        "id": 660766,
+        "fullName": "Juan Yepez",
+        "link": "/api/v1/people/660766",
+        "nameSlug": "juan-yepez-660766"
+      },
+      "toTeam": {
+        "id": 693,
+        "name": "Cardenales de Lara",
+        "link": "/api/v1/teams/693"
+      },
+      "date": "2026-11-13",
+      "effectiveDate": "2026-11-13",
+      "resolutionDate": "2026-11-13",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Cardenales de Lara activated 1B Juan Yepez."
     },
     {
       "id": 950116,
