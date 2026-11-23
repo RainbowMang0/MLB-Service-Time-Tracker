@@ -7,6 +7,11 @@
 .tbl-wrap,
 .season-table-wrap,
 .table-scroll {
+  overflow-x: auto;
+  max-width: 100%;
+  min-width: 0;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
   scrollbar-width: thin;
   scrollbar-color: var(--text-muted) transparent;
 }
