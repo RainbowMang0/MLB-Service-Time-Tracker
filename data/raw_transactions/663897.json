@@ -1,7 +1,7 @@
 {
   "player_id": 663897,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:9d1ac9969206a2904ee3d925b4e29f229b13100b507d69350d053893debbeef3",
+  "fetched_at": "2026-11-23T00:11:12Z",
+  "checksum": "sha256:b16fb726b529a7ca2a0dbab57c79827c47e2c4750517e056fdf5f9d7a8ca15b7",
   "transactions": [
     {
       "id": 233901,
@@ -224,6 +224,26 @@
       "description": "Philadelphia Phillies invited non-roster 3B Luke Williams to spring training."
     },
     {
+      "id": 450918,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2020-09-06",
+      "effectiveDate": "2020-09-06",
+      "resolutionDate": "2020-09-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Philadelphia Phillies invited non-roster 3B Luke Williams to spring training."
+    },
+    {
       "id": 450929,
       "person": {
         "id": 663897,
@@ -246,26 +266,6 @@
       "typeCode": "ASG",
       "typeDesc": "Assigned",
       "description": "3B Luke Williams assigned to Phillies Alternate Training Site from Lehigh Valley IronPigs."
-    },
-    {
-      "id": 450918,
-      "person": {
-        "id": 663897,
-        "fullName": "Luke Williams",
-        "link": "/api/v1/people/663897",
-        "nameSlug": "luke-williams-663897"
-      },
-      "toTeam": {
-        "id": 143,
-        "name": "Philadelphia Phillies",
-        "link": "/api/v1/teams/143"
-      },
-      "date": "2020-09-06",
-      "effectiveDate": "2020-09-06",
-      "resolutionDate": "2020-09-06",
-      "typeCode": "ASG",
-      "typeDesc": "Assigned",
-      "description": "Philadelphia Phillies invited non-roster 3B Luke Williams to spring training."
     },
     {
       "id": 452715,
@@ -292,26 +292,6 @@
       "description": "3B Luke Williams assigned to Lehigh Valley IronPigs from Phillies Alternate Training Site."
     },
     {
-      "id": 469831,
-      "person": {
-        "id": 663897,
-        "fullName": "Luke Williams",
-        "link": "/api/v1/people/663897",
-        "nameSlug": "luke-williams-663897"
-      },
-      "toTeam": {
-        "id": 143,
-        "name": "Philadelphia Phillies",
-        "link": "/api/v1/teams/143"
-      },
-      "date": "2021-02-16",
-      "effectiveDate": "2021-02-16",
-      "resolutionDate": "2021-02-16",
-      "typeCode": "ASG",
-      "typeDesc": "Assigned",
-      "description": "3B Luke Williams assigned to Philadelphia Phillies."
-    },
-    {
       "id": 474773,
       "person": {
         "id": 663897,
@@ -333,6 +313,26 @@
     },
     {
       "id": 469636,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2021-02-16",
+      "effectiveDate": "2021-02-16",
+      "resolutionDate": "2021-02-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Luke Williams assigned to Philadelphia Phillies."
+    },
+    {
+      "id": 469831,
       "person": {
         "id": 663897,
         "fullName": "Luke Williams",
@@ -976,7 +976,7 @@
       "description": "Miami Marlins recalled 3B Luke Williams from Jacksonville Jumbo Shrimp."
     },
     {
-      "id": 661156,
+      "id": 656390,
       "person": {
         "id": 663897,
         "fullName": "Luke Williams",
@@ -1016,7 +1016,7 @@
       "description": "3B Luke Williams assigned to Estrellas Orientales."
     },
     {
-      "id": 656390,
+      "id": 661156,
       "person": {
         "id": 663897,
         "fullName": "Luke Williams",
@@ -1352,26 +1352,6 @@
       "description": "3B Luke Williams elected free agency."
     },
     {
-      "id": 734059,
-      "person": {
-        "id": 663897,
-        "fullName": "Luke Williams",
-        "link": "/api/v1/people/663897",
-        "nameSlug": "luke-williams-663897"
-      },
-      "toTeam": {
-        "id": 431,
-        "name": "Gwinnett Stripers",
-        "link": "/api/v1/teams/431"
-      },
-      "date": "2023-11-18",
-      "effectiveDate": "2023-11-18",
-      "resolutionDate": "2023-11-18",
-      "typeCode": "ASG",
-      "typeDesc": "Assigned",
-      "description": "3B Luke Williams assigned to Gwinnett Stripers."
-    },
-    {
       "id": 734058,
       "person": {
         "id": 663897,
@@ -1390,6 +1370,26 @@
       "typeCode": "SFA",
       "typeDesc": "Signed as Free Agent",
       "description": "Atlanta Braves signed free agent 3B Luke Williams to a minor league contract."
+    },
+    {
+      "id": 734059,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2023-11-18",
+      "effectiveDate": "2023-11-18",
+      "resolutionDate": "2023-11-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Luke Williams assigned to Gwinnett Stripers."
     },
     {
       "id": 739111,
@@ -1456,26 +1456,6 @@
       "description": "Atlanta Braves selected the contract of 3B Luke Williams from Gwinnett Stripers."
     },
     {
-      "id": 773743,
-      "person": {
-        "id": 663897,
-        "fullName": "Luke Williams",
-        "link": "/api/v1/people/663897",
-        "nameSlug": "luke-williams-663897"
-      },
-      "toTeam": {
-        "id": 431,
-        "name": "Gwinnett Stripers",
-        "link": "/api/v1/teams/431"
-      },
-      "date": "2024-05-24",
-      "effectiveDate": "2024-05-24",
-      "resolutionDate": "2024-05-24",
-      "typeCode": "SC",
-      "typeDesc": "Status Change",
-      "description": "3B Luke Williams roster status changed by Gwinnett Stripers."
-    },
-    {
       "id": 773922,
       "person": {
         "id": 663897,
@@ -1494,6 +1474,26 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "Gwinnett Stripers activated 3B Luke Williams."
+    },
+    {
+      "id": 773743,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2024-05-24",
+      "effectiveDate": "2024-05-24",
+      "resolutionDate": "2024-05-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "3B Luke Williams roster status changed by Gwinnett Stripers."
     },
     {
       "id": 773679,
@@ -1944,26 +1944,6 @@
       "description": "SS Luke Williams elected free agency."
     },
     {
-      "id": 882336,
-      "person": {
-        "id": 663897,
-        "fullName": "Luke Williams",
-        "link": "/api/v1/people/663897",
-        "nameSlug": "luke-williams-663897"
-      },
-      "toTeam": {
-        "id": 431,
-        "name": "Gwinnett Stripers",
-        "link": "/api/v1/teams/431"
-      },
-      "date": "2026-01-18",
-      "effectiveDate": "2026-01-18",
-      "resolutionDate": "2026-01-18",
-      "typeCode": "ASG",
-      "typeDesc": "Assigned",
-      "description": "SS Luke Williams assigned to Gwinnett Stripers."
-    },
-    {
       "id": 882335,
       "person": {
         "id": 663897,
@@ -1982,6 +1962,26 @@
       "typeCode": "SFA",
       "typeDesc": "Signed as Free Agent",
       "description": "Atlanta Braves signed free agent SS Luke Williams to a minor league contract."
+    },
+    {
+      "id": 882336,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2026-01-18",
+      "effectiveDate": "2026-01-18",
+      "resolutionDate": "2026-01-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Luke Williams assigned to Gwinnett Stripers."
     },
     {
       "id": 884122,
@@ -2092,26 +2092,6 @@
       "description": "Atlanta Braves sent SS Luke Williams outright to Gwinnett Stripers."
     },
     {
-      "id": 900757,
-      "person": {
-        "id": 663897,
-        "fullName": "Luke Williams",
-        "link": "/api/v1/people/663897",
-        "nameSlug": "luke-williams-663897"
-      },
-      "toTeam": {
-        "id": 144,
-        "name": "Atlanta Braves",
-        "link": "/api/v1/teams/144"
-      },
-      "date": "2026-04-16",
-      "effectiveDate": "2026-04-16",
-      "resolutionDate": "2026-04-16",
-      "typeCode": "SFA",
-      "typeDesc": "Signed as Free Agent",
-      "description": "Atlanta Braves signed free agent SS Luke Williams to a minor league contract."
-    },
-    {
       "id": 900758,
       "person": {
         "id": 663897,
@@ -2130,6 +2110,26 @@
       "typeCode": "ASG",
       "typeDesc": "Assigned",
       "description": "SS Luke Williams assigned to Gwinnett Stripers."
+    },
+    {
+      "id": 900757,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2026-04-16",
+      "effectiveDate": "2026-04-16",
+      "resolutionDate": "2026-04-16",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Atlanta Braves signed free agent SS Luke Williams to a minor league contract."
     },
     {
       "id": 944321,
@@ -2258,6 +2258,46 @@
       "typeCode": "DFA",
       "typeDesc": "Declared Free Agency",
       "description": "SS Luke Williams elected free agency."
+    },
+    {
+      "id": 950650,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2026-11-16",
+      "effectiveDate": "2026-11-16",
+      "resolutionDate": "2026-11-16",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Atlanta Braves signed free agent SS Luke Williams to a minor league contract."
+    },
+    {
+      "id": 950651,
+      "person": {
+        "id": 663897,
+        "fullName": "Luke Williams",
+        "link": "/api/v1/people/663897",
+        "nameSlug": "luke-williams-663897"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2026-11-16",
+      "effectiveDate": "2026-11-16",
+      "resolutionDate": "2026-11-16",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Luke Williams assigned to Gwinnett Stripers."
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "player_id": 666310,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:fe8dccfda7d1e55938852e609f485e3368bd51507ce31374ff3a5ef59055bc37",
+  "fetched_at": "2026-11-23T00:11:12Z",
+  "checksum": "sha256:2d584edf10eba47d1de9659624bc0ae00289785560e2f1e22d5bde2888f84a29",
   "transactions": [
     {
       "id": 256191,
@@ -276,26 +276,6 @@
       "description": "C Bo Naylor assigned to Indians Alternate Training Site from Lynchburg Hillcats."
     },
     {
-      "id": 463966,
-      "person": {
-        "id": 666310,
-        "fullName": "Bo Naylor",
-        "link": "/api/v1/people/666310",
-        "nameSlug": "bo-naylor-666310"
-      },
-      "toTeam": {
-        "id": 481,
-        "name": "Hill City Howlers",
-        "link": "/api/v1/teams/481"
-      },
-      "date": "2020-09-29",
-      "effectiveDate": "2020-09-29",
-      "resolutionDate": "2020-09-29",
-      "typeCode": "ASG",
-      "typeDesc": "Assigned",
-      "description": "C Bo Naylor assigned to Lynchburg Hillcats."
-    },
-    {
       "id": 453005,
       "person": {
         "id": 666310,
@@ -318,6 +298,26 @@
       "typeCode": "ASG",
       "typeDesc": "Assigned",
       "description": "C Bo Naylor assigned to Lynchburg Hillcats from Indians Alternate Training Site."
+    },
+    {
+      "id": 463966,
+      "person": {
+        "id": 666310,
+        "fullName": "Bo Naylor",
+        "link": "/api/v1/people/666310",
+        "nameSlug": "bo-naylor-666310"
+      },
+      "toTeam": {
+        "id": 481,
+        "name": "Hill City Howlers",
+        "link": "/api/v1/teams/481"
+      },
+      "date": "2020-09-29",
+      "effectiveDate": "2020-09-29",
+      "resolutionDate": "2020-09-29",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Bo Naylor assigned to Lynchburg Hillcats."
     },
     {
       "id": 461645,
@@ -360,7 +360,7 @@
       "description": "C Bo Naylor assigned to Cleveland Indians ."
     },
     {
-      "id": 468582,
+      "id": 466319,
       "person": {
         "id": 666310,
         "fullName": "Bo Naylor",
@@ -380,7 +380,7 @@
       "description": "C Bo Naylor assigned to Lake County Captains."
     },
     {
-      "id": 466319,
+      "id": 468582,
       "person": {
         "id": 666310,
         "fullName": "Bo Naylor",
@@ -1037,6 +1037,26 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "C Bo Naylor roster status changed by Milwaukee Brewers."
+    },
+    {
+      "id": 950676,
+      "person": {
+        "id": 666310,
+        "fullName": "Bo Naylor",
+        "link": "/api/v1/people/666310",
+        "nameSlug": "bo-naylor-666310"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2026-10-29",
+      "effectiveDate": "2026-10-29",
+      "resolutionDate": "2026-10-29",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Milwaukee Brewers activated C Bo Naylor."
     }
   ]
 }

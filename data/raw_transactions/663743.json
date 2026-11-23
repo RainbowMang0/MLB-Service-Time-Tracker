@@ -1,7 +1,7 @@
 {
   "player_id": 663743,
-  "fetched_at": "2026-11-19T20:04:15Z",
-  "checksum": "sha256:0fb131bc30cbaba92aaafd58b8817cc48cababb52b6a936e5bd4b60fbd21fc1c",
+  "fetched_at": "2026-11-23T00:11:12Z",
+  "checksum": "sha256:9490dbc2b10599dcbf6dd22f277288575b457649cba94d3e7a902c3ceaf6b384",
   "transactions": [
     {
       "id": 299165,
@@ -368,7 +368,7 @@
       "description": "C Nick Fortes assigned to Jupiter Hammerheads."
     },
     {
-      "id": 466512,
+      "id": 468778,
       "person": {
         "id": 663743,
         "fullName": "Nick Fortes",
@@ -388,7 +388,7 @@
       "description": "C Nick Fortes assigned to Beloit Snappers."
     },
     {
-      "id": 468778,
+      "id": 466512,
       "person": {
         "id": 663743,
         "fullName": "Nick Fortes",
@@ -667,31 +667,6 @@
       "description": "Miami Marlins placed C Nick Fortes on the 10-day injured list retroactive to April 10, 2025. Left oblique strain."
     },
     {
-      "id": 834923,
-      "person": {
-        "id": 663743,
-        "fullName": "Nick Fortes",
-        "link": "/api/v1/people/663743",
-        "nameSlug": "nick-fortes-663743"
-      },
-      "fromTeam": {
-        "id": 146,
-        "name": "Miami Marlins",
-        "link": "/api/v1/teams/146"
-      },
-      "toTeam": {
-        "id": 564,
-        "name": "Jacksonville Jumbo Shrimp",
-        "link": "/api/v1/teams/564"
-      },
-      "date": "2025-05-01",
-      "effectiveDate": "2025-05-01",
-      "resolutionDate": "2025-05-01",
-      "typeCode": "ASG",
-      "typeDesc": "Assigned",
-      "description": "Miami Marlins sent C Nick Fortes on a rehab assignment to Jacksonville Jumbo Shrimp."
-    },
-    {
       "id": 833392,
       "person": {
         "id": 663743,
@@ -718,6 +693,31 @@
     },
     {
       "id": 833351,
+      "person": {
+        "id": 663743,
+        "fullName": "Nick Fortes",
+        "link": "/api/v1/people/663743",
+        "nameSlug": "nick-fortes-663743"
+      },
+      "fromTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "toTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "date": "2025-05-01",
+      "effectiveDate": "2025-05-01",
+      "resolutionDate": "2025-05-01",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Miami Marlins sent C Nick Fortes on a rehab assignment to Jacksonville Jumbo Shrimp."
+    },
+    {
+      "id": 834923,
       "person": {
         "id": 663743,
         "fullName": "Nick Fortes",
@@ -907,7 +907,7 @@
       "effectiveDate": "2026-11-18",
       "typeCode": "TR",
       "typeDesc": "Trade",
-      "description": "Tampa Bay Rays traded C Nick Fortes to Boston Red Sox for RHP Angel Roa."
+      "description": "Tampa Bay Rays traded C Nick Fortes to Boston Red Sox."
     }
   ]
 }

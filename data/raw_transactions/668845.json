@@ -1,7 +1,7 @@
 {
   "player_id": 668845,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:ce23765f5ca93030c30a6932b4e771178f444e7bffa82fb727d435de41a9a09a",
+  "fetched_at": "2026-11-23T00:11:12Z",
+  "checksum": "sha256:b24f956563e4ffd8cd735a72ab401768966142750b4466437eb81df165c2ee16",
   "transactions": [
     {
       "id": 304715,
@@ -148,6 +148,26 @@
       "description": "Colorado Rockies invited non-roster 3B Aaron Schunk to spring training."
     },
     {
+      "id": 463847,
+      "person": {
+        "id": 668845,
+        "fullName": "Aaron Schunk",
+        "link": "/api/v1/people/668845",
+        "nameSlug": "aaron-schunk-668845"
+      },
+      "toTeam": {
+        "id": 573,
+        "name": "Asheville Tourists",
+        "link": "/api/v1/teams/573"
+      },
+      "date": "2020-09-30",
+      "effectiveDate": "2020-09-30",
+      "resolutionDate": "2020-09-30",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Aaron Schunk assigned to Asheville Tourists."
+    },
+    {
       "id": 452566,
       "person": {
         "id": 668845,
@@ -170,26 +190,6 @@
       "typeCode": "ASG",
       "typeDesc": "Assigned",
       "description": "3B Aaron Schunk assigned to Asheville Tourists from Rockies Alternate Training Site."
-    },
-    {
-      "id": 463847,
-      "person": {
-        "id": 668845,
-        "fullName": "Aaron Schunk",
-        "link": "/api/v1/people/668845",
-        "nameSlug": "aaron-schunk-668845"
-      },
-      "toTeam": {
-        "id": 573,
-        "name": "Asheville Tourists",
-        "link": "/api/v1/teams/573"
-      },
-      "date": "2020-09-30",
-      "effectiveDate": "2020-09-30",
-      "resolutionDate": "2020-09-30",
-      "typeCode": "ASG",
-      "typeDesc": "Assigned",
-      "description": "3B Aaron Schunk assigned to Asheville Tourists."
     },
     {
       "id": 466193,
@@ -256,26 +256,6 @@
       "description": "3B Aaron Schunk assigned to Spokane Indians from Fresno Grizzlies."
     },
     {
-      "id": 606666,
-      "person": {
-        "id": 668845,
-        "fullName": "Aaron Schunk",
-        "link": "/api/v1/people/668845",
-        "nameSlug": "aaron-schunk-668845"
-      },
-      "toTeam": {
-        "id": 115,
-        "name": "Colorado Rockies",
-        "link": "/api/v1/teams/115"
-      },
-      "date": "2022-03-17",
-      "effectiveDate": "2022-03-17",
-      "resolutionDate": "2022-03-17",
-      "typeCode": "ASG",
-      "typeDesc": "Assigned",
-      "description": "3B Aaron Schunk assigned to Colorado Rockies."
-    },
-    {
       "id": 612410,
       "person": {
         "id": 668845,
@@ -296,6 +276,26 @@
       "description": "3B Aaron Schunk roster status changed by Colorado Rockies."
     },
     {
+      "id": 606666,
+      "person": {
+        "id": 668845,
+        "fullName": "Aaron Schunk",
+        "link": "/api/v1/people/668845",
+        "nameSlug": "aaron-schunk-668845"
+      },
+      "toTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "date": "2022-03-17",
+      "effectiveDate": "2022-03-17",
+      "resolutionDate": "2022-03-17",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Aaron Schunk assigned to Colorado Rockies."
+    },
+    {
       "id": 613525,
       "person": {
         "id": 668845,
@@ -314,26 +314,6 @@
       "typeCode": "ASG",
       "typeDesc": "Assigned",
       "description": "3B Aaron Schunk assigned to Hartford Yard Goats."
-    },
-    {
-      "id": 678280,
-      "person": {
-        "id": 668845,
-        "fullName": "Aaron Schunk",
-        "link": "/api/v1/people/668845",
-        "nameSlug": "aaron-schunk-668845"
-      },
-      "toTeam": {
-        "id": 115,
-        "name": "Colorado Rockies",
-        "link": "/api/v1/teams/115"
-      },
-      "date": "2023-03-02",
-      "effectiveDate": "2023-03-02",
-      "resolutionDate": "2023-03-02",
-      "typeCode": "SC",
-      "typeDesc": "Status Change",
-      "description": "3B Aaron Schunk roster status changed by Colorado Rockies."
     },
     {
       "id": 674245,
@@ -377,6 +357,26 @@
     },
     {
       "id": 675428,
+      "person": {
+        "id": 668845,
+        "fullName": "Aaron Schunk",
+        "link": "/api/v1/people/668845",
+        "nameSlug": "aaron-schunk-668845"
+      },
+      "toTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "date": "2023-03-02",
+      "effectiveDate": "2023-03-02",
+      "resolutionDate": "2023-03-02",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "3B Aaron Schunk roster status changed by Colorado Rockies."
+    },
+    {
+      "id": 678280,
       "person": {
         "id": 668845,
         "fullName": "Aaron Schunk",
@@ -544,7 +544,7 @@
       "description": "Colorado Rockies selected the contract of 3B Aaron Schunk from Albuquerque Isotopes."
     },
     {
-      "id": 816059,
+      "id": 816330,
       "person": {
         "id": 668845,
         "fullName": "Aaron Schunk",
@@ -564,7 +564,7 @@
       "description": "2B Aaron Schunk roster status changed by Colorado Rockies."
     },
     {
-      "id": 816330,
+      "id": 816059,
       "person": {
         "id": 668845,
         "fullName": "Aaron Schunk",
@@ -652,31 +652,6 @@
       "description": "Colorado Rockies placed 2B Aaron Schunk on the 10-day injured list. Left groin strain."
     },
     {
-      "id": 836039,
-      "person": {
-        "id": 668845,
-        "fullName": "Aaron Schunk",
-        "link": "/api/v1/people/668845",
-        "nameSlug": "aaron-schunk-668845"
-      },
-      "fromTeam": {
-        "id": 115,
-        "name": "Colorado Rockies",
-        "link": "/api/v1/teams/115"
-      },
-      "toTeam": {
-        "id": 342,
-        "name": "Albuquerque Isotopes",
-        "link": "/api/v1/teams/342"
-      },
-      "date": "2025-05-10",
-      "effectiveDate": "2025-05-10",
-      "resolutionDate": "2025-05-10",
-      "typeCode": "ASG",
-      "typeDesc": "Assigned",
-      "description": "Colorado Rockies sent 2B Aaron Schunk on a rehab assignment to Albuquerque Isotopes."
-    },
-    {
       "id": 838248,
       "person": {
         "id": 668845,
@@ -700,6 +675,31 @@
       "typeCode": "ASG",
       "typeDesc": "Assigned",
       "description": "Colorado Rockies sent SS Aaron Schunk on a rehab assignment to Albuquerque Isotopes."
+    },
+    {
+      "id": 836039,
+      "person": {
+        "id": 668845,
+        "fullName": "Aaron Schunk",
+        "link": "/api/v1/people/668845",
+        "nameSlug": "aaron-schunk-668845"
+      },
+      "fromTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "toTeam": {
+        "id": 342,
+        "name": "Albuquerque Isotopes",
+        "link": "/api/v1/teams/342"
+      },
+      "date": "2025-05-10",
+      "effectiveDate": "2025-05-10",
+      "resolutionDate": "2025-05-10",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Colorado Rockies sent 2B Aaron Schunk on a rehab assignment to Albuquerque Isotopes."
     },
     {
       "id": 838249,
@@ -946,26 +946,6 @@
       "description": "Colorado Rockies sent SS Aaron Schunk outright to Albuquerque Isotopes."
     },
     {
-      "id": 878994,
-      "person": {
-        "id": 668845,
-        "fullName": "Aaron Schunk",
-        "link": "/api/v1/people/668845",
-        "nameSlug": "aaron-schunk-668845"
-      },
-      "toTeam": {
-        "id": 144,
-        "name": "Atlanta Braves",
-        "link": "/api/v1/teams/144"
-      },
-      "date": "2025-12-16",
-      "effectiveDate": "2025-12-16",
-      "resolutionDate": "2025-12-16",
-      "typeCode": "SFA",
-      "typeDesc": "Signed as Free Agent",
-      "description": "Atlanta Braves signed free agent SS Aaron Schunk to a minor league contract."
-    },
-    {
       "id": 884120,
       "person": {
         "id": 668845,
@@ -984,6 +964,26 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "SS Aaron Schunk roster status changed by Atlanta Braves."
+    },
+    {
+      "id": 878994,
+      "person": {
+        "id": 668845,
+        "fullName": "Aaron Schunk",
+        "link": "/api/v1/people/668845",
+        "nameSlug": "aaron-schunk-668845"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2025-12-16",
+      "effectiveDate": "2025-12-16",
+      "resolutionDate": "2025-12-16",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Atlanta Braves signed free agent SS Aaron Schunk to a minor league contract."
     },
     {
       "id": 878995,
@@ -1044,6 +1044,26 @@
       "typeCode": "ASG",
       "typeDesc": "Assigned",
       "description": "SS Aaron Schunk assigned to Estrellas Orientales."
+    },
+    {
+      "id": 950376,
+      "person": {
+        "id": 668845,
+        "fullName": "Aaron Schunk",
+        "link": "/api/v1/people/668845",
+        "nameSlug": "aaron-schunk-668845"
+      },
+      "toTeam": {
+        "id": 669,
+        "name": "Estrellas Orientales",
+        "link": "/api/v1/teams/669"
+      },
+      "date": "2026-10-16",
+      "effectiveDate": "2026-10-16",
+      "resolutionDate": "2026-10-16",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Estrellas Orientales activated SS Aaron Schunk."
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "player_id": 663604,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:b8946860ee1d7d91754d999120f61b44f8d4a2782a7c9ceeb25db5d953bf8b4e",
+  "fetched_at": "2026-11-23T00:11:12Z",
+  "checksum": "sha256:358e972647dd58b9c617419ac53b3c28a98ae0ab91b627abd00ba07ecbbafbec",
   "transactions": [
     {
       "id": 359966,
@@ -108,26 +108,6 @@
       "description": "Staten Island Yankees activated CF Brandon Lockridge from the 60-day injured list."
     },
     {
-      "id": 464210,
-      "person": {
-        "id": 663604,
-        "fullName": "Brandon Lockridge",
-        "link": "/api/v1/people/663604",
-        "nameSlug": "brandon-lockridge-663604"
-      },
-      "toTeam": {
-        "id": 233,
-        "name": "Charleston RiverDogs",
-        "link": "/api/v1/teams/233"
-      },
-      "date": "2019-04-03",
-      "effectiveDate": "2019-04-03",
-      "resolutionDate": "2019-04-03",
-      "typeCode": "ASG",
-      "typeDesc": "Assigned",
-      "description": "CF Brandon Lockridge assigned to Charleston RiverDogs."
-    },
-    {
       "id": 394630,
       "person": {
         "id": 663604,
@@ -150,6 +130,26 @@
       "typeCode": "ASG",
       "typeDesc": "Assigned",
       "description": "CF Brandon Lockridge assigned to Charleston RiverDogs from Staten Island Yankees."
+    },
+    {
+      "id": 464210,
+      "person": {
+        "id": 663604,
+        "fullName": "Brandon Lockridge",
+        "link": "/api/v1/people/663604",
+        "nameSlug": "brandon-lockridge-663604"
+      },
+      "toTeam": {
+        "id": 233,
+        "name": "Charleston RiverDogs",
+        "link": "/api/v1/teams/233"
+      },
+      "date": "2019-04-03",
+      "effectiveDate": "2019-04-03",
+      "resolutionDate": "2019-04-03",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "CF Brandon Lockridge assigned to Charleston RiverDogs."
     },
     {
       "id": 409357,
@@ -192,7 +192,7 @@
       "description": "CF Brandon Lockridge assigned to New York Yankees."
     },
     {
-      "id": 466557,
+      "id": 468817,
       "person": {
         "id": 663604,
         "fullName": "Brandon Lockridge",
@@ -212,7 +212,7 @@
       "description": "CF Brandon Lockridge assigned to Tampa Tarpons."
     },
     {
-      "id": 468817,
+      "id": 466557,
       "person": {
         "id": 663604,
         "fullName": "Brandon Lockridge",
@@ -320,26 +320,6 @@
       "description": "Somerset Patriots activated OF Brandon Lockridge from the 7-day injured list."
     },
     {
-      "id": 607318,
-      "person": {
-        "id": 663604,
-        "fullName": "Brandon Lockridge",
-        "link": "/api/v1/people/663604",
-        "nameSlug": "brandon-lockridge-663604"
-      },
-      "toTeam": {
-        "id": 147,
-        "name": "New York Yankees",
-        "link": "/api/v1/teams/147"
-      },
-      "date": "2022-03-19",
-      "effectiveDate": "2022-03-19",
-      "resolutionDate": "2022-03-19",
-      "typeCode": "ASG",
-      "typeDesc": "Assigned",
-      "description": "OF Brandon Lockridge assigned to New York Yankees."
-    },
-    {
       "id": 674366,
       "person": {
         "id": 663604,
@@ -380,7 +360,27 @@
       "description": "OF Brandon Lockridge roster status changed by New York Yankees."
     },
     {
-      "id": 676069,
+      "id": 607318,
+      "person": {
+        "id": 663604,
+        "fullName": "Brandon Lockridge",
+        "link": "/api/v1/people/663604",
+        "nameSlug": "brandon-lockridge-663604"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2022-03-19",
+      "effectiveDate": "2022-03-19",
+      "resolutionDate": "2022-03-19",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Brandon Lockridge assigned to New York Yankees."
+    },
+    {
+      "id": 676848,
       "person": {
         "id": 663604,
         "fullName": "Brandon Lockridge",
@@ -418,6 +418,86 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "OF Brandon Lockridge roster status changed by New York Yankees."
+    },
+    {
+      "id": 676239,
+      "person": {
+        "id": 663604,
+        "fullName": "Brandon Lockridge",
+        "link": "/api/v1/people/663604",
+        "nameSlug": "brandon-lockridge-663604"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2023-02-25",
+      "effectiveDate": "2023-02-25",
+      "resolutionDate": "2023-02-25",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "OF Brandon Lockridge roster status changed by New York Yankees."
+    },
+    {
+      "id": 676069,
+      "person": {
+        "id": 663604,
+        "fullName": "Brandon Lockridge",
+        "link": "/api/v1/people/663604",
+        "nameSlug": "brandon-lockridge-663604"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2023-02-25",
+      "effectiveDate": "2023-02-25",
+      "resolutionDate": "2023-02-25",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "OF Brandon Lockridge roster status changed by New York Yankees."
+    },
+    {
+      "id": 678531,
+      "person": {
+        "id": 663604,
+        "fullName": "Brandon Lockridge",
+        "link": "/api/v1/people/663604",
+        "nameSlug": "brandon-lockridge-663604"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2023-02-25",
+      "effectiveDate": "2023-02-25",
+      "resolutionDate": "2023-02-25",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "OF Brandon Lockridge roster status changed by New York Yankees."
+    },
+    {
+      "id": 673258,
+      "person": {
+        "id": 663604,
+        "fullName": "Brandon Lockridge",
+        "link": "/api/v1/people/663604",
+        "nameSlug": "brandon-lockridge-663604"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2023-02-25",
+      "effectiveDate": "2023-02-25",
+      "resolutionDate": "2023-02-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Brandon Lockridge assigned to New York Yankees."
     },
     {
       "id": 673974,
@@ -458,86 +538,6 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "OF Brandon Lockridge roster status changed by New York Yankees."
-    },
-    {
-      "id": 676239,
-      "person": {
-        "id": 663604,
-        "fullName": "Brandon Lockridge",
-        "link": "/api/v1/people/663604",
-        "nameSlug": "brandon-lockridge-663604"
-      },
-      "toTeam": {
-        "id": 147,
-        "name": "New York Yankees",
-        "link": "/api/v1/teams/147"
-      },
-      "date": "2023-02-25",
-      "effectiveDate": "2023-02-25",
-      "resolutionDate": "2023-02-25",
-      "typeCode": "SC",
-      "typeDesc": "Status Change",
-      "description": "OF Brandon Lockridge roster status changed by New York Yankees."
-    },
-    {
-      "id": 678531,
-      "person": {
-        "id": 663604,
-        "fullName": "Brandon Lockridge",
-        "link": "/api/v1/people/663604",
-        "nameSlug": "brandon-lockridge-663604"
-      },
-      "toTeam": {
-        "id": 147,
-        "name": "New York Yankees",
-        "link": "/api/v1/teams/147"
-      },
-      "date": "2023-02-25",
-      "effectiveDate": "2023-02-25",
-      "resolutionDate": "2023-02-25",
-      "typeCode": "SC",
-      "typeDesc": "Status Change",
-      "description": "OF Brandon Lockridge roster status changed by New York Yankees."
-    },
-    {
-      "id": 676848,
-      "person": {
-        "id": 663604,
-        "fullName": "Brandon Lockridge",
-        "link": "/api/v1/people/663604",
-        "nameSlug": "brandon-lockridge-663604"
-      },
-      "toTeam": {
-        "id": 147,
-        "name": "New York Yankees",
-        "link": "/api/v1/teams/147"
-      },
-      "date": "2023-02-25",
-      "effectiveDate": "2023-02-25",
-      "resolutionDate": "2023-02-25",
-      "typeCode": "SC",
-      "typeDesc": "Status Change",
-      "description": "OF Brandon Lockridge roster status changed by New York Yankees."
-    },
-    {
-      "id": 673258,
-      "person": {
-        "id": 663604,
-        "fullName": "Brandon Lockridge",
-        "link": "/api/v1/people/663604",
-        "nameSlug": "brandon-lockridge-663604"
-      },
-      "toTeam": {
-        "id": 147,
-        "name": "New York Yankees",
-        "link": "/api/v1/teams/147"
-      },
-      "date": "2023-02-25",
-      "effectiveDate": "2023-02-25",
-      "resolutionDate": "2023-02-25",
-      "typeCode": "ASG",
-      "typeDesc": "Assigned",
-      "description": "OF Brandon Lockridge assigned to New York Yankees."
     },
     {
       "id": 696453,
@@ -1307,6 +1307,26 @@
       "typeCode": "CU",
       "typeDesc": "Recalled",
       "description": "Milwaukee Brewers recalled LF Brandon Lockridge from Nashville Sounds."
+    },
+    {
+      "id": 950673,
+      "person": {
+        "id": 663604,
+        "fullName": "Brandon Lockridge",
+        "link": "/api/v1/people/663604",
+        "nameSlug": "brandon-lockridge-663604"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2026-10-29",
+      "effectiveDate": "2026-10-29",
+      "resolutionDate": "2026-10-29",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Milwaukee Brewers activated LF Brandon Lockridge."
     }
   ]
 }

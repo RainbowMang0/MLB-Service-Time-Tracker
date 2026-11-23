@@ -1,7 +1,7 @@
 {
   "player_id": 668904,
-  "fetched_at": "2026-11-21T18:47:39Z",
-  "checksum": "sha256:0bc7763e64465559ee79107b33a141829d207f8f287f58ca79320b3b58c232b5",
+  "fetched_at": "2026-11-23T00:11:12Z",
+  "checksum": "sha256:5ec3a3ea7deb010eb795a0732196c99f15294506a4b794b19e2a4c4c965f2cf1",
   "transactions": [
     {
       "id": 279992,
@@ -360,6 +360,26 @@
       "description": "SS Royce Lewis assigned to Twins Alternate Training Site from Pensacola Blue Wahoos."
     },
     {
+      "id": 463831,
+      "person": {
+        "id": 668904,
+        "fullName": "Royce Lewis",
+        "link": "/api/v1/people/668904",
+        "nameSlug": "royce-lewis-668904"
+      },
+      "toTeam": {
+        "id": 4124,
+        "name": "Pensacola Blue Wahoos",
+        "link": "/api/v1/teams/4124"
+      },
+      "date": "2020-10-02",
+      "effectiveDate": "2020-10-02",
+      "resolutionDate": "2020-10-02",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Royce Lewis assigned to Pensacola Blue Wahoos."
+    },
+    {
       "id": 452794,
       "person": {
         "id": 668904,
@@ -384,46 +404,6 @@
       "description": "SS Royce Lewis assigned to Pensacola Blue Wahoos from Twins Alternate Training Site."
     },
     {
-      "id": 463831,
-      "person": {
-        "id": 668904,
-        "fullName": "Royce Lewis",
-        "link": "/api/v1/people/668904",
-        "nameSlug": "royce-lewis-668904"
-      },
-      "toTeam": {
-        "id": 4124,
-        "name": "Pensacola Blue Wahoos",
-        "link": "/api/v1/teams/4124"
-      },
-      "date": "2020-10-02",
-      "effectiveDate": "2020-10-02",
-      "resolutionDate": "2020-10-02",
-      "typeCode": "ASG",
-      "typeDesc": "Assigned",
-      "description": "SS Royce Lewis assigned to Pensacola Blue Wahoos."
-    },
-    {
-      "id": 468440,
-      "person": {
-        "id": 668904,
-        "fullName": "Royce Lewis",
-        "link": "/api/v1/people/668904",
-        "nameSlug": "royce-lewis-668904"
-      },
-      "toTeam": {
-        "id": 3898,
-        "name": "Wichita Wind Surge",
-        "link": "/api/v1/teams/3898"
-      },
-      "date": "2021-02-12",
-      "effectiveDate": "2021-02-12",
-      "resolutionDate": "2021-02-12",
-      "typeCode": "ASG",
-      "typeDesc": "Assigned",
-      "description": "SS Royce Lewis assigned to Wichita Wind Surge."
-    },
-    {
       "id": 466181,
       "person": {
         "id": 668904,
@@ -444,7 +424,7 @@
       "description": "SS Royce Lewis assigned to Wichita Wind Surge."
     },
     {
-      "id": 474884,
+      "id": 468440,
       "person": {
         "id": 668904,
         "fullName": "Royce Lewis",
@@ -452,16 +432,16 @@
         "nameSlug": "royce-lewis-668904"
       },
       "toTeam": {
-        "id": 142,
-        "name": "Minnesota Twins",
-        "link": "/api/v1/teams/142"
+        "id": 3898,
+        "name": "Wichita Wind Surge",
+        "link": "/api/v1/teams/3898"
       },
-      "date": "2021-02-15",
-      "effectiveDate": "2021-02-15",
-      "resolutionDate": "2021-02-15",
+      "date": "2021-02-12",
+      "effectiveDate": "2021-02-12",
+      "resolutionDate": "2021-02-12",
       "typeCode": "ASG",
       "typeDesc": "Assigned",
-      "description": "SS Royce Lewis assigned to Minnesota Twins ."
+      "description": "SS Royce Lewis assigned to Wichita Wind Surge."
     },
     {
       "id": 469856,
@@ -502,6 +482,26 @@
       "typeCode": "ASG",
       "typeDesc": "Assigned",
       "description": "Minnesota Twins invited non-roster SS Royce Lewis to spring training."
+    },
+    {
+      "id": 474884,
+      "person": {
+        "id": 668904,
+        "fullName": "Royce Lewis",
+        "link": "/api/v1/people/668904",
+        "nameSlug": "royce-lewis-668904"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2021-02-15",
+      "effectiveDate": "2021-02-15",
+      "resolutionDate": "2021-02-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Royce Lewis assigned to Minnesota Twins ."
     },
     {
       "id": 481948,
@@ -964,7 +964,7 @@
       "description": "Minnesota Twins placed SS Royce Lewis on the 10-day injured list. Right quad strain."
     },
     {
-      "id": 727411,
+      "id": 727398,
       "person": {
         "id": 668904,
         "fullName": "Royce Lewis",
@@ -981,7 +981,7 @@
       "resolutionDate": "2023-10-02",
       "typeCode": "SC",
       "typeDesc": "Status Change",
-      "description": "SS Royce Lewis roster status changed by Minnesota Twins."
+      "description": "Minnesota Twins activated SS Royce Lewis from the 10-day injured list."
     },
     {
       "id": 758162,
@@ -1004,7 +1004,7 @@
       "description": "Minnesota Twins activated SS Royce Lewis from the 10-day injured list."
     },
     {
-      "id": 727398,
+      "id": 727411,
       "person": {
         "id": 668904,
         "fullName": "Royce Lewis",
@@ -1021,7 +1021,7 @@
       "resolutionDate": "2023-10-02",
       "typeCode": "SC",
       "typeDesc": "Status Change",
-      "description": "Minnesota Twins activated SS Royce Lewis from the 10-day injured list."
+      "description": "SS Royce Lewis roster status changed by Minnesota Twins."
     },
     {
       "id": 727780,
@@ -1628,7 +1628,7 @@
       "effectiveDate": "2026-11-20",
       "typeCode": "TR",
       "typeDesc": "Trade",
-      "description": "Minnesota Twins traded 1B Royce Lewis to Los Angeles Dodgers for RHP Bobby Miller and C Francisco Espinoza."
+      "description": "Minnesota Twins traded 1B Royce Lewis to Los Angeles Dodgers."
     }
   ]
 }

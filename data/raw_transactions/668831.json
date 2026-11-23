@@ -1,7 +1,7 @@
 {
   "player_id": 668831,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:1f923801b91857fee61802b8022f39c15e0531c7ac7ac2b46cac67aa6b1e8a56",
+  "fetched_at": "2026-11-23T00:11:12Z",
+  "checksum": "sha256:09cac63f2d536725b465cee226497fe59b9844d539189e49522229d67cf7392e",
   "transactions": [
     {
       "id": 424282,
@@ -830,6 +830,26 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "RHP Garrett Stallings roster status changed by Milwaukee Brewers."
+    },
+    {
+      "id": 950675,
+      "person": {
+        "id": 668831,
+        "fullName": "Garrett Stallings",
+        "link": "/api/v1/people/668831",
+        "nameSlug": "garrett-stallings-668831"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2026-10-29",
+      "effectiveDate": "2026-10-29",
+      "resolutionDate": "2026-10-29",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Milwaukee Brewers activated RHP Garrett Stallings."
     }
   ]
 }
