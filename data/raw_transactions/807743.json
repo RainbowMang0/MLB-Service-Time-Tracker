@@ -1,28 +1,8 @@
 {
   "player_id": 807743,
-  "fetched_at": "2026-11-20T19:41:30Z",
-  "checksum": "sha256:2b58a460ff7ff8c8ab0cec476fb09bc4fa0a51db7cf01157a9ed45a07c93f618",
+  "fetched_at": "2026-11-23T00:40:36Z",
+  "checksum": "sha256:ace18ccce88ed66f5d687a3d13fa7738c1540cfe90d645cbda028fd84e671aa2",
   "transactions": [
-    {
-      "id": 694066,
-      "person": {
-        "id": 807743,
-        "fullName": "Sean Sullivan",
-        "link": "/api/v1/people/807743",
-        "nameSlug": "sean-sullivan-807743"
-      },
-      "toTeam": {
-        "id": 6041,
-        "name": "Wake Forest Demon Deacons",
-        "link": "/api/v1/teams/6041"
-      },
-      "date": "2023-05-20",
-      "effectiveDate": "2023-05-20",
-      "resolutionDate": "2023-05-20",
-      "typeCode": "ASG",
-      "typeDesc": "Assigned",
-      "description": "LHP Sean Sullivan assigned to Wake Forest Demon Deacons."
-    },
     {
       "id": 712916,
       "person": {
@@ -42,6 +22,26 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "Wake Forest Demon Deacons activated LHP Sean Sullivan."
+    },
+    {
+      "id": 694066,
+      "person": {
+        "id": 807743,
+        "fullName": "Sean Sullivan",
+        "link": "/api/v1/people/807743",
+        "nameSlug": "sean-sullivan-807743"
+      },
+      "toTeam": {
+        "id": 6041,
+        "name": "Wake Forest Demon Deacons",
+        "link": "/api/v1/teams/6041"
+      },
+      "date": "2023-05-20",
+      "effectiveDate": "2023-05-20",
+      "resolutionDate": "2023-05-20",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Sean Sullivan assigned to Wake Forest Demon Deacons."
     },
     {
       "id": 695408,
@@ -722,7 +722,7 @@
       "effectiveDate": "2026-11-19",
       "typeCode": "TR",
       "typeDesc": "Trade",
-      "description": "Chicago White Sox traded RHP Luis Castillo and RHP Davis Martin to Colorado Rockies for LHP Sean Sullivan and C Douglas Veliz."
+      "description": "Chicago White Sox traded RHP Luis Castillo and RHP Davis Martin to Colorado Rockies for LHP Sean Sullivan."
     }
   ]
 }
