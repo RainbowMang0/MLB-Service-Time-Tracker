@@ -1,7 +1,7 @@
 {
   "player_id": 683568,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:c07aacacc03ca44b9820779c986e6fa92f4faa5a55fd31d6b6ed57eb1040ed85",
+  "fetched_at": "2026-11-23T23:30:19Z",
+  "checksum": "sha256:145e9d82f1905bba9d54d7f89f9933b76167b8ff759d25981da452c656d16bae",
   "transactions": [
     {
       "id": 378753,
@@ -782,6 +782,46 @@
       "typeCode": "DFA",
       "typeDesc": "Declared Free Agency",
       "description": "RHP Jairo Iriarte elected free agency."
+    },
+    {
+      "id": 950953,
+      "person": {
+        "id": 683568,
+        "fullName": "Jairo Iriarte",
+        "link": "/api/v1/people/683568",
+        "nameSlug": "jairo-iriarte-683568"
+      },
+      "toTeam": {
+        "id": 445,
+        "name": "Columbus Clippers",
+        "link": "/api/v1/teams/445"
+      },
+      "date": "2026-11-23",
+      "effectiveDate": "2026-11-23",
+      "resolutionDate": "2026-11-23",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jairo Iriarte assigned to Columbus Clippers."
+    },
+    {
+      "id": 950946,
+      "person": {
+        "id": 683568,
+        "fullName": "Jairo Iriarte",
+        "link": "/api/v1/people/683568",
+        "nameSlug": "jairo-iriarte-683568"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2026-11-23",
+      "effectiveDate": "2026-11-23",
+      "resolutionDate": "2026-11-23",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Cleveland Guardians signed free agent RHP Jairo Iriarte to a minor league contract and invited him to spring training."
     }
   ]
 }

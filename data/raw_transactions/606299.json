@@ -1,6 +1,6 @@
 {
   "player_id": 606299,
-  "fetched_at": "2026-11-22T19:09:26Z",
+  "fetched_at": "2026-11-23T23:30:19Z",
   "checksum": "sha256:28ba0f58b515ae7a265445b02f499a0688c877f7305c0aa82457b35760727687",
   "transactions": [
     {
@@ -887,6 +887,26 @@
       "description": "Boston Red Sox recalled SS Jose Peraza from Red Sox Alternate Training Site."
     },
     {
+      "id": 454288,
+      "person": {
+        "id": 606299,
+        "fullName": "José Peraza",
+        "link": "/api/v1/people/606299",
+        "nameSlug": "jose-peraza-606299"
+      },
+      "toTeam": {
+        "id": 533,
+        "name": "Worcester Red Sox",
+        "link": "/api/v1/teams/533"
+      },
+      "date": "2020-10-28",
+      "effectiveDate": "2020-10-28",
+      "resolutionDate": "2020-10-28",
+      "typeCode": "DFA",
+      "typeDesc": "Declared Free Agency",
+      "description": "SS Jose Peraza elected free agency."
+    },
+    {
       "id": 454374,
       "person": {
         "id": 606299,
@@ -911,7 +931,7 @@
       "description": "Boston Red Sox sent SS Jose Peraza outright to Pawtucket Red Sox."
     },
     {
-      "id": 454288,
+      "id": 455269,
       "person": {
         "id": 606299,
         "fullName": "José Peraza",
@@ -919,16 +939,16 @@
         "nameSlug": "jose-peraza-606299"
       },
       "toTeam": {
-        "id": 533,
-        "name": "Worcester Red Sox",
-        "link": "/api/v1/teams/533"
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
       },
-      "date": "2020-10-28",
-      "effectiveDate": "2020-10-28",
-      "resolutionDate": "2020-10-28",
-      "typeCode": "DFA",
-      "typeDesc": "Declared Free Agency",
-      "description": "SS Jose Peraza elected free agency."
+      "date": "2020-11-04",
+      "effectiveDate": "2020-11-04",
+      "resolutionDate": "2020-11-04",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "New York Mets signed free agent SS Jose Peraza to a minor league contract and invited him to spring training."
     },
     {
       "id": 455274,
@@ -971,7 +991,7 @@
       "description": "New York Mets signed free agent SS Jose Peraza."
     },
     {
-      "id": 455269,
+      "id": 477248,
       "person": {
         "id": 606299,
         "fullName": "José Peraza",
@@ -983,12 +1003,32 @@
         "name": "New York Mets",
         "link": "/api/v1/teams/121"
       },
-      "date": "2020-11-04",
-      "effectiveDate": "2020-11-04",
-      "resolutionDate": "2020-11-04",
-      "typeCode": "SFA",
-      "typeDesc": "Signed as Free Agent",
-      "description": "New York Mets signed free agent SS Jose Peraza to a minor league contract and invited him to spring training."
+      "date": "2021-04-10",
+      "effectiveDate": "2021-04-10",
+      "resolutionDate": "2021-04-10",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "New York Mets selected the contract of SS Jose Peraza."
+    },
+    {
+      "id": 477609,
+      "person": {
+        "id": 606299,
+        "fullName": "José Peraza",
+        "link": "/api/v1/people/606299",
+        "nameSlug": "jose-peraza-606299"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2021-04-10",
+      "effectiveDate": "2021-04-10",
+      "resolutionDate": "2021-04-10",
+      "typeCode": "SE",
+      "typeDesc": "Selected",
+      "description": "New York Mets selected the contract of SS Jose Peraza."
     },
     {
       "id": 476698,
@@ -1013,46 +1053,6 @@
       "typeCode": "SE",
       "typeDesc": "Selected",
       "description": "New York Mets selected the contract of SS Jose Peraza from Mets Alternate Training Site."
-    },
-    {
-      "id": 477609,
-      "person": {
-        "id": 606299,
-        "fullName": "José Peraza",
-        "link": "/api/v1/people/606299",
-        "nameSlug": "jose-peraza-606299"
-      },
-      "toTeam": {
-        "id": 121,
-        "name": "New York Mets",
-        "link": "/api/v1/teams/121"
-      },
-      "date": "2021-04-10",
-      "effectiveDate": "2021-04-10",
-      "resolutionDate": "2021-04-10",
-      "typeCode": "SE",
-      "typeDesc": "Selected",
-      "description": "New York Mets selected the contract of SS Jose Peraza."
-    },
-    {
-      "id": 477248,
-      "person": {
-        "id": 606299,
-        "fullName": "José Peraza",
-        "link": "/api/v1/people/606299",
-        "nameSlug": "jose-peraza-606299"
-      },
-      "toTeam": {
-        "id": 121,
-        "name": "New York Mets",
-        "link": "/api/v1/teams/121"
-      },
-      "date": "2021-04-10",
-      "effectiveDate": "2021-04-10",
-      "resolutionDate": "2021-04-10",
-      "typeCode": "SE",
-      "typeDesc": "Selected",
-      "description": "New York Mets selected the contract of SS Jose Peraza."
     },
     {
       "id": 478772,
@@ -1127,6 +1127,26 @@
       "description": "New York Mets optioned SS Jose Peraza to Mets Alternate Training Site."
     },
     {
+      "id": 489852,
+      "person": {
+        "id": 606299,
+        "fullName": "José Peraza",
+        "link": "/api/v1/people/606299",
+        "nameSlug": "jose-peraza-606299"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2021-04-30",
+      "effectiveDate": "2021-04-30",
+      "resolutionDate": "2021-04-30",
+      "typeCode": "CU",
+      "typeDesc": "Recalled",
+      "description": "New York Mets recalled SS Jose Peraza."
+    },
+    {
       "id": 481714,
       "person": {
         "id": 606299,
@@ -1149,26 +1169,6 @@
       "typeCode": "CU",
       "typeDesc": "Recalled",
       "description": "SS Jose Peraza assigned to New York Mets from Mets Alternate Training Site."
-    },
-    {
-      "id": 489852,
-      "person": {
-        "id": 606299,
-        "fullName": "José Peraza",
-        "link": "/api/v1/people/606299",
-        "nameSlug": "jose-peraza-606299"
-      },
-      "toTeam": {
-        "id": 121,
-        "name": "New York Mets",
-        "link": "/api/v1/teams/121"
-      },
-      "date": "2021-04-30",
-      "effectiveDate": "2021-04-30",
-      "resolutionDate": "2021-04-30",
-      "typeCode": "CU",
-      "typeDesc": "Recalled",
-      "description": "New York Mets recalled SS Jose Peraza."
     },
     {
       "id": 489013,
@@ -1416,7 +1416,7 @@
       "description": "Boston Red Sox signed SS Jose Peraza."
     },
     {
-      "id": 646957,
+      "id": 652760,
       "person": {
         "id": 606299,
         "fullName": "José Peraza",
@@ -1436,7 +1436,7 @@
       "description": "Worcester Red Sox placed SS Jose Peraza on the 7-day injured list."
     },
     {
-      "id": 652760,
+      "id": 646957,
       "person": {
         "id": 606299,
         "fullName": "José Peraza",
@@ -1496,26 +1496,6 @@
       "description": "SS Jose Peraza elected free agency."
     },
     {
-      "id": 679113,
-      "person": {
-        "id": 606299,
-        "fullName": "José Peraza",
-        "link": "/api/v1/people/606299",
-        "nameSlug": "jose-peraza-606299"
-      },
-      "toTeam": {
-        "id": 121,
-        "name": "New York Mets",
-        "link": "/api/v1/teams/121"
-      },
-      "date": "2022-12-10",
-      "effectiveDate": "2022-12-10",
-      "resolutionDate": "2022-12-10",
-      "typeCode": "SC",
-      "typeDesc": "Status Change",
-      "description": "SS José Peraza roster status changed by New York Mets."
-    },
-    {
       "id": 663337,
       "person": {
         "id": 606299,
@@ -1534,6 +1514,26 @@
       "typeCode": "SFA",
       "typeDesc": "Signed as Free Agent",
       "description": "New York Mets signed free agent SS José Peraza to a minor league contract."
+    },
+    {
+      "id": 679113,
+      "person": {
+        "id": 606299,
+        "fullName": "José Peraza",
+        "link": "/api/v1/people/606299",
+        "nameSlug": "jose-peraza-606299"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2022-12-10",
+      "effectiveDate": "2022-12-10",
+      "resolutionDate": "2022-12-10",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "SS José Peraza roster status changed by New York Mets."
     },
     {
       "id": 663338,
@@ -1919,26 +1919,6 @@
       "description": "Acereros del Norte activated 2B José Peraza from the reserve list."
     },
     {
-      "id": 872903,
-      "person": {
-        "id": 606299,
-        "fullName": "José Peraza",
-        "link": "/api/v1/people/606299",
-        "nameSlug": "jose-peraza-606299"
-      },
-      "toTeam": {
-        "id": 699,
-        "name": "Tigres de Aragua",
-        "link": "/api/v1/teams/699"
-      },
-      "date": "2025-10-15",
-      "effectiveDate": "2025-10-15",
-      "resolutionDate": "2025-10-15",
-      "typeCode": "SC",
-      "typeDesc": "Status Change",
-      "description": "Tigres de Aragua activated 2B José Peraza."
-    },
-    {
       "id": 872844,
       "person": {
         "id": 606299,
@@ -1957,6 +1937,26 @@
       "typeCode": "ASG",
       "typeDesc": "Assigned",
       "description": "2B José Peraza assigned to Tigres de Aragua."
+    },
+    {
+      "id": 872903,
+      "person": {
+        "id": 606299,
+        "fullName": "José Peraza",
+        "link": "/api/v1/people/606299",
+        "nameSlug": "jose-peraza-606299"
+      },
+      "toTeam": {
+        "id": 699,
+        "name": "Tigres de Aragua",
+        "link": "/api/v1/teams/699"
+      },
+      "date": "2025-10-15",
+      "effectiveDate": "2025-10-15",
+      "resolutionDate": "2025-10-15",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tigres de Aragua activated 2B José Peraza."
     },
     {
       "id": 905619,
