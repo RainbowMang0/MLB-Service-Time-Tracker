@@ -1500,6 +1500,7 @@ def render(
             player, transactions, player_sections._windows(), section_today
         )
     option_line = html.escape(option_years.player_line(option_count))
+    rookie_line = __import__("rookie_status_pages").player_line(player, transactions, section_today)
     sections = player_sections.render_player_sections(
         player, transactions, team_names, section_today, compact=compact
     )
@@ -1549,7 +1550,7 @@ def render(
     <div><span>MLB debut</span>{debut}</div>
   </div>
 
-  <p class="option-line">{option_line}</p>
+  <p class="option-line">{option_line}</p>{rookie_line}
   <p class="milestone">{html.escape(_milestone_sentence(player, coming, transactions))}</p>
 
   {caveat}
@@ -2134,8 +2135,9 @@ def write_player_pages(
         f"Options: {len(opt_out)} out of options, {len(opt_one)} with one left, "
         f"{opt_unknown} unknown (rostered)"
     )
-    import out_of_options_pages
+    import out_of_options_pages, rookie_status_pages
     out_of_options_pages.write(ooo, generated_at, lastmod, _publish_page, DOCS)
+    rookie_status_pages.write(rostered, generated_at, lastmod, _publish_page, DOCS)
 
     # The homepage's one generated region has to be current before the
     # sitemap hashes that file, or its lastmod would trail the page by a run.
@@ -2527,7 +2529,7 @@ def _write_sitemap(
     # one player's name.
     for path in (
         ARBITRATION_ELIGIBLE_PATH, SUPER_TWO_PAGE_PATH,
-        NON_TENDER_WATCH_PATH, FREE_AGENTS_PATH, OPTIONS_PATH,
+        NON_TENDER_WATCH_PATH, FREE_AGENTS_PATH, OPTIONS_PATH, "rookie-status.html",
     ):
         urls.append(
             f"  <url><loc>{SITE_URL}/{path}</loc>"
@@ -2824,7 +2826,7 @@ h1 { letter-spacing: -0.02em; }
 .list-links { font-size: 0.9rem; color: var(--text-secondary); margin: 0.35rem 0 0.85rem;
               max-width: 68ch; line-height: 1.5; }
 .list-links a { color: var(--accent); text-decoration: none; }
-.list-links a:hover { text-decoration: underline; }
+.list-links a:hover { text-decoration: underline; } .dfa-clubs { max-width: none; } .dfa-clubs a { white-space: nowrap; }
 @media (max-width: 640px) {
   .opt-controls input, .opt-controls select { flex-basis: 100%; }
 }

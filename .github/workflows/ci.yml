@@ -104,6 +104,9 @@ jobs:
           python scripts/out_of_options_pages.py --check
           python tests/test_out_of_options_pages.py
 
+      - name: Rookie eligibility
+        run: python tests/test_rookie_status.py
+
       - name: Service-time rulebook
         run: python tests/test_rulebook.py
 

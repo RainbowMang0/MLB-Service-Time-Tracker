@@ -404,6 +404,21 @@ def offseason_meta(agreement: str) -> str:
     )
 
 
+def rookie_core() -> str:
+    return "MLB rookie eligibility"
+
+
+def rookie_title() -> str:
+    return fit_title(rookie_core())
+
+
+def rookie_meta(eligible: int, graduated: int, year: int) -> str:
+    return fit_meta(
+        f"{eligible} players on a 40-man roster still have rookie eligibility. "
+        f"{graduated} used it up in {year}. From public data, not an official MLB status."
+    )
+
+
 def changes_title() -> str:
     return fit_title("MLB service time and roster changes today")
 
