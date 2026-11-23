@@ -26,3 +26,21 @@ def roster_groups(players: list[dict], open_player=None) -> dict[str, list[dict]
         if p.get("arbitration_eligible") and p.get("id") not in already_named and is_open(p)
     ]
     return {"fa": free_agents, "s2": super_two, "arb": arbitration}
+
+
+def hearing_players(players: list[dict], open_player=None) -> list[dict]:
+    """Players the arbitration number, the name list, and the winter table share.
+
+    Super Two is its own card, and it is also this winter's arbitration list.
+    A contract that already covers next season is on neither: there is no
+    hearing. ``roster_groups`` keeps those two facts apart. This puts them
+    back together so a count and the names under it are the same people.
+    """
+    groups = roster_groups(players, open_player)
+
+    def is_open(player: dict) -> bool:
+        return True if open_player is None else bool(open_player(player))
+
+    seen = {p.get("id") for p in groups["arb"]}
+    extra = [p for p in groups["s2"] if p.get("id") not in seen and is_open(p)]
+    return groups["arb"] + extra
