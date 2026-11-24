@@ -515,6 +515,46 @@ def test_pages_do_not_carry_banned_words_when_present():
         check(f"{page.name} has FAQ structured data", '"@type": "FAQPage"' in text or '"@type":"FAQPage"' in text)
 
 
+def test_mlb_veterans_leave_the_eligible_again_list():
+    import write_rule5_pages as pages
+
+    def person(pid, name, status):
+        return {
+            "player_id": pid, "name": name, "position": "SS", "age": 28,
+            "signed_year": 2016, "how": "Round 1", "level": "Triple-A",
+            "affiliate": "Durham Bulls", "status": status, "estimated": False,
+            "estimated_reasons": [],
+        }
+
+    prospect = person(11, "Young Prospect", "Eligible (again)")
+    veteran = person(22, "Old Veteran", "Eligible (again)")
+    first = person(33, "First Timer", "Eligible (first time)")
+    club = {
+        "club": "Tampa Bay Rays",
+        "counts": {"eligible_first": 1, "eligible_again": 2, "unknown": 0},
+        "players": [prospect, veteran, first],
+    }
+    html_out = pages.render_club_page(club, {}, {22})
+    eligible = html_out.split("<h2>Eligible</h2>", 1)[1].split("MLB veterans", 1)[0]
+    check("a prospect stays in eligible again", "Young Prospect" in eligible)
+    check("a first-timer stays in the eligible list", "First Timer" in eligible)
+    check("a veteran is not in the eligible list", "Old Veteran" not in eligible)
+    folded = html_out.split("MLB veterans on minor-league deals", 1)[1].split("<h2>Unknown</h2>", 1)[0]
+    check("the veteran is in his own section", "Old Veteran" in folded)
+    opener = html_out.split("<details", 1)[1].split(">", 1)[0]
+    check("the veteran section starts collapsed", "open" not in opener)
+    league = pages.render_league({"counts": {}, "clubs": [club]}, {22})
+    row = league.split("Tampa Bay Rays", 1)[1].split("</tr>", 1)[0]
+    check(
+        "the league row counts the veteran apart from eligible again",
+        '<td class="n">1</td><td class="n">1</td><td class="n">1</td><td class="n">0</td>' in row,
+    )
+    service = ROOT / "docs" / "data" / "service_time.json"
+    board = ROOT / "data" / "rule5" / "rule5_2026.json"
+    if service.is_file() and board.is_file():
+        check("Gavin Lux is past the veteran line", 666158 in pages.load_veteran_ids(service))
+
+
 def main():
     test_hand_checked_players()
     test_carlos_lagrange_is_first_eligible_in_december_2026()
@@ -531,6 +571,7 @@ def main():
     test_rendered_row_labels_arronde_2021_and_sorts_hand_checked_first()
     test_saved_board_matches_arronde_and_lagrange_when_present()
     test_pages_do_not_carry_banned_words_when_present()
+    test_mlb_veterans_leave_the_eligible_again_list()
     print(f"\n{PASS} passed, {FAIL} failed")
     if FAIL:
         sys.exit(1)

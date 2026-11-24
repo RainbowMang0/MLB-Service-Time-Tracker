@@ -1028,7 +1028,7 @@ def _options_left_cell(player: dict, option_counts: dict | None) -> str:
     shown = out_of_options_site.roster_options_left(player)
     if shown != "defer":
         if shown is None:
-            return '<td class="n opt-left">—</td>'
+            return '<td class="n opt-left" title="A fourth option year is not counted here.">—</td>'
         return f'<td class="n opt-left">{shown}</td>'
     count = None if not option_counts else option_counts.get(player.get("id"))
     # class is not the bare service-day cell. That one is normalised out of
@@ -4061,7 +4061,7 @@ def render_free_agents(
   {_crumbs(("Players", BASE_PATH), ("Free agents", None))}
 
   <h1>MLB free agents{season_phrase}</h1>
-  <p class="subtitle">{len(fa_now)} players are free-agent eligible now, and everyone else is grouped by the year they could reach it.</p>
+  <p class="subtitle">{len(fa_now)} players are free-agent eligible now, and everyone else is grouped by the year they could reach it. Eligible does not mean unsigned.</p>
   <p class="foot-note">{contracts.PROJECTION_NOTE}</p>
   {list_links.related_league_line(FREE_AGENTS_PATH, BASE_PATH)}
   {_what_is("#free-agency")}

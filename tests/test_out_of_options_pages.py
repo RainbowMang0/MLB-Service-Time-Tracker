@@ -257,6 +257,27 @@ def test_a_fourth_option_moves_three_years_and_keeps_four():
     check("four used years stay out", [row.player["name"] for row in result.out] == ["Four Used"])
     check("four used years are not moved to one left", result.one == [] and result.may_fourth == [])
 
+    three = _roster("Short Career", id=78)
+    labeled = out_of_options.select(
+        [three],
+        TODAY,
+        cache_for=lambda player: [],
+        raw_for=lambda player: recent,
+        counter=lambda player, rows, today: _count((2024, 2025, 2026)),
+        replay=lambda player, today: {"option_years_used": [2024, 2025, 2026]},
+        apply_fourth=True,
+    )
+    check("three used years are not listed with an option left", labeled.one == [] and labeled.out == [])
+    check(
+        "three used years are labeled instead of guessed",
+        [row.player["name"] for row in labeled.may_fourth] == ["Short Career"],
+    )
+    club = pages.render_club("Houston Astros", labeled.out, labeled.one, 2027, labeled.may_fourth)
+    one_part = club.split("<h2>One option year left</h2>", 1)[1].split("<h2>", 1)[0]
+    check("the one-left list does not include the labeled player", "Short Career" not in one_part)
+    check("the page labels the fourth year instead of counting it", "not listed with an option left" in club)
+    check("the one-left list does not explain three seasons as one year left", "Three seasons in this list" not in club)
+
 
 def test_an_injury_year_counts_and_a_lone_transfer_does_not():
     from fourth_option import NO, UNKNOWN, YES, decide
@@ -361,8 +382,8 @@ def test_fixtures_cover_four_years_a_fourth_option_and_missing_data():
 
 def test_real_fourth_option_cases():
     wanted = {
-        814005: "one",   # Jake Bloss
-        694462: "one",   # Hurston Waldrep
+        814005: "fourth",  # Jake Bloss, three years, labeled not counted
+        694462: "fourth",  # Hurston Waldrep
         682729: "out",   # Jonatan Clase, four years
         663893: "one",   # Brendon Little, two years on the record
         671936: "fourth",  # Adam Macko, no signing date
@@ -373,36 +394,39 @@ def test_real_fourth_option_cases():
         689017: "fourth",  # Landon Knack, reviewed hold
         663436: "fourth",  # Davis Martin
         694362: "fourth",  # Blake Dunn
-        685133: "one",   # Wade Meckler, signed too late for five full seasons
+        685133: "fourth",  # Wade Meckler, signed too late for five full seasons
     }
     players = [_player(pid) for pid in wanted]
     result = out_of_options.select(players, TODAY)
     by_out = {row.player["id"]: row for row in result.out}
     by_one = {row.player["id"]: row for row in result.one}
     by_held = {row.player["id"]: row for row in result.may_fourth}
-    check("Bloss is one left and still shows 2024-2026", by_one[814005].years == (2024, 2025, 2026) and 814005 not in by_out)
-    check("Waldrep is one left and still shows 2024-2026", by_one[694462].years == (2024, 2025, 2026))
+    check("Bloss is labeled and still shows 2024-2026", by_held[814005].years == (2024, 2025, 2026) and 814005 not in by_out and 814005 not in by_one)
+    check("Waldrep is labeled and still shows 2024-2026", by_held[694462].years == (2024, 2025, 2026) and 694462 not in by_one)
     check("Clase stays out with four seasons", by_out[682729].years == (2023, 2024, 2025, 2026))
     check("Little stays at the two seasons on the record", by_one[663893].years == (2024, 2026) and 663893 not in by_out)
     check("Macko is held, not listed as out", 671936 in by_held and 671936 not in by_out)
     check("Baker stays out", 641329 in by_out and by_out[641329].years == (2021, 2023, 2024))
     check("Hentges is out and keeps 2019-2021", by_out[656529].years == (2019, 2020, 2021))
     check("Grissom is out", 687093 in by_out and 687093 not in by_one)
-    check("Meckler stays one left", 685133 in by_one and 685133 not in by_out)
+    check("Meckler is labeled, not given an option left", 685133 in by_held and 685133 not in by_one and 685133 not in by_out)
     check("Espino may have a fourth option", 682982 in by_held and 682982 not in by_out)
     check("Knack may have a fourth option", 689017 in by_held and 689017 not in by_out)
     check("Martin may have a fourth option", 663436 in by_held and 663436 not in by_out)
     check("Dunn may have a fourth option", 694362 in by_held and 694362 not in by_out)
     league = pages.render_league(result, 2027)
     check("the league page names a held player", "May have a fourth option" in league and "Adam Macko" in league)
-    check("a player with a fourth year is not in the held note", "Jake Bloss" not in league)
+    check("a labeled fourth year is not shown as one left", "Jake Bloss" in league.split("May have a fourth option", 1)[1])
     jays_out = [row for row in result.out if row.player.get("team") == "Toronto Blue Jays"]
     jays_one = [row for row in result.one if row.player.get("team") == "Toronto Blue Jays"]
-    page = pages.render_club("Toronto Blue Jays", jays_out, jays_one, 2027)
-    out_part, one_part = page.split("<h2>One option year left</h2>", 1)
-    check("the Jays page puts Bloss in one left", "Jake Bloss" in one_part and "Jake Bloss" not in out_part)
+    jays_held = [row for row in result.may_fourth if row.player.get("team") == "Toronto Blue Jays"]
+    page = pages.render_club("Toronto Blue Jays", jays_out, jays_one, 2027, jays_held)
+    out_part, after_out = page.split("<h2>One option year left</h2>", 1)
+    one_part = after_out.split("<h2>", 1)[0]
+    check("the Jays page does not put Bloss in one left", "Jake Bloss" not in one_part and "Jake Bloss" not in out_part)
+    check("the Jays page labels Bloss", "Jake Bloss" in page.split("May have a fourth option", 1)[1])
     check("the Jays page keeps Clase out", "Jonatan Clase" in out_part)
-    check("three seasons are explained as one year left", "Three seasons in this list means one option year is left" in one_part)
+    check("three seasons are not explained as one year left", "Three seasons in this list" not in page)
     check("the one-left section does not call it a fourth option", "fourth" not in one_part.lower())
     for banned in BANNED:
         check(f"Jays page does not name {banned}", banned not in page.lower())
@@ -440,13 +464,16 @@ def test_published_files_and_the_guards():
     check("the league page is on disk", "Players out of options, 2027" in league)
     check("the league page has no last-updated line", "last updated" not in league.lower())
     check("the league page holds an unsettled fourth option", "May have a fourth option" in league and "Adam Macko" in league)
-    check("Jake Bloss is not listed as out", "Jake Bloss" not in league)
+    check("Jake Bloss is labeled, not listed as out", "Jake Bloss" in league.split("May have a fourth option", 1)[1] and "Jake Bloss" not in league.split("May have a fourth option", 1)[0])
     jays = (docs / "t" / "toronto-blue-jays-out-of-options.html").read_text(encoding="utf-8")
     braves = (docs / "t" / "atlanta-braves-out-of-options.html").read_text(encoding="utf-8")
-    out_part, one_part = jays.split("<h2>One option year left</h2>", 1)
-    check("the built Jays page puts Bloss in one left", "Jake Bloss" in one_part and "Jake Bloss" not in out_part)
+    out_part, after_out = jays.split("<h2>One option year left</h2>", 1)
+    one_part = after_out.split("<h2>", 1)[0]
+    check("the built Jays page does not put Bloss in one left", "Jake Bloss" not in one_part and "Jake Bloss" not in out_part)
+    check("the built Jays page labels Bloss", "Jake Bloss" in jays.split("May have a fourth option", 1)[1])
     check("the built Jays page keeps Little on 2024 and 2026", "Brendon Little" in one_part and "2024, 2026" in one_part)
-    check("the built Braves page puts Waldrep in one left", "Hurston Waldrep" in braves.split("<h2>One option year left</h2>", 1)[1])
+    check("the built Braves page labels Waldrep", "Hurston Waldrep" in braves.split("May have a fourth option", 1)[1])
+    check("the built Braves page does not give Waldrep one left", "Hurston Waldrep" not in braves.split("<h2>One option year left</h2>", 1)[1].split("<h2>", 1)[0])
     out_half, held_half = league.split("May have a fourth option", 1)
     check("the built league page lists Hentges out", "Sam Hentges" in out_half)
     check("the built league page lists Grissom out", "Vaughn Grissom" in out_half)

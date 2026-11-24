@@ -109,18 +109,9 @@ def _may_fourth_note(rows: list[Listed], base: str) -> str:
     return (
         "<h2>May have a fourth option</h2>"
         "<p>These players used three option years. A fourth year is allowed "
-        "when a player has fewer than five full professional seasons, and "
-        "the record cannot settle that, so they are not listed as out of options.</p>"
+        "for some short careers. It is not counted here, so they are not "
+        "listed with an option left.</p>"
         "<p>" + ", ".join(links) + ".</p>"
-    )
-
-
-def _one_left_note(rows: list[Listed]) -> str:
-    if not any(len(row.years) >= 3 for row in rows):
-        return ""
-    return (
-        '<p class="foot-note">Three seasons in this list means one option year '
-        "is left. Five full professional seasons were not on the record.</p>"
     )
 
 
@@ -244,8 +235,7 @@ def render_club(
     body = (
         "<h2>Out of options</h2>"
         + _table(out_rows, base)
-        + "<h2>One option year left</h2>"
-        + _one_left_note(one_rows)
+        +         "<h2>One option year left</h2>"
         + _table(one_rows, base)
         + _may_fourth_note(may_rows or [], base)
         + (

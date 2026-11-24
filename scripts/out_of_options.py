@@ -11,11 +11,9 @@ or two different season lists is left off. Publishing one of those totals
 would be a guess.
 
 The standard number of option years comes from the ruleset. A player who
-has used exactly that many may still have a fourth when five full
-professional seasons were not possible, or when the transactions show
-fewer than five. fourth_option.py is that test. A player who already
-used four keeps every year. When the record cannot settle a fourth year,
-he is left off the out-of-options list.
+has used exactly that many may still have a fourth year. That exception
+is not shown as an option left: fourth_option.py only decides whether to
+label him. A player who already used four keeps every year and stays out.
 
 Refusing an outright after five years of service is a different rule. It
 is not decided here.
@@ -67,8 +65,8 @@ class RosterOptions:
     out: list[Listed] = field(default_factory=list)
     one: list[Listed] = field(default_factory=list)
     omitted: list[Omitted] = field(default_factory=list)
-    # Used three option years. A fourth year is possible and the record
-    # cannot settle it, so they are not listed as out.
+    # Used three option years. A fourth year may exist. It is labeled,
+    # not shown as an option still left.
     may_fourth: list[Listed] = field(default_factory=list)
     standard: int = 3
     index: dict[int, str] = field(default_factory=dict)
@@ -217,10 +215,9 @@ def select(
                 decision = fourth_option.FourthOption(
                     fourth_option.UNKNOWN, decision.signed, decision.possible, decision.full
                 )
-            if decision is not None and decision.decision == fourth_option.YES:
-                result.one.append(listed)
-                status = "one"
-            elif decision is not None and decision.decision == fourth_option.UNKNOWN:
+            if decision is not None and decision.decision in (
+                fourth_option.YES, fourth_option.UNKNOWN,
+            ):
                 result.may_fourth.append(listed)
                 status = "fourth"
             else:
@@ -267,7 +264,7 @@ def roster_options_left(player: dict):
     """Options-left cell while a roster classification is prepared.
 
     ``"defer"`` means the caller should use the transaction count.
-    None means the fourth-option record is unsettled, so the cell is a dash.
+    None means a fourth year is not counted, so the cell is a dash.
     """
     if _INDEX is None:
         return "defer"
@@ -333,7 +330,6 @@ def report(result: RosterOptions) -> str:
         f"Out of options: {len(result.out)}",
         f"One option year left: {len(result.one)}",
         f"Left off: {len(result.omitted)}",
-        f"Fourth option, one left: {sum(1 for row in result.one if len(row.years) >= result.standard)}",
         f"May have a fourth option: {len(result.may_fourth)}",
         (
             f"{veterans(result)} of the players out of options already have "
@@ -349,12 +345,6 @@ def report(result: RosterOptions) -> str:
     for name in extra:
         label = name or "(no club)"
         lines.append(f"  {label}: {out_n.get(name, 0)} out, {one_n.get(name, 0)} with one left")
-    moved = [row for row in result.one if len(row.years) >= result.standard]
-    if moved:
-        lines.append("Fourth option, moved to one left:")
-        for row in moved:
-            seasons = ", ".join(str(year) for year in row.years)
-            lines.append(f"  {row.player.get('name')} | {row.player.get('team')} | {seasons}")
     if result.may_fourth:
         lines.append("May have a fourth option:")
         for row in result.may_fourth:
