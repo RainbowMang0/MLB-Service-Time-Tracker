@@ -1366,7 +1366,7 @@ def _roster_or_season_teammates(player: dict, teammates: list[dict] | None, seas
     ])
 
 
-def _player_links(player: dict, option_count, season_index) -> str:
+def _player_links(player: dict, option_count, season_index, season: int | None = None) -> str:
     """List links, the contract clock, and — for a former player — the surname list."""
     base = BASE_PATH
     if not player.get("on_40_man"):
@@ -1378,13 +1378,13 @@ def _player_links(player: dict, option_count, season_index) -> str:
         )
     club = player.get("team") or ""
     live = bool(club) and club in {name for name, _abbr in CLUB_ABBR}
-    eligible = select_arbitration_eligible([player])
+    eligible = select_arbitration_eligible([player], season)
     line = list_links.winter_line(
         base,
         free_agent=bool(player.get("free_agent_eligible")),
         arbitration=bool(eligible),
         super_two=bool(player.get("super_two_candidate")),
-        non_tender=bool(select_non_tender_watch(eligible)),
+        non_tender=bool(select_non_tender_watch(eligible, season)),
         out_of_options=bool(option_count and option_count.out_of_options),
         club=club if live else "",
         club_free_agents=f"{base}{club_free_agents_path(club)}" if live else "",
@@ -1541,7 +1541,7 @@ def render(
   {crumbs}
   <h1>{name} service time</h1>
   <p class="subtitle">{club_label}{' · ' if club_label and position else ''}{position}{'' if contracts.label_for(player.get('id'), coming) else ' · ' + html.escape(_status(player))}</p>{contracts.signed_block(player.get("id"), coming)}
-  {_player_links(player, option_count, season_index)}
+  {_player_links(player, option_count, season_index, coming)}
   <p class="lede">{lede}</p>
 
   <div class="facts">

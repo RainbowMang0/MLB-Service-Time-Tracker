@@ -41,9 +41,14 @@ MUST_FIX = {
              "label": "Signed through 2027 · option exercised", "fa_year": 2027},
     670623: {"name": "Isaac Paredes", "through": 2027,
              "label": "Signed through 2027 · option exercised", "fa_year": 2027},
+    657757: {"name": "Gavin Sheets", "through": 2027,
+             "label": "Signed through 2027 · 2028\u20132029 player option",
+             "fa_year": 2027},
+    670764: {"name": "Taylor Walls", "through": 2027,
+             "label": "Signed through 2027 · option exercised", "fa_year": 2027},
+    696285: {"name": "Jacob Young", "through": 2030,
+             "label": "Signed through 2030 · 2031 club option"},
 }
-# The Nationals have not confirmed this one. The row stays; the lists do not.
-UNCONFIRMED = 696285
 # 2027 is a vesting option whose physical was not confirmed.
 CHAPMAN = 547973
 # No guaranteed seasons were recorded. They stay where service time put them.
@@ -96,12 +101,8 @@ def test_file_shape():
           all(row.first <= row.last for row in rows.values()))
     check("a confirmed row is in the file",
           any(row.governs() for row in rows.values()))
-    young = rows[UNCONFIRMED]
-    check("Jacob Young is stored", young.name == "Jacob Young")
-    check("Jacob Young is unconfirmed", young.status == contracts.STATUS_UNCONFIRMED)
-    check("an unconfirmed row does not cover 2027", contracts.covers(UNCONFIRMED, 2027) is False)
-    check("an unconfirmed row has no page line", contracts.label_for(UNCONFIRMED, 2027) == "")
-    check("his note stays in the file", "not confirmed" in young.unconfirmed.lower())
+    check("a stored row is not left unconfirmed",
+          all(row.status != contracts.STATUS_UNCONFIRMED for row in rows.values()))
     for pid, name in NO_YEARS.items():
         check(f"{name} has no row", pid not in rows)
     names = {_norm(row.name) for row in rows.values()}
@@ -156,6 +157,23 @@ def test_expired_contract_excludes_nobody():
     # 2019-24 deal does not pull that year forward or push it back.
     check("the expired contract keeps his service-time year", years.get(1) == 2028)
     check("the active contract moves to his last guaranteed season", years.get(2) == 2028)
+    pending = contracts.Contract(
+        id=9, name="Pending", club="A", signed="2026-11-01",
+        first=2027, last=2030, option_years=(2031,), option_type="club",
+        status=contracts.STATUS_UNCONFIRMED, source_url="https://example.invalid",
+        unconfirmed="the club has not confirmed it",
+    )
+    pending_index = {9: pending}
+    check("an unconfirmed row does not cover 2027", contracts.covers(9, 2027, pending_index) is False)
+    check("an unconfirmed row has no page line", contracts.label_for(9, 2027, pending_index) == "")
+    pending_player = {
+        "id": 9, "name": "Pending", "team": "A", "on_40_man": True,
+        "service_days_total": 4 * wpp.FULL_YEAR_DAYS, "service_time": "4.000",
+        "arbitration_eligible": True, "super_two_candidate": False,
+        "free_agent_eligible": False, **low,
+    }
+    still = {p["id"] for p in wpp.select_arbitration_eligible([pending_player], COMING, pending_index)}
+    check("an unconfirmed row stays arbitration-eligible", still == {9})
 
 
 def test_live_lists_use_guarantees_only():
@@ -221,19 +239,10 @@ def test_live_lists_use_guarantees_only():
               "http" not in page.split("signed-through")[-1][:80] if "signed-through" in page else False)
         check(f"{expect['name']} page names no salary site",
               not any(word in page for word in ("FanGraphs", "Spotrac", "Baseball-Reference", "Cot's")))
-
-    young = by_id.get(UNCONFIRMED)
-    check("Jacob Young is on a roster", young is not None)
-    if young is not None:
-        check("Jacob Young stays arbitration-eligible", UNCONFIRMED in after_arb)
-        if UNCONFIRMED in before_watch:
-            check("Jacob Young stays on the non-tender list", UNCONFIRMED in after_watch)
-        else:
-            check("Jacob Young was not a non-tender candidate", UNCONFIRMED not in after_watch)
-        page = wpp.render(young, {}, "2026-11-09T00:00:00+00:00", [])
-        check("Jacob Young has no Signed through line", "Signed through" not in page)
-        check("his live service time is unchanged on the page",
-              young["service_time"] in page)
+        check(f"{expect['name']} page does not claim the arbitration list",
+              "arbitration list" not in page)
+        check(f"{expect['name']} page does not claim non-tender watch",
+              "non-tender watch" not in page)
 
     moniak = by_id[666160]
     projected = wpp.free_agency_year(moniak, COMING)

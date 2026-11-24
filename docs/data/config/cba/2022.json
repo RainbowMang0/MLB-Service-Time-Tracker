@@ -111,7 +111,7 @@
     },
     "arbitration.super_two.minimum_prior_season_days": {
       "status": "documented",
-      "note": "86 days in the immediately preceding season, as a second condition on top of the ranking."
+      "note": "The prior-season day floor defines who is in the class that gets ranked. It is not a filter applied after the ranking."
     },
     "arbitration.super_two.service_range_years": {
       "status": "documented",
