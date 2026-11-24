@@ -4550,6 +4550,27 @@ Pinned by `test_super_two_class_requires_86_days_not_just_any_accrual()` and
 `test_validate_super_two_counts_failures_and_would_exit_nonzero()` for the
 exit-code wiring.
 
+## The 2026 cutoff is 2.132 on stored days (2026-11-24)
+
+The day floor already defines the class before the 22% rank. Re-measured
+on the stored database: 143 players finished 2026 with 2.000–3.000 years
+and the prior-season day floor. 22% of 143 is 31.46, which rounds to 31.
+Jordan Beck and Quinn Priester are tied at 2.133 (ranks 29 and 30). Tyron
+Guerrero is alone at 2.132 and is the 31st, so the computed cutoff is
+2.132. There is no tie at 2.132 to pull him up to the published 2.133.
+
+Public reporting put Guerrero and Beck at 2.133 as the last two qualifiers,
+and Priester at 2.134. Stored service is one day lower for Guerrero and
+Priester. Beck matches. With those stored days the 31st player is at
+2.132, so the computed line cannot be 2.133 without changing his total.
+Ranking the wider band (179 players with at least one day) first would
+make the cutoff 2.130, farther from 2.133. Earlier seasons use the same
+function. Their published reference figures were not edited. 2025 already
+matches 2.140.
+
+`tests/test_super_two_class.py` pins the order and the tie shape on a
+fixture, not on the live database.
+
 ## The player profile vision, and what each part costs (2026-09-11)
 
 Owner's picture: a visitor clicks a name and gets a full profile — service

@@ -93,6 +93,12 @@ jobs:
       - name: Contract years
         run: python tests/test_contracts.py
 
+      # The day floor defines the Super Two class before the 22% rank.
+      # Ties at the slot share the cutoff; a player one day under does not
+      # pull the line up to the tie above him.
+      - name: Super Two class order
+        run: python tests/test_super_two_class.py
+
       - name: Player page sections
         run: python tests/test_player_sections.py
 
