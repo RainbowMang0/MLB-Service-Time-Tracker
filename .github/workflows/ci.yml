@@ -107,6 +107,11 @@ jobs:
       - name: Rookie eligibility
         run: python tests/test_rookie_status.py
 
+      - name: Debuts
+        run: |
+          python scripts/debuts_pages.py --check
+          python tests/test_debuts.py
+
       - name: Service-time rulebook
         run: python tests/test_rulebook.py
 

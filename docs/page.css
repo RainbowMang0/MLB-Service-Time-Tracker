@@ -1,10 +1,5 @@
 @import "table-scroll.css";
-/* Generated stylesheet for the static pages. Edit the generator, not this file.
-
-Shared by every static page (player, club, 404). It used to be inlined into
-each of the 1,358 player pages, which cost ~1.4 KB apiece and, worse, could
-not be cached: clicking from one player to another re-downloaded the same
-rules every time. As a real file the browser fetches it once. */
+/* Generated stylesheet for the static pages. Edit the generator, not this file. Shared by every static page so the browser fetches these rules once. */
 
 .wrap { max-width: min(60rem, 100%); margin: 0 auto; padding: 24px clamp(16px,4vw,40px) 48px;
         overflow-x: clip; }
@@ -148,9 +143,13 @@ h1 { letter-spacing: -0.02em; }
 .list-links { font-size: 0.9rem; color: var(--text-secondary); margin: 0.35rem 0 0.85rem;
               max-width: 68ch; line-height: 1.5; }
 .list-links a { color: var(--accent); text-decoration: none; }
-.list-links a:hover { text-decoration: underline; } .dfa-clubs { max-width: none; } .dfa-clubs a { white-space: nowrap; }
+.list-links a:hover { text-decoration: underline; }
+.dfa-clubs { max-width: none; }
+.dfa-clubs a { white-space: nowrap; }
 @media (max-width: 640px) {
   .opt-controls input, .opt-controls select { flex-basis: 100%; }
 }
-.faq h3 { font-size: 1.02rem; margin: 1.15rem 0 0.2rem; line-height: 1.35; } .faq p { margin: 0.15rem 0 0; }
-.signed-through { font-size: 0.95rem; line-height: 1.45; margin: 0.35rem 0 0; max-width: 40rem; } .roster-signed { display: block; margin-top: 0.12rem; max-width: 12rem; font-size: 0.75rem; line-height: 1.35; color: var(--text-muted); white-space: normal; }
+.faq h3 { font-size: 1.02rem; margin: 1.15rem 0 0.2rem; line-height: 1.35; }
+.faq p { margin: 0.15rem 0 0; }
+.signed-through { font-size: 0.95rem; line-height: 1.45; margin: 0.35rem 0 0; max-width: 40rem; }
+.roster-signed { display: block; margin-top: 0.12rem; max-width: 12rem; font-size: 0.75rem; line-height: 1.35; color: var(--text-muted); white-space: normal; }

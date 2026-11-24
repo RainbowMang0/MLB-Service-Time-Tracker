@@ -1,0 +1,30 @@
+/* Debuts page only. Shared rules stay in page.css. */
+
+.debut-clubs {
+  max-width: none;
+}
+.debut-clubs a {
+  white-space: nowrap;
+}
+.debuts .debut-line {
+  display: block;
+  max-width: 18rem;
+  margin-top: 0.12rem;
+  color: var(--text-secondary);
+  font-size: 0.82rem;
+  line-height: 1.35;
+  white-space: normal;
+}
+.debuts .debut-line a {
+  color: var(--accent);
+  text-decoration: none;
+}
+.debuts .debut-line a:hover {
+  text-decoration: underline;
+}
+.debuts td.when,
+.debuts th:nth-child(2),
+.debuts td.club,
+.debuts th:nth-child(3) {
+  white-space: nowrap;
+}
