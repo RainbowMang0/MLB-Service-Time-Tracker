@@ -5519,7 +5519,7 @@ def test_the_homepage_puts_numbers_before_the_long_explanation():
     lede_pos = index_html.index('class="home-lede"')
     tiles_pos = index_html.index('class="stat-tiles"')
     controls_pos = index_html.index('class="controls"')
-    table_pos = index_html.index('class="table-wrap"')
+    table_pos = index_html.index('class="table-wrap')
     check(
         "the lede comes before the tiles, search and table",
         lede_pos < tiles_pos < controls_pos < table_pos,

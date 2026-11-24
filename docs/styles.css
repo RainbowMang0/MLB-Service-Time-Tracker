@@ -345,6 +345,7 @@ html, body {
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 12px;
   margin: 0 clamp(16px, 4vw, 40px) 24px;
+  min-height: 85px; /* filled desktop row; keeps the tiles from shoving the page */
 }
 .stat-tile {
   position: relative;
@@ -357,12 +358,8 @@ html, body {
   -webkit-backdrop-filter: blur(20px) saturate(180%);
   box-shadow: 0 4px 18px var(--glass-shadow);
 }
-/* MOTION. One entrance, staggered across the tiles, and hover responses
-   that acknowledge a pointer without moving the layout. Everything here is
-   transform/opacity only -- those composite on the GPU and cannot trigger
-   reflow, which is what keeps a 5,578-row table responsive underneath.
-   The whole block is switched off under prefers-reduced-motion: motion is
-   a reward for attention, never a toll on it. */
+/* Tile entrance and hover are transform/opacity only, and only when the
+   visitor has not asked for reduced motion. */
 @media (prefers-reduced-motion: no-preference) {
   .stat-tile {
     animation: tile-in 0.5s cubic-bezier(0.22, 0.61, 0.36, 1) both;
@@ -440,14 +437,13 @@ html, body {
 .stat-tile.accent-muted .value { color: var(--text-secondary); }
 .stat-tile.accent-muted { background: transparent; border-style: dashed; }
 
-/* Census counts describe the whole database; the eligibility tiles describe
-   the players on a 40-man today. They are different kinds of fact and used
-   to be seven identical tiles all shouting at once. */
+/* Census is the whole database; the tiles are the current 40-man only. */
 .census {
   margin: 0 clamp(16px, 4vw, 40px) 14px;
   color: var(--text-secondary);
   font-size: 0.85rem;
   font-variant-numeric: tabular-nums;
+  min-height: 19px;
 }
 .census b {
   color: var(--text-primary);
@@ -564,8 +560,8 @@ thead th:focus-visible {
   background: var(--surface-1);
   box-shadow: 0 8px 34px var(--glass-shadow);
 }
-/* Same filament as the stat tiles, so the table reads as another panel in
-   the same instrument rather than a separate widget. */
+/* Loading only. Removed with the rows, so a short filter does not keep the gap. */
+.table-wrap.is-loading { min-height: 70vh; }
 .table-wrap::before {
   content: "";
   position: sticky;
@@ -809,11 +805,8 @@ tbody td.player-name { border-left-color: var(--club-d, var(--club, transparent)
   .svc-years { font-size: 1.05rem; }
   .census { font-size: 0.78rem; }
 
-  /* Measured on a 390x844 phone: the table began 755px down the page, so
-     the first screen was header, disclaimer, tiles and filters and no data
-     at all. The disclaimer keeps its full text -- it is the one thing on
-     this page that must not be quietly shrunk away -- and the space comes
-     out of the chrome around it instead. */
+  /* The disclaimer keeps its full text on a phone; the space comes out of
+     the chrome around it. */
   .disclaimer-banner { font-size: 0.8rem; padding: 8px 11px; margin-bottom: 14px; }
 
   /* Four tiles as 2x2 rather than 2x2 with desktop padding. */
@@ -821,6 +814,13 @@ tbody td.player-name { border-left-color: var(--club-d, var(--club, transparent)
   .stat-tile { padding: 9px 11px; }
   .stat-tile .value { font-size: 1.25rem; }
   .stat-tile .label { font-size: 0.68rem; margin-top: 2px; }
+
+  /* 360/390 only. Wider phones are shorter; a taller reserve would leave a gap. */
+@media (max-width: 400px) {
+  .census { min-height: 51px; }
+  .stat-tiles { min-height: 148px; }
+  .disclaimer-banner { min-height: 54px; }
+}
 
   /* On a phone the name column was so tight that "Justin Verlander" and
      "Zack Greinke" both wrapped to two lines, and the team beside them

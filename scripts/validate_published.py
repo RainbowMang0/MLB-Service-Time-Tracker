@@ -6,13 +6,13 @@ Do the three published files agree with each other?
 
 WHY THIS EXISTS
 ===============
-The site publishes the same figures three times, in three shapes:
+The site publishes the same figures in several shapes:
 
     docs/data/service_time.json   the database -- every field, one object
                                   per player, and the pipeline's own source
                                   of truth on the next run
-    docs/data/index.json          the compact table payload the browser
-                                  actually downloads
+    docs/data/index.json          the compact table, including previous players
+    docs/data/home.json           the roster slice the homepage paints first
     docs/data/profiles/NN.json    per-player season detail, sharded by id % 64
 
 Only the last two are ever read by a visitor, and they are DERIVED. So a
@@ -57,8 +57,12 @@ import re
 import sys
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "scripts"))
+import home_index  # noqa: E402
+
 DB_FILE = ROOT / "docs" / "data" / "service_time.json"
 INDEX_FILE = ROOT / "docs" / "data" / "index.json"
+HOME_FILE = home_index.HOME_FILE
 PROFILE_DIR = ROOT / "docs" / "data" / "profiles"
 PROFILE_SHARDS = 64
 
@@ -82,6 +86,11 @@ def check_published() -> list[str]:
     ]
     if len(fields) < 8:
         return [f"index `fields` lists only {len(fields)} columns; expected at least 8"]
+
+    if not HOME_FILE.exists():
+        problems.append("home.json is missing; the homepage would have nothing to paint")
+    else:
+        problems.extend(home_index.agreement_problems(idx, json.loads(HOME_FILE.read_text())))
 
     seen = set()
     for row in idx["players"]:
@@ -430,7 +439,7 @@ def main() -> None:
             "run scripts/validate_service_sanity.py for the names"
         )
     if not problems:
-        print("\nAll three published files agree.")
+        print("\nPublished files agree.")
         return
     print(f"\n{len(problems)} disagreement(s):")
     for problem in problems[:40]:

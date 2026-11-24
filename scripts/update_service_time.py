@@ -46,6 +46,7 @@ import cba  # noqa: E402
 import change_log  # noqa: E402
 import mlb_clubs  # noqa: E402
 import fetch_mlb_data as mlb  # noqa: E402
+import home_index  # noqa: E402
 import refresh_complete  # noqa: E402
 import contracts  # noqa: E402
 import salary_estimates  # noqa: E402
@@ -1408,13 +1409,10 @@ def _rules_block() -> dict:
     CBA rules, in a second language, which had to be edited in step with the
     Python or the table and the static pages would disagree.
 
-    Stamped into BOTH published data files, not just the compact index. app.js
-    falls back from index.json to service_time.json when an older deployment
-    has not regenerated the index yet, and that fallback used to leave every
-    threshold null: the meter read 100% for every player, formatDays() returned
-    "Infinity.NaN", and the profile footer said "null days credit a full year".
-    A fallback that renders nonsense is worse than no fallback, and shipping
-    this block in both files is what makes the documented one actually work.
+    Stamped into the database and the compact index. The homepage paints from
+    home.json (this block, plus the current 40-man) and does not read the
+    database. A missing block used to leave every threshold null: the meter
+    read 100% for every player and formatDays() returned "Infinity.NaN".
     """
     return {
         "version": _RULES.version,
@@ -1618,6 +1616,7 @@ def write_index(
     }
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     INDEX_FILE.write_text(json.dumps(payload, separators=(",", ":")))
+    home_index.write_home_index(payload)
     print(f"Wrote compact index for {len(rows)} players to {INDEX_FILE}")
 
 

@@ -202,6 +202,12 @@ jobs:
       - name: Header search suggestions
         run: node --test tests/typeahead.test.cjs
 
+      # The homepage paints from home.json. A fallback to the full database,
+      # or a sample roster in app.js, would put a multi-megabyte download
+      # back on the first screen.
+      - name: Homepage does not fetch the full database
+        run: python tests/test_homepage_load.py
+
       # The three published files are derived from the database and are the
       # only two a visitor ever reads, so a bad derivation ships wrong numbers
       # while every check that reads the database still passes. This also
