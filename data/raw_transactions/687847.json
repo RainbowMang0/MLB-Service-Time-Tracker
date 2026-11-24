@@ -1,7 +1,7 @@
 {
   "player_id": 687847,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:4bca8dbf4ddfe0f1a7db986b0a7b7583ee115f6d98121e0764a5cba1433b5fc6",
+  "fetched_at": "2026-11-23T23:30:19Z",
+  "checksum": "sha256:d77e7431ea95af33c6cbc58f364f30cd9c8313719a48eba861ecde0d66316dcc",
   "transactions": [
     {
       "id": 416411,
@@ -1181,6 +1181,46 @@
       "typeCode": "DFA",
       "typeDesc": "Declared Free Agency",
       "description": "RHP Marc Church elected free agency."
+    },
+    {
+      "id": 950949,
+      "person": {
+        "id": 687847,
+        "fullName": "Marc Church",
+        "link": "/api/v1/people/687847",
+        "nameSlug": "marc-church-687847"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2026-11-23",
+      "effectiveDate": "2026-11-23",
+      "resolutionDate": "2026-11-23",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Washington Nationals signed free agent RHP Marc Church to a minor league contract and invited him to spring training."
+    },
+    {
+      "id": 950950,
+      "person": {
+        "id": 687847,
+        "fullName": "Marc Church",
+        "link": "/api/v1/people/687847",
+        "nameSlug": "marc-church-687847"
+      },
+      "toTeam": {
+        "id": 534,
+        "name": "Rochester Red Wings",
+        "link": "/api/v1/teams/534"
+      },
+      "date": "2026-11-23",
+      "effectiveDate": "2026-11-23",
+      "resolutionDate": "2026-11-23",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Marc Church assigned to Rochester Red Wings."
     }
   ]
 }

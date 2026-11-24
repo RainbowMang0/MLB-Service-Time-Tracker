@@ -1,28 +1,8 @@
 {
   "player_id": 676572,
-  "fetched_at": "2026-11-23T00:18:28Z",
+  "fetched_at": "2026-11-24T00:37:03Z",
   "checksum": "sha256:fcf8cac25e207cc8b4aa543918ad312aa20c63bb8e8135efe3eae27fc76669cc",
   "transactions": [
-    {
-      "id": 369001,
-      "person": {
-        "id": 676572,
-        "fullName": "Eric Wagaman",
-        "link": "/api/v1/people/676572",
-        "nameSlug": "eric-wagaman-676572"
-      },
-      "toTeam": {
-        "id": 147,
-        "name": "New York Yankees",
-        "link": "/api/v1/teams/147"
-      },
-      "date": "2017-06-14",
-      "effectiveDate": "2017-06-14",
-      "resolutionDate": "2017-06-14",
-      "typeCode": "SGN",
-      "typeDesc": "Signed",
-      "description": "New York Yankees signed 1B Eric Wagaman."
-    },
     {
       "id": 318566,
       "person": {
@@ -42,6 +22,26 @@
       "typeCode": "ASG",
       "typeDesc": "Assigned",
       "description": "1B Eric Wagaman assigned to New York Yankees."
+    },
+    {
+      "id": 369001,
+      "person": {
+        "id": 676572,
+        "fullName": "Eric Wagaman",
+        "link": "/api/v1/people/676572",
+        "nameSlug": "eric-wagaman-676572"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2017-06-14",
+      "effectiveDate": "2017-06-14",
+      "resolutionDate": "2017-06-14",
+      "typeCode": "SGN",
+      "typeDesc": "Signed",
+      "description": "New York Yankees signed 1B Eric Wagaman."
     },
     {
       "id": 318567,
@@ -424,26 +424,6 @@
       "description": "1B Eric Wagaman assigned to Hudson Valley Renegades from Tampa Tarpons."
     },
     {
-      "id": 606826,
-      "person": {
-        "id": 676572,
-        "fullName": "Eric Wagaman",
-        "link": "/api/v1/people/676572",
-        "nameSlug": "eric-wagaman-676572"
-      },
-      "toTeam": {
-        "id": 147,
-        "name": "New York Yankees",
-        "link": "/api/v1/teams/147"
-      },
-      "date": "2022-03-18",
-      "effectiveDate": "2022-03-18",
-      "resolutionDate": "2022-03-18",
-      "typeCode": "ASG",
-      "typeDesc": "Assigned",
-      "description": "1B Eric Wagaman assigned to New York Yankees."
-    },
-    {
       "id": 611934,
       "person": {
         "id": 676572,
@@ -462,6 +442,26 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "1B Eric Wagaman roster status changed by New York Yankees."
+    },
+    {
+      "id": 606826,
+      "person": {
+        "id": 676572,
+        "fullName": "Eric Wagaman",
+        "link": "/api/v1/people/676572",
+        "nameSlug": "eric-wagaman-676572"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2022-03-18",
+      "effectiveDate": "2022-03-18",
+      "resolutionDate": "2022-03-18",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "1B Eric Wagaman assigned to New York Yankees."
     },
     {
       "id": 614258,
@@ -507,7 +507,7 @@
       "description": "1B Eric Wagaman assigned to Somerset Patriots from Hudson Valley Renegades."
     },
     {
-      "id": 614259,
+      "id": 614156,
       "person": {
         "id": 676572,
         "fullName": "Eric Wagaman",
@@ -527,7 +527,7 @@
       "description": "Somerset Patriots transferred 1B Eric Wagaman to the Development List."
     },
     {
-      "id": 614156,
+      "id": 614259,
       "person": {
         "id": 676572,
         "fullName": "Eric Wagaman",
@@ -614,26 +614,6 @@
       "description": "1B Eric Wagaman assigned to Somerset Patriots from Hudson Valley Renegades."
     },
     {
-      "id": 674980,
-      "person": {
-        "id": 676572,
-        "fullName": "Eric Wagaman",
-        "link": "/api/v1/people/676572",
-        "nameSlug": "eric-wagaman-676572"
-      },
-      "toTeam": {
-        "id": 147,
-        "name": "New York Yankees",
-        "link": "/api/v1/teams/147"
-      },
-      "date": "2023-03-10",
-      "effectiveDate": "2023-03-10",
-      "resolutionDate": "2023-03-10",
-      "typeCode": "ASG",
-      "typeDesc": "Assigned",
-      "description": "1B Eric Wagaman assigned to New York Yankees."
-    },
-    {
       "id": 675831,
       "person": {
         "id": 676572,
@@ -674,7 +654,7 @@
       "description": "1B Eric Wagaman roster status changed by New York Yankees."
     },
     {
-      "id": 719903,
+      "id": 674980,
       "person": {
         "id": 676572,
         "fullName": "Eric Wagaman",
@@ -682,16 +662,16 @@
         "nameSlug": "eric-wagaman-676572"
       },
       "toTeam": {
-        "id": 1956,
-        "name": "Somerset Patriots",
-        "link": "/api/v1/teams/1956"
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
       },
-      "date": "2023-07-24",
-      "effectiveDate": "2023-07-24",
-      "resolutionDate": "2023-07-24",
-      "typeCode": "SC",
-      "typeDesc": "Status Change",
-      "description": "Somerset Patriots placed 1B Eric Wagaman on the 7-day injured list."
+      "date": "2023-03-10",
+      "effectiveDate": "2023-03-10",
+      "resolutionDate": "2023-03-10",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "1B Eric Wagaman assigned to New York Yankees."
     },
     {
       "id": 714173,
@@ -713,6 +693,26 @@
       "typeDesc": "Status Change"
     },
     {
+      "id": 719903,
+      "person": {
+        "id": 676572,
+        "fullName": "Eric Wagaman",
+        "link": "/api/v1/people/676572",
+        "nameSlug": "eric-wagaman-676572"
+      },
+      "toTeam": {
+        "id": 1956,
+        "name": "Somerset Patriots",
+        "link": "/api/v1/teams/1956"
+      },
+      "date": "2023-07-24",
+      "effectiveDate": "2023-07-24",
+      "resolutionDate": "2023-07-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Somerset Patriots placed 1B Eric Wagaman on the 7-day injured list."
+    },
+    {
       "id": 728131,
       "person": {
         "id": 676572,
@@ -731,26 +731,6 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "Somerset Patriots activated 1B Eric Wagaman from the 7-day injured list."
-    },
-    {
-      "id": 751493,
-      "person": {
-        "id": 676572,
-        "fullName": "Eric Wagaman",
-        "link": "/api/v1/people/676572",
-        "nameSlug": "eric-wagaman-676572"
-      },
-      "toTeam": {
-        "id": 108,
-        "name": "Los Angeles Angels",
-        "link": "/api/v1/teams/108"
-      },
-      "date": "2023-12-06",
-      "effectiveDate": "2023-12-06",
-      "resolutionDate": "2023-12-06",
-      "typeCode": "ASG",
-      "typeDesc": "Assigned",
-      "description": "1B Eric Wagaman assigned to Los Angeles Angels."
     },
     {
       "id": 751893,
@@ -791,6 +771,26 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "1B Eric Wagaman roster status changed by Los Angeles Angels."
+    },
+    {
+      "id": 751493,
+      "person": {
+        "id": 676572,
+        "fullName": "Eric Wagaman",
+        "link": "/api/v1/people/676572",
+        "nameSlug": "eric-wagaman-676572"
+      },
+      "toTeam": {
+        "id": 108,
+        "name": "Los Angeles Angels",
+        "link": "/api/v1/teams/108"
+      },
+      "date": "2023-12-06",
+      "effectiveDate": "2023-12-06",
+      "resolutionDate": "2023-12-06",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "1B Eric Wagaman assigned to Los Angeles Angels."
     },
     {
       "id": 734626,
@@ -1069,7 +1069,7 @@
       "description": "St. Paul Saints activated 1B Eric Wagaman."
     },
     {
-      "id": 893149,
+      "id": 892961,
       "person": {
         "id": 676572,
         "fullName": "Eric Wagaman",
@@ -1093,7 +1093,7 @@
       "description": "Minnesota Twins optioned 1B Eric Wagaman to St. Paul Saints."
     },
     {
-      "id": 892961,
+      "id": 893149,
       "person": {
         "id": 676572,
         "fullName": "Eric Wagaman",

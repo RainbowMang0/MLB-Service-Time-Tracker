@@ -1,7 +1,7 @@
 {
   "player_id": 687849,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:94df1a6ded8df85d5b5d1914d467faae5c6277472834130a643de1df583b705d",
+  "fetched_at": "2026-11-23T23:30:19Z",
+  "checksum": "sha256:ab911ede6bea6f4ba06021ffa15932ae96c259cbcfd7d3959214b330cfbde59f",
   "transactions": [
     {
       "id": 407780,
@@ -1884,6 +1884,26 @@
       "typeCode": "REL",
       "typeDesc": "Released",
       "description": "Washington Nationals released RHP Zak Kent."
+    },
+    {
+      "id": 950944,
+      "person": {
+        "id": 687849,
+        "fullName": "Zak Kent",
+        "link": "/api/v1/people/687849",
+        "nameSlug": "zak-kent-687849"
+      },
+      "toTeam": {
+        "id": 695,
+        "name": "Leones del Caracas",
+        "link": "/api/v1/teams/695"
+      },
+      "date": "2026-11-23",
+      "effectiveDate": "2026-11-23",
+      "resolutionDate": "2026-11-23",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Leones del Caracas released RHP Zak Kent."
     }
   ]
 }

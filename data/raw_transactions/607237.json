@@ -1,6 +1,6 @@
 {
   "player_id": 607237,
-  "fetched_at": "2026-11-22T19:09:26Z",
+  "fetched_at": "2026-11-24T00:37:03Z",
   "checksum": "sha256:944bfc893d904d03ff019ce78df29f15730963bb5b9e9c2d174dbb5e7ac1e3b0",
   "transactions": [
     {
@@ -660,26 +660,6 @@
       "description": "LHP Amir Garrett roster status changed by Cincinnati Reds."
     },
     {
-      "id": 477890,
-      "person": {
-        "id": 607237,
-        "fullName": "Amir Garrett",
-        "link": "/api/v1/people/607237",
-        "nameSlug": "amir-garrett-607237"
-      },
-      "toTeam": {
-        "id": 113,
-        "name": "Cincinnati Reds",
-        "link": "/api/v1/teams/113"
-      },
-      "date": "2019-08-20",
-      "effectiveDate": "2019-08-20",
-      "resolutionDate": "2019-08-20",
-      "typeCode": "SC",
-      "typeDesc": "Status Change",
-      "description": "Cincinnati Reds activated P Amir Garrett."
-    },
-    {
       "id": 424795,
       "person": {
         "id": 607237,
@@ -698,6 +678,26 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "Cincinnati Reds activated LHP Amir Garrett."
+    },
+    {
+      "id": 477890,
+      "person": {
+        "id": 607237,
+        "fullName": "Amir Garrett",
+        "link": "/api/v1/people/607237",
+        "nameSlug": "amir-garrett-607237"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2019-08-20",
+      "effectiveDate": "2019-08-20",
+      "resolutionDate": "2019-08-20",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Cincinnati Reds activated P Amir Garrett."
     },
     {
       "id": 478656,
@@ -820,7 +820,7 @@
       "description": "Kansas City Royals placed LHP Amir Garrett on the 15-day injured list."
     },
     {
-      "id": 614984,
+      "id": 615519,
       "person": {
         "id": 607237,
         "fullName": "Amir Garrett",
@@ -840,7 +840,7 @@
       "description": "Kansas City Royals activated LHP Amir Garrett."
     },
     {
-      "id": 615519,
+      "id": 614984,
       "person": {
         "id": 607237,
         "fullName": "Amir Garrett",
@@ -903,6 +903,26 @@
       "description": "Kansas City Royals placed LHP Amir Garrett on the 10-day injured list."
     },
     {
+      "id": 630563,
+      "person": {
+        "id": 607237,
+        "fullName": "Amir Garrett",
+        "link": "/api/v1/people/607237",
+        "nameSlug": "amir-garrett-607237"
+      },
+      "toTeam": {
+        "id": 541,
+        "name": "Omaha Storm Chasers",
+        "link": "/api/v1/teams/541"
+      },
+      "date": "2022-06-08",
+      "effectiveDate": "2022-06-08",
+      "resolutionDate": "2022-06-08",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "sent LHP Amir Garrett on a rehab assignment to Omaha Storm Chasers."
+    },
+    {
       "id": 629763,
       "person": {
         "id": 607237,
@@ -926,26 +946,6 @@
       "typeCode": "ASG",
       "typeDesc": "Assigned",
       "description": "Kansas City Royals sent LHP Amir Garrett on a rehab assignment to Omaha Storm Chasers."
-    },
-    {
-      "id": 630563,
-      "person": {
-        "id": 607237,
-        "fullName": "Amir Garrett",
-        "link": "/api/v1/people/607237",
-        "nameSlug": "amir-garrett-607237"
-      },
-      "toTeam": {
-        "id": 541,
-        "name": "Omaha Storm Chasers",
-        "link": "/api/v1/teams/541"
-      },
-      "date": "2022-06-08",
-      "effectiveDate": "2022-06-08",
-      "resolutionDate": "2022-06-08",
-      "typeCode": "ASG",
-      "typeDesc": "Assigned",
-      "description": "sent LHP Amir Garrett on a rehab assignment to Omaha Storm Chasers."
     },
     {
       "id": 630562,
@@ -1198,25 +1198,6 @@
       "description": "Kansas City Royals released LHP Amir Garrett."
     },
     {
-      "id": 714160,
-      "person": {
-        "id": 607237,
-        "fullName": "Amir Garrett",
-        "link": "/api/v1/people/607237",
-        "nameSlug": "amir-garrett-607237"
-      },
-      "toTeam": {
-        "id": 114,
-        "name": "Cleveland Guardians",
-        "link": "/api/v1/teams/114"
-      },
-      "date": "2023-07-24",
-      "effectiveDate": "2023-07-24",
-      "resolutionDate": "2023-07-24",
-      "typeCode": "SFA",
-      "typeDesc": "Signed as Free Agent"
-    },
-    {
       "id": 714161,
       "person": {
         "id": 607237,
@@ -1234,6 +1215,25 @@
       "resolutionDate": "2023-07-24",
       "typeCode": "ASG",
       "typeDesc": "Assigned"
+    },
+    {
+      "id": 714160,
+      "person": {
+        "id": 607237,
+        "fullName": "Amir Garrett",
+        "link": "/api/v1/people/607237",
+        "nameSlug": "amir-garrett-607237"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2023-07-24",
+      "effectiveDate": "2023-07-24",
+      "resolutionDate": "2023-07-24",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent"
     },
     {
       "id": 717596,
@@ -1484,7 +1484,7 @@
       "description": "LHP Amir Garrett assigned to Salt Lake Bees."
     },
     {
-      "id": 774809,
+      "id": 774515,
       "person": {
         "id": 607237,
         "fullName": "Amir Garrett",
@@ -1504,7 +1504,7 @@
       "description": "Salt Lake Bees activated LHP Amir Garrett."
     },
     {
-      "id": 774515,
+      "id": 774809,
       "person": {
         "id": 607237,
         "fullName": "Amir Garrett",
@@ -1564,26 +1564,6 @@
       "description": "LHP Amir Garrett assigned to Aguilas Cibaenas."
     },
     {
-      "id": 817299,
-      "person": {
-        "id": 607237,
-        "fullName": "Amir Garrett",
-        "link": "/api/v1/people/607237",
-        "nameSlug": "amir-garrett-607237"
-      },
-      "toTeam": {
-        "id": 141,
-        "name": "Toronto Blue Jays",
-        "link": "/api/v1/teams/141"
-      },
-      "date": "2025-02-18",
-      "effectiveDate": "2025-02-18",
-      "resolutionDate": "2025-02-18",
-      "typeCode": "SFA",
-      "typeDesc": "Signed as Free Agent",
-      "description": "Toronto Blue Jays signed free agent LHP Amir Garrett to a minor league contract."
-    },
-    {
       "id": 817300,
       "person": {
         "id": 607237,
@@ -1604,6 +1584,26 @@
       "description": "LHP Amir Garrett assigned to Buffalo Bisons."
     },
     {
+      "id": 817299,
+      "person": {
+        "id": 607237,
+        "fullName": "Amir Garrett",
+        "link": "/api/v1/people/607237",
+        "nameSlug": "amir-garrett-607237"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2025-02-18",
+      "effectiveDate": "2025-02-18",
+      "resolutionDate": "2025-02-18",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Toronto Blue Jays signed free agent LHP Amir Garrett to a minor league contract."
+    },
+    {
       "id": 822459,
       "person": {
         "id": 607237,
@@ -1622,31 +1622,6 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "Buffalo Bisons placed LHP Amir Garrett on the 60-day injured list."
-    },
-    {
-      "id": 850069,
-      "person": {
-        "id": 607237,
-        "fullName": "Amir Garrett",
-        "link": "/api/v1/people/607237",
-        "nameSlug": "amir-garrett-607237"
-      },
-      "fromTeam": {
-        "id": 422,
-        "name": "Buffalo Bisons",
-        "link": "/api/v1/teams/422"
-      },
-      "toTeam": {
-        "id": 1390,
-        "name": "FCL Blue Jays",
-        "link": "/api/v1/teams/1390"
-      },
-      "date": "2025-06-24",
-      "effectiveDate": "2025-06-24",
-      "resolutionDate": "2025-06-24",
-      "typeCode": "ASG",
-      "typeDesc": "Assigned",
-      "description": "Buffalo Bisons sent LHP Amir Garrett on a rehab assignment to FCL Blue Jays."
     },
     {
       "id": 851646,
@@ -1674,7 +1649,32 @@
       "description": "Buffalo Bisons sent LHP Amir Garrett on a rehab assignment to FCL Blue Jays."
     },
     {
-      "id": 853597,
+      "id": 850069,
+      "person": {
+        "id": 607237,
+        "fullName": "Amir Garrett",
+        "link": "/api/v1/people/607237",
+        "nameSlug": "amir-garrett-607237"
+      },
+      "fromTeam": {
+        "id": 422,
+        "name": "Buffalo Bisons",
+        "link": "/api/v1/teams/422"
+      },
+      "toTeam": {
+        "id": 1390,
+        "name": "FCL Blue Jays",
+        "link": "/api/v1/teams/1390"
+      },
+      "date": "2025-06-24",
+      "effectiveDate": "2025-06-24",
+      "resolutionDate": "2025-06-24",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "Buffalo Bisons sent LHP Amir Garrett on a rehab assignment to FCL Blue Jays."
+    },
+    {
+      "id": 851920,
       "person": {
         "id": 607237,
         "fullName": "Amir Garrett",
@@ -1699,7 +1699,7 @@
       "description": "Buffalo Bisons sent LHP Amir Garrett on a rehab assignment to Dunedin Blue Jays."
     },
     {
-      "id": 851920,
+      "id": 853597,
       "person": {
         "id": 607237,
         "fullName": "Amir Garrett",

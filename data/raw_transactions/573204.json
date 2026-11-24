@@ -1,7 +1,7 @@
 {
   "player_id": 573204,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:f087c06d85f0e2b4ef360bcba6528098eeeb1c21d1fa1e370ba9e2ef5b06f3b2",
+  "fetched_at": "2026-11-24T00:37:03Z",
+  "checksum": "sha256:2cbdd9189ecb7a66f51f3b326cc4708a73939e1736d96492d0877fb9424fc029",
   "transactions": [
     {
       "id": 370507,
@@ -1959,6 +1959,26 @@
       "typeCode": "DFA",
       "typeDesc": "Declared Free Agency",
       "description": "LHP Caleb Thielbar elected free agency."
+    },
+    {
+      "id": 950954,
+      "person": {
+        "id": 573204,
+        "fullName": "Caleb Thielbar",
+        "link": "/api/v1/people/573204",
+        "nameSlug": "caleb-thielbar-573204"
+      },
+      "toTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "date": "2026-11-23",
+      "effectiveDate": "2026-11-23",
+      "resolutionDate": "2026-11-23",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Kansas City Royals signed free agent LHP Caleb Thielbar."
     }
   ]
 }

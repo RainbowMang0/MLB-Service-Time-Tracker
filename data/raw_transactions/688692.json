@@ -1,7 +1,7 @@
 {
   "player_id": 688692,
-  "fetched_at": "2026-11-21T18:47:39Z",
-  "checksum": "sha256:0ca61547c4493a746a42dc8f64aaa7349553d77ab8b9c366167194530ae47a62",
+  "fetched_at": "2026-11-23T23:30:19Z",
+  "checksum": "sha256:096271b5857135139938c5ada4ae6cda93f6457270934cd14b73665c0542044e",
   "transactions": [
     {
       "id": 668348,
@@ -406,6 +406,46 @@
       "typeCode": "DFA",
       "typeDesc": "Declared Free Agency",
       "description": "LHP Jared Simpson elected free agency."
+    },
+    {
+      "id": 950952,
+      "person": {
+        "id": 688692,
+        "fullName": "Jared Simpson",
+        "link": "/api/v1/people/688692",
+        "nameSlug": "jared-simpson-688692"
+      },
+      "toTeam": {
+        "id": 534,
+        "name": "Rochester Red Wings",
+        "link": "/api/v1/teams/534"
+      },
+      "date": "2026-11-23",
+      "effectiveDate": "2026-11-23",
+      "resolutionDate": "2026-11-23",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Jared Simpson assigned to Rochester Red Wings."
+    },
+    {
+      "id": 950951,
+      "person": {
+        "id": 688692,
+        "fullName": "Jared Simpson",
+        "link": "/api/v1/people/688692",
+        "nameSlug": "jared-simpson-688692"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2026-11-23",
+      "effectiveDate": "2026-11-23",
+      "resolutionDate": "2026-11-23",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Washington Nationals signed free agent LHP Jared Simpson to a minor league contract and invited him to spring training."
     }
   ]
 }
