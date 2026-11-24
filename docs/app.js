@@ -1,10 +1,11 @@
 (() => {
   "use strict";
 
-  // The compact index is what this page downloads. It drops fields the table
-  // never reads, recomputes everything derivable from the day count, and
-  // stores rows as arrays with team and position lookup tables. The full
-  // database stays published for the pipeline. This page does not fetch it.
+  // First paint reads home.json: the current 40-man, plus census counts for
+  // the whole list. index.json (every previous player) loads after the table
+  // is up, for that filter and for the header search. The full database stays
+  // published for the pipeline. This page does not fetch it.
+  const HOME_URL = "data/home.json";
   const DATA_URL = "data/index.json";
   // Per-player season detail, sharded by `id % 64`. Opening a profile fetches one ~12 KB
   // file instead of the ~0.9 MB the whole breakdown would cost, so the table
@@ -207,6 +208,9 @@
   }
 
   let allPlayers = [];
+  // False while allPlayers is the roster slice. The previous-player filter
+  // waits for index.json rather than painting a list that is missing them.
+  let fullReady = false;
   let sortKey = "service_days_total";
   let sortDir = "desc";
 
@@ -391,11 +395,15 @@
     );
   }
 
-  function renderStatTiles(players) {
-    const total = players.length;
+  function renderStatTiles(players, census) {
     const rostered = players.filter((p) => p.on_40_man);
-    const current = rostered.length;
-    const previous = total - current;
+    // The census describes the whole database. The first payload is only the
+    // 40-man, so those four numbers ride along on it. Without them the line
+    // would say every previous player had vanished, then jump when the rest
+    // of the list arrived.
+    const total = census ? census.tracked : players.length;
+    const current = census ? census.rostered : rostered.length;
+    const previous = census ? census.previous : total - current;
     // Counted over rostered players only. Across the whole database these
     // read absurdly: 1,475 "free agency eligible" against 1,359 players on a
     // 40-man, because 1,174 of them are retired men who crossed 6.000 years
@@ -405,21 +413,25 @@
     const fa = rostered.filter((p) => p.free_agent_eligible).length;
     const arb = rostered.filter((p) => p.arbitration_eligible && !p.free_agent_eligible).length;
     const superTwo = rostered.filter((p) => p.super_two_candidate).length;
-    const partial = players.filter((p) => !isComplete(p)).length;
+    const partial = census
+      ? census.incomplete
+      : players.filter((p) => !isComplete(p)).length;
 
     // Census first, and quietly: these describe the whole database, which is
     // mostly retired players, and they used to sit in tiles identical to the
     // eligibility ones. Seven equal tiles meant three different kinds of fact
     // all shouting at the same volume.
-    const census = el("stat-census");
-    if (census) {
+    const censusEl = el("stat-census");
+    if (censusEl) {
       const n = (v) => v.toLocaleString();
       // The yet-to-debut count is stated because the table hides those rows.
       // Without it the census would say 1,360 are on a 40-man while the table
       // paged through 1,333, which is the same kind of silent mismatch that
       // made the eligibility tiles look like an arithmetic bug.
-      const yetToDebut = players.filter((p) => !hasService(p)).length;
-      census.innerHTML =
+      const yetToDebut = census
+        ? census.yet_to_debut
+        : players.filter((p) => !hasService(p)).length;
+      censusEl.innerHTML =
         `<b>${n(total)}</b> players tracked` +
         `<span class="sep">·</span><b>${n(current)}</b> on a 40-man roster` +
         `<span class="sep">·</span><b>${n(previous)}</b> previously rostered` +
@@ -564,7 +576,24 @@
     return rows;
   }
 
+  function viewNeedsPreviousPlayers() {
+    const roster = el("roster-filter");
+    return !roster || roster.value !== "current";
+  }
+
   function renderTable() {
+    const wrap = document.querySelector(".table-wrap");
+    if (viewNeedsPreviousPlayers() && !fullReady) {
+      const tbody = el("players-tbody");
+      if (tbody) {
+        tbody.innerHTML =
+          '<tr><td colspan="5" class="empty-state">Loading previous players…</td></tr>';
+      }
+      renderPagination(0, 0);
+      loadFullIndex().then(adoptFull).catch(showPreviousError);
+      return;
+    }
+    if (wrap) wrap.classList.remove("is-loading");
     const rows = getFilteredSorted();
     const tbody = el("players-tbody");
 
@@ -1423,7 +1452,7 @@
     superTwoCutoff = data.super_two_cutoff || null;
     superTwoPublished = data.super_two_published || null;
     renderMeta(data);
-    renderStatTiles(allPlayers);
+    renderStatTiles(allPlayers, data.census);
     populateTeamFilter(allPlayers);
     updateSortIndicators();
     wireSorting();
@@ -1437,17 +1466,85 @@
   }
 
   function showLoadError() {
-    const message = "The player list could not be loaded. Refresh to try again.";
+    const message = "The player list could not be loaded.";
     const note = el("disclaimer-text");
     const tbody = el("players-tbody");
     if (note) note.textContent = message;
     if (tbody) {
       tbody.innerHTML =
-        '<tr><td colspan="5" class="empty-state">The player list could not be loaded.</td></tr>';
+        '<tr><td colspan="5" class="empty-state">The player list could not be loaded. ' +
+        '<button type="button" class="page-btn" id="load-retry">Try again</button></td></tr>';
+      const retry = el("load-retry");
+      if (retry) retry.addEventListener("click", begin);
     }
   }
 
-  wireThemeToggle();
+  function showPreviousError() {
+    const tbody = el("players-tbody");
+    if (!tbody || fullReady) return;
+    tbody.innerHTML =
+      '<tr><td colspan="5" class="empty-state">Previous players could not be loaded. ' +
+      '<button type="button" class="page-btn" id="load-retry">Try again</button></td></tr>';
+    const retry = el("load-retry");
+    if (!retry) return;
+    retry.addEventListener("click", () => {
+      window.__blstIndexPromise = null;
+      tbody.innerHTML =
+        '<tr><td colspan="5" class="empty-state">Loading previous players…</td></tr>';
+      loadFullIndex().then(adoptFull).catch(showPreviousError);
+    });
+  }
 
-  fetchJson(DATA_URL).then(init).catch(showLoadError);
+  // One in-flight promise, shared with the header search, so focusing the
+  // box does not download the list a second time. Default cache mode: the
+  // host's Cache-Control is a few minutes and the file changes once a day,
+  // so a cache-busting query would only make repeat visits slower.
+  function loadFullIndex() {
+    if (!window.__blstIndexPromise) {
+      const pending = fetchJson(DATA_URL);
+      pending.catch(() => {
+        if (window.__blstIndexPromise === pending) window.__blstIndexPromise = null;
+      });
+      window.__blstIndexPromise = pending;
+    }
+    return window.__blstIndexPromise;
+  }
+
+  function adoptFull(data) {
+    if (fullReady || !data) return;
+    applyRules(data);
+    const rows = data.players || [];
+    allPlayers = Array.isArray(rows[0]) ? hydrate(data) : rows;
+    fullReady = true;
+    if (viewNeedsPreviousPlayers()) renderTable();
+  }
+
+  function paintFrom(data, partial) {
+    fullReady = !partial;
+    init(data);
+  }
+
+  function begin() {
+    window.__blstIndexPromise = null;
+    const note = el("disclaimer-text");
+    const tbody = el("players-tbody");
+    if (note) note.textContent = "Loading data…";
+    if (tbody && !fullReady) {
+      tbody.innerHTML =
+        '<tr><td colspan="5" class="empty-state">Loading player data…</td></tr>';
+    }
+    fetchJson(HOME_URL).then((data) => {
+      paintFrom(data, true);
+      // After the roster paints. Starting the large file in parallel would
+      // steal bandwidth from the one the first screen is waiting on.
+      requestAnimationFrame(() => {
+        loadFullIndex().then(adoptFull).catch(() => {});
+      });
+    }).catch(() => {
+      loadFullIndex().then((data) => paintFrom(data, false)).catch(showLoadError);
+    });
+  }
+
+  wireThemeToggle();
+  begin();
 })();

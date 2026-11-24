@@ -156,8 +156,14 @@
     var decodedPromise = null;
     function loadDecoded() {
       if (!decodedPromise) {
-        decodedPromise = fetch(base + "data/index.json")
-          .then(function (r) { return r.json(); })
+        // The homepage starts this download itself once the roster is on
+        // screen. Reuse it; a second fetch would pull the same file twice.
+        var pending = window.__blstIndexPromise;
+        if (!pending) {
+          pending = fetch(base + "data/index.json").then(function (r) { return r.json(); });
+          window.__blstIndexPromise = pending;
+        }
+        decodedPromise = Promise.resolve(pending)
           .then(decodeIndex)
           .catch(function () { return { teams: [], players: [] }; });
       }
