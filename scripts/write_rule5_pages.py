@@ -68,6 +68,44 @@ LEAGUE_FAQ = (
 )
 
 
+# A display split only. Players with this many credited major league years
+# are still Rule 5 eligible, and they bury the prospect list. The length of
+# a year comes from the ruleset. This is not a Rule 5 threshold.
+VETERAN_YEARS = 3
+
+
+def load_veteran_ids(service_path: pathlib.Path | None = None) -> set[int]:
+    """Ids with at least VETERAN_YEARS of major league service."""
+    import cba  # noqa: E402
+
+    full = int(cba.default().require("service_time.days_per_credited_year"))
+    floor = VETERAN_YEARS * full
+    path = service_path or (ROOT / "docs" / "data" / "service_time.json")
+    if not path.is_file():
+        return set()
+    data = json.loads(path.read_text(encoding="utf-8"))
+    players = data.get("players") if isinstance(data, dict) else data
+    found: set[int] = set()
+    for player in players or []:
+        if not isinstance(player, dict):
+            continue
+        pid = player.get("id")
+        days = player.get("service_days_total")
+        if isinstance(pid, bool) or isinstance(days, bool):
+            continue
+        if isinstance(pid, int) and isinstance(days, int) and days >= floor:
+            found.add(pid)
+    return found
+
+
+def is_mlb_veteran(player: dict, veteran_ids: set[int]) -> bool:
+    """Eligible again, with enough major league service to leave that list."""
+    return (
+        player.get("status") == "Eligible (again)"
+        and player.get("player_id") in veteran_ids
+    )
+
+
 def sort_players(players: list[dict]) -> list[dict]:
     """Hand-checked names first. Everyone else by level, then draft round."""
 
@@ -134,6 +172,19 @@ def _row(player: dict, pages: dict[int, str], prefix: str) -> str:
         f"<tr><td>{who}</td><td>{pos}</td><td class=\"n\">{age}</td>"
         f"<td>{_signed(player)}</td><td title=\"{aff}\">{level}</td>"
         f"<td>{_badge(player.get('status') or '')}{est}</td></tr>"
+    )
+
+
+def _veterans_block(players: list[dict], pages: dict[int, str], prefix: str) -> str:
+    if not players:
+        return ""
+    return (
+        '<details class="rule5-fold">'
+        f"<summary>MLB veterans on minor-league deals ({len(players)})</summary>"
+        '<p class="rule5-note">Three or more years of major league service, '
+        "on an affiliate roster and off the 40-man.</p>"
+        f"{_table(players, pages, prefix)}"
+        "</details>"
     )
 
 
@@ -226,16 +277,20 @@ def _club_faq(club: str) -> tuple[tuple[str, str], ...]:
     )
 
 
-def render_league(data: dict) -> str:
+def render_league(data: dict, veteran_ids: set[int] | None = None) -> str:
+    veteran_ids = veteran_ids or set()
     rows = []
     for club in data["clubs"]:
         slug = wpp.slug(club["club"])
         counts = club["counts"]
         name = html.escape(club["club"])
+        veterans = sum(1 for player in club["players"] if is_mlb_veteran(player, veteran_ids))
+        again = counts["eligible_again"] - veterans
         rows.append(
             f'<tr><td><a href="t/{slug}-rule-5.html">{name}</a></td>'
             f'<td class="n">{counts["eligible_first"]}</td>'
-            f'<td class="n">{counts["eligible_again"]}</td>'
+            f'<td class="n">{again}</td>'
+            f'<td class="n">{veterans}</td>'
             f'<td class="n">{counts["unknown"]}</td></tr>'
         )
     totals = data.get("counts") or {}
@@ -244,9 +299,9 @@ def render_league(data: dict) -> str:
   <p>The reserve list is due November 17, 2026, and the draft is scheduled for December 9, 2026.</p>
   <p>The labor agreement expires December 1, 2026, so the December draft may be delayed or dropped.</p>
   <p class="foot-note"><a href="{wpp.BASE_PATH}offseason.html">Offseason dates and lists</a></p>
-  <p class="rule5-note">A row marked estimated uses the earliest of more than one signing, or is a winter or spring international signing whose June 5 age date is unsettled. Players who are not yet eligible are left off each club list.</p>
+  <p class="rule5-note">A row marked estimated uses the earliest of more than one signing, or is a winter or spring international signing whose June 5 age date is unsettled. Players who are not yet eligible are left off each club list. Veterans are players with three or more years of major league service.</p>
   <table class="rule5-clubs"><thead><tr><th>Club</th><th class="n">First time</th>
-  <th class="n">Eligible again</th><th class="n">Unknown</th></tr></thead>
+  <th class="n">Eligible again</th><th class="n">Veterans</th><th class="n">Unknown</th></tr></thead>
   <tbody>{''.join(rows)}</tbody></table>
   {_faq_html(LEAGUE_FAQ)}
 """
@@ -273,23 +328,33 @@ def render_league(data: dict) -> str:
     )
 
 
-def render_club_page(club: dict, pages: dict[int, str]) -> str:
+def render_club_page(
+    club: dict, pages: dict[int, str], veteran_ids: set[int] | None = None,
+) -> str:
     name = club["club"]
     slug = wpp.slug(name)
-    eligible = sort_players([
+    veteran_ids = veteran_ids or set()
+    pool = [
         p for p in club["players"]
         if p.get("status") in ("Eligible (first time)", "Eligible (again)")
-    ])
+    ]
+    veterans = sort_players([p for p in pool if is_mlb_veteran(p, veteran_ids)])
+    eligible = sort_players([p for p in pool if not is_mlb_veteran(p, veteran_ids)])
     unknown = sort_players([p for p in club["players"] if p.get("status") == "Unknown"])
-    counts = club["counts"]
+    n_first = sum(1 for p in eligible if p.get("status") == "Eligible (first time)")
+    n_again = sum(1 for p in eligible if p.get("status") == "Eligible (again)")
+    vet_bit = (
+        f", {len(veterans)} MLB veterans on minor-league deals" if veterans else ""
+    )
     faq = _club_faq(name)
     body = f"""
   <p>Minor leaguers in the {html.escape(name)} system who are off the 40-man and look selectable in the 2026 Rule 5.</p>
   <p>The reserve list is due November 17, 2026, and the draft is scheduled for December 9, 2026.</p>
   <p>The labor agreement expires December 1, 2026, so the December draft may be delayed or dropped.</p>
-  <p class="rule5-note">{counts['eligible_first']} first-time, {counts['eligible_again']} eligible again, {counts['unknown']} unknown. A row marked estimated uses the earliest of more than one signing, or is a winter or spring international signing whose June 5 age date is unsettled.</p>
+  <p class="rule5-note">{n_first} first-time, {n_again} eligible again{vet_bit}, {len(unknown)} unknown. A row marked estimated uses the earliest of more than one signing, or is a winter or spring international signing whose June 5 age date is unsettled.</p>
   <h2>Eligible</h2>
   {_table(eligible, pages, "../")}
+  {_veterans_block(veterans, pages, "../")}
   <h2>Unknown</h2>
   <p class="rule5-note">These players are on an affiliate roster and off the 40-man, and the signing record is not enough to classify them.</p>
   {_table(unknown, pages, "../")}
@@ -300,7 +365,7 @@ def render_club_page(club: dict, pages: dict[int, str]) -> str:
     url = f"{wpp.SITE_URL}/t/{slug}-rule-5.html"
     core = f"Rule 5 eligible {name} 2026"
     desc = page_titles.fit_meta(
-        f"Rule 5 eligible {name} in 2026: {counts['eligible_first']} minor leaguers "
+        f"Rule 5 eligible {name} in 2026: {n_first} minor leaguers "
         "off the 40-man look eligible for the first time. Estimated from public "
         "signing data, not an official list."
     )
@@ -325,12 +390,14 @@ def render_club_page(club: dict, pages: dict[int, str]) -> str:
     )
 
 
-def write_all(data: dict) -> None:
+def write_all(data: dict, veteran_ids: set[int] | None = None) -> None:
     pages = _page_index()
-    (DOCS / "rule-5.html").write_text(render_league(data), encoding="utf-8")
+    if veteran_ids is None:
+        veteran_ids = load_veteran_ids()
+    (DOCS / "rule-5.html").write_text(render_league(data, veteran_ids), encoding="utf-8")
     for club in data["clubs"]:
         rel = DOCS / "t" / f"{wpp.slug(club['club'])}-rule-5.html"
-        rel.write_text(render_club_page(club, pages), encoding="utf-8")
+        rel.write_text(render_club_page(club, pages, veteran_ids), encoding="utf-8")
     print(f"wrote league page and {len(data['clubs'])} club boards", flush=True)
 
 

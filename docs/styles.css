@@ -836,7 +836,7 @@ tbody td.player-name { border-left-color: var(--club-d, var(--club, transparent)
   #players-table thead th:nth-child(4),
   #players-table tbody td:nth-child(4) { display: none; }
   tbody td.player-name { min-width: 8.5rem; }
-  tbody td.player-name .player-link { white-space: nowrap; }
+  tbody td.player-name .player-link, td a { white-space: nowrap; display: inline-flex; align-items: center; min-height: 44px; }
 
   /* Five stacked full-width controls was 218px of filters above the data.
      Search stays full width; the four selects pair up. */

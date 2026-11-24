@@ -279,6 +279,8 @@ def test_pages_do_not_cite_the_research():
     sample = wpp.render_free_agents([], {}, "2026-11-09T00:00:00+00:00")
     check("the free-agent page carries the projection note",
           contracts.PROJECTION_NOTE in sample)
+    check("the free-agent page says eligible does not mean unsigned",
+          "Eligible does not mean unsigned." in sample)
     club = wpp.render_club_free_agents("Colorado Rockies", [], [], "2026-11-09T00:00:00+00:00", 2027)
     check("a club free-agent page carries the same note", contracts.PROJECTION_NOTE in club)
 
