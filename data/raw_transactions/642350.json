@@ -1,7 +1,7 @@
 {
   "player_id": 642350,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:8bf47a9bdda73c11c15d9ba0fee1b5302e6b2e550da013002f47ddd3555dd83e",
+  "fetched_at": "2026-11-25T21:12:42Z",
+  "checksum": "sha256:94ed1d2611656d254f31c148ccd3f96f68cb2c20f947b4edca27ca18113c2035",
   "transactions": [
     {
       "id": 370422,
@@ -2061,6 +2061,26 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "Los Angeles Angels activated LF Jose Siri from the paternity list."
+    },
+    {
+      "id": 951005,
+      "person": {
+        "id": 642350,
+        "fullName": "Jose Siri",
+        "link": "/api/v1/people/642350",
+        "nameSlug": "jose-siri-642350"
+      },
+      "toTeam": {
+        "id": 670,
+        "name": "Gigantes del Cibao",
+        "link": "/api/v1/teams/670"
+      },
+      "date": "2026-11-24",
+      "effectiveDate": "2026-11-24",
+      "resolutionDate": "2026-11-24",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LF Jose Siri assigned to Gigantes del Cibao."
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "player_id": 542513,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:9299705a148c870cea8ac1e03612efa2b12cf6bffa34d8986ba3b0d86bdcfeaa",
+  "fetched_at": "2026-11-25T21:12:42Z",
+  "checksum": "sha256:00fb31c532552a7b8f50901806e5be2c70e1c10daa8a208ed5a76b55295977d2",
   "transactions": [
     {
       "id": 371034,
@@ -1875,6 +1875,26 @@
       "typeCode": "ASG",
       "typeDesc": "Assigned",
       "description": "C Tomás Telis assigned to Tiburones de La Guaira."
+    },
+    {
+      "id": 951048,
+      "person": {
+        "id": 542513,
+        "fullName": "Tomás Telis",
+        "link": "/api/v1/people/542513",
+        "nameSlug": "tomas-telis-542513"
+      },
+      "toTeam": {
+        "id": 673,
+        "name": "Aguilas de Mexicali",
+        "link": "/api/v1/teams/673"
+      },
+      "date": "2026-11-24",
+      "effectiveDate": "2026-11-24",
+      "resolutionDate": "2026-11-24",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Tomás Telis assigned to Aguilas de Mexicali."
     }
   ]
 }

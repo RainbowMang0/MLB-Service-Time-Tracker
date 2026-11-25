@@ -1,7 +1,7 @@
 {
   "player_id": 642547,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:4c8f96bc06a596906a88a229149867b9cdcbe6ab0ab979dc95b86887dad85af9",
+  "fetched_at": "2026-11-25T21:12:42Z",
+  "checksum": "sha256:ac9fe5abcab5b20ace0d46ddc37835d9d9a91d73102fc8f36393b03420d0e62b",
   "transactions": [
     {
       "id": 369023,
@@ -1141,6 +1141,26 @@
       "typeCode": "DFA",
       "typeDesc": "Declared Free Agency",
       "description": "RHP Freddy Peralta elected free agency."
+    },
+    {
+      "id": 950970,
+      "person": {
+        "id": 642547,
+        "fullName": "Freddy Peralta",
+        "link": "/api/v1/people/642547",
+        "nameSlug": "freddy-peralta-642547"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2026-11-24",
+      "effectiveDate": "2026-11-24",
+      "resolutionDate": "2026-11-24",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Baltimore Orioles signed free agent RHP Freddy Peralta."
     }
   ]
 }

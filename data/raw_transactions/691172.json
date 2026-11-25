@@ -1,7 +1,7 @@
 {
   "player_id": 691172,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:6bdbdde2a8c62d435593c7df0afaa17918b3c6580d1b9801f51970802c56ecb9",
+  "fetched_at": "2026-11-25T21:12:42Z",
+  "checksum": "sha256:114810067c2ae0fb98abb680eaea337a53be86b6c5ce874bb9ba4fdfeb67f583",
   "transactions": [
     {
       "id": 443894,
@@ -1854,6 +1854,26 @@
       "typeCode": "OUT",
       "typeDesc": "Outrighted",
       "description": "Baltimore Orioles sent RHP Yosver Zulueta outright to Norfolk Tides."
+    },
+    {
+      "id": 950983,
+      "person": {
+        "id": 691172,
+        "fullName": "Yosver Zulueta",
+        "link": "/api/v1/people/691172",
+        "nameSlug": "yosver-zulueta-691172"
+      },
+      "toTeam": {
+        "id": 671,
+        "name": "Leones del Escogido",
+        "link": "/api/v1/teams/671"
+      },
+      "date": "2026-11-24",
+      "effectiveDate": "2026-11-24",
+      "resolutionDate": "2026-11-24",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Yosver Zulueta assigned to Leones del Escogido."
     }
   ]
 }

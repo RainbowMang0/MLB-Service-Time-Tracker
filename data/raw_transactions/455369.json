@@ -1,7 +1,7 @@
 {
   "player_id": 455369,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:c1851460ed1d10ba5fb86c9dbcfec9596b0d4b020d80cdbd218230407286b5bf",
+  "fetched_at": "2026-11-25T21:12:42Z",
+  "checksum": "sha256:7f6062a27622dead6f9b6460997c0d154e7382cedfb80675207862f5734177e3",
   "transactions": [
     {
       "id": 14622,
@@ -1839,6 +1839,26 @@
       "typeCode": "ASG",
       "typeDesc": "Assigned",
       "description": "3B Ramiro Pena assigned to Tomateros de Culiacan."
+    },
+    {
+      "id": 951033,
+      "person": {
+        "id": 455369,
+        "fullName": "Ramiro Pena",
+        "link": "/api/v1/people/455369",
+        "nameSlug": "ramiro-pena-455369"
+      },
+      "toTeam": {
+        "id": 678,
+        "name": "Tomateros de Culiacan",
+        "link": "/api/v1/teams/678"
+      },
+      "date": "2026-11-24",
+      "effectiveDate": "2026-11-24",
+      "resolutionDate": "2026-11-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Tomateros de Culiacan placed 3B Ramiro Pena on the reserve list."
     }
   ]
 }

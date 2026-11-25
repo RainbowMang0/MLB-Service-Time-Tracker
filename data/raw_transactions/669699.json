@@ -1,7 +1,7 @@
 {
   "player_id": 669699,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:1380f5777e0a26058ba3cc48f07328684a5013ff4ad89effdcd916a96b236bc8",
+  "fetched_at": "2026-11-25T21:12:42Z",
+  "checksum": "sha256:8431e0e6f52ffe08345268dd72cf0152d884cbd5bbb6ea7eae336a76162e6f95",
   "transactions": [
     {
       "id": 298587,
@@ -1560,6 +1560,46 @@
       "typeCode": "DFA",
       "typeDesc": "Declared Free Agency",
       "description": "SS Braden Shewmake elected free agency."
+    },
+    {
+      "id": 951095,
+      "person": {
+        "id": 669699,
+        "fullName": "Braden Shewmake",
+        "link": "/api/v1/people/669699",
+        "nameSlug": "braden-shewmake-669699"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2026-11-24",
+      "effectiveDate": "2026-11-24",
+      "resolutionDate": "2026-11-24",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Milwaukee Brewers signed free agent SS Braden Shewmake to a minor league contract."
+    },
+    {
+      "id": 951096,
+      "person": {
+        "id": 669699,
+        "fullName": "Braden Shewmake",
+        "link": "/api/v1/people/669699",
+        "nameSlug": "braden-shewmake-669699"
+      },
+      "toTeam": {
+        "id": 556,
+        "name": "Nashville Sounds",
+        "link": "/api/v1/teams/556"
+      },
+      "date": "2026-11-25",
+      "effectiveDate": "2026-11-25",
+      "resolutionDate": "2026-11-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Braden Shewmake assigned to Nashville Sounds."
     }
   ]
 }

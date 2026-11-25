@@ -1,7 +1,7 @@
 {
   "player_id": 553869,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:982252fd0b497bf6cb0487b75bad9fa1284967ad76d4ce3075b5ee9675ddfb19",
+  "fetched_at": "2026-11-25T21:12:42Z",
+  "checksum": "sha256:980c6343db30a04842b969d1b972c335cf15462c3330afb180c35ef8635ef323",
   "transactions": [
     {
       "id": 4885,
@@ -1861,6 +1861,26 @@
       "typeCode": "DFA",
       "typeDesc": "Declared Free Agency",
       "description": "C Elias Díaz elected free agency."
+    },
+    {
+      "id": 950962,
+      "person": {
+        "id": 553869,
+        "fullName": "Elias Díaz",
+        "link": "/api/v1/people/553869",
+        "nameSlug": "elias-diaz-553869"
+      },
+      "toTeam": {
+        "id": 692,
+        "name": "Aguilas del Zulia",
+        "link": "/api/v1/teams/692"
+      },
+      "date": "2026-11-24",
+      "effectiveDate": "2026-11-24",
+      "resolutionDate": "2026-11-24",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Elias Díaz assigned to Aguilas del Zulia."
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "player_id": 642020,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:cebcc2490dc67901d76008e4a19d4f747d3c251a2894866aa99da65ae7492174",
+  "fetched_at": "2026-11-25T21:12:42Z",
+  "checksum": "sha256:bf26621aeca113a7f12ca5d8c0fe272e90bd405d8c1d0941f7187c78b9d8c257",
   "transactions": [
     {
       "id": 271282,
@@ -1603,6 +1603,26 @@
       "typeCode": "ASG",
       "typeDesc": "Assigned",
       "description": "C Chuckie Robinson assigned to Aguilas de Mexicali."
+    },
+    {
+      "id": 951044,
+      "person": {
+        "id": 642020,
+        "fullName": "Chuckie Robinson",
+        "link": "/api/v1/people/642020",
+        "nameSlug": "chuckie-robinson-642020"
+      },
+      "toTeam": {
+        "id": 673,
+        "name": "Aguilas de Mexicali",
+        "link": "/api/v1/teams/673"
+      },
+      "date": "2026-11-24",
+      "effectiveDate": "2026-11-24",
+      "resolutionDate": "2026-11-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Aguilas de Mexicali placed C Chuckie Robinson on the reserve list."
     }
   ]
 }

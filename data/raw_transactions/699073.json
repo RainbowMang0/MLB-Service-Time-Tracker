@@ -1,7 +1,7 @@
 {
   "player_id": 699073,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:6ac922ad132144f3fb14cae95c328a8d3d387c3eaa8ad08aa6ed00913346078b",
+  "fetched_at": "2026-11-25T21:12:42Z",
+  "checksum": "sha256:b72c38b23b175ba415af1b445bc7cd68bf202b53456b0c3231288c6ab5477370",
   "transactions": [
     {
       "id": 459912,
@@ -820,6 +820,26 @@
       "typeCode": "CU",
       "typeDesc": "Recalled",
       "description": "Detroit Tigers recalled C Thayron Liranzo from Erie SeaWolves."
+    },
+    {
+      "id": 950980,
+      "person": {
+        "id": 699073,
+        "fullName": "Thayron Liranzo",
+        "link": "/api/v1/people/699073",
+        "nameSlug": "thayron-liranzo-699073"
+      },
+      "toTeam": {
+        "id": 668,
+        "name": "Toros del Este",
+        "link": "/api/v1/teams/668"
+      },
+      "date": "2026-11-24",
+      "effectiveDate": "2026-11-24",
+      "resolutionDate": "2026-11-24",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Thayron Liranzo assigned to Toros del Este."
     }
   ]
 }

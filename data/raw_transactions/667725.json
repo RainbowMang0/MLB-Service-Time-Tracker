@@ -1,7 +1,7 @@
 {
   "player_id": 667725,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:e61e7388f0decf71adf2efbb3954e3e802bf36769b30cb1504184440f1f06b69",
+  "fetched_at": "2026-11-25T21:12:42Z",
+  "checksum": "sha256:a6b0d338bf17f1d072a5dd1d1d783009af68e37e8922462e8a1b1275428be371",
   "transactions": [
     {
       "id": 255868,
@@ -1805,6 +1805,26 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "Algodoneros de Guasave placed RHP Kyle Tyler on the reserve list."
+    },
+    {
+      "id": 951040,
+      "person": {
+        "id": 667725,
+        "fullName": "Kyle Tyler",
+        "link": "/api/v1/people/667725",
+        "nameSlug": "kyle-tyler-667725"
+      },
+      "toTeam": {
+        "id": 5482,
+        "name": "Algodoneros de Guasave",
+        "link": "/api/v1/teams/5482"
+      },
+      "date": "2026-11-24",
+      "effectiveDate": "2026-11-24",
+      "resolutionDate": "2026-11-24",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Kyle Tyler assigned to Algodoneros de Guasave."
     }
   ]
 }

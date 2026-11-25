@@ -1,7 +1,7 @@
 {
   "player_id": 682825,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:42be23ec22dd4476a8ff0d35339ac82684712e09de4fc50626e47a8de749f09c",
+  "fetched_at": "2026-11-25T21:12:42Z",
+  "checksum": "sha256:fd6f5fcaa9339e462449e52399280b3420a94863030f143ffeaa83e72f604462",
   "transactions": [
     {
       "id": 366590,
@@ -1046,6 +1046,26 @@
       "typeCode": "CU",
       "typeDesc": "Recalled",
       "description": "Cincinnati Reds recalled RHP Luis Mey from Louisville Bats."
+    },
+    {
+      "id": 951008,
+      "person": {
+        "id": 682825,
+        "fullName": "Luis Mey",
+        "link": "/api/v1/people/682825",
+        "nameSlug": "luis-mey-682825"
+      },
+      "toTeam": {
+        "id": 669,
+        "name": "Estrellas Orientales",
+        "link": "/api/v1/teams/669"
+      },
+      "date": "2026-11-24",
+      "effectiveDate": "2026-11-24",
+      "resolutionDate": "2026-11-24",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Luis Mey assigned to Estrellas Orientales."
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "player_id": 668470,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:24dd7baf36303245dd7d8e7386f2c848f4b151abcc8930214ac577b785015f7d",
+  "fetched_at": "2026-11-25T21:12:42Z",
+  "checksum": "sha256:621acf23bfba51f62860aad7737d479752b3468c4d947d9651cb9ab9e7b642f4",
   "transactions": [
     {
       "id": 263675,
@@ -1471,6 +1471,46 @@
       "typeCode": "REL",
       "typeDesc": "Released",
       "description": "Salt Lake Bees released RHP Hagen Danner."
+    },
+    {
+      "id": 951107,
+      "person": {
+        "id": 668470,
+        "fullName": "Hagen Danner",
+        "link": "/api/v1/people/668470",
+        "nameSlug": "hagen-danner-668470"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2026-11-24",
+      "effectiveDate": "2026-11-24",
+      "resolutionDate": "2026-11-24",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Washington Nationals signed free agent RHP Hagen Danner to a minor league contract."
+    },
+    {
+      "id": 951108,
+      "person": {
+        "id": 668470,
+        "fullName": "Hagen Danner",
+        "link": "/api/v1/people/668470",
+        "nameSlug": "hagen-danner-668470"
+      },
+      "toTeam": {
+        "id": 534,
+        "name": "Rochester Red Wings",
+        "link": "/api/v1/teams/534"
+      },
+      "date": "2026-11-25",
+      "effectiveDate": "2026-11-25",
+      "resolutionDate": "2026-11-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Hagen Danner assigned to Rochester Red Wings."
     }
   ]
 }

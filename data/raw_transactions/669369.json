@@ -1,7 +1,7 @@
 {
   "player_id": 669369,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:b7460afdb7086c9f80ec0987d397c1ea544b5eff28a9ae5948b0943741098934",
+  "fetched_at": "2026-11-25T21:12:42Z",
+  "checksum": "sha256:1c9ece65ba091800e6950e10b4e4505584eeb2918b7a3ca14bf17d49166f6650",
   "transactions": [
     {
       "id": 318012,
@@ -1419,6 +1419,46 @@
       "typeCode": "DFA",
       "typeDesc": "Declared Free Agency",
       "description": "RF Bryce Johnson elected free agency."
+    },
+    {
+      "id": 951109,
+      "person": {
+        "id": 669369,
+        "fullName": "Bryce Johnson",
+        "link": "/api/v1/people/669369",
+        "nameSlug": "bryce-johnson-669369"
+      },
+      "toTeam": {
+        "id": 140,
+        "name": "Texas Rangers",
+        "link": "/api/v1/teams/140"
+      },
+      "date": "2026-11-24",
+      "effectiveDate": "2026-11-24",
+      "resolutionDate": "2026-11-24",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Texas Rangers signed free agent RF Bryce Johnson to a minor league contract."
+    },
+    {
+      "id": 951110,
+      "person": {
+        "id": 669369,
+        "fullName": "Bryce Johnson",
+        "link": "/api/v1/people/669369",
+        "nameSlug": "bryce-johnson-669369"
+      },
+      "toTeam": {
+        "id": 102,
+        "name": "Round Rock Express",
+        "link": "/api/v1/teams/102"
+      },
+      "date": "2026-11-25",
+      "effectiveDate": "2026-11-25",
+      "resolutionDate": "2026-11-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RF Bryce Johnson assigned to Round Rock Express."
     }
   ]
 }

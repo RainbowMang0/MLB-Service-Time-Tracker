@@ -1,7 +1,7 @@
 {
   "player_id": 529017,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:7fdc257488822f523c098231f8f5ef9c2688c29665d1d7630d2c1405b15609cb",
+  "fetched_at": "2026-11-25T21:12:42Z",
+  "checksum": "sha256:b2276dfb0112dc2b33dc1575fff9c20c7b9028cd7e344f705625592a4da96261",
   "transactions": [
     {
       "id": 421445,
@@ -784,6 +784,46 @@
       "typeCode": "DFA",
       "typeDesc": "Declared Free Agency",
       "description": "RHP Alexander Cornielle elected free agency."
+    },
+    {
+      "id": 951103,
+      "person": {
+        "id": 529017,
+        "fullName": "Alexander Cornielle",
+        "link": "/api/v1/people/529017",
+        "nameSlug": "alexander-cornielle-529017"
+      },
+      "toTeam": {
+        "id": 139,
+        "name": "Tampa Bay Rays",
+        "link": "/api/v1/teams/139"
+      },
+      "date": "2026-11-24",
+      "effectiveDate": "2026-11-24",
+      "resolutionDate": "2026-11-24",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Tampa Bay Rays signed free agent RHP Alexander Cornielle to a minor league contract."
+    },
+    {
+      "id": 951104,
+      "person": {
+        "id": 529017,
+        "fullName": "Alexander Cornielle",
+        "link": "/api/v1/people/529017",
+        "nameSlug": "alexander-cornielle-529017"
+      },
+      "toTeam": {
+        "id": 234,
+        "name": "Durham Bulls",
+        "link": "/api/v1/teams/234"
+      },
+      "date": "2026-11-25",
+      "effectiveDate": "2026-11-25",
+      "resolutionDate": "2026-11-25",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Alexander Cornielle assigned to Durham Bulls."
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "player_id": 687074,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:8211f72695a854c39819f710fb91445726984e864c1387287231da0f83548920",
+  "fetched_at": "2026-11-25T21:12:42Z",
+  "checksum": "sha256:93c7279c4e2603be9dd54f6084daf3c7f0ebdff359b96086338c68ba65d83954",
   "transactions": [
     {
       "id": 411174,
@@ -1172,6 +1172,26 @@
       "typeCode": "ASG",
       "typeDesc": "Assigned",
       "description": "RHP Tyler Owens assigned to Altoona Curve from FCL Pirates."
+    },
+    {
+      "id": 950974,
+      "person": {
+        "id": 687074,
+        "fullName": "Tyler Owens",
+        "link": "/api/v1/people/687074",
+        "nameSlug": "tyler-owens-687074"
+      },
+      "toTeam": {
+        "id": 667,
+        "name": "Aguilas Cibaenas",
+        "link": "/api/v1/teams/667"
+      },
+      "date": "2026-11-24",
+      "effectiveDate": "2026-11-24",
+      "resolutionDate": "2026-11-24",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Tyler Owens assigned to Aguilas Cibaenas."
     }
   ]
 }

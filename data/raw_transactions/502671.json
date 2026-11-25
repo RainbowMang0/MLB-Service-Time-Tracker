@@ -1,7 +1,7 @@
 {
   "player_id": 502671,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:f2e14e69baabdabc7be9974d278754ae188ec80ec174b449a6c9221f3c682f28",
+  "fetched_at": "2026-11-25T21:12:42Z",
+  "checksum": "sha256:053b07da372798dd6619999a46c9ebe7823668fe7e8133a91f2b429c1b9c1250",
   "transactions": [
     {
       "id": 12246,
@@ -611,6 +611,26 @@
       "typeCode": "DFA",
       "typeDesc": "Declared Free Agency",
       "description": "1B Paul Goldschmidt elected free agency."
+    },
+    {
+      "id": 951113,
+      "person": {
+        "id": 502671,
+        "fullName": "Paul Goldschmidt",
+        "link": "/api/v1/people/502671",
+        "nameSlug": "paul-goldschmidt-502671"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2026-11-25",
+      "effectiveDate": "2026-11-25",
+      "resolutionDate": "2026-11-25",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "New York Mets signed free agent 1B Paul Goldschmidt."
     }
   ]
 }

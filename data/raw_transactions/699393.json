@@ -1,7 +1,7 @@
 {
   "player_id": 699393,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:22995a85d88238c2c4506c9f65ac277cf314d1bd7b9b1be3bd91709af52ce5ac",
+  "fetched_at": "2026-11-25T21:12:42Z",
+  "checksum": "sha256:5c0156a28d3c7795672b9d34d35b4a076c34869d78973c91f3ac55a5b5740f5c",
   "transactions": [
     {
       "id": 460484,
@@ -442,6 +442,26 @@
       "typeCode": "CU",
       "typeDesc": "Recalled",
       "description": "Chicago Cubs recalled 2B Pedro Ramírez from Iowa Cubs."
+    },
+    {
+      "id": 950973,
+      "person": {
+        "id": 699393,
+        "fullName": "Pedro Ramírez",
+        "link": "/api/v1/people/699393",
+        "nameSlug": "pedro-ramirez-699393"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2026-11-24",
+      "effectiveDate": "2026-11-24",
+      "resolutionDate": "2026-11-24",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "2B Pedro Ramírez changed number to 20."
     }
   ]
 }

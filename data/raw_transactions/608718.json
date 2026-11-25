@@ -1,7 +1,7 @@
 {
   "player_id": 608718,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:5e2a2bc0fcfeacea812966b0ecc73595abc1c626eab04c11c830567a7e73b7d4",
+  "fetched_at": "2026-11-25T21:12:42Z",
+  "checksum": "sha256:aa30c12f39cd846409d4030ab174d994c8cab280f92c21a0d439dbef0a93dbde",
   "transactions": [
     {
       "id": 123734,
@@ -1691,6 +1691,26 @@
       "typeCode": "DFA",
       "typeDesc": "Declared Free Agency",
       "description": "LHP Brent Suter elected free agency."
+    },
+    {
+      "id": 950958,
+      "person": {
+        "id": 608718,
+        "fullName": "Brent Suter",
+        "link": "/api/v1/people/608718",
+        "nameSlug": "brent-suter-608718"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2026-11-24",
+      "effectiveDate": "2026-11-24",
+      "resolutionDate": "2026-11-24",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "New York Yankees signed free agent LHP Brent Suter."
     }
   ]
 }

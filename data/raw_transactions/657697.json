@@ -1,7 +1,7 @@
 {
   "player_id": 657697,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:0fc05dc29f53d8fd6a6ab1258048f8b6a40bfdefba09e89a987e481e43b4f856",
+  "fetched_at": "2026-11-25T21:12:42Z",
+  "checksum": "sha256:a359475a8574f688f170492f067be3b24a23184be4620a7a8d23aa1ebb2fe213",
   "transactions": [
     {
       "id": 193091,
@@ -2438,6 +2438,26 @@
       "typeCode": "REL",
       "typeDesc": "Released",
       "description": "Worcester Red Sox released RHP Vinny Nittoli."
+    },
+    {
+      "id": 951049,
+      "person": {
+        "id": 657697,
+        "fullName": "Vinny Nittoli",
+        "link": "/api/v1/people/657697",
+        "nameSlug": "vinny-nittoli-657697"
+      },
+      "toTeam": {
+        "id": 673,
+        "name": "Aguilas de Mexicali",
+        "link": "/api/v1/teams/673"
+      },
+      "date": "2026-11-24",
+      "effectiveDate": "2026-11-24",
+      "resolutionDate": "2026-11-24",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Vinny Nittoli assigned to Aguilas de Mexicali."
     }
   ]
 }

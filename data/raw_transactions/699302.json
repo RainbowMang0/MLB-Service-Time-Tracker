@@ -1,7 +1,7 @@
 {
   "player_id": 699302,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:c786fefead14d607c927aaa10f10f70bfdb6324cf6034b67cf190e1a20afcbe9",
+  "fetched_at": "2026-11-25T21:12:42Z",
+  "checksum": "sha256:eb4e71380f0d1e9a74a8dd491edb31ee81730c54fb6f7f72a4a2c0330d51a821",
   "transactions": [
     {
       "id": 460314,
@@ -658,6 +658,26 @@
       "typeCode": "CU",
       "typeDesc": "Recalled",
       "description": "Cincinnati Reds recalled LF Héctor Rodríguez from Louisville Bats."
+    },
+    {
+      "id": 950991,
+      "person": {
+        "id": 699302,
+        "fullName": "Héctor Rodríguez",
+        "link": "/api/v1/people/699302",
+        "nameSlug": "hector-rodriguez-699302"
+      },
+      "toTeam": {
+        "id": 671,
+        "name": "Leones del Escogido",
+        "link": "/api/v1/teams/671"
+      },
+      "date": "2026-11-24",
+      "effectiveDate": "2026-11-24",
+      "resolutionDate": "2026-11-24",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RF Héctor Rodríguez assigned to Leones del Escogido."
     }
   ]
 }

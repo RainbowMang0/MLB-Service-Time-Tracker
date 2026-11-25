@@ -1,7 +1,7 @@
 {
   "player_id": 663886,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:10bf9ea40f863ec6b659b53a2c100a0882d175e8f188d25ab7f171cd2c85aa43",
+  "fetched_at": "2026-11-25T21:12:42Z",
+  "checksum": "sha256:e47c6d68cf4fe875b7830280ba5663e8bd86c122a4d13820eba1ba5332592497",
   "transactions": [
     {
       "id": 230112,
@@ -1319,6 +1319,26 @@
       "typeCode": "DFA",
       "typeDesc": "Declared Free Agency",
       "description": "C Tyler Stephenson elected free agency."
+    },
+    {
+      "id": 951124,
+      "person": {
+        "id": 663886,
+        "fullName": "Tyler Stephenson",
+        "link": "/api/v1/people/663886",
+        "nameSlug": "tyler-stephenson-663886"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2026-11-25",
+      "effectiveDate": "2026-11-25",
+      "resolutionDate": "2026-11-25",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Cincinnati Reds signed free agent C Tyler Stephenson."
     }
   ]
 }

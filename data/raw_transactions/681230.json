@@ -1,7 +1,7 @@
 {
   "player_id": 681230,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:9e65fb2e996eb478c34078718c0c4c01c360f3938a355810fff4a3b7dad05ac7",
+  "fetched_at": "2026-11-25T21:12:42Z",
+  "checksum": "sha256:0244a12b50ba72a1382838cb5a74630ae106d57ca9e777e1a50d7689769e014c",
   "transactions": [
     {
       "id": 487921,
@@ -693,6 +693,26 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "Chicago Cubs activated 3B BJ Murray Jr.."
+    },
+    {
+      "id": 950971,
+      "person": {
+        "id": 681230,
+        "fullName": "BJ Murray Jr.",
+        "link": "/api/v1/people/681230",
+        "nameSlug": "bj-murray-jr-681230"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2026-11-24",
+      "effectiveDate": "2026-11-24",
+      "resolutionDate": "2026-11-24",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "3B BJ Murray Jr. changed number to 18."
     }
   ]
 }

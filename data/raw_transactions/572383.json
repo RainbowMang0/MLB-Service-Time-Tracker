@@ -1,7 +1,7 @@
 {
   "player_id": 572383,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:4314f6b8ec2a3da0ca677c8fa53fbc22cc42323cd0c71d18e0da317bc9761abc",
+  "fetched_at": "2026-11-25T21:12:42Z",
+  "checksum": "sha256:3dbb3643f644b7d8163f3af7ee15b62e665db78e43febac14c523addf321d80a",
   "transactions": [
     {
       "id": 13774,
@@ -2741,6 +2741,26 @@
       "typeCode": "SFA",
       "typeDesc": "Signed as Free Agent",
       "description": "Piratas de Campeche signed free agent LHP Brian Moran."
+    },
+    {
+      "id": 951014,
+      "person": {
+        "id": 572383,
+        "fullName": "Brian Moran",
+        "link": "/api/v1/people/572383",
+        "nameSlug": "brian-moran-572383"
+      },
+      "toTeam": {
+        "id": 685,
+        "name": "Cangrejeros de Santurce",
+        "link": "/api/v1/teams/685"
+      },
+      "date": "2026-11-24",
+      "effectiveDate": "2026-11-24",
+      "resolutionDate": "2026-11-24",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Brian Moran assigned to Cangrejeros de Santurce."
     }
   ]
 }

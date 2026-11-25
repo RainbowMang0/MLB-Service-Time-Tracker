@@ -1,6 +1,6 @@
 {
   "player_id": 620454,
-  "fetched_at": "2026-11-24T00:37:03Z",
+  "fetched_at": "2026-11-25T21:12:42Z",
   "checksum": "sha256:f083838c1becd430009f54ba04e80e058a3b27826ae03d70adb76095f2f52481",
   "transactions": [
     {
@@ -911,26 +911,6 @@
       "description": "LHP Jose Castillo elected free agency."
     },
     {
-      "id": 605961,
-      "person": {
-        "id": 620454,
-        "fullName": "José Castillo",
-        "link": "/api/v1/people/620454",
-        "nameSlug": "jose-castillo-620454"
-      },
-      "toTeam": {
-        "id": 135,
-        "name": "San Diego Padres",
-        "link": "/api/v1/teams/135"
-      },
-      "date": "2022-03-13",
-      "effectiveDate": "2022-03-13",
-      "resolutionDate": "2022-03-13",
-      "typeCode": "SFA",
-      "typeDesc": "Signed as Free Agent",
-      "description": "San Diego Padres signed free agent LHP Jose Castillo to a minor league contract and invited him to spring training."
-    },
-    {
       "id": 611791,
       "person": {
         "id": 620454,
@@ -949,6 +929,26 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "LHP Jose Castillo roster status changed by San Diego Padres."
+    },
+    {
+      "id": 605961,
+      "person": {
+        "id": 620454,
+        "fullName": "José Castillo",
+        "link": "/api/v1/people/620454",
+        "nameSlug": "jose-castillo-620454"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2022-03-13",
+      "effectiveDate": "2022-03-13",
+      "resolutionDate": "2022-03-13",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "San Diego Padres signed free agent LHP Jose Castillo to a minor league contract and invited him to spring training."
     },
     {
       "id": 611240,
@@ -1284,29 +1284,6 @@
       "typeDesc": "Status Change"
     },
     {
-      "id": 714233,
-      "person": {
-        "id": 620454,
-        "fullName": "José Castillo",
-        "link": "/api/v1/people/620454",
-        "nameSlug": "jose-castillo-620454"
-      },
-      "fromTeam": {
-        "id": 135,
-        "name": "San Diego Padres",
-        "link": "/api/v1/teams/135"
-      },
-      "toTeam": {
-        "id": 146,
-        "name": "Miami Marlins",
-        "link": "/api/v1/teams/146"
-      },
-      "date": "2023-07-25",
-      "effectiveDate": "2023-07-25",
-      "typeCode": "TR",
-      "typeDesc": "Trade"
-    },
-    {
       "id": 714234,
       "person": {
         "id": 620454,
@@ -1328,6 +1305,29 @@
       "effectiveDate": "2023-07-25",
       "typeCode": "OPT",
       "typeDesc": "Optioned"
+    },
+    {
+      "id": 714233,
+      "person": {
+        "id": 620454,
+        "fullName": "José Castillo",
+        "link": "/api/v1/people/620454",
+        "nameSlug": "jose-castillo-620454"
+      },
+      "fromTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "toTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "date": "2023-07-25",
+      "effectiveDate": "2023-07-25",
+      "typeCode": "TR",
+      "typeDesc": "Trade"
     },
     {
       "id": 719136,
@@ -1394,7 +1394,7 @@
       "description": "LHP José Castillo assigned to Navegantes del Magallanes."
     },
     {
-      "id": 758184,
+      "id": 734566,
       "person": {
         "id": 620454,
         "fullName": "José Castillo",
@@ -1409,9 +1409,9 @@
       "date": "2023-12-04",
       "effectiveDate": "2023-12-04",
       "resolutionDate": "2023-12-04",
-      "typeCode": "SC",
-      "typeDesc": "Status Change",
-      "description": "Reno Aces activated LHP José Castillo."
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP José Castillo assigned to Reno Aces."
     },
     {
       "id": 734565,
@@ -1434,7 +1434,7 @@
       "description": "Arizona Diamondbacks signed free agent LHP José Castillo to a minor league contract."
     },
     {
-      "id": 734566,
+      "id": 758184,
       "person": {
         "id": 620454,
         "fullName": "José Castillo",
@@ -1449,9 +1449,9 @@
       "date": "2023-12-04",
       "effectiveDate": "2023-12-04",
       "resolutionDate": "2023-12-04",
-      "typeCode": "ASG",
-      "typeDesc": "Assigned",
-      "description": "LHP José Castillo assigned to Reno Aces."
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Reno Aces activated LHP José Castillo."
     },
     {
       "id": 739015,
@@ -1519,26 +1519,6 @@
       "description": "Reno Aces sent LHP José Castillo on a rehab assignment to ACL D-backs."
     },
     {
-      "id": 787934,
-      "person": {
-        "id": 620454,
-        "fullName": "José Castillo",
-        "link": "/api/v1/people/620454",
-        "nameSlug": "jose-castillo-620454"
-      },
-      "toTeam": {
-        "id": 1991,
-        "name": "ACL D-backs",
-        "link": "/api/v1/teams/1991"
-      },
-      "date": "2024-07-09",
-      "effectiveDate": "2024-07-09",
-      "resolutionDate": "2024-07-09",
-      "typeCode": "ASG",
-      "typeDesc": "Assigned",
-      "description": "sent LHP José Castillo on a rehab assignment to ACL D-backs."
-    },
-    {
       "id": 786034,
       "person": {
         "id": 620454,
@@ -1562,6 +1542,26 @@
       "typeCode": "ASG",
       "typeDesc": "Assigned",
       "description": "Reno Aces sent LHP José Castillo on a rehab assignment to ACL D-backs."
+    },
+    {
+      "id": 787934,
+      "person": {
+        "id": 620454,
+        "fullName": "José Castillo",
+        "link": "/api/v1/people/620454",
+        "nameSlug": "jose-castillo-620454"
+      },
+      "toTeam": {
+        "id": 1991,
+        "name": "ACL D-backs",
+        "link": "/api/v1/teams/1991"
+      },
+      "date": "2024-07-09",
+      "effectiveDate": "2024-07-09",
+      "resolutionDate": "2024-07-09",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "sent LHP José Castillo on a rehab assignment to ACL D-backs."
     },
     {
       "id": 787899,
@@ -1664,7 +1664,7 @@
       "description": "Reno Aces placed LHP José Castillo on the 7-day injured list."
     },
     {
-      "id": 831248,
+      "id": 831249,
       "person": {
         "id": 620454,
         "fullName": "José Castillo",
@@ -1704,7 +1704,7 @@
       "description": "Reno Aces activated LHP José Castillo from the 7-day injured list."
     },
     {
-      "id": 831249,
+      "id": 831248,
       "person": {
         "id": 620454,
         "fullName": "José Castillo",

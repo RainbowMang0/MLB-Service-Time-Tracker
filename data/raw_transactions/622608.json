@@ -1,7 +1,7 @@
 {
   "player_id": 622608,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:91f5d6eae162e42566073fe1f2128d6f4da204eff7eaf98c0f7f66921944fd29",
+  "fetched_at": "2026-11-25T21:12:42Z",
+  "checksum": "sha256:59c279c5d8e986ad422a5eb612baee1a78b61feef684b43e9608ee217f9cf1f5",
   "transactions": [
     {
       "id": 120728,
@@ -1479,6 +1479,26 @@
       "typeCode": "DFA",
       "typeDesc": "Declared Free Agency",
       "description": "RHP Antonio Senzatela elected free agency."
+    },
+    {
+      "id": 951122,
+      "person": {
+        "id": 622608,
+        "fullName": "Antonio Senzatela",
+        "link": "/api/v1/people/622608",
+        "nameSlug": "antonio-senzatela-622608"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2026-11-25",
+      "effectiveDate": "2026-11-25",
+      "resolutionDate": "2026-11-25",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Milwaukee Brewers signed free agent RHP Antonio Senzatela."
     }
   ]
 }

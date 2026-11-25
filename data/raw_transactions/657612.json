@@ -1,7 +1,7 @@
 {
   "player_id": 657612,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:47a762e7bf1674e36e085060dbc5a13ef91091b556aa345965d0e36009426ef6",
+  "fetched_at": "2026-11-25T21:12:42Z",
+  "checksum": "sha256:afecd902ccf9a3428c5f1c095671968a2357a186e9732e7840dcd567d88d2892",
   "transactions": [
     {
       "id": 192846,
@@ -1020,6 +1020,26 @@
       "typeCode": "DFA",
       "typeDesc": "Declared Free Agency",
       "description": "LHP Tim Hill elected free agency."
+    },
+    {
+      "id": 950957,
+      "person": {
+        "id": 657612,
+        "fullName": "Tim Hill",
+        "link": "/api/v1/people/657612",
+        "nameSlug": "tim-hill-657612"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2026-11-24",
+      "effectiveDate": "2026-11-24",
+      "resolutionDate": "2026-11-24",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "New York Yankees signed free agent LHP Tim Hill."
     }
   ]
 }

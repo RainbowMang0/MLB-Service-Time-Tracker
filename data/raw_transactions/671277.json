@@ -1,7 +1,7 @@
 {
   "player_id": 671277,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:0ac5131a32c53dce50ac651b2d63f93f77dfcb4a847d46c055547a1a08651551",
+  "fetched_at": "2026-11-25T21:12:42Z",
+  "checksum": "sha256:e801dae369b1befbbea00885909bb6536ab7fcf54c07361c26cffec1cbf85c30",
   "transactions": [
     {
       "id": 280813,
@@ -1166,6 +1166,26 @@
       "typeCode": "TR",
       "typeDesc": "Trade",
       "description": "Washington Nationals traded 1B Luis García Jr. to New York Yankees for RHP Ben Grable, RHP Yovanny Cruz, RHP Jack Cebert and RHP Jake Bird."
+    },
+    {
+      "id": 951004,
+      "person": {
+        "id": 671277,
+        "fullName": "Luis García Jr.",
+        "link": "/api/v1/people/671277",
+        "nameSlug": "luis-garcia-jr-671277"
+      },
+      "toTeam": {
+        "id": 670,
+        "name": "Gigantes del Cibao",
+        "link": "/api/v1/teams/670"
+      },
+      "date": "2026-11-24",
+      "effectiveDate": "2026-11-24",
+      "resolutionDate": "2026-11-24",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "1B Luis García Jr. assigned to Gigantes del Cibao."
     }
   ]
 }

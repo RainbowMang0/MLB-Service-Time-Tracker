@@ -1,7 +1,7 @@
 {
   "player_id": 614179,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:72aceea2d8a30b1e667393537b323e9f583d32193e50188584d758ee401d9de4",
+  "fetched_at": "2026-11-25T21:12:42Z",
+  "checksum": "sha256:1e946b1528741914fb3a9aa9461b153199fbced077be429f847294bac4b548cc",
   "transactions": [
     {
       "id": 109616,
@@ -1823,6 +1823,26 @@
       "typeCode": "DFA",
       "typeDesc": "Declared Free Agency",
       "description": "RHP José Ruiz elected free agency."
+    },
+    {
+      "id": 950963,
+      "person": {
+        "id": 614179,
+        "fullName": "José Ruiz",
+        "link": "/api/v1/people/614179",
+        "nameSlug": "jose-ruiz-614179"
+      },
+      "toTeam": {
+        "id": 696,
+        "name": "Navegantes del Magallanes",
+        "link": "/api/v1/teams/696"
+      },
+      "date": "2026-11-24",
+      "effectiveDate": "2026-11-24",
+      "resolutionDate": "2026-11-24",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP José Ruiz assigned to Navegantes del Magallanes."
     }
   ]
 }

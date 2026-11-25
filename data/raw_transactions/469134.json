@@ -1,7 +1,7 @@
 {
   "player_id": 469134,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:e1bc0e3378a3c1e5579f42babb7e49858411b14cd58459494e080a53df56656e",
+  "fetched_at": "2026-11-25T21:12:42Z",
+  "checksum": "sha256:d5ac742b8e2a7d7a43e506c76910778c5c86c7f905c2828fc2da9c37226e216c",
   "transactions": [
     {
       "id": 15688,
@@ -1578,6 +1578,26 @@
       "typeCode": "ASG",
       "typeDesc": "Assigned",
       "description": "RHP Esmil Rogers assigned to Estrellas Orientales."
+    },
+    {
+      "id": 950972,
+      "person": {
+        "id": 469134,
+        "fullName": "Esmil Rogers",
+        "link": "/api/v1/people/469134",
+        "nameSlug": "esmil-rogers-469134"
+      },
+      "toTeam": {
+        "id": 667,
+        "name": "Aguilas Cibaenas",
+        "link": "/api/v1/teams/667"
+      },
+      "date": "2026-11-24",
+      "effectiveDate": "2026-11-24",
+      "resolutionDate": "2026-11-24",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Esmil Rogers assigned to Aguilas Cibaenas."
     }
   ]
 }

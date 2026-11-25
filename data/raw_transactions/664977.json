@@ -1,7 +1,7 @@
 {
   "player_id": 664977,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:ddbf428844e31b990d44be03c566ff70d749fae2c7610be05142138c975a60c0",
+  "fetched_at": "2026-11-25T21:12:42Z",
+  "checksum": "sha256:cea46228fd1af3b963feacf44549dd894c7295c22a5ef9e457e14095f151fc3e",
   "transactions": [
     {
       "id": 271164,
@@ -851,6 +851,26 @@
       "typeCode": "REL",
       "typeDesc": "Released",
       "description": "Amarillo Sod Poodles released RHP Blake Cederlind."
+    },
+    {
+      "id": 951027,
+      "person": {
+        "id": 664977,
+        "fullName": "Blake Cederlind",
+        "link": "/api/v1/people/664977",
+        "nameSlug": "blake-cederlind-664977"
+      },
+      "toTeam": {
+        "id": 677,
+        "name": "Naranjeros de Hermosillo",
+        "link": "/api/v1/teams/677"
+      },
+      "date": "2026-11-24",
+      "effectiveDate": "2026-11-24",
+      "resolutionDate": "2026-11-24",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Blake Cederlind assigned to Naranjeros de Hermosillo."
     }
   ]
 }

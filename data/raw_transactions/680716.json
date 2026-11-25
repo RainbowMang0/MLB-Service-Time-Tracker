@@ -1,7 +1,7 @@
 {
   "player_id": 680716,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:bb3fa1b5b4308f3a0d9ab44db59b1df83b21a718dfcafc58b641becfcdbc3dc6",
+  "fetched_at": "2026-11-25T21:12:42Z",
+  "checksum": "sha256:46f3e38750e573c6240cecc60c3a65a2bf55230f8541ffd818d744e8e99eb419",
   "transactions": [
     {
       "id": 359524,
@@ -1809,6 +1809,26 @@
       "typeCode": "ASG",
       "typeDesc": "Assigned",
       "description": "SS Jonathan Ornelas assigned to Aguilas de Mexicali."
+    },
+    {
+      "id": 951045,
+      "person": {
+        "id": 680716,
+        "fullName": "Jonathan Ornelas",
+        "link": "/api/v1/people/680716",
+        "nameSlug": "jonathan-ornelas-680716"
+      },
+      "toTeam": {
+        "id": 673,
+        "name": "Aguilas de Mexicali",
+        "link": "/api/v1/teams/673"
+      },
+      "date": "2026-11-24",
+      "effectiveDate": "2026-11-24",
+      "resolutionDate": "2026-11-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Aguilas de Mexicali placed SS Jonathan Ornelas on the reserve list."
     }
   ]
 }

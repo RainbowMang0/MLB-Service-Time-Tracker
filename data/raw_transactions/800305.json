@@ -1,7 +1,7 @@
 {
   "player_id": 800305,
-  "fetched_at": "2026-11-19T20:04:15Z",
-  "checksum": "sha256:f8ed62bd05690509892c1e8df2b67e4bd25601adeb772f3ebba0b61d37ea0288",
+  "fetched_at": "2026-11-25T21:12:42Z",
+  "checksum": "sha256:d6afedf6227989c023d24b1466d1219ad7c2470d3f3600f5f893dd2c9cc57676",
   "transactions": [
     {
       "id": 602456,
@@ -514,6 +514,26 @@
       "typeCode": "SE",
       "typeDesc": "Selected",
       "description": "St. Louis Cardinals selected the contract of SS Jesús  Báez from Ozarks Springbirds."
+    },
+    {
+      "id": 950986,
+      "person": {
+        "id": 800305,
+        "fullName": "Jesús  Báez",
+        "link": "/api/v1/people/800305",
+        "nameSlug": "jesus-baez-800305"
+      },
+      "toTeam": {
+        "id": 671,
+        "name": "Leones del Escogido",
+        "link": "/api/v1/teams/671"
+      },
+      "date": "2026-11-24",
+      "effectiveDate": "2026-11-24",
+      "resolutionDate": "2026-11-24",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Jesús  Báez assigned to Leones del Escogido."
     }
   ]
 }

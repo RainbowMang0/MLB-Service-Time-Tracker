@@ -1,7 +1,7 @@
 {
   "player_id": 681808,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:8af954b5239d3a50387e73fbe3d8953f9a94feb7808448a8efcb9364d5770be2",
+  "fetched_at": "2026-11-25T21:12:42Z",
+  "checksum": "sha256:399979fa42d7a05a137b9d8b9a38b9bee6e34f4c2420986a027013951953f56a",
   "transactions": [
     {
       "id": 359871,
@@ -1208,6 +1208,26 @@
       "typeCode": "ACQ",
       "typeDesc": "Acquired",
       "description": "Minnesota Twins acquired RHP Chris Vallimont from the York Revolution of the Atlantic League."
+    },
+    {
+      "id": 950978,
+      "person": {
+        "id": 681808,
+        "fullName": "Chris Vallimont",
+        "link": "/api/v1/people/681808",
+        "nameSlug": "chris-vallimont-681808"
+      },
+      "toTeam": {
+        "id": 668,
+        "name": "Toros del Este",
+        "link": "/api/v1/teams/668"
+      },
+      "date": "2026-11-24",
+      "effectiveDate": "2026-11-24",
+      "resolutionDate": "2026-11-24",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Chris Vallimont assigned to Toros del Este."
     }
   ]
 }

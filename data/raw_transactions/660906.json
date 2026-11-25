@@ -1,7 +1,7 @@
 {
   "player_id": 660906,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:e50ef8d1b2e52b0a9c70010ca6be92964c35ee736688b88911562db71a9ba1e5",
+  "fetched_at": "2026-11-25T21:12:42Z",
+  "checksum": "sha256:015668a345e77ddcb03f40c62b29c7095918d9794f8e150dcba340daee806b20",
   "transactions": [
     {
       "id": 213157,
@@ -1460,6 +1460,26 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "Bravos de Leon activated LHP Francisco Pérez from the reserve list."
+    },
+    {
+      "id": 950994,
+      "person": {
+        "id": 660906,
+        "fullName": "Francisco Pérez",
+        "link": "/api/v1/people/660906",
+        "nameSlug": "francisco-perez-660906"
+      },
+      "toTeam": {
+        "id": 667,
+        "name": "Aguilas Cibaenas",
+        "link": "/api/v1/teams/667"
+      },
+      "date": "2026-11-24",
+      "effectiveDate": "2026-11-24",
+      "resolutionDate": "2026-11-24",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Francisco Pérez assigned to Aguilas Cibaenas."
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "player_id": 663460,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:36f44a1dd76e7e854f5f566a9b7171482c6ddee166db79272dd09f956dfa04fa",
+  "fetched_at": "2026-11-25T21:12:42Z",
+  "checksum": "sha256:21a8e00c5d306c06c7f846571e48f4a9c0a613c1e50bc97bef0898f0363533cb",
   "transactions": [
     {
       "id": 363226,
@@ -974,6 +974,26 @@
       "typeCode": "DFA",
       "typeDesc": "Declared Free Agency",
       "description": "LHP Kris Bubic elected free agency."
+    },
+    {
+      "id": 951121,
+      "person": {
+        "id": 663460,
+        "fullName": "Kris Bubic",
+        "link": "/api/v1/people/663460",
+        "nameSlug": "kris-bubic-663460"
+      },
+      "toTeam": {
+        "id": 114,
+        "name": "Cleveland Guardians",
+        "link": "/api/v1/teams/114"
+      },
+      "date": "2026-11-25",
+      "effectiveDate": "2026-11-25",
+      "resolutionDate": "2026-11-25",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Cleveland Guardians signed free agent LHP Kris Bubic."
     }
   ]
 }

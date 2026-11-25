@@ -1,7 +1,7 @@
 {
   "player_id": 672012,
-  "fetched_at": "2026-11-23T00:18:28Z",
-  "checksum": "sha256:082b8143afa79101f4ca4c7959349c35fbc26fc0a472eed684ebe4c01569a630",
+  "fetched_at": "2026-11-25T21:12:42Z",
+  "checksum": "sha256:8fcaa99a1e03e16c85e6c7487ed84912ab0a856ea3310e9a23a75a79148bc2a8",
   "transactions": [
     {
       "id": 332563,
@@ -1204,6 +1204,26 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "Milwaukee Brewers activated DH Tyler Black."
+    },
+    {
+      "id": 951123,
+      "person": {
+        "id": 672012,
+        "fullName": "Tyler Black",
+        "link": "/api/v1/people/672012",
+        "nameSlug": "tyler-black-672012"
+      },
+      "toTeam": {
+        "id": 158,
+        "name": "Milwaukee Brewers",
+        "link": "/api/v1/teams/158"
+      },
+      "date": "2026-11-25",
+      "effectiveDate": "2026-11-25",
+      "resolutionDate": "2026-11-25",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Milwaukee Brewers designated DH Tyler Black for assignment."
     }
   ]
 }

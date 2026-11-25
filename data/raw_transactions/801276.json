@@ -1,7 +1,7 @@
 {
   "player_id": 801276,
-  "fetched_at": "2026-11-19T20:04:15Z",
-  "checksum": "sha256:f9cd174b263c1837370cb2be01cbe04b1bda5c39ce520ec4cc6567100931e55b",
+  "fetched_at": "2026-11-25T21:12:42Z",
+  "checksum": "sha256:1ce038a46478fda2d654aa8cff7330c5afe9dc30b80ebbc43cd00884df2a01f8",
   "transactions": [
     {
       "id": 604943,
@@ -450,6 +450,26 @@
       "typeCode": "SE",
       "typeDesc": "Selected",
       "description": "Miami Marlins selected the contract of SS Juan Matheus from Jacksonville Jumbo Shrimp."
+    },
+    {
+      "id": 950964,
+      "person": {
+        "id": 801276,
+        "fullName": "Juan Matheus",
+        "link": "/api/v1/people/801276",
+        "nameSlug": "juan-matheus-801276"
+      },
+      "toTeam": {
+        "id": 695,
+        "name": "Leones del Caracas",
+        "link": "/api/v1/teams/695"
+      },
+      "date": "2026-11-24",
+      "effectiveDate": "2026-11-24",
+      "resolutionDate": "2026-11-24",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Juan Matheus assigned to Leones del Caracas."
     }
   ]
 }

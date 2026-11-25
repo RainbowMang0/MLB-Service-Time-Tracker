@@ -1,7 +1,7 @@
 {
   "player_id": 669256,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:922675fb3e38a6779496b849d171430456e5d1dbb2e27eb60b0ecf9a41f9c3ed",
+  "fetched_at": "2026-11-25T21:12:42Z",
+  "checksum": "sha256:f766ccdb5b9375ab77a76a24a88ad5dd6a28600907e3987d4705a9506792cf07",
   "transactions": [
     {
       "id": 273778,
@@ -1806,6 +1806,26 @@
       "typeCode": "DFA",
       "typeDesc": "Declared Free Agency",
       "description": "1B Nick Solak elected free agency."
+    },
+    {
+      "id": 951026,
+      "person": {
+        "id": 669256,
+        "fullName": "Nick Solak",
+        "link": "/api/v1/people/669256",
+        "nameSlug": "nick-solak-669256"
+      },
+      "toTeam": {
+        "id": 677,
+        "name": "Naranjeros de Hermosillo",
+        "link": "/api/v1/teams/677"
+      },
+      "date": "2026-11-24",
+      "effectiveDate": "2026-11-24",
+      "resolutionDate": "2026-11-24",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Naranjeros de Hermosillo placed 1B Nick Solak on the reserve list."
     }
   ]
 }
