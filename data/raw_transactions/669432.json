@@ -1,7 +1,7 @@
 {
   "player_id": 669432,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:2b529646f571c4cc6a0af27670dbe021c2a363fb5ea1405d3c8839789e6f2911",
+  "fetched_at": "2026-11-26T21:01:30Z",
+  "checksum": "sha256:77bd0b9ab4b6222e230b573701ebd0dacc54ca3e5f62213fca698b0d2b3a27f8",
   "transactions": [
     {
       "id": 281075,
@@ -1271,6 +1271,26 @@
       "typeCode": "DFA",
       "typeDesc": "Declared Free Agency",
       "description": "LHP Trevor Rogers elected free agency."
+    },
+    {
+      "id": 951126,
+      "person": {
+        "id": 669432,
+        "fullName": "Trevor Rogers",
+        "link": "/api/v1/people/669432",
+        "nameSlug": "trevor-rogers-669432"
+      },
+      "toTeam": {
+        "id": 112,
+        "name": "Chicago Cubs",
+        "link": "/api/v1/teams/112"
+      },
+      "date": "2026-11-25",
+      "effectiveDate": "2026-11-25",
+      "resolutionDate": "2026-11-25",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Chicago Cubs signed free agent LHP Trevor Rogers."
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "player_id": 682674,
-  "fetched_at": "2026-11-21T18:47:39Z",
-  "checksum": "sha256:debbdedbd1475c95f278df80e622aab549fa4fc2ce1dd228b46be61b12b87b9a",
+  "fetched_at": "2026-11-26T21:01:30Z",
+  "checksum": "sha256:3e16defd878ff9c919db43476f8dc65b93d94bfca5f645171d92cad6e79e3a62",
   "transactions": [
     {
       "id": 365660,
@@ -896,6 +896,46 @@
       "typeCode": "DFA",
       "typeDesc": "Declared Free Agency",
       "description": "LF Victor Bericoto elected free agency."
+    },
+    {
+      "id": 951214,
+      "person": {
+        "id": 682674,
+        "fullName": "Victor Bericoto",
+        "link": "/api/v1/people/682674",
+        "nameSlug": "victor-bericoto-682674"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2026-11-25",
+      "effectiveDate": "2026-11-25",
+      "resolutionDate": "2026-11-25",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "San Francisco Giants signed free agent LF Victor Bericoto to a minor league contract."
+    },
+    {
+      "id": 951215,
+      "person": {
+        "id": 682674,
+        "fullName": "Victor Bericoto",
+        "link": "/api/v1/people/682674",
+        "nameSlug": "victor-bericoto-682674"
+      },
+      "toTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "date": "2026-11-26",
+      "effectiveDate": "2026-11-26",
+      "resolutionDate": "2026-11-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LF Victor Bericoto assigned to Sacramento River Cats."
     }
   ]
 }

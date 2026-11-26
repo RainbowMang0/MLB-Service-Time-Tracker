@@ -1,7 +1,7 @@
 {
   "player_id": 814305,
-  "fetched_at": "2026-11-21T18:47:39Z",
-  "checksum": "sha256:ceae4da8b9f373723131885e75e9aed1265d2a3ef621b54b40ca7256127af198",
+  "fetched_at": "2026-11-26T21:01:30Z",
+  "checksum": "sha256:d1a3d7023e9c816b9a4970f1cded0ca0e3e0379d16ab05cd0fbff5286b48273a",
   "transactions": [
     {
       "id": 701109,
@@ -462,6 +462,26 @@
       "typeCode": "CLW",
       "typeDesc": "Claimed Off Waivers",
       "description": "New York Mets claimed RHP Yunior Tur off waivers from Athletics."
+    },
+    {
+      "id": 951131,
+      "person": {
+        "id": 814305,
+        "fullName": "Yunior Tur",
+        "link": "/api/v1/people/814305",
+        "nameSlug": "yunior-tur-814305"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2026-11-25",
+      "effectiveDate": "2026-11-25",
+      "resolutionDate": "2026-11-25",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "New York Mets designated RHP Yunior Tur for assignment."
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "player_id": 699114,
-  "fetched_at": "2026-11-21T18:47:39Z",
-  "checksum": "sha256:34904d7b050953a9125e2ffd22bc28f8ab7de54bc2364acfe09cb6f39cc3ea23",
+  "fetched_at": "2026-11-26T21:01:30Z",
+  "checksum": "sha256:01c98b089c69475f6e8763f7a4d5920a096d87666b1d1d8f5ac168b42df997b7",
   "transactions": [
     {
       "id": 460355,
@@ -610,6 +610,46 @@
       "typeCode": "DFA",
       "typeDesc": "Declared Free Agency",
       "description": "SS Leo Balcazar elected free agency."
+    },
+    {
+      "id": 951175,
+      "person": {
+        "id": 699114,
+        "fullName": "Leo Balcazar",
+        "link": "/api/v1/people/699114",
+        "nameSlug": "leo-balcazar-699114"
+      },
+      "toTeam": {
+        "id": 113,
+        "name": "Cincinnati Reds",
+        "link": "/api/v1/teams/113"
+      },
+      "date": "2026-11-25",
+      "effectiveDate": "2026-11-25",
+      "resolutionDate": "2026-11-25",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Cincinnati Reds signed free agent SS Leo Balcazar to a minor league contract."
+    },
+    {
+      "id": 951176,
+      "person": {
+        "id": 699114,
+        "fullName": "Leo Balcazar",
+        "link": "/api/v1/people/699114",
+        "nameSlug": "leo-balcazar-699114"
+      },
+      "toTeam": {
+        "id": 416,
+        "name": "Louisville Bats",
+        "link": "/api/v1/teams/416"
+      },
+      "date": "2026-11-26",
+      "effectiveDate": "2026-11-26",
+      "resolutionDate": "2026-11-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Leo Balcazar assigned to Louisville Bats."
     }
   ]
 }

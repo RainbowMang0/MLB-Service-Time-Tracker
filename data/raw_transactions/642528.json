@@ -1,7 +1,7 @@
 {
   "player_id": 642528,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:098ea163e3336ab0f05e3f2bbcb1990ae42fcaccd339156b91e675bd0db14278",
+  "fetched_at": "2026-11-26T21:01:30Z",
+  "checksum": "sha256:b7a764a78a81b0d57f635f61e91d516cd6afc565c18e7129b1cfbbe683799db2",
   "transactions": [
     {
       "id": 370752,
@@ -1942,6 +1942,26 @@
       "typeCode": "DFA",
       "typeDesc": "Declared Free Agency",
       "description": "RHP Jonathan Loáisiga elected free agency."
+    },
+    {
+      "id": 951125,
+      "person": {
+        "id": 642528,
+        "fullName": "Jonathan Loáisiga",
+        "link": "/api/v1/people/642528",
+        "nameSlug": "jonathan-loaisiga-642528"
+      },
+      "toTeam": {
+        "id": 147,
+        "name": "New York Yankees",
+        "link": "/api/v1/teams/147"
+      },
+      "date": "2026-11-25",
+      "effectiveDate": "2026-11-25",
+      "resolutionDate": "2026-11-25",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "New York Yankees signed free agent RHP Jonathan Loáisiga."
     }
   ]
 }

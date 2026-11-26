@@ -1,7 +1,7 @@
 {
   "player_id": 680737,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:cff377a9aa43c030414fa5dccbe7f15079529acfc8fb35c8777a02150972cb2b",
+  "fetched_at": "2026-11-26T21:01:30Z",
+  "checksum": "sha256:1b4b3a7cfa9349c7e6321bdcbed3a60706b7186664d14f09172b4f05ac7947c8",
   "transactions": [
     {
       "id": 367983,
@@ -1448,6 +1448,46 @@
       "typeCode": "DFA",
       "typeDesc": "Declared Free Agency",
       "description": "CF Michael Helman elected free agency."
+    },
+    {
+      "id": 951173,
+      "person": {
+        "id": 680737,
+        "fullName": "Michael Helman",
+        "link": "/api/v1/people/680737",
+        "nameSlug": "michael-helman-680737"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2026-11-25",
+      "effectiveDate": "2026-11-25",
+      "resolutionDate": "2026-11-25",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Atlanta Braves signed free agent CF Michael Helman to a minor league contract."
+    },
+    {
+      "id": 951174,
+      "person": {
+        "id": 680737,
+        "fullName": "Michael Helman",
+        "link": "/api/v1/people/680737",
+        "nameSlug": "michael-helman-680737"
+      },
+      "toTeam": {
+        "id": 431,
+        "name": "Gwinnett Stripers",
+        "link": "/api/v1/teams/431"
+      },
+      "date": "2026-11-26",
+      "effectiveDate": "2026-11-26",
+      "resolutionDate": "2026-11-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "CF Michael Helman assigned to Gwinnett Stripers."
     }
   ]
 }

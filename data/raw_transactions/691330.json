@@ -1,7 +1,7 @@
 {
   "player_id": 691330,
-  "fetched_at": "2026-11-21T18:47:39Z",
-  "checksum": "sha256:9d0b2756d11094e644b2c13fb134f434406cd9d40efcde1ab7914b8e4fc5e059",
+  "fetched_at": "2026-11-26T21:01:30Z",
+  "checksum": "sha256:48b3fe59f89f9b40bcf4bcbd3c58c0997c8298db620a39520689761845556016",
   "transactions": [
     {
       "id": 415348,
@@ -726,6 +726,46 @@
       "typeCode": "DFA",
       "typeDesc": "Declared Free Agency",
       "description": "RHP Moisés Chace elected free agency."
+    },
+    {
+      "id": 951201,
+      "person": {
+        "id": 691330,
+        "fullName": "Moisés Chace",
+        "link": "/api/v1/people/691330",
+        "nameSlug": "moises-chace-691330"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2026-11-25",
+      "effectiveDate": "2026-11-25",
+      "resolutionDate": "2026-11-25",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Philadelphia Phillies signed free agent RHP Moisés Chace to a minor league contract."
+    },
+    {
+      "id": 951202,
+      "person": {
+        "id": 691330,
+        "fullName": "Moisés Chace",
+        "link": "/api/v1/people/691330",
+        "nameSlug": "moises-chace-691330"
+      },
+      "toTeam": {
+        "id": 1410,
+        "name": "Lehigh Valley IronPigs",
+        "link": "/api/v1/teams/1410"
+      },
+      "date": "2026-11-26",
+      "effectiveDate": "2026-11-26",
+      "resolutionDate": "2026-11-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Moisés Chace assigned to Lehigh Valley IronPigs."
     }
   ]
 }

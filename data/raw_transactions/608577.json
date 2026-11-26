@@ -1,6 +1,6 @@
 {
   "player_id": 608577,
-  "fetched_at": "2026-11-25T21:12:42Z",
+  "fetched_at": "2026-11-26T21:01:30Z",
   "checksum": "sha256:d8d80f589c2743f3d91d9a60f5c07850c4aed046857bad9621213a19aa5433e3",
   "transactions": [
     {
@@ -280,6 +280,26 @@
       "description": "Texas Rangers selected the contract of Nomar Mazara from Round Rock Express."
     },
     {
+      "id": 257631,
+      "person": {
+        "id": 608577,
+        "fullName": "Nomar Mazara",
+        "link": "/api/v1/people/608577",
+        "nameSlug": "nomar-mazara-608577"
+      },
+      "toTeam": {
+        "id": 379,
+        "name": "Texas Rangers Prospects",
+        "link": "/api/v1/teams/379"
+      },
+      "date": "2016-03-21",
+      "effectiveDate": "2016-03-21",
+      "resolutionDate": "2016-03-21",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Nomar Mazara assigned to Texas Rangers Futures."
+    },
+    {
       "id": 257571,
       "person": {
         "id": 608577,
@@ -302,26 +322,6 @@
       "typeCode": "OPT",
       "typeDesc": "Optioned",
       "description": "Texas Rangers optioned RF Nomar Mazara to Round Rock Express."
-    },
-    {
-      "id": 257631,
-      "person": {
-        "id": 608577,
-        "fullName": "Nomar Mazara",
-        "link": "/api/v1/people/608577",
-        "nameSlug": "nomar-mazara-608577"
-      },
-      "toTeam": {
-        "id": 379,
-        "name": "Texas Rangers Prospects",
-        "link": "/api/v1/teams/379"
-      },
-      "date": "2016-03-21",
-      "effectiveDate": "2016-03-21",
-      "resolutionDate": "2016-03-21",
-      "typeCode": "ASG",
-      "typeDesc": "Assigned",
-      "description": "OF Nomar Mazara assigned to Texas Rangers Futures."
     },
     {
       "id": 261653,
@@ -910,26 +910,6 @@
       "description": "RF Nomar Mazara assigned to Tigres del Licey."
     },
     {
-      "id": 662575,
-      "person": {
-        "id": 608577,
-        "fullName": "Nomar Mazara",
-        "link": "/api/v1/people/608577",
-        "nameSlug": "nomar-mazara-608577"
-      },
-      "toTeam": {
-        "id": 672,
-        "name": "Tigres del Licey",
-        "link": "/api/v1/teams/672"
-      },
-      "date": "2022-11-25",
-      "effectiveDate": "2022-11-25",
-      "resolutionDate": "2022-11-25",
-      "typeCode": "SC",
-      "typeDesc": "Status Change",
-      "description": "Tigres del Licey activated RF Nomar Mazara."
-    },
-    {
       "id": 662762,
       "person": {
         "id": 608577,
@@ -950,7 +930,7 @@
       "description": "Tigres del Licey activated RF Nomar Mazara."
     },
     {
-      "id": 667672,
+      "id": 662575,
       "person": {
         "id": 608577,
         "fullName": "Nomar Mazara",
@@ -958,16 +938,16 @@
         "nameSlug": "nomar-mazara-608577"
       },
       "toTeam": {
-        "id": 110,
-        "name": "Baltimore Orioles",
-        "link": "/api/v1/teams/110"
+        "id": 672,
+        "name": "Tigres del Licey",
+        "link": "/api/v1/teams/672"
       },
-      "date": "2022-12-06",
-      "effectiveDate": "2022-12-06",
-      "resolutionDate": "2022-12-06",
+      "date": "2022-11-25",
+      "effectiveDate": "2022-11-25",
+      "resolutionDate": "2022-11-25",
       "typeCode": "SC",
       "typeDesc": "Status Change",
-      "description": "RF Nomar Mazara roster status changed by Baltimore Orioles."
+      "description": "Tigres del Licey activated RF Nomar Mazara."
     },
     {
       "id": 662577,
@@ -1010,6 +990,26 @@
       "description": "Norfolk Tides activated RF Nomar Mazara."
     },
     {
+      "id": 667672,
+      "person": {
+        "id": 608577,
+        "fullName": "Nomar Mazara",
+        "link": "/api/v1/people/608577",
+        "nameSlug": "nomar-mazara-608577"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2022-12-06",
+      "effectiveDate": "2022-12-06",
+      "resolutionDate": "2022-12-06",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "RF Nomar Mazara roster status changed by Baltimore Orioles."
+    },
+    {
       "id": 662576,
       "person": {
         "id": 608577,
@@ -1048,6 +1048,26 @@
       "typeCode": "REL",
       "typeDesc": "Released",
       "description": "Baltimore Orioles released RF Nomar Mazara."
+    },
+    {
+      "id": 684593,
+      "person": {
+        "id": 608577,
+        "fullName": "Nomar Mazara",
+        "link": "/api/v1/people/608577",
+        "nameSlug": "nomar-mazara-608577"
+      },
+      "toTeam": {
+        "id": 534,
+        "name": "Rochester Red Wings",
+        "link": "/api/v1/teams/534"
+      },
+      "date": "2023-04-14",
+      "effectiveDate": "2023-04-14",
+      "resolutionDate": "2023-04-14",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RF Nomar Mazara assigned to Rochester Red Wings."
     },
     {
       "id": 684597,
@@ -1090,26 +1110,6 @@
       "description": "Rochester Red Wings placed RF Nomar Mazara on the 7-day injured list."
     },
     {
-      "id": 684593,
-      "person": {
-        "id": 608577,
-        "fullName": "Nomar Mazara",
-        "link": "/api/v1/people/608577",
-        "nameSlug": "nomar-mazara-608577"
-      },
-      "toTeam": {
-        "id": 534,
-        "name": "Rochester Red Wings",
-        "link": "/api/v1/teams/534"
-      },
-      "date": "2023-04-14",
-      "effectiveDate": "2023-04-14",
-      "resolutionDate": "2023-04-14",
-      "typeCode": "ASG",
-      "typeDesc": "Assigned",
-      "description": "RF Nomar Mazara assigned to Rochester Red Wings."
-    },
-    {
       "id": 714204,
       "person": {
         "id": 608577,
@@ -1149,7 +1149,7 @@
       "description": "RF Nomar Mazara assigned to Sultanes de Monterrey."
     },
     {
-      "id": 820803,
+      "id": 830466,
       "person": {
         "id": 608577,
         "fullName": "Nomar Mazara",
@@ -1169,7 +1169,7 @@
       "description": "Sultanes de Monterrey placed OF Nomar Mazara on the reserve list."
     },
     {
-      "id": 830466,
+      "id": 820803,
       "person": {
         "id": 608577,
         "fullName": "Nomar Mazara",
@@ -1229,26 +1229,6 @@
       "description": "El Aguila de Veracruz released OF Nomar Mazara."
     },
     {
-      "id": 873254,
-      "person": {
-        "id": 608577,
-        "fullName": "Nomar Mazara",
-        "link": "/api/v1/people/608577",
-        "nameSlug": "nomar-mazara-608577"
-      },
-      "toTeam": {
-        "id": 670,
-        "name": "Gigantes del Cibao",
-        "link": "/api/v1/teams/670"
-      },
-      "date": "2025-10-15",
-      "effectiveDate": "2025-10-15",
-      "resolutionDate": "2025-10-15",
-      "typeCode": "ASG",
-      "typeDesc": "Assigned",
-      "description": "OF Nomar Mazara assigned to Gigantes del Cibao."
-    },
-    {
       "id": 946384,
       "person": {
         "id": 608577,
@@ -1267,6 +1247,26 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "Gigantes del Cibao activated OF Nomar Mazara."
+    },
+    {
+      "id": 873254,
+      "person": {
+        "id": 608577,
+        "fullName": "Nomar Mazara",
+        "link": "/api/v1/people/608577",
+        "nameSlug": "nomar-mazara-608577"
+      },
+      "toTeam": {
+        "id": 670,
+        "name": "Gigantes del Cibao",
+        "link": "/api/v1/teams/670"
+      },
+      "date": "2025-10-15",
+      "effectiveDate": "2025-10-15",
+      "resolutionDate": "2025-10-15",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "OF Nomar Mazara assigned to Gigantes del Cibao."
     }
   ]
 }

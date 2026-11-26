@@ -1,7 +1,7 @@
 {
   "player_id": 681168,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:39e8159814981f44cc1cc48ed8c996728027665c42f59750c249abbee66a344a",
+  "fetched_at": "2026-11-26T21:01:30Z",
+  "checksum": "sha256:dbb151edb144d1c493ab52559cabd6ef019caa3dc33ea9086dc4a81ee6c69316",
   "transactions": [
     {
       "id": 355300,
@@ -1115,6 +1115,46 @@
       "typeCode": "DFA",
       "typeDesc": "Declared Free Agency",
       "description": "RHP Luis Curvelo elected free agency."
+    },
+    {
+      "id": 951208,
+      "person": {
+        "id": 681168,
+        "fullName": "Luis Curvelo",
+        "link": "/api/v1/people/681168",
+        "nameSlug": "luis-curvelo-681168"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2026-11-25",
+      "effectiveDate": "2026-11-25",
+      "resolutionDate": "2026-11-25",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Washington Nationals signed free agent RHP Luis Curvelo to a minor league contract."
+    },
+    {
+      "id": 951209,
+      "person": {
+        "id": 681168,
+        "fullName": "Luis Curvelo",
+        "link": "/api/v1/people/681168",
+        "nameSlug": "luis-curvelo-681168"
+      },
+      "toTeam": {
+        "id": 534,
+        "name": "Rochester Red Wings",
+        "link": "/api/v1/teams/534"
+      },
+      "date": "2026-11-26",
+      "effectiveDate": "2026-11-26",
+      "resolutionDate": "2026-11-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Luis Curvelo assigned to Rochester Red Wings."
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "player_id": 694851,
-  "fetched_at": "2026-11-21T18:47:39Z",
-  "checksum": "sha256:2dde36da1f8d2cf0c0c6ab1386977b5bba9e656b9b330fcf7ca5c7b9986e367f",
+  "fetched_at": "2026-11-26T21:01:30Z",
+  "checksum": "sha256:8a2d8f286b64d1aa4c80ee963128733ce5d467203efe3775759993cc120f66e0",
   "transactions": [
     {
       "id": 488173,
@@ -1277,6 +1277,46 @@
       "typeCode": "DFA",
       "typeDesc": "Declared Free Agency",
       "description": "RHP Andrew Hoffmann elected free agency."
+    },
+    {
+      "id": 951205,
+      "person": {
+        "id": 694851,
+        "fullName": "Andrew Hoffmann",
+        "link": "/api/v1/people/694851",
+        "nameSlug": "andrew-hoffmann-694851"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2026-11-25",
+      "effectiveDate": "2026-11-25",
+      "resolutionDate": "2026-11-25",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Philadelphia Phillies signed free agent RHP Andrew Hoffmann to a minor league contract."
+    },
+    {
+      "id": 951206,
+      "person": {
+        "id": 694851,
+        "fullName": "Andrew Hoffmann",
+        "link": "/api/v1/people/694851",
+        "nameSlug": "andrew-hoffmann-694851"
+      },
+      "toTeam": {
+        "id": 1410,
+        "name": "Lehigh Valley IronPigs",
+        "link": "/api/v1/teams/1410"
+      },
+      "date": "2026-11-26",
+      "effectiveDate": "2026-11-26",
+      "resolutionDate": "2026-11-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Andrew Hoffmann assigned to Lehigh Valley IronPigs."
     }
   ]
 }

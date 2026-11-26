@@ -1,7 +1,7 @@
 {
   "player_id": 663584,
-  "fetched_at": "2026-11-21T18:47:39Z",
-  "checksum": "sha256:68dad9353fc360560ac3059d0c46180b91bbe5c453fb627c64b70de6b97ae9ed",
+  "fetched_at": "2026-11-26T21:01:30Z",
+  "checksum": "sha256:155d5738c7cd35d219955d71c7a4e8718993fc94c915c4bf0932efa337af713e",
   "transactions": [
     {
       "id": 368365,
@@ -1249,6 +1249,46 @@
       "typeCode": "DFA",
       "typeDesc": "Declared Free Agency",
       "description": "C Hayden Senger elected free agency."
+    },
+    {
+      "id": 951194,
+      "person": {
+        "id": 663584,
+        "fullName": "Hayden Senger",
+        "link": "/api/v1/people/663584",
+        "nameSlug": "hayden-senger-663584"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2026-11-25",
+      "effectiveDate": "2026-11-25",
+      "resolutionDate": "2026-11-25",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "New York Mets signed free agent C Hayden Senger to a minor league contract."
+    },
+    {
+      "id": 951195,
+      "person": {
+        "id": 663584,
+        "fullName": "Hayden Senger",
+        "link": "/api/v1/people/663584",
+        "nameSlug": "hayden-senger-663584"
+      },
+      "toTeam": {
+        "id": 552,
+        "name": "Syracuse Mets",
+        "link": "/api/v1/teams/552"
+      },
+      "date": "2026-11-26",
+      "effectiveDate": "2026-11-26",
+      "resolutionDate": "2026-11-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "C Hayden Senger assigned to Syracuse Mets."
     }
   ]
 }

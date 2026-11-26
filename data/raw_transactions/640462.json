@@ -1,7 +1,7 @@
 {
   "player_id": 640462,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:1ea987b7eff6464a326aa8152f353695075a838ea3c5329044f39578388a8e97",
+  "fetched_at": "2026-11-26T21:01:30Z",
+  "checksum": "sha256:e058ddc5646e09ecc154eb5fe2900cb0909dba9f74f10cf0ddcd26cb6fef956e",
   "transactions": [
     {
       "id": 276224,
@@ -1342,6 +1342,26 @@
       "typeCode": "DFA",
       "typeDesc": "Declared Free Agency",
       "description": "LHP A.J. Puk elected free agency."
+    },
+    {
+      "id": 951223,
+      "person": {
+        "id": 640462,
+        "fullName": "A.J. Puk",
+        "link": "/api/v1/people/640462",
+        "nameSlug": "a-j-puk-640462"
+      },
+      "toTeam": {
+        "id": 120,
+        "name": "Washington Nationals",
+        "link": "/api/v1/teams/120"
+      },
+      "date": "2026-11-26",
+      "effectiveDate": "2026-11-26",
+      "resolutionDate": "2026-11-26",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Washington Nationals signed free agent LHP A.J. Puk."
     }
   ]
 }

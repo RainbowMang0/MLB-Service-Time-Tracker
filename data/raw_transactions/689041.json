@@ -1,7 +1,7 @@
 {
   "player_id": 689041,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:8805ce729d1d1591b77e137a7276ff8b89cfe74c42e5025f4da57061711213bc",
+  "fetched_at": "2026-11-26T21:01:30Z",
+  "checksum": "sha256:1dcf578ebff9fcc9537f15fb4a413b6a5495e6437c247ef2a525785a7f5c0cf7",
   "transactions": [
     {
       "id": 642009,
@@ -854,6 +854,46 @@
       "typeCode": "DFA",
       "typeDesc": "Declared Free Agency",
       "description": "LF Rhylan Thomas elected free agency."
+    },
+    {
+      "id": 951212,
+      "person": {
+        "id": 689041,
+        "fullName": "Rhylan Thomas",
+        "link": "/api/v1/people/689041",
+        "nameSlug": "rhylan-thomas-689041"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2026-11-25",
+      "effectiveDate": "2026-11-25",
+      "resolutionDate": "2026-11-25",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Toronto Blue Jays signed free agent LF Rhylan Thomas to a minor league contract."
+    },
+    {
+      "id": 951213,
+      "person": {
+        "id": 689041,
+        "fullName": "Rhylan Thomas",
+        "link": "/api/v1/people/689041",
+        "nameSlug": "rhylan-thomas-689041"
+      },
+      "toTeam": {
+        "id": 422,
+        "name": "Buffalo Bisons",
+        "link": "/api/v1/teams/422"
+      },
+      "date": "2026-11-26",
+      "effectiveDate": "2026-11-26",
+      "resolutionDate": "2026-11-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LF Rhylan Thomas assigned to Buffalo Bisons."
     }
   ]
 }

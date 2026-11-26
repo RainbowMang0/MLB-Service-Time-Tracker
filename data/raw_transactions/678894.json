@@ -1,7 +1,7 @@
 {
   "player_id": 678894,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:8f24d3687f47777cafa326216a30044d8e2c2271bc451fe9003d14649c6e8695",
+  "fetched_at": "2026-11-26T21:01:30Z",
+  "checksum": "sha256:2b30bb0d469b5b43c82cbc969976853c42f770a025dc3ca78fa56e4c3393f1f0",
   "transactions": [
     {
       "id": 338659,
@@ -1358,6 +1358,46 @@
       "typeCode": "DFA",
       "typeDesc": "Declared Free Agency",
       "description": "SS Liover Peguero elected free agency."
+    },
+    {
+      "id": 951199,
+      "person": {
+        "id": 678894,
+        "fullName": "Liover Peguero",
+        "link": "/api/v1/people/678894",
+        "nameSlug": "liover-peguero-678894"
+      },
+      "toTeam": {
+        "id": 136,
+        "name": "Seattle Mariners",
+        "link": "/api/v1/teams/136"
+      },
+      "date": "2026-11-25",
+      "effectiveDate": "2026-11-25",
+      "resolutionDate": "2026-11-25",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Seattle Mariners signed free agent SS Liover Peguero to a minor league contract."
+    },
+    {
+      "id": 951200,
+      "person": {
+        "id": 678894,
+        "fullName": "Liover Peguero",
+        "link": "/api/v1/people/678894",
+        "nameSlug": "liover-peguero-678894"
+      },
+      "toTeam": {
+        "id": 529,
+        "name": "Tacoma Rainiers",
+        "link": "/api/v1/teams/529"
+      },
+      "date": "2026-11-26",
+      "effectiveDate": "2026-11-26",
+      "resolutionDate": "2026-11-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Liover Peguero assigned to Tacoma Rainiers."
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "player_id": 685744,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:5e3a581f1e43578eab575134ace277e9061c28d4790a159792ec772dfc71fa40",
+  "fetched_at": "2026-11-26T21:01:30Z",
+  "checksum": "sha256:c53390ac878881e4f7e7f72884b14f300d311a11459f13dc2cd1feed17c5fed8",
   "transactions": [
     {
       "id": 395604,
@@ -1073,6 +1073,46 @@
       "typeCode": "DFA",
       "typeDesc": "Declared Free Agency",
       "description": "CF Kenedy Corona elected free agency."
+    },
+    {
+      "id": 951217,
+      "person": {
+        "id": 685744,
+        "fullName": "Kenedy Corona",
+        "link": "/api/v1/people/685744",
+        "nameSlug": "kenedy-corona-685744"
+      },
+      "toTeam": {
+        "id": 137,
+        "name": "San Francisco Giants",
+        "link": "/api/v1/teams/137"
+      },
+      "date": "2026-11-25",
+      "effectiveDate": "2026-11-25",
+      "resolutionDate": "2026-11-25",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "San Francisco Giants signed free agent CF Kenedy Corona to a minor league contract."
+    },
+    {
+      "id": 951218,
+      "person": {
+        "id": 685744,
+        "fullName": "Kenedy Corona",
+        "link": "/api/v1/people/685744",
+        "nameSlug": "kenedy-corona-685744"
+      },
+      "toTeam": {
+        "id": 105,
+        "name": "Sacramento River Cats",
+        "link": "/api/v1/teams/105"
+      },
+      "date": "2026-11-26",
+      "effectiveDate": "2026-11-26",
+      "resolutionDate": "2026-11-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "CF Kenedy Corona assigned to Sacramento River Cats."
     }
   ]
 }

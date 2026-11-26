@@ -1,7 +1,7 @@
 {
   "player_id": 700242,
-  "fetched_at": "2026-11-21T18:47:39Z",
-  "checksum": "sha256:c1fddbd2168cb8084d961388c29961f12a7ce4792440e2196ef9e0f8118d5273",
+  "fetched_at": "2026-11-26T21:01:30Z",
+  "checksum": "sha256:a3a9f2f771a51934e1d7e7cd625759f6553dd1bc0350faa2ef374b06f27818d4",
   "transactions": [
     {
       "id": 507770,
@@ -842,6 +842,46 @@
       "typeCode": "DFA",
       "typeDesc": "Declared Free Agency",
       "description": "SS Trey Sweeney elected free agency."
+    },
+    {
+      "id": 951181,
+      "person": {
+        "id": 700242,
+        "fullName": "Trey Sweeney",
+        "link": "/api/v1/people/700242",
+        "nameSlug": "trey-sweeney-700242"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2026-11-25",
+      "effectiveDate": "2026-11-25",
+      "resolutionDate": "2026-11-25",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Detroit Tigers signed free agent SS Trey Sweeney to a minor league contract."
+    },
+    {
+      "id": 951182,
+      "person": {
+        "id": 700242,
+        "fullName": "Trey Sweeney",
+        "link": "/api/v1/people/700242",
+        "nameSlug": "trey-sweeney-700242"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2026-11-26",
+      "effectiveDate": "2026-11-26",
+      "resolutionDate": "2026-11-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "SS Trey Sweeney assigned to Toledo Mud Hens."
     }
   ]
 }

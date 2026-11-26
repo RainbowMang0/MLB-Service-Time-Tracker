@@ -1,7 +1,7 @@
 {
   "player_id": 669373,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:e918c6f1017dd92ffe3556aff2f29ff3c1f58eb01d1a1eb6aa5de98fc55fcbcc",
+  "fetched_at": "2026-11-26T21:01:30Z",
+  "checksum": "sha256:62f279cef7371e090344d35fb009adb7120f89f3f6da372757204d28f998a37e",
   "transactions": [
     {
       "id": 363343,
@@ -919,6 +919,26 @@
       "typeCode": "DFA",
       "typeDesc": "Declared Free Agency",
       "description": "LHP Tarik Skubal elected free agency."
+    },
+    {
+      "id": 951128,
+      "person": {
+        "id": 669373,
+        "fullName": "Tarik Skubal",
+        "link": "/api/v1/people/669373",
+        "nameSlug": "tarik-skubal-669373"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2026-11-25",
+      "effectiveDate": "2026-11-25",
+      "resolutionDate": "2026-11-25",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "New York Mets signed free agent LHP Tarik Skubal."
     }
   ]
 }

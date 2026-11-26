@@ -1,7 +1,7 @@
 {
   "player_id": 805725,
-  "fetched_at": "2026-11-21T18:47:39Z",
-  "checksum": "sha256:6a0664e2612ab8f9c4662deee2bd3d86836351b973940c3b65d75085e8293055",
+  "fetched_at": "2026-11-26T21:01:30Z",
+  "checksum": "sha256:c3c4717460f5a578f96a3e8a2714a480bef6a9c45c080c22c4ef11cd68e1fba5",
   "transactions": [
     {
       "id": 643407,
@@ -1135,6 +1135,46 @@
       "typeCode": "DFA",
       "typeDesc": "Declared Free Agency",
       "description": "LHP Jake Miller elected free agency."
+    },
+    {
+      "id": 951179,
+      "person": {
+        "id": 805725,
+        "fullName": "Jake Miller",
+        "link": "/api/v1/people/805725",
+        "nameSlug": "jake-miller-805725"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2026-11-25",
+      "effectiveDate": "2026-11-25",
+      "resolutionDate": "2026-11-25",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Detroit Tigers signed free agent LHP Jake Miller to a minor league contract."
+    },
+    {
+      "id": 951180,
+      "person": {
+        "id": 805725,
+        "fullName": "Jake Miller",
+        "link": "/api/v1/people/805725",
+        "nameSlug": "jake-miller-805725"
+      },
+      "toTeam": {
+        "id": 512,
+        "name": "Toledo Mud Hens",
+        "link": "/api/v1/teams/512"
+      },
+      "date": "2026-11-26",
+      "effectiveDate": "2026-11-26",
+      "resolutionDate": "2026-11-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "LHP Jake Miller assigned to Toledo Mud Hens."
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "player_id": 650382,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:b85e2cb618185a955af264dd1f23501aafb3c6033ad11831077303956a28f6c3",
+  "fetched_at": "2026-11-26T21:01:30Z",
+  "checksum": "sha256:62a943d3e63cc0248da6157cc323a52d0061fb81b66721717a5b377cb87ced91",
   "transactions": [
     {
       "id": 178994,
@@ -1235,6 +1235,26 @@
       "typeCode": "ASG",
       "typeDesc": "Assigned",
       "description": "LHP Darwinzon Hernández assigned to Cardenales de Lara."
+    },
+    {
+      "id": 951129,
+      "person": {
+        "id": 650382,
+        "fullName": "Darwinzon Hernández",
+        "link": "/api/v1/people/650382",
+        "nameSlug": "darwinzon-hernandez-650382"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2026-11-25",
+      "effectiveDate": "2026-11-25",
+      "resolutionDate": "2026-11-25",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "New York Mets signed free agent LHP Darwinzon Hernández."
     }
   ]
 }

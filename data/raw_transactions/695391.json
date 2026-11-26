@@ -1,7 +1,7 @@
 {
   "player_id": 695391,
-  "fetched_at": "2026-11-21T18:47:39Z",
-  "checksum": "sha256:6f66131dd7d2211c9a05398320e142ab5be0a9104db91b9113ccfefc4d692747",
+  "fetched_at": "2026-11-26T21:01:30Z",
+  "checksum": "sha256:cd176e26e6900cdf6ced9e4ee4b9b1ade615d1359fb618a4a9092faf58561300",
   "transactions": [
     {
       "id": 506279,
@@ -1281,6 +1281,46 @@
       "typeCode": "DFA",
       "typeDesc": "Declared Free Agency",
       "description": "3B Brett Harris elected free agency."
+    },
+    {
+      "id": 951203,
+      "person": {
+        "id": 695391,
+        "fullName": "Brett Harris",
+        "link": "/api/v1/people/695391",
+        "nameSlug": "brett-harris-695391"
+      },
+      "toTeam": {
+        "id": 143,
+        "name": "Philadelphia Phillies",
+        "link": "/api/v1/teams/143"
+      },
+      "date": "2026-11-25",
+      "effectiveDate": "2026-11-25",
+      "resolutionDate": "2026-11-25",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Philadelphia Phillies signed free agent 3B Brett Harris to a minor league contract."
+    },
+    {
+      "id": 951204,
+      "person": {
+        "id": 695391,
+        "fullName": "Brett Harris",
+        "link": "/api/v1/people/695391",
+        "nameSlug": "brett-harris-695391"
+      },
+      "toTeam": {
+        "id": 1410,
+        "name": "Lehigh Valley IronPigs",
+        "link": "/api/v1/teams/1410"
+      },
+      "date": "2026-11-26",
+      "effectiveDate": "2026-11-26",
+      "resolutionDate": "2026-11-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "3B Brett Harris assigned to Lehigh Valley IronPigs."
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "player_id": 669422,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:723c85c695e5c6f96fc4afb164ad9c44e02d659e497361c123d15046918499ae",
+  "fetched_at": "2026-11-26T21:01:30Z",
+  "checksum": "sha256:29fc066bc5f3206f90927cea40e2f019337b6fc861bf1d5ec0ec35e78bbabf0c",
   "transactions": [
     {
       "id": 319505,
@@ -1217,6 +1217,46 @@
       "typeCode": "DFA",
       "typeDesc": "Declared Free Agency",
       "description": "RHP Matt Sauer elected free agency."
+    },
+    {
+      "id": 951185,
+      "person": {
+        "id": 669422,
+        "fullName": "Matt Sauer",
+        "link": "/api/v1/people/669422",
+        "nameSlug": "matt-sauer-669422"
+      },
+      "toTeam": {
+        "id": 117,
+        "name": "Houston Astros",
+        "link": "/api/v1/teams/117"
+      },
+      "date": "2026-11-25",
+      "effectiveDate": "2026-11-25",
+      "resolutionDate": "2026-11-25",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Houston Astros signed free agent RHP Matt Sauer to a minor league contract."
+    },
+    {
+      "id": 951186,
+      "person": {
+        "id": 669422,
+        "fullName": "Matt Sauer",
+        "link": "/api/v1/people/669422",
+        "nameSlug": "matt-sauer-669422"
+      },
+      "toTeam": {
+        "id": 5434,
+        "name": "Sugar Land Space Cowboys",
+        "link": "/api/v1/teams/5434"
+      },
+      "date": "2026-11-26",
+      "effectiveDate": "2026-11-26",
+      "resolutionDate": "2026-11-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Matt Sauer assigned to Sugar Land Space Cowboys."
     }
   ]
 }

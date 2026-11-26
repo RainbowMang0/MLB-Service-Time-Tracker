@@ -1,7 +1,7 @@
 {
   "player_id": 681252,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:0afd149af62e1ce9085edd8932dca5d02ebdb33d9d4884e9d608e14f20408c01",
+  "fetched_at": "2026-11-26T21:01:30Z",
+  "checksum": "sha256:e4b67735271d2214209fce554437541e7356d1a12cfadb114da68891bac7ad38",
   "transactions": [
     {
       "id": 407688,
@@ -967,6 +967,26 @@
       "typeCode": "CLW",
       "typeDesc": "Claimed Off Waivers",
       "description": "New York Mets claimed RHP Jack Anderson off waivers from Minnesota Twins."
+    },
+    {
+      "id": 951130,
+      "person": {
+        "id": 681252,
+        "fullName": "Jack Anderson",
+        "link": "/api/v1/people/681252",
+        "nameSlug": "jack-anderson-681252"
+      },
+      "toTeam": {
+        "id": 121,
+        "name": "New York Mets",
+        "link": "/api/v1/teams/121"
+      },
+      "date": "2026-11-25",
+      "effectiveDate": "2026-11-25",
+      "resolutionDate": "2026-11-25",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "New York Mets designated RHP Jack Anderson for assignment."
     }
   ]
 }
