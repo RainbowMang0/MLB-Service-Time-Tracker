@@ -1,7 +1,7 @@
 {
   "player_id": 664761,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:96c71cf363aa1fdcf4b35d31a7a6e2b7a8d591100fbd0de489b86e36a1542e8e",
+  "fetched_at": "2026-11-27T20:47:01Z",
+  "checksum": "sha256:b59ea4c5ccebab0c048fc1db0a87972861c7bc22dd94cbf4a6bf0566631f4b8e",
   "transactions": [
     {
       "id": 359284,
@@ -1084,6 +1084,26 @@
       "typeCode": "DFA",
       "typeDesc": "Declared Free Agency",
       "description": "3B Alec Bohm elected free agency."
+    },
+    {
+      "id": 951257,
+      "person": {
+        "id": 664761,
+        "fullName": "Alec Bohm",
+        "link": "/api/v1/people/664761",
+        "nameSlug": "alec-bohm-664761"
+      },
+      "toTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "date": "2026-11-27",
+      "effectiveDate": "2026-11-27",
+      "resolutionDate": "2026-11-27",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Kansas City Royals signed free agent 3B Alec Bohm."
     }
   ]
 }

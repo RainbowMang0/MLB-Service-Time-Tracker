@@ -1,7 +1,7 @@
 {
   "player_id": 670768,
-  "fetched_at": "2026-11-26T21:01:30Z",
-  "checksum": "sha256:625dcc5b4a31f62adc55e15745c087706b0f66518abe452ddc609a6e8ab06786",
+  "fetched_at": "2026-11-27T20:47:01Z",
+  "checksum": "sha256:c986662af00cdb12d63ea80a5ee83ab1dd91df568516cfd3d77361286304b421",
   "transactions": [
     {
       "id": 275840,
@@ -1712,6 +1712,26 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "Naranjeros de Hermosillo placed RF Luis González on the reserve list."
+    },
+    {
+      "id": 951228,
+      "person": {
+        "id": 670768,
+        "fullName": "Luis González",
+        "link": "/api/v1/people/670768",
+        "nameSlug": "luis-gonzalez-670768"
+      },
+      "toTeam": {
+        "id": 677,
+        "name": "Naranjeros de Hermosillo",
+        "link": "/api/v1/teams/677"
+      },
+      "date": "2026-11-26",
+      "effectiveDate": "2026-11-26",
+      "resolutionDate": "2026-11-26",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Naranjeros de Hermosillo activated RF Luis González from the reserve list."
     }
   ]
 }

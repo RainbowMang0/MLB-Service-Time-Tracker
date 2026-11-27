@@ -1,7 +1,7 @@
 {
   "player_id": 592712,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:a75be63002efc160c2e612f2ba43c1fedd6ab69b96e9356a5871a3aa13ee026f",
+  "fetched_at": "2026-11-27T20:47:01Z",
+  "checksum": "sha256:2344013a4c2718665ef0ec32f232ccdfd044b2a1cd2045961d2cd16677cd292e",
   "transactions": [
     {
       "id": 122963,
@@ -1487,6 +1487,26 @@
       "typeCode": "REL",
       "typeDesc": "Released",
       "description": "Navegantes del Magallanes released RHP Connor Sadzeck."
+    },
+    {
+      "id": 951246,
+      "person": {
+        "id": 592712,
+        "fullName": "Connor Sadzeck",
+        "link": "/api/v1/people/592712",
+        "nameSlug": "connor-sadzeck-592712"
+      },
+      "toTeam": {
+        "id": 680,
+        "name": "Yaquis de Obregon",
+        "link": "/api/v1/teams/680"
+      },
+      "date": "2026-11-26",
+      "effectiveDate": "2026-11-26",
+      "resolutionDate": "2026-11-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Connor Sadzeck assigned to Yaquis de Obregon."
     }
   ]
 }

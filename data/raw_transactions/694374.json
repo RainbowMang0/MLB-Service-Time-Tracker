@@ -1,7 +1,7 @@
 {
   "player_id": 694374,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:7483b0cabfc8bf2d0119b1c85caa399b49954c5b9777788244e6f2990e66b87c",
+  "fetched_at": "2026-11-27T20:47:01Z",
+  "checksum": "sha256:b2d00bd59d3e3d8c375b00212a70aa3ccbab09720c9c689147e80a688ebbaf7a",
   "transactions": [
     {
       "id": 751630,
@@ -753,6 +753,30 @@
       "typeCode": "CU",
       "typeDesc": "Recalled",
       "description": "Arizona Diamondbacks recalled LF Tim Tawa from Reno Aces."
+    },
+    {
+      "id": 951271,
+      "person": {
+        "id": 694374,
+        "fullName": "Tim Tawa",
+        "link": "/api/v1/people/694374",
+        "nameSlug": "tim-tawa-694374"
+      },
+      "fromTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "toTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "date": "2026-11-27",
+      "effectiveDate": "2026-11-27",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Pittsburgh Pirates traded C Henry Davis to Arizona Diamondbacks for 1B Tim Tawa."
     }
   ]
 }

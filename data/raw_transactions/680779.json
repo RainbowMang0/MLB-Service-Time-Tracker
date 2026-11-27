@@ -1,7 +1,7 @@
 {
   "player_id": 680779,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:d71b2ecc5189a885a555540feaab1a0489b199be012c7e4a19d48bc582b7bede",
+  "fetched_at": "2026-11-27T20:47:01Z",
+  "checksum": "sha256:d538c5f86790caced0eea01952d4fc1ff257f50d84d84d15a76416130c82eef8",
   "transactions": [
     {
       "id": 407472,
@@ -1286,6 +1286,30 @@
       "typeCode": "NUM",
       "typeDesc": "Number Change",
       "description": "C Henry Davis changed number to 32."
+    },
+    {
+      "id": 951271,
+      "person": {
+        "id": 680779,
+        "fullName": "Henry Davis",
+        "link": "/api/v1/people/680779",
+        "nameSlug": "henry-davis-680779"
+      },
+      "fromTeam": {
+        "id": 134,
+        "name": "Pittsburgh Pirates",
+        "link": "/api/v1/teams/134"
+      },
+      "toTeam": {
+        "id": 109,
+        "name": "Arizona Diamondbacks",
+        "link": "/api/v1/teams/109"
+      },
+      "date": "2026-11-27",
+      "effectiveDate": "2026-11-27",
+      "typeCode": "TR",
+      "typeDesc": "Trade",
+      "description": "Pittsburgh Pirates traded C Henry Davis to Arizona Diamondbacks for 1B Tim Tawa."
     }
   ]
 }

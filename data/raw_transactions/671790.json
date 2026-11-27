@@ -1,7 +1,7 @@
 {
   "player_id": 671790,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:581444b468854cffdf9a981ed26762ad9b92713f04652ab96e0e8f6238ed1b1a",
+  "fetched_at": "2026-11-27T20:47:01Z",
+  "checksum": "sha256:7be5be473f680f1e1e7d201bddc51c116a74f3e936c3c0cc63405a3041f87a98",
   "transactions": [
     {
       "id": 283511,
@@ -1565,6 +1565,46 @@
       "typeCode": "REL",
       "typeDesc": "Released",
       "description": "Conspiradores de Queretaro released RHP Ronald Bolaños."
+    },
+    {
+      "id": 951245,
+      "person": {
+        "id": 671790,
+        "fullName": "Ronald Bolaños",
+        "link": "/api/v1/people/671790",
+        "nameSlug": "ronald-bolanos-671790"
+      },
+      "toTeam": {
+        "id": 680,
+        "name": "Yaquis de Obregon",
+        "link": "/api/v1/teams/680"
+      },
+      "date": "2026-11-26",
+      "effectiveDate": "2026-11-26",
+      "resolutionDate": "2026-11-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Ronald Bolaños assigned to Yaquis de Obregon."
+    },
+    {
+      "id": 951249,
+      "person": {
+        "id": 671790,
+        "fullName": "Ronald Bolaños",
+        "link": "/api/v1/people/671790",
+        "nameSlug": "ronald-bolanos-671790"
+      },
+      "toTeam": {
+        "id": 680,
+        "name": "Yaquis de Obregon",
+        "link": "/api/v1/teams/680"
+      },
+      "date": "2026-11-26",
+      "effectiveDate": "2026-11-26",
+      "resolutionDate": "2026-11-26",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Ronald Bolaños assigned to Yaquis de Obregon."
     }
   ]
 }

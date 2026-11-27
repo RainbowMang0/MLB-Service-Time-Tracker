@@ -1,7 +1,7 @@
 {
   "player_id": 687765,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:3a119216cf76803c6671b476d23842d17dbbf1e15a68098991153dfff364874c",
+  "fetched_at": "2026-11-27T20:47:01Z",
+  "checksum": "sha256:04145ee9a24fa12d299b32f9c04598ad0c388c6f9396b295e07cd00642f66c92",
   "transactions": [
     {
       "id": 412088,
@@ -761,6 +761,26 @@
       "typeCode": "CU",
       "typeDesc": "Recalled",
       "description": "Kansas City Royals recalled RHP Mitch Spence from Omaha Storm Chasers."
+    },
+    {
+      "id": 951258,
+      "person": {
+        "id": 687765,
+        "fullName": "Mitch Spence",
+        "link": "/api/v1/people/687765",
+        "nameSlug": "mitch-spence-687765"
+      },
+      "toTeam": {
+        "id": 118,
+        "name": "Kansas City Royals",
+        "link": "/api/v1/teams/118"
+      },
+      "date": "2026-11-27",
+      "effectiveDate": "2026-11-27",
+      "resolutionDate": "2026-11-27",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Kansas City Royals designated RHP Mitch Spence for assignment."
     }
   ]
 }

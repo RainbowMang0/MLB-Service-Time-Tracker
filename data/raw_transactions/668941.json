@@ -1,7 +1,7 @@
 {
   "player_id": 668941,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:c8865a03638f4cbef010882a1687ca79b1cd4885e8a78f14ed6f0074fc8d39f8",
+  "fetched_at": "2026-11-27T20:47:01Z",
+  "checksum": "sha256:df1c06fb6c695dae1ff1910847540a808dee9074b7351373f1e5f2f0999c03fb",
   "transactions": [
     {
       "id": 273852,
@@ -1439,6 +1439,26 @@
       "typeCode": "DFA",
       "typeDesc": "Declared Free Agency",
       "description": "LHP JoJo Romero elected free agency."
+    },
+    {
+      "id": 951260,
+      "person": {
+        "id": 668941,
+        "fullName": "JoJo Romero",
+        "link": "/api/v1/people/668941",
+        "nameSlug": "jojo-romero-668941"
+      },
+      "toTeam": {
+        "id": 135,
+        "name": "San Diego Padres",
+        "link": "/api/v1/teams/135"
+      },
+      "date": "2026-11-27",
+      "effectiveDate": "2026-11-27",
+      "resolutionDate": "2026-11-27",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "San Diego Padres signed free agent LHP JoJo Romero."
     }
   ]
 }

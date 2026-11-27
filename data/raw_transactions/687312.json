@@ -1,7 +1,7 @@
 {
   "player_id": 687312,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:c4ea202d0f1d498930e3475d0a036071b49153ded520f45484db15d49c07e8ab",
+  "fetched_at": "2026-11-27T20:47:01Z",
+  "checksum": "sha256:45c1666423f0a3d8b2e44ce45e92f44ab69596e8d1dcc4d385a467493a777ddf",
   "transactions": [
     {
       "id": 606652,
@@ -728,6 +728,26 @@
       "typeCode": "CU",
       "typeDesc": "Recalled",
       "description": "Colorado Rockies recalled RHP Gabriel Hughes from Albuquerque Isotopes."
+    },
+    {
+      "id": 951273,
+      "person": {
+        "id": 687312,
+        "fullName": "Gabriel Hughes",
+        "link": "/api/v1/people/687312",
+        "nameSlug": "gabriel-hughes-687312"
+      },
+      "toTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "date": "2026-11-27",
+      "effectiveDate": "2026-11-27",
+      "resolutionDate": "2026-11-27",
+      "typeCode": "NUM",
+      "typeDesc": "Number Change",
+      "description": "RHP Gabriel Hughes changed number to 45."
     }
   ]
 }

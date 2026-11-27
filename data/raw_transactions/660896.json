@@ -1,7 +1,7 @@
 {
   "player_id": 660896,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:094692bfa2aca5fdef43199d455974a2a3ebcc29e64332599b853cadbf54f626",
+  "fetched_at": "2026-11-27T20:47:01Z",
+  "checksum": "sha256:33d03b82e0d01573707e136a07103651d246f6d248ced658c85df8d250c48331",
   "transactions": [
     {
       "id": 370539,
@@ -1612,6 +1612,26 @@
       "typeCode": "ASG",
       "typeDesc": "Assigned",
       "description": "RHP Jorge Alcala assigned to Aguilas Cibaenas."
+    },
+    {
+      "id": 951270,
+      "person": {
+        "id": 660896,
+        "fullName": "Jorge Alcala",
+        "link": "/api/v1/people/660896",
+        "nameSlug": "jorge-alcala-660896"
+      },
+      "toTeam": {
+        "id": 698,
+        "name": "Tiburones de La Guaira",
+        "link": "/api/v1/teams/698"
+      },
+      "date": "2026-11-27",
+      "effectiveDate": "2026-11-27",
+      "resolutionDate": "2026-11-27",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Jorge Alcala assigned to Tiburones de La Guaira."
     }
   ]
 }
