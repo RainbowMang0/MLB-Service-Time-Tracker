@@ -1,7 +1,7 @@
 {
   "player_id": 595751,
-  "fetched_at": "2026-11-20T19:41:30Z",
-  "checksum": "sha256:549e2b00ad2ed05d7ede7da6dfd65ef739d82ca685603377f319b0ed7fb4b0e0",
+  "fetched_at": "2026-11-28T19:38:40Z",
+  "checksum": "sha256:b87f269df4f3ba24fea9f8a6fdd38d647b4c49d2b056fc5d5118e8f9a6046980",
   "transactions": [
     {
       "id": 52038,
@@ -2481,6 +2481,26 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "Yaquis de Obregon placed C Jorge Alfaro on the reserve list."
+    },
+    {
+      "id": 951319,
+      "person": {
+        "id": 595751,
+        "fullName": "Jorge Alfaro",
+        "link": "/api/v1/people/595751",
+        "nameSlug": "jorge-alfaro-595751"
+      },
+      "toTeam": {
+        "id": 680,
+        "name": "Yaquis de Obregon",
+        "link": "/api/v1/teams/680"
+      },
+      "date": "2026-11-27",
+      "effectiveDate": "2026-11-27",
+      "resolutionDate": "2026-11-27",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Yaquis de Obregon activated C Jorge Alfaro from the reserve list."
     }
   ]
 }

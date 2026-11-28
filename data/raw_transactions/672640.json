@@ -1,6 +1,6 @@
 {
   "player_id": 672640,
-  "fetched_at": "2026-11-27T20:47:01Z",
+  "fetched_at": "2026-11-28T19:38:40Z",
   "checksum": "sha256:cb06e8a66d52643b3725647e9954b7ed75c026ee262ebb5b0289c24cecfb4b68",
   "transactions": [
     {
@@ -1108,7 +1108,7 @@
       "description": "Toronto Blue Jays transferred SS Otto Lopez from the 7-day injured list to the 60-day injured list. Left oblique strain."
     },
     {
-      "id": 727301,
+      "id": 725721,
       "person": {
         "id": 672640,
         "fullName": "Otto Lopez",
@@ -1133,7 +1133,7 @@
       "description": "Toronto Blue Jays sent SS Otto Lopez on a rehab assignment to Buffalo Bisons."
     },
     {
-      "id": 725721,
+      "id": 727301,
       "person": {
         "id": 672640,
         "fullName": "Otto Lopez",
@@ -1326,30 +1326,6 @@
       "description": "SS Otto Lopez roster status changed by San Francisco Giants."
     },
     {
-      "id": 761661,
-      "person": {
-        "id": 672640,
-        "fullName": "Otto Lopez",
-        "link": "/api/v1/people/672640",
-        "nameSlug": "otto-lopez-672640"
-      },
-      "fromTeam": {
-        "id": 146,
-        "name": "Miami Marlins",
-        "link": "/api/v1/teams/146"
-      },
-      "toTeam": {
-        "id": 564,
-        "name": "Jacksonville Jumbo Shrimp",
-        "link": "/api/v1/teams/564"
-      },
-      "date": "2024-04-04",
-      "effectiveDate": "2024-04-04",
-      "typeCode": "OPT",
-      "typeDesc": "Optioned",
-      "description": "Miami Marlins optioned SS Otto Lopez to Jacksonville Jumbo Shrimp."
-    },
-    {
       "id": 760637,
       "person": {
         "id": 672640,
@@ -1372,6 +1348,30 @@
       "typeCode": "CLW",
       "typeDesc": "Claimed Off Waivers",
       "description": "Miami Marlins claimed SS Otto Lopez off waivers from San Francisco Giants."
+    },
+    {
+      "id": 761661,
+      "person": {
+        "id": 672640,
+        "fullName": "Otto Lopez",
+        "link": "/api/v1/people/672640",
+        "nameSlug": "otto-lopez-672640"
+      },
+      "fromTeam": {
+        "id": 146,
+        "name": "Miami Marlins",
+        "link": "/api/v1/teams/146"
+      },
+      "toTeam": {
+        "id": 564,
+        "name": "Jacksonville Jumbo Shrimp",
+        "link": "/api/v1/teams/564"
+      },
+      "date": "2024-04-04",
+      "effectiveDate": "2024-04-04",
+      "typeCode": "OPT",
+      "typeDesc": "Optioned",
+      "description": "Miami Marlins optioned SS Otto Lopez to Jacksonville Jumbo Shrimp."
     },
     {
       "id": 763383,

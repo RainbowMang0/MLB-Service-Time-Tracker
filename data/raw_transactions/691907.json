@@ -1,7 +1,7 @@
 {
   "player_id": 691907,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:78bac3d6008b8d239a24f12794af4f7589f75b3fb2b94b895fddfab3e9e27c31",
+  "fetched_at": "2026-11-28T19:38:40Z",
+  "checksum": "sha256:02a289943553f2c33e7cbd755274f670fba044068de5d142928921da632f404d",
   "transactions": [
     {
       "id": 422405,
@@ -989,6 +989,26 @@
       "typeCode": "TR",
       "typeDesc": "Trade",
       "description": "Boston Red Sox traded SS Tsung-Che Cheng to Detroit Tigers for cash."
+    },
+    {
+      "id": 951283,
+      "person": {
+        "id": 691907,
+        "fullName": "Tsung-Che Cheng",
+        "link": "/api/v1/people/691907",
+        "nameSlug": "tsung-che-cheng-691907"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2026-11-27",
+      "effectiveDate": "2026-11-27",
+      "resolutionDate": "2026-11-27",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Detroit Tigers designated SS Tsung-Che Cheng for assignment."
     }
   ]
 }

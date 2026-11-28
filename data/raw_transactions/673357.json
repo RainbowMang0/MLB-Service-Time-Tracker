@@ -1,7 +1,7 @@
 {
   "player_id": 673357,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:c113a665a10fe247b3c27b87928a8032635651710a69d0bd7a74d78eb74680d6",
+  "fetched_at": "2026-11-28T19:38:40Z",
+  "checksum": "sha256:e3690bfb6348bd672503d6e2ebf7e2d026d9b22db6ddf63ba8860d0c8b25d10a",
   "transactions": [
     {
       "id": 312148,
@@ -1414,6 +1414,26 @@
       "typeCode": "DFA",
       "typeDesc": "Declared Free Agency",
       "description": "CF Luis Robert Jr. elected free agency."
+    },
+    {
+      "id": 951339,
+      "person": {
+        "id": 673357,
+        "fullName": "Luis Robert Jr.",
+        "link": "/api/v1/people/673357",
+        "nameSlug": "luis-robert-jr-673357"
+      },
+      "toTeam": {
+        "id": 110,
+        "name": "Baltimore Orioles",
+        "link": "/api/v1/teams/110"
+      },
+      "date": "2026-11-28",
+      "effectiveDate": "2026-11-28",
+      "resolutionDate": "2026-11-28",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Baltimore Orioles signed free agent CF Luis Robert Jr.."
     }
   ]
 }

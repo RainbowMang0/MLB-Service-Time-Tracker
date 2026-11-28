@@ -1,7 +1,7 @@
 {
   "player_id": 641816,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:e2aef2544731138b6fd7163ceee158bcd7b2f1a686a0f9ca746475385f5eb009",
+  "fetched_at": "2026-11-28T19:38:40Z",
+  "checksum": "sha256:d352d44c84369f275f75270d017f4a20a3fe85336d35302e1952d352a31792ee",
   "transactions": [
     {
       "id": 160241,
@@ -1583,6 +1583,26 @@
       "typeCode": "DFA",
       "typeDesc": "Declared Free Agency",
       "description": "RHP Tyler Mahle elected free agency."
+    },
+    {
+      "id": 951338,
+      "person": {
+        "id": 641816,
+        "fullName": "Tyler Mahle",
+        "link": "/api/v1/people/641816",
+        "nameSlug": "tyler-mahle-641816"
+      },
+      "toTeam": {
+        "id": 144,
+        "name": "Atlanta Braves",
+        "link": "/api/v1/teams/144"
+      },
+      "date": "2026-11-28",
+      "effectiveDate": "2026-11-28",
+      "resolutionDate": "2026-11-28",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Atlanta Braves signed free agent RHP Tyler Mahle."
     }
   ]
 }

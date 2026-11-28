@@ -1,7 +1,7 @@
 {
   "player_id": 669234,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:150d1f6f0520bf1562f8415fedfa5ee1906e656b14da6da4317ceef389660f2d",
+  "fetched_at": "2026-11-28T19:38:40Z",
+  "checksum": "sha256:15aa36a91223b4f98ae8e5d0771b00e6a50f7bb864b2fa637e260f6c7c44d0ec",
   "transactions": [
     {
       "id": 388046,
@@ -1227,6 +1227,26 @@
       "typeCode": "ASG",
       "typeDesc": "Assigned",
       "description": "RF Justyn-Henry Malloy assigned to Aguilas del Zulia."
+    },
+    {
+      "id": 951336,
+      "person": {
+        "id": 669234,
+        "fullName": "Justyn-Henry Malloy",
+        "link": "/api/v1/people/669234",
+        "nameSlug": "justyn-henry-malloy-669234"
+      },
+      "toTeam": {
+        "id": 692,
+        "name": "Aguilas del Zulia",
+        "link": "/api/v1/teams/692"
+      },
+      "date": "2026-11-28",
+      "effectiveDate": "2026-11-28",
+      "resolutionDate": "2026-11-28",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Aguilas del Zulia released RF Justyn-Henry Malloy."
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "player_id": 673490,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:430346c57b1027a33e843d56a7b88b8550989950321f26657925e629231b93ec",
+  "fetched_at": "2026-11-28T19:38:40Z",
+  "checksum": "sha256:b6900a12ed5078824a6b062dcf1989a4b7b59162684be3b932a9eec00e65303f",
   "transactions": [
     {
       "id": 459190,
@@ -760,6 +760,26 @@
       "typeCode": "DFA",
       "typeDesc": "Declared Free Agency",
       "description": "SS Ha-Seong Kim elected free agency."
+    },
+    {
+      "id": 951280,
+      "person": {
+        "id": 673490,
+        "fullName": "Ha-Seong Kim",
+        "link": "/api/v1/people/673490",
+        "nameSlug": "ha-seong-kim-673490"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2026-11-27",
+      "effectiveDate": "2026-11-27",
+      "resolutionDate": "2026-11-27",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Detroit Tigers signed free agent SS Ha-Seong Kim."
     }
   ]
 }

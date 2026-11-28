@@ -1,7 +1,7 @@
 {
   "player_id": 802686,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:48a7c3d664461a5ea794834b88019d0ed2ae82c39d71fb555e551e00c3c82919",
+  "fetched_at": "2026-11-28T19:38:40Z",
+  "checksum": "sha256:8dc3e7872aafe59d3fdb47a538af05eabcef41689eb57cf44fb362e310e9fd1b",
   "transactions": [
     {
       "id": 617097,
@@ -722,6 +722,26 @@
       "typeCode": "CU",
       "typeDesc": "Recalled",
       "description": "Colorado Rockies recalled LHP Hayden Harris from Albuquerque Isotopes."
+    },
+    {
+      "id": 951316,
+      "person": {
+        "id": 802686,
+        "fullName": "Hayden Harris",
+        "link": "/api/v1/people/802686",
+        "nameSlug": "hayden-harris-802686"
+      },
+      "toTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "date": "2026-11-27",
+      "effectiveDate": "2026-11-27",
+      "resolutionDate": "2026-11-27",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Colorado Rockies designated LHP Hayden Harris for assignment."
     }
   ]
 }

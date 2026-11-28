@@ -1,7 +1,7 @@
 {
   "player_id": 649966,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:cf7be749972bce19f4bab01898fe4a6ac5788ec2bb875eb8c032523bf228782f",
+  "fetched_at": "2026-11-28T19:38:40Z",
+  "checksum": "sha256:4ed4d95f38331faa797fce7a2920e9a812693f0af2ee9a1e7d3026389a1b0f47",
   "transactions": [
     {
       "id": 177726,
@@ -1968,6 +1968,26 @@
       "typeCode": "DFA",
       "typeDesc": "Declared Free Agency",
       "description": "2B Luis Urías elected free agency."
+    },
+    {
+      "id": 951318,
+      "person": {
+        "id": 649966,
+        "fullName": "Luis Urías",
+        "link": "/api/v1/people/649966",
+        "nameSlug": "luis-urias-649966"
+      },
+      "toTeam": {
+        "id": 680,
+        "name": "Yaquis de Obregon",
+        "link": "/api/v1/teams/680"
+      },
+      "date": "2026-11-27",
+      "effectiveDate": "2026-11-27",
+      "resolutionDate": "2026-11-27",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Yaquis de Obregon activated 2B Luis Urías from the reserve list."
     }
   ]
 }

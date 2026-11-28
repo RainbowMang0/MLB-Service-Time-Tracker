@@ -1,7 +1,7 @@
 {
   "player_id": 671213,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:d3d805eefd6ed5ed68a23afa0cb13502e1eef6885c9d295d147c59eea1bed04a",
+  "fetched_at": "2026-11-28T19:38:40Z",
+  "checksum": "sha256:bf1e8a5365625ff2c343b91b85e369cb2d7cd0160e7d54e6d7a75f839f00d98c",
   "transactions": [
     {
       "id": 279975,
@@ -1141,6 +1141,26 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "Boston Red Sox activated 1B Triston Casas from the 60-day injured list."
+    },
+    {
+      "id": 951274,
+      "person": {
+        "id": 671213,
+        "fullName": "Triston Casas",
+        "link": "/api/v1/people/671213",
+        "nameSlug": "triston-casas-671213"
+      },
+      "toTeam": {
+        "id": 672,
+        "name": "Tigres del Licey",
+        "link": "/api/v1/teams/672"
+      },
+      "date": "2026-11-27",
+      "effectiveDate": "2026-11-27",
+      "resolutionDate": "2026-11-27",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "1B Triston Casas assigned to Tigres del Licey."
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "player_id": 656849,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:53e9f06b76a32aaf37584ff0d11b1ef337985e9700bba7e7c6de475288e0fde6",
+  "fetched_at": "2026-11-28T19:38:40Z",
+  "checksum": "sha256:0f617fdfe63e13b5881a68ea0dcf70a412296692e07eaf9da630f8bfbbf6b47b",
   "transactions": [
     {
       "id": 275850,
@@ -1337,6 +1337,26 @@
       "typeCode": "DFA",
       "typeDesc": "Declared Free Agency",
       "description": "LHP David Peterson elected free agency."
+    },
+    {
+      "id": 951315,
+      "person": {
+        "id": 656849,
+        "fullName": "David Peterson",
+        "link": "/api/v1/people/656849",
+        "nameSlug": "david-peterson-656849"
+      },
+      "toTeam": {
+        "id": 115,
+        "name": "Colorado Rockies",
+        "link": "/api/v1/teams/115"
+      },
+      "date": "2026-11-27",
+      "effectiveDate": "2026-11-27",
+      "resolutionDate": "2026-11-27",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Colorado Rockies signed free agent LHP David Peterson."
     }
   ]
 }

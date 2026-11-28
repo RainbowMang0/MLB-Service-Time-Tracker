@@ -1,0 +1,47 @@
+{
+  "player_id": 838343,
+  "fetched_at": "2026-11-28T19:38:40Z",
+  "checksum": "sha256:1c708523af83b80656719cc17f814ff8f04a368050c3b82b287334e502cc2b60",
+  "transactions": [
+    {
+      "id": 884570,
+      "person": {
+        "id": 838343,
+        "fullName": "Kaima Taira",
+        "link": "/api/v1/people/838343",
+        "nameSlug": "kaima-taira-838343"
+      },
+      "toTeam": {
+        "id": 843,
+        "name": "Japan",
+        "link": "/api/v1/teams/843"
+      },
+      "date": "2026-02-05",
+      "effectiveDate": "2026-02-05",
+      "resolutionDate": "2026-02-05",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Japan activated RHP Kaima Taira."
+    },
+    {
+      "id": 951269,
+      "person": {
+        "id": 838343,
+        "fullName": "Kaima Taira",
+        "link": "/api/v1/people/838343",
+        "nameSlug": "kaima-taira-838343"
+      },
+      "toTeam": {
+        "id": 141,
+        "name": "Toronto Blue Jays",
+        "link": "/api/v1/teams/141"
+      },
+      "date": "2026-11-27",
+      "effectiveDate": "2026-11-27",
+      "resolutionDate": "2026-11-27",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Toronto Blue Jays signed free agent RHP Kaima Taira."
+    }
+  ]
+}

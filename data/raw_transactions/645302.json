@@ -1,7 +1,7 @@
 {
   "player_id": 645302,
-  "fetched_at": "2026-11-18T20:05:22Z",
-  "checksum": "sha256:cc01c7bc9a09a39ed1890d10f914af9d9f9e7a89c4800b0c1998030fcdd9bf64",
+  "fetched_at": "2026-11-28T19:38:40Z",
+  "checksum": "sha256:2a20cc9e2106aad659625ad001c5c420c276fc18baf6ec2a535d75a70f4ea964",
   "transactions": [
     {
       "id": 162893,
@@ -1510,6 +1510,26 @@
       "typeCode": "ASG",
       "typeDesc": "Assigned",
       "description": "RF Victor Robles assigned to Aguilas Cibaenas."
+    },
+    {
+      "id": 951279,
+      "person": {
+        "id": 645302,
+        "fullName": "Victor Robles",
+        "link": "/api/v1/people/645302",
+        "nameSlug": "victor-robles-645302"
+      },
+      "toTeam": {
+        "id": 671,
+        "name": "Leones del Escogido",
+        "link": "/api/v1/teams/671"
+      },
+      "date": "2026-11-27",
+      "effectiveDate": "2026-11-27",
+      "resolutionDate": "2026-11-27",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RF Victor Robles assigned to Leones del Escogido."
     }
   ]
 }

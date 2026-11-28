@@ -1,7 +1,7 @@
 {
   "player_id": 605155,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:586affb731ac516233f8f689001405725505ef4735b407f4bbe3e1c35e3e3b2f",
+  "fetched_at": "2026-11-28T19:38:40Z",
+  "checksum": "sha256:566d781e82c65c2299506955a0506e42c892fb1d5e10fd2f2cf3e00267960b40",
   "transactions": [
     {
       "id": 96473,
@@ -2511,6 +2511,26 @@
       "typeCode": "ASG",
       "typeDesc": "Assigned",
       "description": "RHP Colten Brewer assigned to Naranjeros de Hermosillo."
+    },
+    {
+      "id": 951329,
+      "person": {
+        "id": 605155,
+        "fullName": "Colten Brewer",
+        "link": "/api/v1/people/605155",
+        "nameSlug": "colten-brewer-605155"
+      },
+      "toTeam": {
+        "id": 677,
+        "name": "Naranjeros de Hermosillo",
+        "link": "/api/v1/teams/677"
+      },
+      "date": "2026-11-27",
+      "effectiveDate": "2026-11-27",
+      "resolutionDate": "2026-11-27",
+      "typeCode": "SC",
+      "typeDesc": "Status Change",
+      "description": "Naranjeros de Hermosillo placed RHP Colten Brewer on the reserve list."
     }
   ]
 }

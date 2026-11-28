@@ -1,7 +1,7 @@
 {
   "player_id": 656464,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:619a7642e0d130c0f3865ed7142547f68d6660bd6baf4e97e3cee2b191ddd7c8",
+  "fetched_at": "2026-11-28T19:38:40Z",
+  "checksum": "sha256:c59495fefe9f3052f9d569bfb76e947a69b148772e4402a1a3ce303875097dd5",
   "transactions": [
     {
       "id": 253599,
@@ -959,6 +959,26 @@
       "typeCode": "DFA",
       "typeDesc": "Declared Free Agency",
       "description": "RHP Kevin Ginkel elected free agency."
+    },
+    {
+      "id": 951331,
+      "person": {
+        "id": 656464,
+        "fullName": "Kevin Ginkel",
+        "link": "/api/v1/people/656464",
+        "nameSlug": "kevin-ginkel-656464"
+      },
+      "toTeam": {
+        "id": 142,
+        "name": "Minnesota Twins",
+        "link": "/api/v1/teams/142"
+      },
+      "date": "2026-11-28",
+      "effectiveDate": "2026-11-28",
+      "resolutionDate": "2026-11-28",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Minnesota Twins signed free agent RHP Kevin Ginkel."
     }
   ]
 }

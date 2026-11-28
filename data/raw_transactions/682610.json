@@ -1,7 +1,7 @@
 {
   "player_id": 682610,
-  "fetched_at": "2026-11-17T20:33:14Z",
-  "checksum": "sha256:d152e7094ff0870796be08a10aabdf170365b646045b9a9d07e153eb216867bd",
+  "fetched_at": "2026-11-28T19:38:40Z",
+  "checksum": "sha256:57cd31dc99095c458b2c3c3a691ebf3eb839b88c74ab81b0e3b794b42978fb3c",
   "transactions": [
     {
       "id": 364855,
@@ -1790,6 +1790,26 @@
       "typeCode": "TR",
       "typeDesc": "Trade",
       "description": "Aguilas Cibaenas traded RHP Roddery Muñoz to Leones del Escogido."
+    },
+    {
+      "id": 951277,
+      "person": {
+        "id": 682610,
+        "fullName": "Roddery Muñoz",
+        "link": "/api/v1/people/682610",
+        "nameSlug": "roddery-munoz-682610"
+      },
+      "toTeam": {
+        "id": 667,
+        "name": "Aguilas Cibaenas",
+        "link": "/api/v1/teams/667"
+      },
+      "date": "2026-11-27",
+      "effectiveDate": "2026-11-27",
+      "resolutionDate": "2026-11-27",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "RHP Roddery Muñoz assigned to Aguilas Cibaenas."
     }
   ]
 }

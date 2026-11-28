@@ -1,7 +1,7 @@
 {
   "player_id": 689225,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:9b2133f99d21b2fe20d5c686e29881f7ae76a8e02dfd68204a0746d4e183b27d",
+  "fetched_at": "2026-11-28T19:38:40Z",
+  "checksum": "sha256:82f39bcfc8938f159b04407998f32fde4defe57225d0b200b80821ea0520ed72",
   "transactions": [
     {
       "id": 412479,
@@ -1053,6 +1053,26 @@
       "typeCode": "CU",
       "typeDesc": "Recalled",
       "description": "Detroit Tigers recalled RHP Beau Brieske from Toledo Mud Hens."
+    },
+    {
+      "id": 951282,
+      "person": {
+        "id": 689225,
+        "fullName": "Beau Brieske",
+        "link": "/api/v1/people/689225",
+        "nameSlug": "beau-brieske-689225"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2026-11-27",
+      "effectiveDate": "2026-11-27",
+      "resolutionDate": "2026-11-27",
+      "typeCode": "DES",
+      "typeDesc": "Designated for Assignment",
+      "description": "Detroit Tigers designated RHP Beau Brieske for assignment."
     }
   ]
 }

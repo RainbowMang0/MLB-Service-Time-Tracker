@@ -1,7 +1,7 @@
 {
   "player_id": 661563,
-  "fetched_at": "2026-11-21T18:47:39Z",
-  "checksum": "sha256:027f1720306a544b5643d3681c36dafeced777a475777277c4f94b2fc9bce8a3",
+  "fetched_at": "2026-11-28T19:38:40Z",
+  "checksum": "sha256:a7111a5c4e49bab4f8dd53c0356b2208522a003fd57f630c32c0acbc8b869840",
   "transactions": [
     {
       "id": 216295,
@@ -1659,6 +1659,26 @@
       "typeCode": "DFA",
       "typeDesc": "Declared Free Agency",
       "description": "RHP Luis Gil elected free agency."
+    },
+    {
+      "id": 951281,
+      "person": {
+        "id": 661563,
+        "fullName": "Luis Gil",
+        "link": "/api/v1/people/661563",
+        "nameSlug": "luis-gil-661563"
+      },
+      "toTeam": {
+        "id": 116,
+        "name": "Detroit Tigers",
+        "link": "/api/v1/teams/116"
+      },
+      "date": "2026-11-27",
+      "effectiveDate": "2026-11-27",
+      "resolutionDate": "2026-11-27",
+      "typeCode": "SFA",
+      "typeDesc": "Signed as Free Agent",
+      "description": "Detroit Tigers signed free agent RHP Luis Gil."
     }
   ]
 }

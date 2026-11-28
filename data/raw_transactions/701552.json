@@ -1,7 +1,7 @@
 {
   "player_id": 701552,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:c02126bd0266111f85081a4955ff08ec29065f6494f4ffabc99291726eec4b78",
+  "fetched_at": "2026-11-28T19:38:40Z",
+  "checksum": "sha256:27bb54697b15eb2c44362df2475031b760a0e4ef96b631e66e340f09c3522839",
   "transactions": [
     {
       "id": 506392,
@@ -861,6 +861,26 @@
       "typeCode": "ASG",
       "typeDesc": "Assigned",
       "description": "RHP Andre Granillo assigned to Navegantes del Magallanes."
+    },
+    {
+      "id": 951337,
+      "person": {
+        "id": 701552,
+        "fullName": "Andre Granillo",
+        "link": "/api/v1/people/701552",
+        "nameSlug": "andre-granillo-701552"
+      },
+      "toTeam": {
+        "id": 696,
+        "name": "Navegantes del Magallanes",
+        "link": "/api/v1/teams/696"
+      },
+      "date": "2026-11-28",
+      "effectiveDate": "2026-11-28",
+      "resolutionDate": "2026-11-28",
+      "typeCode": "REL",
+      "typeDesc": "Released",
+      "description": "Navegantes del Magallanes released RHP Andre Granillo."
     }
   ]
 }

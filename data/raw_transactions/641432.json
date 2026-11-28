@@ -1,7 +1,7 @@
 {
   "player_id": 641432,
-  "fetched_at": "2026-11-09T23:12:59Z",
-  "checksum": "sha256:fd5833479dde83bb0f91b36d147cc319f19c2b0d5495beee97bb8c4bfaf46988",
+  "fetched_at": "2026-11-28T19:38:40Z",
+  "checksum": "sha256:f9d52c3feaca98e3d8a2f5717151b0d5035d8462e8db935527f8d8a1aa840a16",
   "transactions": [
     {
       "id": 231479,
@@ -1733,6 +1733,26 @@
       "typeCode": "SC",
       "typeDesc": "Status Change",
       "description": "Charros de Jalisco activated 1B Willie Calhoun from the reserve list."
+    },
+    {
+      "id": 951326,
+      "person": {
+        "id": 641432,
+        "fullName": "Willie Calhoun",
+        "link": "/api/v1/people/641432",
+        "nameSlug": "willie-calhoun-641432"
+      },
+      "toTeam": {
+        "id": 677,
+        "name": "Naranjeros de Hermosillo",
+        "link": "/api/v1/teams/677"
+      },
+      "date": "2026-11-27",
+      "effectiveDate": "2026-11-27",
+      "resolutionDate": "2026-11-27",
+      "typeCode": "ASG",
+      "typeDesc": "Assigned",
+      "description": "1B Willie Calhoun assigned to Naranjeros de Hermosillo."
     }
   ]
 }
