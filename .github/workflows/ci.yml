@@ -115,6 +115,9 @@ jobs:
       - name: Service-time rulebook
         run: python tests/test_rulebook.py
 
+      - name: 2020 opener
+        run: python tests/test_2020_opener.py
+
       - name: Rulebook publish holds and rollback
         run: python tests/test_rulebook_publish.py
 

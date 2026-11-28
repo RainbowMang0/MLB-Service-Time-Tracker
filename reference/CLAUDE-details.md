@@ -387,6 +387,12 @@ participant ~0.6 years short — Aaron Judge read 9.095 instead of 10.027.
 Handled by `_prorate_shortened_season()` in `service_time.py`, applied before
 the 172-day cap. `SHORTENED_SEASONS = {2020}`.
 
+The length in that scale is the opening club's season. Twenty-six clubs opened
+on 24 July 2020. The Yankees, Nationals, Dodgers, and Giants played on 23 July,
+and their players keep that length. The rulebook uses the same split
+(`scripts/season_openers.py`). Using 23 July for every club made the rulebook
+a day or two short of the published count and held those seasons.
+
 The `186/B` formula comes from contemporaneous reporting of the agreement, not
 from MLB's ledger. It reproduces Judge's known figure, which is decent
 evidence — but if a 2020-era player looks wrong, check here first.
