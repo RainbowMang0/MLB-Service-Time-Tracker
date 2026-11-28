@@ -18,6 +18,7 @@ from pathlib import Path
 
 import cba
 import rulebook
+import season_openers
 from rulebook import evaluate
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -149,6 +150,11 @@ def replay_one(player: dict, horizon: dt.date) -> dict:
         appearance_counts=_games(player),
         appearance_dates=dates,
         appearance_checked=checked,
+        season_clubs={
+            int(row["y"]): [club for club in row.get("t") or [] if isinstance(club, int)]
+            for row in player.get("seasons") or []
+            if isinstance(row, dict) and row.get("y") is not None and row.get("t")
+        },
     )
 
 
@@ -201,9 +207,18 @@ def apply_player(player: dict, result: dict, prior_holds: dict[str, dict], full_
         import rulebook_guard
         accepted = bool(old and old.get("cleared")) or rulebook_guard.released(int(player["id"]), year)
         played = games.get(year, 0)
-        if accepted and rule_days < published_days:
+        preserved = season_openers.site_scale_action(
+            year, raw, rule_days, published_days, earlier.get(year),
+        )
+        if preserved == "keep":
+            # The site already shows the other 2020 length of these same raw
+            # days. Raising it would change a published total.
+            days, src = published_days, (previous.get(year) or {}).get("src") or "read"
+        elif accepted and rule_days < published_days:
             days, src = rule_days, "read"
-        elif rule_days < published_days and not rulebook_guard.measured_replaces(rule_days, earlier.get(year)):
+        elif rule_days < published_days and (
+            preserved == "hold" or not rulebook_guard.measured_replaces(rule_days, earlier.get(year))
+        ):
             days, src = published_days, "held"
             holds.append({
                 "player_id": int(player["id"]),

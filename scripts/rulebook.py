@@ -24,6 +24,7 @@ from pathlib import Path
 
 import cba
 import rulebook_limits
+import season_openers
 from mlb_clubs import MLB_CLUB_IDS
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -738,6 +739,7 @@ def evaluate(
     calendar: Calendar | None = None,
     ruleset: cba.Ruleset | None = None,
     book: dict | None = None,
+    season_clubs: dict | None = None,
 ) -> dict:
     """Service time, option years, and injured-list spells for one player.
 
@@ -1187,6 +1189,10 @@ def evaluate(
     seasons = []
     review_flags = []
     total = 0
+    club_2020 = season_openers.opening_club(
+        ((day, row_ids(row)) for day, row, _hit in rows),
+        None if not season_clubs else season_clubs.get(2020),
+    )
     all_ranges = []
     option_days: dict[int, int] = {}
     for year in years:
@@ -1263,7 +1269,8 @@ def evaluate(
                 extra_start = opener_1995 - dt.timedelta(days=STRIKE_1995_DAYS)
                 raw += STRIKE_1995_DAYS
                 credit_pieces.append((extra_start, extra_end, frozenset({"accrual.strike-service-1996"})))
-        prorated = _prorate(year, raw, start, end, ruleset)
+        scale_start = season_openers.proration_start(year, start, club_2020)
+        prorated = _prorate(year, raw, scale_start, end, ruleset)
         credited = min(prorated, cap)
         season_rules = sorted({rule for _lo, _hi, rules in pieces for rule in rules})
         if credit:
@@ -1310,6 +1317,7 @@ def evaluate(
             "year": year,
             "start": start.isoformat(),
             "end": end.isoformat(),
+            "scale_start": scale_start.isoformat(),
             "roster_days": roster_days,
             "option_days": opt,
             "option_service_credit": credit,
@@ -1395,7 +1403,7 @@ def sanity_errors(result: dict, cap: int | None = None, full_year: int | None = 
         piece_days = sum(item["days"] for item in ranges)
         if piece_days != season["raw_days"]:
             errors.append(f"{season['year']} ranges do not add up to the raw days")
-        start = dt.date.fromisoformat(season["start"])
+        start = dt.date.fromisoformat(season.get("scale_start") or season["start"])
         end = dt.date.fromisoformat(season["end"])
         expected = _prorate(season["year"], season["raw_days"], start, end, ruleset)
         expected = min(expected, cap)
