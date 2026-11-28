@@ -24,6 +24,20 @@
 # remote tip, put them back, recommit, push again. Ours wins for the paths
 # we generated; theirs wins for every other file in the tree.
 #
+# TRANSACTION PAGES
+# =================
+# The DFA snapshot and the out-of-options pages are built from both
+# transaction stores. The roster job and the raw-store job commit those
+# stores from separate checkouts, and the raw job usually finishes first.
+# A page built before that commit, then copied back on top of it, does
+# not match the transactions CI reads. So whenever this commit includes a
+# transaction store (or the DFA snapshot), rebuild those pages from the
+# tree that is about to be committed. That includes the retry: the reset
+# has just brought in the other job's store, and the copies we put back
+# were built without it. A rebuild that fails keeps the pages already on
+# disk and still commits the stores. A page must not throw away a finished
+# roster fetch; CI is the backstop.
+#
 # Usage:
 #   scripts/commit_data.sh "commit message" path [path...]
 
@@ -49,6 +63,25 @@ stage() {
   done
 }
 
+# Pages whose --check reads the stores. See scripts/rebuild_transaction_pages.py.
+rebuild_transaction_pages() {
+  local p needed=0
+  for p in "${PATHS[@]}"; do
+    case "$p" in
+      data/cache|data/cache/*|data/raw_transactions|data/raw_transactions/*|data/dfa_outcomes.json)
+        needed=1
+        ;;
+    esac
+  done
+  if [ "$needed" -ne 1 ]; then
+    return 0
+  fi
+  if ! python3 scripts/rebuild_transaction_pages.py; then
+    echo "Transaction pages were not rebuilt. Keeping the copies already on disk." >&2
+  fi
+}
+
+rebuild_transaction_pages
 stage
 if git diff --cached --quiet; then
   echo "No data changes -- nothing to commit."
@@ -84,6 +117,9 @@ for attempt in $(seq 1 "$ATTEMPTS"); do
   done
   rm -rf "$keep"
 
+  # The restored snapshot was built before this reset. Rebuild it from
+  # the stores now on disk, which include whatever the other job pushed.
+  rebuild_transaction_pages
   stage
   if git diff --cached --quiet; then
     echo "The remote tip already carries this data -- nothing left to commit."

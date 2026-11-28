@@ -223,9 +223,13 @@ jobs:
         continue-on-error: true
         run: python scripts/build_roster_rules_page.py
 
-      # Reads the transaction cache the update just wrote. Temp-then-rename
-      # is inside the script. A failure keeps the previous page and must not
-      # drop the day's roster commit; CI already runs --check.
+      # Reads the transaction cache this update just wrote, and the raw
+      # feed that was on this checkout. The raw-store job usually commits
+      # newer files while this fetch is still running. commit_data.sh
+      # rebuilds the page again after it takes those files, so the snapshot
+      # matches the transactions that actually get pushed. A failure here
+      # keeps the previous page and must not drop the day's roster commit;
+      # CI already runs --check.
       - name: Rebuild the DFA outcomes page
         if: steps.gate.outputs.run == 'true'
         continue-on-error: true
@@ -333,12 +337,24 @@ jobs:
         run: |
           set -uo pipefail
           MODE="${{ steps.rawgate.outputs.mode }}"
+          # commit_data.sh rebuilds the DFA snapshot and the out-of-options
+          # pages from this store plus the roster cache, then commits the
+          # results with the store. The club directory itself stays off
+          # this list: restoring all of docs/t would put this checkout's
+          # old roster pages back on top of a roster commit.
+          transaction_pages=(
+            data/dfa_outcomes.json
+            docs/dfa-outcomes.html
+            docs/out-of-options.html
+            docs/t/*-out-of-options.html
+          )
           if [ "$MODE" = "window" ]; then
             python scripts/raw_transactions.py --window
             code=$?
             scripts/commit_data.sh \
               "chore: raw transaction window ($(date -u +%F))" \
-              data/raw_transactions
+              data/raw_transactions \
+              "${transaction_pages[@]}"
             if [ $? -ne 0 ]; then
               exit 1
             fi
@@ -359,7 +375,8 @@ jobs:
             code=$?
             scripts/commit_data.sh \
               "chore: raw transaction store ($(date -u +%F))" \
-              data/raw_transactions
+              data/raw_transactions \
+              "${transaction_pages[@]}"
             if [ $? -ne 0 ]; then
               exit 1
             fi

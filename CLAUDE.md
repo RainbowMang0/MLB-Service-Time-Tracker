@@ -56,6 +56,7 @@ scripts/backfill_history.py    resumable backfill of non-rostered players
 scripts/super_two.py           Super Two class + cutoff from the whole population
 scripts/write_player_pages.py  static player/club/alumni pages, sitemaps, NAV_SECTIONS
 scripts/commit_data.sh         commits generated data, surviving a concurrent push
+scripts/rebuild_transaction_pages.py  DFA and out-of-options pages after a transaction commit
 scripts/validate_*.py          service_time (vs B-R hand entries), against_rosters,
                                super_two (offline), published (offline: files agree,
                                every link resolves)

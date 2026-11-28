@@ -295,6 +295,37 @@ def test_the_page_is_wired_into_the_site() -> None:
         check(f"{name} commits the page", "docs/dfa-outcomes.html" in body)
         check(f"{name} commits the snapshot", "data/dfa_outcomes.json" in body)
         check(f"{name} rebuilds the page", "scripts/build_dfa_outcomes_page.py" in body)
+    daily = (ROOT / ".github" / "workflows" / "update-service-time.yml").read_text(encoding="utf-8")
+    raw_job = daily.split("raw-transactions:", 1)[1]
+    check("the raw job commits the snapshot with the store", raw_job.count("data/dfa_outcomes.json") >= 1)
+    check("the raw job commits the page with the store", "docs/dfa-outcomes.html" in raw_job)
+    check("both raw commits pass the page list", raw_job.count('"${transaction_pages[@]}"') >= 2)
+    check(
+        "the raw job does not restore every club page",
+        "docs/t\n" not in raw_job and "docs/t \\" not in raw_job,
+    )
+    commit_sh = (ROOT / "scripts" / "commit_data.sh").read_text(encoding="utf-8")
+    calls = [
+        i for i, line in enumerate(commit_sh.splitlines())
+        if line.strip() == "rebuild_transaction_pages"
+    ]
+    reset_at = next(
+        i for i, line in enumerate(commit_sh.splitlines())
+        if line.strip().startswith("git reset --hard")
+    )
+    first_commit = next(
+        i for i, line in enumerate(commit_sh.splitlines())
+        if line.strip().startswith('git commit')
+    )
+    check("a transaction commit rebuilds the pages first", any(i < first_commit for i in calls))
+    check("a rejected push rebuilds the pages after taking the remote tip", any(i > reset_at for i in calls))
+    check(
+        "the rebuild reads both stores and the snapshot path",
+        all(token in commit_sh for token in ("data/cache", "data/raw_transactions", "data/dfa_outcomes.json")),
+    )
+    rebuild = (ROOT / "scripts" / "rebuild_transaction_pages.py").read_text(encoding="utf-8")
+    check("the rebuild writes this page", "scripts/build_dfa_outcomes_page.py" in rebuild)
+    check("the rebuild writes the out-of-options pages", "scripts/out_of_options_pages.py" in rebuild)
     ci = (ROOT / ".github" / "workflows" / "ci.yml").read_text(encoding="utf-8")
     check("ci runs the page check", "scripts/build_dfa_outcomes_page.py --check" in ci)
     check("ci names this suite", "tests/test_dfa_outcomes.py" in ci)
