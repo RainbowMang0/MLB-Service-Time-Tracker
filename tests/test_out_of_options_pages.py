@@ -470,6 +470,11 @@ def test_published_files_and_the_guards():
     for name in ("update-service-time.yml", "backfill-history.yml"):
         body = (ROOT / ".github" / "workflows" / name).read_text(encoding="utf-8")
         check(f"{name} commits the league page", "docs/out-of-options.html" in body)
+    raw_job = (ROOT / ".github" / "workflows" / "update-service-time.yml").read_text(encoding="utf-8").split("raw-transactions:", 1)[1]
+    check("the raw job commits the league page with the store", "docs/out-of-options.html" in raw_job)
+    check("the raw job commits the club pages with the store", "docs/t/*-out-of-options.html" in raw_job)
+    rebuild = (ROOT / "scripts" / "rebuild_transaction_pages.py").read_text(encoding="utf-8")
+    check("a transaction commit rebuilds these pages", "scripts/out_of_options_pages.py" in rebuild)
     ci = (ROOT / ".github" / "workflows" / "ci.yml").read_text(encoding="utf-8")
     check("ci names this suite", "tests/test_out_of_options_pages.py" in ci)
     check("ci checks the built pages", "scripts/out_of_options_pages.py --check" in ci)
